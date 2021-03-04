@@ -1,0 +1,309 @@
+From aef59a2e108d1f722c1444616088f064088c61de Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Thu, 4 Mar 2021 23:04:09 +0000
+Subject: [PATCH 20/24] =?UTF-8?q?18:=20Replace=20substitute=20PNG=20for=20?=
+ =?UTF-8?q?956=20with=20a=20proper=20=C2=B5=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ PRM/ADFS.HTML            |   4 ++--
+ PRM/CMOS.HTML            |   2 +-
+ PRM/ECONET.HTML          |   2 +-
+ PRM/INTERRUPTS.HTML      |   2 +-
+ PRM/MEDECO.HTML          |   2 +-
+ PRM/MEDINTRO.HTML        |   2 +-
+ PRM/SHAREDCLIBRARY.HTML  |   6 +++---
+ PRM/SOFTVECS.HTML        |   6 +++---
+ PRM/SOUND.HTML           |  10 +++++-----
+ PRM/SOUNDDMA.HTML        |  20 ++++++++++----------
+ SYMBOLS/ENTITIES/956.PNG | Bin 201 -> 0 bytes
+ 11 files changed, 28 insertions(+), 28 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/956.PNG
+
+diff --git a/PRM/ADFS.HTML b/PRM/ADFS.HTML
+index ebe9783..0ae45f3 100644
+--- a/PRM/ADFS.HTML
++++ b/PRM/ADFS.HTML
+@@ -100,8 +100,8 @@ Variation in speed:
+ <tr>
+ <td align="left" valign="top">
+ Min. Write to read changeover time:
+-<td align="left" valign="top">696 <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S (2Meg mode) (43 bytes)<br>
+-1300 <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S (1Meg mode) (40 bytes)<br>
++<td align="left" valign="top">696 µS (2Meg mode) (43 bytes)<br>
++1300 µS (1Meg mode) (40 bytes)<br>
+ (values for one particular drive)
+ <tr>
+ <td align="left" valign="top">
+diff --git a/PRM/CMOS.HTML b/PRM/CMOS.HTML
+index b45d5e2..1306690 100644
+--- a/PRM/CMOS.HTML
++++ b/PRM/CMOS.HTML
+@@ -301,7 +301,7 @@
+ <td align="left" valign="top" rowspan="5" nowrap>Bits 5 - 6
+ <td align="left" valign="top">16 bit sound control:
+ <tr>
+-<td align="left" valign="top">0 ⇒ STANDARD <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law sound (ie no 16 bit sound output)
++<td align="left" valign="top">0 ⇒ STANDARD µ-law sound (ie no 16 bit sound output)
+ <tr>
+ <td align="left" valign="top">1 ⇒ DAC clock is slave, 11.2896MHz external clock, standard VIDC20 or 44.1kHz×4/(4...45) rates (as on ESP card)
+ <tr>
+diff --git a/PRM/ECONET.HTML b/PRM/ECONET.HTML
+index 249065c..7fce54a 100644
+--- a/PRM/ECONET.HTML
++++ b/PRM/ECONET.HTML
+@@ -212,7 +212,7 @@
+  80   PRINT Status%
+  90 UNTIL NOT ((Status%=TxReady%) OR (Status%=Transmitting%))
+ 100 END</pre></p>
+-<p>Now the program will show us the status of the TxCB. We would be very unlikely to see the status value ever be <i>Status_Transmitting</i> since it will only have this value for about 90<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s during the two seconds it is retrying for. But it is most important that your software should be able to handle such a situation without error.</p>
++<p>Now the program will show us the status of the TxCB. We would be very unlikely to see the status value ever be <i>Status_Transmitting</i> since it will only have this value for about 90µs during the two seconds it is retrying for. But it is most important that your software should be able to handle such a situation without error.</p>
+ <p>For retries to be effective you must try for at least 5 seconds. Recommended values for the Count and Delay are:</p>
+ <dl>
+ <dd>
+diff --git a/PRM/INTERRUPTS.HTML b/PRM/INTERRUPTS.HTML
+index 4511626..b167204 100644
+--- a/PRM/INTERRUPTS.HTML
++++ b/PRM/INTERRUPTS.HTML
+@@ -413,7 +413,7 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-5822"></a>Speed of execution</h5>
+ <dd>
+ <p><a name="marker-695343"></a>Interrupt handling routines must be quick to execute. This is because they are entered with interrupts disabled, so while they are running other hardware may be kept waiting. This slows the machine down considerably.</p>
+-<p>In practice, 100<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s is the longest you should leave interrupts disabled. If your routine will take longer than this, try to make it shorter. If all else fails, your routine must re-enable interrupts. It should do so by clearing the I bit of R15, using for example:
++<p>In practice, 100µs is the longest you should leave interrupts disabled. If your routine will take longer than this, try to make it shorter. If all else fails, your routine must re-enable interrupts. It should do so by clearing the I bit of R15, using for example:
+ <pre>        MOV     Rtemp, PC    ; I_Bit set in PSR
+         TEQP    Rtemp,#I_bit ; Note TEQ is like EOR: so clears I_Bit in PSR</pre>
+ <p>where <tt>I_bit</tt> is a constant having only the I bit set. You cannot simply do <tt>TEQP PC,#I_bit</tt>, because in this instruction the PC is presented without the PSR bits. For more details see <A HREF="ASM.HTML#88015">Appendix A: ARM assembler</a>.</p>
+diff --git a/PRM/MEDECO.HTML b/PRM/MEDECO.HTML
+index 95a5309..2849d81 100644
+--- a/PRM/MEDECO.HTML
++++ b/PRM/MEDECO.HTML
+@@ -273,7 +273,7 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-6067"></a>On exit</h5>
+ <dd>
+-<p>R0 = <a name="marker-98846"></a>Econet clock period in 1/4<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S (EG 20 FOR A 5<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s period), or 0 if no clock<br>
++<p>R0 = <a name="marker-98846"></a>Econet clock period in 1/4µS (EG 20 FOR A 5µs period), or 0 if no clock<br>
+ R1 = Econet clock frequency in kHz (eg 200 for a 200kHz frequency), or 0 if no clock<br>
+ R2, R3 corrupted</p>
+ 
+diff --git a/PRM/MEDINTRO.HTML b/PRM/MEDINTRO.HTML
+index 4e7f80f..fe3c0bc 100644
+--- a/PRM/MEDINTRO.HTML
++++ b/PRM/MEDINTRO.HTML
+@@ -190,7 +190,7 @@
+ <li>The new DrawFile module renders Draw files either to the screen, or to a printer driver during printing. This makes it easy for you to support imported Draw files in your applications.
+ <li>The range of Boot applications has been extended, mainly to support network booting.
+ <li>Further changes have been made to printing, largely to support JPEGs.
+-<li>The SoundDMA module has been extended to support 16 bit sound, as well as the 8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law sound used by all earlier versions of RISC OS.
++<li>The SoundDMA module has been extended to support 16 bit sound, as well as the 8 bit µ-law sound used by all earlier versions of RISC OS.
+ <li>The Joystick module has been extended both to support PC-style analogue joysticks, and to provide calls used with analogue input devices on older Acorn machines.
+ <li>The Toolbox modules from Acorn C/C++ have been added to RISC OS. Toolbox applications therefore don't need to load the modules into RAM, hence decreasing their memory usage.
+ </ul>
+diff --git a/PRM/SHAREDCLIBRARY.HTML b/PRM/SHAREDCLIBRARY.HTML
+index 99baf9b..b0f37ca 100644
+--- a/PRM/SHAREDCLIBRARY.HTML
++++ b/PRM/SHAREDCLIBRARY.HTML
+@@ -107,7 +107,7 @@
+ <dt>
+ <h5><a name="idx-8557"></a>Execution time costs</h5>
+ <dd>
+-<p>It costs only 4 cycles (0.5<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s) per function call and a very small penalty on access to the library's static data by the library (the user program's access to the same data is unpenalised). In general, the difference in performance between using the shared C library and linking a program stand-alone with ANSILib is less than 1%. For the important Dhrystone-2.1 benchmark the performance difference cannot be measured.</p>
++<p>It costs only 4 cycles (0.5µs) per function call and a very small penalty on access to the library's static data by the library (the user program's access to the same data is unpenalised). In general, the difference in performance between using the shared C library and linking a program stand-alone with ANSILib is less than 1%. For the important Dhrystone-2.1 benchmark the performance difference cannot be measured.</p>
+ </dl>
+ 
+ <dt>
+@@ -1713,13 +1713,13 @@ Control is regained through the procedure pointer returned in R0 by one of the l
+ <dt>
+ <h5><a name="50989"></a>Entry no. 39: void _kernel_irqs_on(void)</h5>
+ <dd>
+-<p>Enable interrupts. You should not disable interrupts unless absolutely necessary. If you disable interrupts you should re-enable them as soon as possible (preferably within 10<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S). </p>
++<p>Enable interrupts. You should not disable interrupts unless absolutely necessary. If you disable interrupts you should re-enable them as soon as possible (preferably within 10µS). </p>
+ <p>This function can only be used from code running in SVC mode. </p>
+ 
+ <dt>
+ <h5><a name="73824"></a>Entry no. 40: void _kernel_irqs_off(void)</h5>
+ <dd>
+-<p>Disable IRQ interrupts. You should not disable interrupts unless absolutely necessary. If you disable interrupts you should re-enable them as soon as possible (preferably within 10<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S). </p>
++<p>Disable IRQ interrupts. You should not disable interrupts unless absolutely necessary. If you disable interrupts you should re-enable them as soon as possible (preferably within 10µS). </p>
+ <p>This function can only be used from code running in SVC mode. </p>
+ 
+ <dt>
+diff --git a/PRM/SOFTVECS.HTML b/PRM/SOFTVECS.HTML
+index 4353828..3d0a999 100644
+--- a/PRM/SOFTVECS.HTML
++++ b/PRM/SOFTVECS.HTML
+@@ -656,13 +656,13 @@ Vector
+ <h5><a name="marker-567802"></a>ByteV</h5>
+ <dd>
+ <p>ByteV is used to indirect all calls to <a name="marker-567830"></a>OS_Byte - see <A HREF="OSBYTE.HTML#65869">OS_Byte</a> for full details. The default action is to call the ROM OS_Byte routine.</p>
+-<p>Note that interrupts are disabled when an OS_Byte is called. If you claim this vector, your routine must enable interrupts if its processing takes a long time (over 100<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s), and be prepared to be re-entered.</p>
++<p>Note that interrupts are disabled when an OS_Byte is called. If you claim this vector, your routine must enable interrupts if its processing takes a long time (over 100µs), and be prepared to be re-entered.</p>
+ 
+ <dt>
+ <h5><a name="marker-567803"></a>WordV</h5>
+ <dd>
+ <p>WordV is used to indirect all calls to <a name="marker-567831"></a>OS_Word - see <A HREF="OSWORD.HTML#15524">OS_Word</a> for full details. The default action is to call the ROM OS_Word routine.</p>
+-<p>Note that interrupts are disabled when an OS_Word is called. If you claim this vector, your routine must enable interrupts if its processing takes a long time (over 100<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s), and be prepared to be re-entered.</p>
++<p>Note that interrupts are disabled when an OS_Word is called. If you claim this vector, your routine must enable interrupts if its processing takes a long time (over 100µs), and be prepared to be re-entered.</p>
+ 
+ <dt>
+ <h5><a name="marker-567804"></a>FileV</h5>
+@@ -1227,7 +1227,7 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-8765"></a>Use</h5>
+ <dd>
+ <p>This vector is called every centisecond. It must never be intercepted, as this would prevent other clients from being called.</p>
+-<p>Routines that take a long time (say &gt; 100<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s) may re-enable IRQ so long as they disable it again before passing the call on. If you do so, other calls may be made to TickerV in the meantime. Your routine needs to prevent or cope with re-entrancy. One way of ensuring that the code is single threaded is:</p>
++<p>Routines that take a long time (say &gt; 100µs) may re-enable IRQ so long as they disable it again before passing the call on. If you do so, other calls may be made to TickerV in the meantime. Your routine needs to prevent or cope with re-entrancy. One way of ensuring that the code is single threaded is:</p>
+ <ul>
+ <li>to use a flag in its workspace to note that it is currently threaded, and:
+ <li>to keep a count of how many calls to TickerV have been missed while it was threaded, so the count can be examined on exit and corrected for.
+diff --git a/PRM/SOUND.HTML b/PRM/SOUND.HTML
+index bf5f384..195f9ea 100644
+--- a/PRM/SOUND.HTML
++++ b/PRM/SOUND.HTML
+@@ -114,18 +114,18 @@
+ <dt>
+ <h5><a name="idx-8809"></a>Sample rate: maximum</h5>
+ <dd>
+-<p>A high <a name="marker-650642"></a>sample rate will give the best sound quality. If too high a rate is sought then DMA request conflicts will occur, especially when high bandwidths are also required from VIDC (the Video Controller) by high resolution screen modes. To avoid such contention the <a name="marker-650644"></a>output period must not be less than 4<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S. OUTPUTTING A BYTE TO ONE OF EIGHT CHANNELS EVERY 4<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S RESULTS IN A <A NAME="MARKER-650645"></A>SAMPLE PERIOD OF 32<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s, which gives a maximum sample rate of 31.25kHz.</p>
++<p>A high <a name="marker-650642"></a>sample rate will give the best sound quality. If too high a rate is sought then DMA request conflicts will occur, especially when high bandwidths are also required from VIDC (the Video Controller) by high resolution screen modes. To avoid such contention the <a name="marker-650644"></a>output period must not be less than 4µS. OUTPUTTING A BYTE TO ONE OF EIGHT CHANNELS EVERY 4µS RESULTS IN A <A NAME="MARKER-650645"></A>SAMPLE PERIOD OF 32µs, which gives a maximum sample rate of 31.25kHz.</p>
+ 
+ <dt>
+ <h5><a name="idx-8810"></a>Sample rate: default</h5>
+ <dd>
+-<p>The <a name="marker-650648"></a>clock for the Sound system is derived from the system clock for the video controller, which is then divided by a multiple of 24. Current ARM based computers use a <a name="marker-650647"></a>VIDC system clock of 24MHz, 25.175MHz or 36MHz, depending on the screen mode and monitor type selected. The default output period is 6<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S_ WHICH IS COMPATIBLE WITH VIDC SYSTEM CLOCKS RUNNING AT MULTIPLES OF 4MHZ FROM 12MHZ UPWARDS (IE 12MHZ_ 16MHZ_ 20MHZ...). THIS 6<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s output period is obtained as follows from the 24MHz and 36MHz VIDC system clocks:</p>
++<p>The <a name="marker-650648"></a>clock for the Sound system is derived from the system clock for the video controller, which is then divided by a multiple of 24. Current ARM based computers use a <a name="marker-650647"></a>VIDC system clock of 24MHz, 25.175MHz or 36MHz, depending on the screen mode and monitor type selected. The default output period is 6µS_ WHICH IS COMPATIBLE WITH VIDC SYSTEM CLOCKS RUNNING AT MULTIPLES OF 4MHZ FROM 12MHZ UPWARDS (IE 12MHZ_ 16MHZ_ 20MHZ...). THIS 6µs output period is obtained as follows from the 24MHz and 36MHz VIDC system clocks:</p>
+ <ul>
+ <li>24MHz clock divided by 144 (6 × 24)
+ <li>36MHz clock divided by 216 (9 × 24)
+ </ul>
+ <p>Unfortunately with a VIDC system clock of 25.175MHz (used for VGA screen modes) the same output period cannot be produced. The divider used is the same as for a 24MHz VIDC system clock (ie 144, or 6 × 24), which results in a slightly shorter output period, and so <a name="marker-650646"></a>sounds are approximately a semitone higher.</p>
+-<p>Outputting a byte to one of eight channels every 6<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">S RESULTS IN A SAMPLE PERIOD OF 48<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s, which gives a default sample rate of 20.833kHz.</p>
++<p>Outputting a byte to one of eight channels every 6µS RESULTS IN A SAMPLE PERIOD OF 48µs, which gives a default sample rate of 20.833kHz.</p>
+ 
+ <dt>
+ <h5><a name="idx-8811"></a>Buffer length</h5>
+@@ -357,7 +357,7 @@ Image registers programmed individually.</p>
+ <td align="left" valign="top">channel number
+ <tr>
+ <td align="left" valign="top">R8
+-<td align="left" valign="top"><a name="marker-650677"></a>sample period in <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s
++<td align="left" valign="top"><a name="marker-650677"></a>sample period in µs
+ <tr>
+ <td align="left" valign="top">R9
+ <td align="left" valign="top">pointer to SCCB (<a name="marker-650678"></a>Sound Channel Control Block)
+@@ -538,7 +538,7 @@ Image registers programmed individually.</p>
+ <dd>
+ <p>R0 = number of <a name="marker-650612"></a>channels, rounded up to 1,2,4 or 8<br>
+ R1 = <a name="marker-650353"></a>sample length (in bytes per channel - default 208) <br>
+-R2 = <a name="marker-650360"></a>sample period (in <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s per channel - default 48) <br>
++R2 = <a name="marker-650360"></a>sample period (in µs per channel - default 48) <br>
+ R3 = pointer to <a name="marker-650361"></a>Channel Handler (normally 0 to preserve system Handler) <br>
+ R4 = pointer to <a name="marker-650377"></a>Scheduler (normally 0 to preserve system Scheduler) </p>
+ 
+diff --git a/PRM/SOUNDDMA.HTML b/PRM/SOUNDDMA.HTML
+index a3206a2..8a30cb2 100644
+--- a/PRM/SOUNDDMA.HTML
++++ b/PRM/SOUNDDMA.HTML
+@@ -14,7 +14,7 @@
+ <dd>
+ <dl>
+ <dd>
+-<p>From RISC OS 3.6 onwards the Sound<a name="marker-300206"></a>DMA module has been extended to support 16 bit sound, as well as the 8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law sound used by all earlier versions of RISC OS. This module is also supplied with the 16 bit Audio Card upgrade for the Risc PC.</p>
++<p>From RISC OS 3.6 onwards the Sound<a name="marker-300206"></a>DMA module has been extended to support 16 bit sound, as well as the 8 bit µ-law sound used by all earlier versions of RISC OS. This module is also supplied with the 16 bit Audio Card upgrade for the Risc PC.</p>
+ </dl>
+ 
+ <dt>
+@@ -24,7 +24,7 @@
+ <dd>
+ <p>Machines using the new architecture all output sound using the <a name="marker-300212"></a>VIDC20 video controller - whether it is a separate chip, or integrated into the ARM 7500 chip. VIDC20 provides two different types of sound output:</p>
+ <ul>
+-<li><p>It provides 8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law sound on 8 channels; this is fully backward compatible with the sound provided by VIDC1 under earlier versions of RISC OS.</p>
++<li><p>It provides 8 bit µ-law sound on 8 channels; this is fully backward compatible with the sound provided by VIDC1 under earlier versions of RISC OS.</p>
+ <p>This is output as an analogue signal, via internal sound DACs (digital to analogue converters) - just as with VIDC1.</p>
+ <li><p>It also provides 16 bit linear stereo sound (ie CD-style).</p>
+ <p>This is output as digital data, and requires an external <a name="marker-300501"></a>DAC. The 16 bit Audio Card upgrade for the Risc PC provides such a DAC; one is fitted as standard to later designs of computer.</p>
+@@ -51,7 +51,7 @@
+ <dd>
+ <dl>
+ <dd>
+-<p>When the new SoundDMA module uses <a name="marker-300236"></a>VIDC20's 8 bit sound output, it works just as on earlier versions of RISC OS. The standard VIDC20 internal <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law DACs are used, as with VIDC1 and earlier versions of RISC OS.</p>
++<p>When the new SoundDMA module uses <a name="marker-300236"></a>VIDC20's 8 bit sound output, it works just as on earlier versions of RISC OS. The standard VIDC20 internal µ-law DACs are used, as with VIDC1 and earlier versions of RISC OS.</p>
+ </dl>
+ 
+ <dt>
+@@ -98,14 +98,14 @@
+ <dt>
+ <h5><a name="51190"></a>Support for 8 bit sound</h5>
+ <dd>
+-<p>The new SoundDMA module also supports 8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-LAW SOUND. THE SOUND IS GENERATED IN THE SAME WAY AS BEFORE: THE 8 BIT <A NAME="MARKER-300265"></A>CHANNEL HANDLER GENERATES <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-LAW DATA WHICH IT PLACES IN THE SOUND DMA <A NAME="MARKER-300269"></A>BUFFER. (FOR FULL DETAILS SEE <A HREF="SQUASH.HTML#21197">The Sound system</a>.) The SoundDMA module converts this data from multiple channels in <a name="marker-300266"></a>8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-LAW FORMAT TO TWO STEREO CHANNELS IN 16 BIT LINEAR FORMAT. IT THEN CALLS THE LINEAR HANDLER (IF ANY) TO FILL THE DMA BUFFER WITH ITS OWN SOUND DATA; THE LINEAR HANDLER CAN EITHER OVERWRITE THE CONVERTED 8 BIT SOUND DATA ALREADY IN THE BUFFER_ OR CAN MERGE IT WITH ITS OWN SOUND DATA. ALL LINEAR HANDLERS SHOULD ALLOW THE USER TO CONFIGURE THEIR PREFERENCE FOR THIS.<A NAME="MARKER-300271"></a></p>
++<p>The new SoundDMA module also supports 8 bit µ-LAW SOUND. THE SOUND IS GENERATED IN THE SAME WAY AS BEFORE: THE 8 BIT <A NAME="MARKER-300265"></A>CHANNEL HANDLER GENERATES µ-LAW DATA WHICH IT PLACES IN THE SOUND DMA <A NAME="MARKER-300269"></A>BUFFER. (FOR FULL DETAILS SEE <A HREF="SQUASH.HTML#21197">The Sound system</a>.) The SoundDMA module converts this data from multiple channels in <a name="marker-300266"></a>8 bit µ-LAW FORMAT TO TWO STEREO CHANNELS IN 16 BIT LINEAR FORMAT. IT THEN CALLS THE LINEAR HANDLER (IF ANY) TO FILL THE DMA BUFFER WITH ITS OWN SOUND DATA; THE LINEAR HANDLER CAN EITHER OVERWRITE THE CONVERTED 8 BIT SOUND DATA ALREADY IN THE BUFFER_ OR CAN MERGE IT WITH ITS OWN SOUND DATA. ALL LINEAR HANDLERS SHOULD ALLOW THE USER TO CONFIGURE THEIR PREFERENCE FOR THIS.<A NAME="MARKER-300271"></a></p>
+ <dd>
+ 
+ <h6><a name="92430"></a>Restrictions of the 8 bit emulation</h6>
+ <dd>
+ <p>This conversion of 8 bit sound to 16 bit sound is transparent, and in general no difference from the old 8 bit sound system will be apparent. However:</p>
+ <ul>
+-<li>Although the 16 bit sound system provides many of the <a name="marker-300282"></a>sample periods possible under the old 8 bit sound system - including the default period of 48<img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">s used by the standard voice generators and many applications - there are a few less commonly used periods for which it can only provide a close match.
++<li>Although the 16 bit sound system provides many of the <a name="marker-300282"></a>sample periods possible under the old 8 bit sound system - including the default period of 48µs used by the standard voice generators and many applications - there are a few less commonly used periods for which it can only provide a close match.
+ <li><p>The 8 bit samples must fit within the sound DMA <a name="marker-300283"></a>buffer when they are converted to 16 bit stereo sound, and hence must total less than a page in size. This means that the number of 8 bit samples is limited to 1K without oversampling, or 512 with oversampling. Again, this is not a problem with the 8 bit default of 208 samples per channel.<a name="marker-300277"></a></p>
+ </ul>
+ </dl>
+@@ -142,7 +142,7 @@
+ <dt>
+ <h5><a name="idx-9135"></a>How linear handlers are called</h5>
+ <dd>
+-<p>The <a name="marker-300316"></a>handler is passed the address of the sound DMA <a name="marker-300315"></a>buffer for it to fill with 16 bit linear stereo sound data. <a name="marker-300323"></a>Each sample is stored in a word as a pair of signed (2's complement) 16 bit values, with the right channel data in bits 0 - 15, and the left channel data in bits 16 - 31. A flag indicates if the buffer already contains sound data <a name="marker-300325"></a>converted from multiple channels in 8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-LAW FORMAT; SEE <A HREF="#51190">Support for 8 bit sound</a> for more details of the action the linear handler should take in this case.</p>
++<p>The <a name="marker-300316"></a>handler is passed the address of the sound DMA <a name="marker-300315"></a>buffer for it to fill with 16 bit linear stereo sound data. <a name="marker-300323"></a>Each sample is stored in a word as a pair of signed (2's complement) 16 bit values, with the right channel data in bits 0 - 15, and the left channel data in bits 16 - 31. A flag indicates if the buffer already contains sound data <a name="marker-300325"></a>converted from multiple channels in 8 bit µ-LAW FORMAT; SEE <A HREF="#51190">Support for 8 bit sound</a> for more details of the action the linear handler should take in this case.</p>
+ <p>The full conditions for entry and exit are as follows:</p>
+ 
+ <h6><a name="idx-9136"></a>On entry</h6>
+@@ -161,7 +161,7 @@ R3 = flags:
+ <td align="left" valign="top">data in buffer is invalid and must be overwritten
+ <tr>
+ <td align="left" valign="top">1
+-<td align="left" valign="top">data in buffer has been converted from multiple channels in 8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law format, and is not all 0.
++<td align="left" valign="top">data in buffer has been converted from multiple channels in 8 bit µ-law format, and is not all 0.
+ <tr>
+ <td align="left" valign="top">2
+ <td align="left" valign="top">data in buffer is all 0: if handler would generate silent output, it may simply return.
+@@ -271,9 +271,9 @@ Fast interrupts are enabled </p>
+ <dd>
+ <table>
+ <tr>
+-<td align="left" valign="top">0 ⇒ THE SOUND SYSTEM ONLY SUPPORTS 8 BIT <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law sound; R1 is 0, and R2 preserved
++<td align="left" valign="top">0 ⇒ THE SOUND SYSTEM ONLY SUPPORTS 8 BIT µ-law sound; R1 is 0, and R2 preserved
+ <tr>
+-<td align="left" valign="top">1 ⇒ THE SOUND SYSTEM SUPPORTS 16 BIT SOUND_ AND ALSO 8 BIT <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law sound by emulation; other registers as below
++<td align="left" valign="top">1 ⇒ THE SOUND SYSTEM SUPPORTS 16 BIT SOUND_ AND ALSO 8 BIT µ-law sound by emulation; other registers as below
+ </table>
+ </dl>
+ R1 = the configuration stored in SoundSystem bits at offset 132 of <A HREF="CMOS.HTML#38752">CMOS RAM allocation</a>:
+@@ -613,7 +613,7 @@ R2 = previous sample rate, in units of 1/1024 Hz</p>
+ <table>
+ <tr>
+ <td align="left" valign="top"><tt>8bit</tt>
+-<td align="left" valign="top">standard 8 bit <img src="../SYMBOLS/ENTITIES/956.PNG" alt="[MU]">-law sound, as on older hardware
++<td align="left" valign="top">standard 8 bit µ-law sound, as on older hardware
+ <tr>
+ <td align="left" valign="top"><tt>16bit</tt>
+ <td align="left" valign="top">standard 16 bit sound, as on newer hardware or Acorn 16 bit Audio Card
+diff --git a/SYMBOLS/ENTITIES/956.PNG b/SYMBOLS/ENTITIES/956.PNG
+deleted file mode 100644
+index 4e43487b631f5997733986fce068076eedd9305f..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 201
+zcmeAS@N?(olHy`uVBq!ia0vp^d_XMB0VEh&vy(l56jMo%UoZnB<CMSafV?J87srr_
+zTgfSVjw>8KcHqE=cg+0~%*@Qn%!g~;+}w__wXpyxH8v54@OQ#&Y;E!E5<u|I(9pnO
+zid}Mr=+EYdjEC3n<mpio;^E=a`P(ijVZ_8|d`EnT?7{~dXHVQ1eLT@t`EXs^@g9x?
+uC2bFRHl1{r>{BXUZ?MPlnc8O;<wC}3+hniUg+<zc-011*=d#Wzp$Pz@9YLZ1
+
+-- 
+2.29.2
+

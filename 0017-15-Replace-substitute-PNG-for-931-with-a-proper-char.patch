@@ -1,0 +1,54 @@
+From bebc5040aafad8aca3710347dad72b236f1cfd47 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Thu, 4 Mar 2021 22:56:38 +0000
+Subject: [PATCH 17/24] =?UTF-8?q?15:=20Replace=20substitute=20PNG=20for=20?=
+ =?UTF-8?q?931=20with=20a=20proper=20=CE=A3=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ PRM/FILEFORMATS.HTML     |   4 ++--
+ SYMBOLS/ENTITIES/931.PNG | Bin 251 -> 0 bytes
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/931.PNG
+
+diff --git a/PRM/FILEFORMATS.HTML b/PRM/FILEFORMATS.HTML
+index b76b674..2d31c13 100644
+--- a/PRM/FILEFORMATS.HTML
++++ b/PRM/FILEFORMATS.HTML
+@@ -2152,7 +2152,7 @@ LFont_Trinity.Medium.Italic:</pre></p>
+ <td align="left" valign="top">gate data (see <A HREF="#64897">Gates</a>)<br>
+ <i>For c = 1 to 8 (ie for each channel in turn)</i>
+ <tr>
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/931.PNG" alt="[SUMATION]"><i>q1</i>...<i>q8</i>
++<td align="left" valign="top">Σ<i>q1</i>...<i>q8</i>
+ <td align="left" valign="top">
+ <ul>
+ data for all notes or rests in channel <i>c</i> (see <A HREF="#70145">Notes and rests</a>)
+@@ -2370,7 +2370,7 @@ Sound_QTempo value = beats per minute × 128 × 4096 / 6000</ul></p>
+ <td align="left" valign="top">1
+ <td align="left" valign="top">8 indicates Instrument names follow
+ <tr>
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/931.PNG" alt="[SUMATION]">n1...n8
++<td align="left" valign="top">Σn1...n8
+ <td align="left" valign="top">8 null terminated strings for each <i>voice number</i> used in ascending order in command 3 above.
+ </table>
+ </dl>
+diff --git a/SYMBOLS/ENTITIES/931.PNG b/SYMBOLS/ENTITIES/931.PNG
+deleted file mode 100644
+index f8a18c56e713724c4b691ba9b0c0f53c593aa841..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 251
+zcmeAS@N?(olHy`uVBq!ia0vp^{6H+k0VEg}e!YDeNHLWJ`2{mDGEVus4#?Z$>Eakt
+zam)AoLasvv0>?kzpROw*#>4Hc#gSz2MvzU4XVKL+!fym~?3xZH7)iEe9^ED`z$T?8
+z!Q*Wd5E#&$*z`Yp{%_givNyf{ukwErR<6BW*>nC~+X*LPLxUK)92*p-{ZVJA<Y!zc
+z!sO7>uwDOXDl=nB-<>-K-YfHGZIo(#xpnfap9ee7)VfyxQWm?E9Ws0Rcl#Xfm%Hwt
+y@iNzMYAx4F&)+ECdBjZaT*)_{FhxtLvi5jSVNGALzeYPjzVdYSb6Mw<&;$U)#9hJw
+
+-- 
+2.29.2
+

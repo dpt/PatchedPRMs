@@ -1,0 +1,592 @@
+From 88973820dfdfb6f6e7610456030e8ba29c843e9b Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Thu, 4 Mar 2021 23:31:36 +0000
+Subject: [PATCH 23/24] =?UTF-8?q?21:=20Replace=20substitute=20PNG=20for=20?=
+ =?UTF-8?q?8805=20with=20a=20proper=20=E2=89=A5=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ PRM/ADFS.HTML                  |  16 ++++++++--------
+ PRM/BUFFERS.HTML               |   2 +-
+ PRM/CHARINPUT.HTML             |   2 +-
+ PRM/CHAROUTPUT.HTML            |   2 +-
+ PRM/COLOURTRANS.HTML           |  26 +++++++++++++-------------
+ PRM/CONVERSIONS.HTML           |   2 +-
+ PRM/ECONET.HTML                |   2 +-
+ PRM/FILECORE.HTML              |   4 ++--
+ PRM/FILEFORMATS.HTML           |  12 ++++++------
+ PRM/FILESWITCH.HTML            |   8 ++++----
+ PRM/PDRIVERS.HTML              |   2 +-
+ PRM/PROCSTD.HTML               |   4 ++--
+ PRM/PROGENV.HTML               |   4 ++--
+ PRM/SHAREDCLIBRARY.HTML        |   2 +-
+ PRM/SOUND.HTML                 |   4 ++--
+ PRM/TERRITORY.HTML             |   2 +-
+ PRM/VDU.HTML                   |   2 +-
+ PRM/VIDEO.HTML                 |   2 +-
+ PRM/WIMP.HTML                  |  10 +++++-----
+ SYMBOLS/ENTITIES/8805.PNG      | Bin 208 -> 0 bytes
+ TOOLBOX/DDE/APPE.HTML          |   2 +-
+ TOOLBOX/DDE/APPF.HTML          |   4 ++--
+ TOOLBOX/TOOLBOX/TOOLINTRO.HTML |   4 ++--
+ 23 files changed, 59 insertions(+), 59 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/8805.PNG
+
+diff --git a/PRM/ADFS.HTML b/PRM/ADFS.HTML
+index 0ae45f3..1c9f005 100644
+--- a/PRM/ADFS.HTML
++++ b/PRM/ADFS.HTML
+@@ -370,18 +370,18 @@ Assuming the drive is always running fast gives an actual workable track length
+ <th align="left" valign="top">~gap4
+ <tr>
+ <td align="left" valign="top">FM
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">16
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">10
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">16
++<td align="left" valign="top">≥16
++<td align="left" valign="top">≥10
++<td align="left" valign="top">≥16
+ <tr>
+ <td align="left" valign="top">MFM
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">32
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">24
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">16
++<td align="left" valign="top">≥32
++<td align="left" valign="top">≥24
++<td align="left" valign="top">≥16
+ </table>
+ </dl>
+ <p>Evaluation of 'does it fit' is:</p>
+-<p>Low track length - gap1 + gap3 - (secsize + SecOvrhead + gap3)×secs <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> min. gap4</p>
++<p>Low track length - gap1 + gap3 - (secsize + SecOvrhead + gap3)×secs ≥ min. gap4</p>
+ <p>If 'no', does it fit using minimum gap1 and minimum gap3?</p>
+ <ul>
+ <li>If so, divide slack amongst gaps (including gap4); else return error
+@@ -402,7 +402,7 @@ Assuming the drive is always running fast gives an actual workable track length
+ <li>Disc changed support should be available on pin 34, and should be resettable with a step pulse.
+ <li>The drive should mask <a name="marker-642679"></a>index pulses when selected but without a disc present.
+ <li>The drive should not mask index pulses whilst step pulses are being issued.
+-<li>The drive should support a 'density in' signal (from FDC) that is active high for high density (<img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">500Kbps).
++<li>The drive should support a 'density in' signal (from FDC) that is active high for high density (≥500Kbps).
+ <li>The drive should supply media ID signals that indicate the greatest density supported by the current drive/media.
+ <li>Drives 0/1 should be ready to use within 500mS of motor startup.
+ <li>Drives 2/3 should be ready to use within 1000mS of motor startup.
+diff --git a/PRM/BUFFERS.HTML b/PRM/BUFFERS.HTML
+index a6b7199..1a42f40 100644
+--- a/PRM/BUFFERS.HTML
++++ b/PRM/BUFFERS.HTML
+@@ -377,7 +377,7 @@ R1 = 254
+ <td align="left" valign="top">
+ R1 = 255
+ <td align="left" valign="top">number of bytes in the keyboard buffer</table>
+-<p>Obviously we are more concerned with the calls where R1 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 246 here. Note that R1 = (255 - buffer number) in these cases. If you want, you can also calculate this as { (- (buffer number + 1)) AND &amp;FF }.</p>
++<p>Obviously we are more concerned with the calls where R1 ≥ 246 here. Note that R1 = (255 - buffer number) in these cases. If you want, you can also calculate this as { (- (buffer number + 1)) AND &amp;FF }.</p>
+ <p>The calls to read the mouse position are considered obsolete, and are unreliable because they read the buffered position rather than the actual position. You should use <A HREF="VDU.HTML#53334">OS_Mouse</a> instead.</p>
+ 
+ <dt>
+diff --git a/PRM/CHARINPUT.HTML b/PRM/CHARINPUT.HTML
+index 025183f..cd48171 100644
+--- a/PRM/CHARINPUT.HTML
++++ b/PRM/CHARINPUT.HTML
+@@ -2606,7 +2606,7 @@ Fast interrupts are enabled</p>
+ <p>If the value of R1 passed is zero, then Shift and Ctrl are enabled. Any non-zero value will disable them; this is the default.</p>
+ <p>If they are enabled then the following actions occur depending on the value generated by a key:</p>
+ <ul>
+-<li>if the value <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> &amp;80:<br>
++<li>if the value ≥ &amp;80:<br>
+ <dl>
+ <dd>Shift exclusive ORs the value with &amp;10<br>
+ Ctrl exclusive ORs the value with &amp;20</dl>
+diff --git a/PRM/CHAROUTPUT.HTML b/PRM/CHAROUTPUT.HTML
+index 88c592e..9dd783a 100644
+--- a/PRM/CHAROUTPUT.HTML
++++ b/PRM/CHAROUTPUT.HTML
+@@ -712,7 +712,7 @@ Fast interrupts are enabled</p>
+ <dd>
+ <p>The state stored is changed by being masked with R2 and then exclusive ORd with R1: ie ((state AND R2) XOR R1). This means that R2 controls which bits are changed and R1 supplies the new bits.</p>
+ <p>This call allows reading the current <i>NoIgnore</i> state or changing it to a new value.</p>
+-<p>If the value read or written is <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">&amp;80 (ie has bit 7 set), then the printer ignore character is not used. If bit 7 is clear, then the current printer ignore character is filtered out.</p>
++<p>If the value read or written is ≥&amp;80 (ie has bit 7 set), then the printer ignore character is not used. If bit 7 is clear, then the current printer ignore character is filtered out.</p>
+ <p>The default setting of this flag is controlled by *Configure Ignore and may be changed temporarily using *Ignore.</p>
+ 
+ <dt>
+diff --git a/PRM/COLOURTRANS.HTML b/PRM/COLOURTRANS.HTML
+index 81e887e..a56d844 100644
+--- a/PRM/COLOURTRANS.HTML
++++ b/PRM/COLOURTRANS.HTML
+@@ -444,11 +444,11 @@ Given palette entry, mode and palette pointer, return furthest colour number</p>
+ <h5><a name="idx-1579"></a>On entry</h5>
+ <dd>
+ <p>R0 = source mode, or -1 for current mode, or (if = 256) pointer to sprite, or (if &gt; 256) pointer to sprite area<br><!-- errata -->
+-R1 = source palette pointer, or -1 for current palette, or (if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R5)<br>
++R1 = source palette pointer, or -1 for current palette, or (if R0 ≥ 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R5)<br>
+ R2 = destination mode, or -1 for current mode<br>
+ R3 = destination palette pointer, or -1 for current palette, or 0 for default for the mode<br>
+ R4 = pointer to buffer, or 0 to return required size of buffer<br>
+-R5 = flags (used if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256):<br>
++R5 = flags (used if R0 ≥ 256):<br>
+ <dl>
+ <dd>
+ bit 0 set ⇒ R1 = pointer to sprite; else R1 = pointer to sprite name<br>
+@@ -462,8 +462,8 @@ bits 24 - 31 give format of table:<br>
+ all other bits reserved (must be zero)<br>
+ </dl>
+ </dl>
+-R6 = pointer to workspace for transfer function (if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256, and bit 2 of R5 is set)<br>
+-R7 = pointer to transfer function (if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256, and bit 2 of R5 is set)</p>
++R6 = pointer to workspace for transfer function (if R0 ≥ 256, and bit 2 of R5 is set)<br>
++R7 = pointer to transfer function (if R0 ≥ 256, and bit 2 of R5 is set)</p>
+ 
+ <dt>
+ <h5><a name="idx-1580"></a>On exit</h5>
+@@ -515,12 +515,12 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-1587"></a>On entry</h5>
+ <dd>
+-<p>R0 = source mode, or -1 for current mode, or (if <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256) pointer to sprite area<br>
+-R1 = source palette pointer, or -1 for current palette, or (if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R5)<br>
++<p>R0 = source mode, or -1 for current mode, or (if ≥ 256) pointer to sprite area<br>
++R1 = source palette pointer, or -1 for current palette, or (if R0 ≥ 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R5)<br>
+ R2 = destination mode, or -1 for current mode<br>
+ R3 = destination palette pointer, or -1 for current palette, or 0 for default for the mode<br>
+ R4 = pointer to buffer<br>
+-R5 = flags (used if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256):<br>
++R5 = flags (used if R0 ≥ 256):<br>
+ <dl>
+ <dd>
+ bit 0 set ⇒ R1 = pointer to sprite; else R1 = pointer to sprite name<br>
+@@ -1851,11 +1851,11 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-1803"></a>On entry</h5>
+ <dd>
+-<p>R0 = source mode, or -1 for current mode, or (if <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256) pointer to sprite area<br>
+-R1 = source palette pointer, or -1 for current palette, or (if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R4)<br>
++<p>R0 = source mode, or -1 for current mode, or (if ≥ 256) pointer to sprite area<br>
++R1 = source palette pointer, or -1 for current palette, or (if R0 ≥ 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R4)<br>
+ R2 = pointer to buffer, or 0 to return required size in R3<br>
+ R3 = size of buffer (if R2 ≠ 0)<br>
+-R4 = flags (used if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256):<br>
++R4 = flags (used if R0 ≥ 256):<br>
+ <dl>
+ <dd>
+ bit 0 set ⇒ R1 = pointer to sprite; else R1 = pointer to sprite name<br>
+@@ -1909,10 +1909,10 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-1811"></a>On entry</h5>
+ <dd>
+ <p>R0 = -1 to write current mode's palette, or pointer to sprite area<br>
+-R1 = -1 to write current palette, else ignored (if R0 = -1); or (if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 0) pointer to sprite name/sprite in area pointed to by R0 (as specified by R4)<br>
++R1 = -1 to write current palette, else ignored (if R0 = -1); or (if R0 ≥ 0) pointer to sprite name/sprite in area pointed to by R0 (as specified by R4)<br>
+ R2 = pointer to palette to write<br>
+ R3 reserved (must be zero)<br>
+-R4 = flags (used if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 0):<br>
++R4 = flags (used if R0 ≥ 0):<br>
+ <dl>
+ <dd>
+ bit 0 set ⇒ R1 = pointer to sprite; else R1 = pointer to sprite name<br>
+@@ -2172,7 +2172,7 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-1851"></a>On entry</h5>
+ <dd>
+ <p>R0 = source mode, or -1 for current mode, or (if = 256) pointer to sprite, or (if &gt; 256) pointer to sprite area<br><!-- errata -->
+-R1 = source palette pointer, or -1 for current palette, or (if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R5)<br>
++R1 = source palette pointer, or -1 for current palette, or (if R0 ≥ 256) pointer to sprite name/sprite in area pointed to by R0 (as specified by bit 0 of R5)<br>
+ R2 = destination mode, or -1 for current mode<br>
+ R3 = destination palette pointer, or -1 for current palette, or 0 for default for the mode<br>
+ R4 = pointer to buffer, or 0 to return required size of buffer<br>
+diff --git a/PRM/CONVERSIONS.HTML b/PRM/CONVERSIONS.HTML
+index 9aa8c3c..8ea5154 100644
+--- a/PRM/CONVERSIONS.HTML
++++ b/PRM/CONVERSIONS.HTML
+@@ -688,7 +688,7 @@ Fast interrupts are enabled</p>
+ <p>The returned string is null-terminated, and starts with an <a name="marker-489771"></a>X if the SWI number has bit 17 set. </p>
+ <p>SWI numbers &lt; &amp;200 have an 'OS_' prefix to the main part, and a SWI-dependent end section (which is 'Undefined' for unknown OS SWIs).</p>
+ <p>SWI numbers in the range &amp;100 to &amp;1FF are converted in the form OS_WriteI+"A", or OS_WriteI+23 if the character is not a printable one.</p>
+-<p>SWI numbers <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> &amp;200 are looked for in modules. If a suitable name is found, it is given in the form <i>module_name</i> or <i>module_number</i>, eg. Wimp_Initialise, Wimp_32. If no name is found in the modules, the string 'User' is returned.</p>
++<p>SWI numbers ≥ &amp;200 are looked for in modules. If a suitable name is found, it is given in the form <i>module_name</i> or <i>module_number</i>, eg. Wimp_Initialise, Wimp_32. If no name is found in the modules, the string 'User' is returned.</p>
+ <p>Note that this call does not correctly handle negative SWI numbers in RISC OS 2.</p>
+ 
+ <dt>
+diff --git a/PRM/ECONET.HTML b/PRM/ECONET.HTML
+index 7fce54a..0e0a235 100644
+--- a/PRM/ECONET.HTML
++++ b/PRM/ECONET.HTML
+@@ -225,7 +225,7 @@
+ <td align="left" valign="top">Count = 40, Delay = 5
+ <tr>
+ <td align="left" valign="top">All other transmissions:
+-<td align="left" valign="top">Delay × (Count - 1) <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 500<A NAME="MARKER-239999"></a>
++<td align="left" valign="top">Delay × (Count - 1) ≥ 500<A NAME="MARKER-239999"></a>
+ </table>
+ </dl>
+ 
+diff --git a/PRM/FILECORE.HTML b/PRM/FILECORE.HTML
+index 12a4029..de29e93 100644
+--- a/PRM/FILECORE.HTML
++++ b/PRM/FILECORE.HTML
+@@ -131,7 +131,7 @@
+ <tr>
+ <td align="left" valign="top">E
+ <td align="left" valign="top">New
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">1
++<td align="left" valign="top">≥1
+ <td align="left" valign="top">New
+ <td align="left" valign="top">Yes
+ </table>
+@@ -1766,7 +1766,7 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-3373"></a>On entry</h5>
+ <dd>
+-<p>R0 = pointer to buffer (must be <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 4K long)<br>
++<p>R0 = pointer to buffer (must be ≥ 4K long)<br>
+ R1 = pointer to disc record describing shape and format<br>
+ R2
+ <dl>
+diff --git a/PRM/FILEFORMATS.HTML b/PRM/FILEFORMATS.HTML
+index 2d31c13..cca207a 100644
+--- a/PRM/FILEFORMATS.HTML
++++ b/PRM/FILEFORMATS.HTML
+@@ -1443,7 +1443,7 @@ A zero value means the character is not defined.
+ <td align="left" valign="top" colspan="2">bits 2-5 reserved (must be zero)
+ <tr>
+ <td align="left" valign="top" colspan="2">
+-<td align="left" valign="top" colspan="2">bit 6 set ⇒ FLAG WORD PRECEDES INDEX IN CHUNK (MUST BE SET IF <I>VERSION NUMBER</I> <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 7, else clear).
++<td align="left" valign="top" colspan="2">bit 6 set ⇒ FLAG WORD PRECEDES INDEX IN CHUNK (MUST BE SET IF <I>VERSION NUMBER</I> ≥ 7, else clear).
+ <tr>
+ <td align="left" valign="top" colspan="2">
+ <td align="left" valign="top" colspan="2">bit 7 reserved (must be zero)
+@@ -1493,7 +1493,7 @@ A zero value means the character is not defined.
+ If offset(<i>n</i>+1)=offset(<i>n</i>), then chunk <i>n</i> is null.
+ </table>
+ </dl>
+-<p>If <i>version number</i> <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 8, these bytes end the header:</p>
++<p>If <i>version number</i> ≥ 8, these bytes end the header:</p>
+ <dl>
+ <dd>
+ <table>
+@@ -1600,7 +1600,7 @@ If offset(<i>n</i>+1)=offset(<i>n</i>), then chunk <i>n</i> is null.
+ <td align="left" valign="top" colspan="2">0 ⇒ no scaffold data for char
+ <tr>
+ <td align="left" valign="top">1
+-<td align="left" valign="top" colspan="2">skeleton threshold pixel size (if <i>version number</i> <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 5)
++<td align="left" valign="top" colspan="2">skeleton threshold pixel size (if <i>version number</i> ≥ 5)
+ <tr>
+ <td align="left" valign="top" colspan="2">
+ <td align="left" valign="top">When rastering the outlines, skeleton lines will only be drawn if either the x- or the y- pixel size is less than this value (except if value = 0, which means 'always draw skeleton lines').
+@@ -1672,7 +1672,7 @@ If offset(<i>n</i>+1)=offset(<i>n</i>), then chunk <i>n</i> is null.
+ <td align="left" valign="top" colspan="2">... word-aligned chunk data follows (see description below)
+ </table>
+ </dl>
+-<p>If <i>version number</i> <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 8:</p>
++<p>If <i>version number</i> ≥ 8:</p>
+ <dl>
+ <dd>
+ <table>
+@@ -1700,7 +1700,7 @@ If offset(<i>n</i>+1)=offset(<i>n</i>), then chunk <i>n</i> is null.
+ <dt>
+ <h5><a name="idx-3599"></a>Chunk data</h5>
+ <dd>
+-<p>If <i>version number</i> <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 7:</p>
++<p>If <i>version number</i> ≥ 7:</p>
+ <dl>
+ <dd>
+ <table>
+@@ -1748,7 +1748,7 @@ If offset(<i>n</i>+1)=offset(<i>n</i>), then chunk <i>n</i> is null.
+ <td align="left" valign="top" colspan="2">Size is × 4 if vertical placement is used, and × 4 if horizontal placement is used (because the character data is repeated for each of four possible sub-placements). Character index is more tightly bound than vertical placement, which is more tightly bound than horizontal placement.
+ <tr>
+ <td align="left" valign="top">?
+-<td align="left" valign="top" colspan="2">dependency bytes (if outline file, and <i>version</i> <i>number</i> <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 6)
++<td align="left" valign="top" colspan="2">dependency bytes (if outline file, and <i>version</i> <i>number</i> ≥ 6)
+ <tr>
+ <td align="left" valign="top" colspan="2">
+ <td align="left" valign="top">One bit required for each chunk in file.
+diff --git a/PRM/FILESWITCH.HTML b/PRM/FILESWITCH.HTML
+index 7bf922b..d2058eb 100644
+--- a/PRM/FILESWITCH.HTML
++++ b/PRM/FILESWITCH.HTML
+@@ -1819,7 +1819,7 @@ R5 = size of buffer</p>
+ <dd>
+ <table>
+ <tr>
+-<td align="left" valign="top" nowrap>R5 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 1 ⇒
++<td align="left" valign="top" nowrap>R5 ≥ 1 ⇒
+ <td align="left" valign="top">there are (R5 - 1) completely unused bytes in the buffer; so R5 = 1 ⇒ there are 0 unused bytes in the buffer, and therefore the terminator just fitted
+ <tr>
+ <td align="left" valign="top" nowrap>R5 ≤ 0 ⇒
+@@ -3150,7 +3150,7 @@ R1 = pointer to string</p>
+ <p>R0 preserved<br>
+ R1 = pointer to part of name past the filing system specifier if present<br>
+ R2 = -1 ⇒ no filing system was specified (call has no effect)<br>
+-R2 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 0 ⇒ old filing system to be reselected<br>
++R2 ≥ 0 ⇒ old filing system to be reselected<br>
+ R3 = pointer to special field, or 0 if none present</p>
+ 
+ <dt>
+@@ -3204,7 +3204,7 @@ R2 = pointer to filing system control block, or 0 if not found</p>
+ <h5><a name="idx-4036"></a>Use</h5>
+ <dd>
+ <p>This call checks for the presence of a filing system.</p>
+-<p>If R1 &lt; &amp;100 then it is the filing system number (see <A HREF="#97010">Filing system numbers</a>); if, however, R1 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> &amp;100 then it points to the filing system name. The filing system name match is case-insensitive. If R2 is 0, the filing system name is taken to be terminated with any control character or the characters: '#', ':' or '-'. If R2 is not 0, then the filing system name is terminated by any control character.</p>
++<p>If R1 &lt; &amp;100 then it is the filing system number (see <A HREF="#97010">Filing system numbers</a>); if, however, R1 ≥ &amp;100 then it points to the filing system name. The filing system name match is case-insensitive. If R2 is 0, the filing system name is taken to be terminated with any control character or the characters: '#', ':' or '-'. If R2 is not 0, then the filing system name is terminated by any control character.</p>
+ <p>The filing system control block that is pointed to by R2 on exit is for the internal use of FileSwitch, and you should not use or alter it. You should only test the value of R2 for equality (or not) with zero.</p>
+ <p>An error is returned if the filing system name contains bad characters or is badly terminated. </p>
+ <dd>
+@@ -3787,7 +3787,7 @@ R5 = size of buffer</p>
+ <dd>
+ <table>
+ <tr>
+-<td align="left" valign="top">R5 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 1 ⇒
++<td align="left" valign="top">R5 ≥ 1 ⇒
+ <td align="left" valign="top">there are (R5 - 1) completely unused bytes in the buffer; so R5 = 1 ⇒ there are 0 unused bytes in the buffer, and therefore the terminator just fitted
+ <tr>
+ <td align="left" valign="top">R5 ≤ 0 ⇒
+diff --git a/PRM/PDRIVERS.HTML b/PRM/PDRIVERS.HTML
+index aba433f..1952a05 100644
+--- a/PRM/PDRIVERS.HTML
++++ b/PRM/PDRIVERS.HTML
+@@ -1523,7 +1523,7 @@ It can  therefore look up precisely which RGB combination is supposedto correspo
+ <dd>
+ <p><a name="marker-132789"></a><a name="marker-132788"></a>You should only use the GCOL sequence (VDU 18,<i>gcol_action</i>,<i>colour</i>) if absolutely necessary, and you should be aware of the fact that the printer driver has a simplified interpretation of the parameters, as follows:</p>
+ <ul>
+-<li>As usual the background colour is affected if <i>colour</i> <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 128, and the foreground colour if <i>colour</i> &lt; 128.
++<li>As usual the background colour is affected if <i>colour</i> ≥ 128, and the foreground colour if <i>colour</i> &lt; 128.
+ <li>The <i>gcol_action</i> is treated in the same way as for ColourTrans_SetGCOL; see <A HREF="#88195">ColourTrans_SetGCOL</a>.
+ </ul>
+ <p>We strongly recommend that applications should use ColourTrans calls to set colours, as these will allow the printer to produce as accurate an approximation as it can to the desired colour, independently of the screen palette.<a name="marker-132783"></a><a name="marker-132787"></a></p>
+diff --git a/PRM/PROCSTD.HTML b/PRM/PROCSTD.HTML
+index 98467e6..c6d00e6 100644
+--- a/PRM/PROCSTD.HTML
++++ b/PRM/PROCSTD.HTML
+@@ -122,7 +122,7 @@ f7 FN 7   ; floating point preserved register<a name="marker-443376"></a></pre>
+ <dt>
+ <h5><a name="idx-7881"></a>Data representation and argument passing</h5>
+ <dd>
+-<p>The <a name="marker-443377"></a>APCS is defined in terms of N (<img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 0) word-sized arguments being passed from the caller to the callee, and a single word or floating-point result passed back by the callee. The standard does not describe the layout in store of records, arrays and so forth, used by ARM-targeted compilers for C, Pascal, Fortran-77, and so on. In other words, the mapping from language-level objects to APCS words is defined by each language's implementation, not by APCS, and, indeed, there is no formal reason why two implementations of, say, Pascal for the ARM should not use different mappings and, hence, not be cross-callable.</p>
++<p>The <a name="marker-443377"></a>APCS is defined in terms of N (≥ 0) word-sized arguments being passed from the caller to the callee, and a single word or floating-point result passed back by the callee. The standard does not describe the layout in store of records, arrays and so forth, used by ARM-targeted compilers for C, Pascal, Fortran-77, and so on. In other words, the mapping from language-level objects to APCS words is defined by each language's implementation, not by APCS, and, indeed, there is no formal reason why two implementations of, say, Pascal for the ARM should not use different mappings and, hence, not be cross-callable.</p>
+ <p>Obviously, it would be very unhelpful for a language implementor to stand by this formal position and implementors are strongly encouraged to adopt not just the letter of APCS but also the obviously natural mappings of source language objects into argument words. Strong hints are given about this in later sections which discuss (some) language specifics.</p>
+ 
+ <dt>
+@@ -130,7 +130,7 @@ f7 FN 7   ; floating point preserved register<a name="marker-443376"></a></pre>
+ <dd>
+ 
+ <h6><a name="idx-7883"></a>Control Arrival</h6>
+-<p>W<a name="marker-443378"></a>e consider the passing of N (<img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 0) ACTUAL ARGUMENT WORDS TO A PROCEDURE WHICH EXPECTS TO RECEIVE EITHER EXACTLY N ARGUMENT WORDS OR A VARIABLE NUMBER V (<img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 1) of argument words (it is assumed that there is at least one argument word which indicates in a language-implementation-dependent manner how many actual argument words there are: for example, by using a format string argument, a count argument, or an argument-list terminator).</p>
++<p>W<a name="marker-443378"></a>e consider the passing of N (≥ 0) ACTUAL ARGUMENT WORDS TO A PROCEDURE WHICH EXPECTS TO RECEIVE EITHER EXACTLY N ARGUMENT WORDS OR A VARIABLE NUMBER V (≥ 1) of argument words (it is assumed that there is at least one argument word which indicates in a language-implementation-dependent manner how many actual argument words there are: for example, by using a format string argument, a count argument, or an argument-list terminator).</p>
+ <p>At the instant when control arrives at the target procedure, the following shall be true (for any M, if a statement is made about argM, and M &gt; N, the statement can be ignored):</p>
+ <dl>
+ <dd>
+diff --git a/PRM/PROGENV.HTML b/PRM/PROGENV.HTML
+index d34f709..df412a7 100644
+--- a/PRM/PROGENV.HTML
++++ b/PRM/PROGENV.HTML
+@@ -1034,7 +1034,7 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-8018"></a>VarType_Code</h5>
+ <dd>
+-<p>When R4 is set to 16 on entry (and R2 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 0) a code variable may be created. In this case R1 is the pointer to the code fragment associated with the variable, and R2 is the length of the code fragment. This code must be word-aligned and takes the following format:</p>
++<p>When R4 is set to 16 on entry (and R2 ≥ 0) a code variable may be created. In this case R1 is the pointer to the code fragment associated with the variable, and R2 is the length of the code fragment. This code must be word-aligned and takes the following format:</p>
+ <ul>
+ <table>
+ <tr>
+@@ -1244,7 +1244,7 @@ R0
+ <td align="left" valign="top">UpCall
+ <td align="left" valign="top">R12 when called
+ <td align="left" valign="top">Ignored</table>
+-<p>The 'Memory limit' (handler 0) is the permitted RAM limit, as used by OS_GetEnv. The 'Application space' (handler 14) is the amount of read/write memory in application space. Consequently it should always be the case that Application space <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> Memory limit.</p>
++<p>The 'Memory limit' (handler 0) is the permitted RAM limit, as used by OS_GetEnv. The 'Application space' (handler 14) is the amount of read/write memory in application space. Consequently it should always be the case that Application space ≥ Memory limit.</p>
+ <p>'Other exceptions' (handler 5) is for future expansion.</p>
+ <p>The error buffer (handler 6) must be 256 bytes long.</p>
+ <p>The register buffers (handlers 7 and 8) must be word-aligned and 16 words long.</p>
+diff --git a/PRM/SHAREDCLIBRARY.HTML b/PRM/SHAREDCLIBRARY.HTML
+index 058d5c7..465096d 100644
+--- a/PRM/SHAREDCLIBRARY.HTML
++++ b/PRM/SHAREDCLIBRARY.HTML
+@@ -1848,7 +1848,7 @@ typedef void * allocproc(unsigned);</pre></p>
+ <h5><a name="76242"></a>Entry no. 46: _kernel_ExtendProc *_kernel_register_slotextend(_kernel_ExtendProc *<i>proc</i>)</h5>
+ <dd>
+ <p>When the initial heap (supplied to _kernel_init) is full, the kernel is normally capable of extending it by extending the wimpslot. However, if the heap limit is not the same as the application limit, it is assumed that someone else has acquired the space between, and the procedure registered here is called to request <tt><i>n</i></tt> bytes from it.</p>
+-<p>Its return value is expected to be <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> <tt><i>n</i></tt>, or 0 to indicate failure. If successful the word pointed to by <tt><i>p</i></tt> should be set to point to the space allocated.</p>
++<p>Its return value is expected to be ≥ <tt><i>n</i></tt>, or 0 to indicate failure. If successful the word pointed to by <tt><i>p</i></tt> should be set to point to the space allocated.</p>
+ </dl>
+ 
+ <dt>
+diff --git a/PRM/SOUND.HTML b/PRM/SOUND.HTML
+index 195f9ea..af9b511 100644
+--- a/PRM/SOUND.HTML
++++ b/PRM/SOUND.HTML
+@@ -655,7 +655,7 @@ R1 = image position:
+ <h5><a name="idx-8856"></a>On exit</h5>
+ <dd>
+ <p>R0 preserved <br>
+-R1 = previous image position, or -128 if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 8 on entry</p>
++R1 = previous image position, or -128 if R0 ≥ 8 on entry</p>
+ 
+ <dt>
+ <h5><a name="idx-8857"></a>Interrupts</h5>
+@@ -1234,7 +1234,7 @@ bits 11 - 0 are a 12-bit fraction of an octave (in units of 1/4096 octave)
+ <dt>
+ <h5><a name="idx-8948"></a>On exit</h5>
+ <dd>
+-<p>R0 = 32-bit phase accumulator value, or preserved if R0 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> &amp;8000 on entry</p>
++<p>R0 = 32-bit phase accumulator value, or preserved if R0 ≥ &amp;8000 on entry</p>
+ 
+ <dt>
+ <h5><a name="idx-8949"></a>Interrupts</h5>
+diff --git a/PRM/TERRITORY.HTML b/PRM/TERRITORY.HTML
+index d48b0ba..4f19bd1 100644
+--- a/PRM/TERRITORY.HTML
++++ b/PRM/TERRITORY.HTML
+@@ -2303,7 +2303,7 @@ Fast interrupts are enabled</p>
+ <dd>
+ <p>This call transforms the string pointed to by R2 and places the resulting string into the buffer pointed to by R1. The transformation is such that if a byte by byte comparison is applied to two transformed strings, then the strings will compare less than, equal to or greater than (as though Territory_Collate had been applied to the original strings).</p>
+ <p>If you call this SWI with R3 set to 0 on entry, R1 may be a null pointer. On exit R0 will contain the length of the transformed string, without altering the buffer. You may then set up a buffer of the required size (remembering to allow for the terminating null) before again calling this SWI to place the string in the buffer.</p>
+-<p>If R0 on exit is <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> R3 on entry (ie the string was too long to fit in the buffer) the contents of the buffer are undefined, but writing will not have occurred beyond the bounds of the buffer, since this call never writes more than R3 bytes.</p>
++<p>If R0 on exit is ≥ R3 on entry (ie the string was too long to fit in the buffer) the contents of the buffer are undefined, but writing will not have occurred beyond the bounds of the buffer, since this call never writes more than R3 bytes.</p>
+ <p>If copying takes place between strings that overlap the behaviour is undefined.</p>
+ <p>The C library function <i>strxfrm</i> calls this SWI. If you're programming in C you can instead use <i>strxfrm</i> to transform strings, provided you have previously called the <i>setlocale</i> function.</p>
+ <p>This call is not available in RISC OS 3 (version 3.00), and leaves the string unaltered in RISC OS 3 (version 3.10).</p>
+diff --git a/PRM/VDU.HTML b/PRM/VDU.HTML
+index 700365e..792546f 100644
+--- a/PRM/VDU.HTML
++++ b/PRM/VDU.HTML
+@@ -6926,7 +6926,7 @@ R3 =
+ <tr>
+ <td align="left" valign="top">
+ &nbsp;
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 4
++<td align="left" valign="top">≥ 4
+ <td align="left" valign="top">pointer to colour block (on 64-byte boundary):<br>
+ <table>
+ <tr>
+diff --git a/PRM/VIDEO.HTML b/PRM/VIDEO.HTML
+index 0faec1e..0c33fef 100644
+--- a/PRM/VIDEO.HTML
++++ b/PRM/VIDEO.HTML
+@@ -1669,7 +1669,7 @@ R1 = mode specifier</p>
+ <td align="left" valign="top">1
+ <tr>
+ <td align="left" valign="top">YEigFactor
+-<td align="left" valign="top">1 if yres <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> xres/2, or
++<td align="left" valign="top">1 if yres ≥ xres/2, or
+ 2 if yres &lt; xres/2
+ <tr>
+ <td align="left" valign="top">LineLength
+diff --git a/PRM/WIMP.HTML b/PRM/WIMP.HTML
+index 29f7e54..9fd2fe4 100644
+--- a/PRM/WIMP.HTML
++++ b/PRM/WIMP.HTML
+@@ -2235,7 +2235,7 @@ R3 = pointer to RAM area</p>
+ <p>R0 = last Wim<a name="marker-154180"></a>p version number known to task × 100 (310 for RISC OS 3 applications)<br>
+ R1 = 'TASK' (low byte = 'T', high byte = 'K', i.e. &amp;4B534154)<br>
+ R2 = pointer to short description of task, for use in Task Manager display<br>
+-R3 = pointer to a list of message numbers terminated by a 0 word (not if R0 is less than 300). If Wimp version number is <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">310 then a null pointer indicates that <b>no</b> messages are important to this task, whereas a null list indicates that <b>all</b> messages are important; this is the reverse of what you might expect.
++R3 = pointer to a list of message numbers terminated by a 0 word (not if R0 is less than 300). If Wimp version number is ≥310 then a null pointer indicates that <b>no</b> messages are important to this task, whereas a null list indicates that <b>all</b> messages are important; this is the reverse of what you might expect.
+ <dt>
+ 
+ <h5><a name="idx-11406"></a>On exit</h5>
+@@ -3267,7 +3267,7 @@ drag returns button state*16
+ 5 ⇒ action button (highlights when icon selected)<br>
+ 6 ⇒ default action button (highlights when icon selected)<br>
+ 7 ⇒ editable field<br>
+-<img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">8 ⇒ normal single pixel border</p>
++≥8 ⇒ normal single pixel border</p>
+ <p><tt><i>slab_in_colour</i></tt> - relates to the highlight colour applied to border types 5 &amp; 6. By default this is 14, but the validation string can over-ride this, when the icon is selected the foreground colour is retained and the background changes to the highlight colour.</p>
+ <p>The Bo(R)der command is not available in RISC OS 2, and does not correctly highlight fancy font icons under RISC OS 3.</p>
+ 
+@@ -4952,7 +4952,7 @@ Fast interrupts are enabled</p>
+ <td align="left" valign="top">Lefthand button pressed (Select)
+ </table>
+ </dl>
+-<p>If the mouse is over a user window (window handle <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">0) then the icon handle will be either a valid non-negative value for a user icon, or one of the following system values:</p>
++<p>If the mouse is over a user window (window handle ≥0) then the icon handle will be either a valid non-negative value for a user icon, or one of the following system values:</p>
+ <dl>
+ <dd>
+ <table>
+@@ -7727,7 +7727,7 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-11886"></a>Use</h5>
+ <dd>
+ <p>This SWI allows you to update the list of messages known by a certain task. This routine updates the messages list for the current task. </p>
+-<p>This call is of use only for tasks that specified a Wimp version number <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 300 to Wimp_Initialise.</p>
++<p>This call is of use only for tasks that specified a Wimp version number ≥ 300 to Wimp_Initialise.</p>
+ 
+ <dt>
+ <h5><a name="idx-11887"></a>Related SWIs</h5>
+@@ -7772,7 +7772,7 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-11894"></a>Use</h5>
+ <dd>
+ <p>This SWI allows the caller to remove messages from the list specified either on Wimp_Initialise or by Wimp_AddMessages. </p>
+-<p>This call is of use only for tasks that specified a Wimp version number <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 300 to Wimp_Initialise.</p>
++<p>This call is of use only for tasks that specified a Wimp version number ≥ 300 to Wimp_Initialise.</p>
+ 
+ <dt>
+ <h5><a name="idx-11895"></a>Related SWIs</h5>
+diff --git a/SYMBOLS/ENTITIES/8805.PNG b/SYMBOLS/ENTITIES/8805.PNG
+deleted file mode 100644
+index 02d386581db2105b983522ac89726c6d470f3a2e..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 208
+zcmeAS@N?(olHy`uVBq!ia0vp^d_XL~0VEih{|i0?QcNX5e!&ckj8p!u1M)gOT^vIy
+zZY5jD6wMQ4l+fcg*zv}_K=S@~Z-W_Y+KVM6>(5_L2$=a__E>64N=*J?g^T~?&ZVZ@
+zkw2ht;lo_U#8-K8ZNCfNz2)JXHsgH2yRR%_eJ!^G_C9Bpu;7~K?0XNaPAcntGCN!6
+zx9<hvZ>PWf-}mIjd6^s@jsrhx*oE|4677ZhAKEb}n5*pAS$;1C<Wx^rKbLh*2~7aL
+C2~czZ
+
+diff --git a/TOOLBOX/DDE/APPE.HTML b/TOOLBOX/DDE/APPE.HTML
+index 4224b99..c848707 100644
+--- a/TOOLBOX/DDE/APPE.HTML
++++ b/TOOLBOX/DDE/APPE.HTML
+@@ -1704,7 +1704,7 @@ End                          ; The list of offsets of locations to
+ </table>
+ <p><b>lineinc</b> describes how to calculate the source position (line, column) of the next statement from the source position of this one:</p>
+ <p>If lineinc is in the range 0 ≤ and &lt; 64, the new position is (line+lineinc,1). <br>
+-If lineinc <img src="../../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 64, the new position is (line, column+lineinc -64).</p>
++If lineinc ≥ 64, the new position is (line, column+lineinc -64).</p>
+ <p>The number of bytes of code generated for a statement may be zero, provided the line increment is non-zero (such an item may describe a block end or block start, for example).</p>
+ <p>It is not possible to describe a statement which generates no code and no line number increment, as that encoding is used as an escape to the long form lineinfo items described below.</p>
+ <p>If codeinc is greater than 255, or lineinc is required to describe a line number change greater than 63 or a column change greater than 191, then both bytes are written to describe 0 increments, and the real values are given in the following two or three (unsigned) half words. (Note that there are two ways to describe 0 increments: 0 lines and 0 columns, which serves to discriminate between the two half word and three half word forms). If the starting column for the next statement is 1, the two half word form is used, which in effect is a triple of half words as follows:</p>
+diff --git a/TOOLBOX/DDE/APPF.HTML b/TOOLBOX/DDE/APPF.HTML
+index 4ebab42..a36ecd3 100644
+--- a/TOOLBOX/DDE/APPF.HTML
++++ b/TOOLBOX/DDE/APPF.HTML
+@@ -216,7 +216,7 @@
+ <li>sl shall identify the current stack chunk in a system-defined manner
+ <li>at all times, sl shall identify the same chunk as sp points into.
+ </ul>
+-<p>Note: sl <img src="../../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> stack chunk limit + 256 allows the most common limit checks to be made very cheaply during function entry.</p>
++<p>Note: sl ≥ stack chunk limit + 256 allows the most common limit checks to be made very cheaply during function entry.</p>
+ <p>This final requirement implies that on changing stack chunks, sl and sp must be loaded simultaneously by means of an:</p>
+ <p><pre>LDM ..., {..., sl, sp}.</pre></p>
+ <p>In general, this means that return from a function executing on an extension chunk, to one executing on an earlier-allocated chunk, should be via an intermediate function invocation, specially fabricated when the stack was extended.</p>
+@@ -659,4 +659,4 @@ MOV    pc, lr                 ; MOVS in 26-bit modes</pre></p>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/TOOLBOX/TOOLBOX/TOOLINTRO.HTML b/TOOLBOX/TOOLBOX/TOOLINTRO.HTML
+index f2f1ab3..2027795 100644
+--- a/TOOLBOX/TOOLBOX/TOOLINTRO.HTML
++++ b/TOOLBOX/TOOLBOX/TOOLINTRO.HTML
+@@ -1284,7 +1284,7 @@ else buffer pointed at by R1 holds directory name passed to Toolbox_Initialise
+ <tr>
+ <td align="left" valign="top">R1
+ <td align="left" valign="top">=
+-<td align="left" valign="top">last Wimp version number known to task * 100 (must be <img src="../../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;=">310)
++<td align="left" valign="top">last Wimp version number known to task * 100 (must be ≥310)
+ <tr>
+ <td align="left" valign="top">R2
+ <td align="left" valign="top">=
+@@ -1573,4 +1573,4 @@ If R3 = 0, then no Toolbox events are delivered
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+-- 
+2.29.2
+

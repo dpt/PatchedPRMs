@@ -1,0 +1,131 @@
+From 773b7873d0854be63888dd78638f80f4c6abc9d3 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Thu, 4 Mar 2021 23:09:16 +0000
+Subject: [PATCH 21/24] =?UTF-8?q?19:=20Replace=20substitute=20PNG=20for=20?=
+ =?UTF-8?q?960=20with=20a=20proper=20=CF=80=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ BASIC/PART3/KEYWORDS.HTML |  18 +++++++++---------
+ SYMBOLS/ENTITIES/960.PNG  | Bin 215 -> 0 bytes
+ TOOLBOX/C/CMATHLIB.HTML   |   2 +-
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/960.PNG
+
+diff --git a/BASIC/PART3/KEYWORDS.HTML b/BASIC/PART3/KEYWORDS.HTML
+index 63c9b90..caeee05 100644
+--- a/BASIC/PART3/KEYWORDS.HTML
++++ b/BASIC/PART3/KEYWORDS.HTML
+@@ -170,7 +170,7 @@ Starting with 581628 bytes free.</tt><p>The number of bytes free in the above me
+ <dt>
+ <h5><a name="idx-226"></a>Result</h5>
+ <dd>
+-<p>Real in the range 0 to <img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI "> radians, being the inverse cosine of the argument.</p>
++<p>Real in the range 0 to π radians, being the inverse cosine of the argument.</p>
+ <dt>
+ <h5><a name="idx-227"></a>Examples</h5>
+ <dd>
+@@ -358,7 +358,7 @@ APPEND second_half$ </tt></p>
+ <dt>
+ <h5><a name="idx-246"></a>Result</h5>
+ <dd>
+-<p>Real in the range -<img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">/2 TO P<img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">/2 radians, being the inverse sine of the argument.</p>
++<p>Real in the range -π/2 TO Pπ/2 radians, being the inverse sine of the argument.</p>
+ <dt>
+ <h5><a name="idx-247"></a>Examples</h5>
+ <dd>
+@@ -382,7 +382,7 @@ angle=DEG(ASN(0.2213)) </tt></p>
+ <dt>
+ <h5><a name="idx-250"></a>Result</h5>
+ <dd>
+-<p>Real in the range -<img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">/2 TO P<img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">/2 radians, being the inverse tangent of the argument.</p>
++<p>Real in the range -π/2 TO Pπ/2 radians, being the inverse tangent of the argument.</p>
+ <dt>
+ <h5><a name="idx-251"></a>Examples</h5>
+ <dd>
+@@ -1718,7 +1718,7 @@ COLOUR 1,255,255,255 : REM logical colour 1 = white</tt></p>
+ <h5><a name="idx-309"></a>Result</h5>
+ <dd>
+ <p>Real between -1 and +1 inclusive.</p>
+-<p>Note: If the argument is outside the range -8388608 to 8388608 radians, it is impossible to determine how many <img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">s to subtract. The error <tt>Accuracy lost in sine</tt>/<tt>cosine</tt>/<tt>tangent</tt> is generated.</p>
++<p>Note: If the argument is outside the range -8388608 to 8388608 radians, it is impossible to determine how many πs to subtract. The error <tt>Accuracy lost in sine</tt>/<tt>cosine</tt>/<tt>tangent</tt> is generated.</p>
+ <dt>
+ <h5><a name="idx-310"></a>Examples</h5>
+ <dd>
+@@ -1871,7 +1871,7 @@ DEF PROCarray_determinant(A())</tt></p>
+ <dt>
+ <h5><a name="idx-327"></a>Result</h5>
+ <dd>
+-<p>A real equal to 180*<i>n</i>/<img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI "> where n is the argument's value.</p>
++<p>A real equal to 180*<i>n</i>/π where n is the argument's value.</p>
+ <dt>
+ <h5><a name="idx-328"></a>Examples</h5>
+ <dd>
+@@ -4014,7 +4014,7 @@ OTHERWISE PROCdraw(x,y) : PROCwait</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Function returning the value of <img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">.</p>
++<p>Function returning the value of π.</p>
+ <dt>
+ <h5><a name="idx-600"></a>Syntax</h5>
+ <dd>
+@@ -4338,7 +4338,7 @@ Function returning <tt>-quit</tt> status.</p>
+ <dt>
+ <h5><a name="idx-642"></a>Result</h5>
+ <dd>
+-<p>A real giving the corresponding value in radians: argument*<img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">/180.</p>
++<p>A real giving the corresponding value in radians: argument*π/180.</p>
+ <dt>
+ <h5><a name="idx-643"></a>Examples</h5>
+ <dd>
+@@ -4755,7 +4755,7 @@ IF SGN(a)&lt;&gt;SGN(b) THEN ...</tt></p>
+ <h5><a name="idx-699"></a>Result</h5>
+ <dd>
+ <p>A real in the range -1 to 1, being the sine of the argument.</p>
+-<p>Note: If the argument is outside the range -8388608 to 8388608 radians, it is impossible to determine how many <img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">s to subtract. The error <tt>Accuracy lost in sine</tt>/<tt>cosine</tt>/<tt>tangent</tt> is generated.</p>
++<p>Note: If the argument is outside the range -8388608 to 8388608 radians, it is impossible to determine how many πs to subtract. The error <tt>Accuracy lost in sine</tt>/<tt>cosine</tt>/<tt>tangent</tt> is generated.</p>
+ <dt>
+ <h5><a name="idx-700"></a>Examples</h5>
+ <dd>
+@@ -5118,7 +5118,7 @@ INPUT TAB(0,10)"How many eggs",eggs%</tt></p>
+ <h5><a name="idx-753"></a>Result</h5>
+ <dd>
+ <p>A real giving the tangent of the angle, in the range -1E38 to +1E38.</p>
+-<p>Note: If the argument is outside the range -8388608 to 8388608 radians, it is impossible to determine how many <img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI ">s to subtract. The error <tt>Accuracy lost in sine</tt>/<tt>cosine</tt>/<tt>tangent</tt> is generated.</p>
++<p>Note: If the argument is outside the range -8388608 to 8388608 radians, it is impossible to determine how many πs to subtract. The error <tt>Accuracy lost in sine</tt>/<tt>cosine</tt>/<tt>tangent</tt> is generated.</p>
+ <dt>
+ <h5><a name="idx-754"></a>Examples</h5>
+ <dd>
+diff --git a/SYMBOLS/ENTITIES/960.PNG b/SYMBOLS/ENTITIES/960.PNG
+deleted file mode 100644
+index eaf358409f128fc7fd218638da5d40889078b875..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 215
+zcmeAS@N?(olHy`uVBq!ia0vp^d>}RlkYL!eonbMMn&;`_7*cV|_LL&mp#%o^kJ~pY
+z?AWm3LnE^|58L5YZ<yp9W+&b|;4N|V3FDila08CjTut1};vy{9d9>yK=q9iK`@nM1
+zz3?qd<-TrNa{A({WW7{2_j<Qe<+^8+S1L|^(q_FvS)-Fdd_mWOlna;kC9U`veebQn
+zy}LDOEC~w>4$65f@MnzX-@Rj&fLczKd2>;OR~FNU`7fr=XjhrrRJhJQ$J%Pvo-3ga
+PAQyYO`njxgN@xNASaVde
+
+diff --git a/TOOLBOX/C/CMATHLIB.HTML b/TOOLBOX/C/CMATHLIB.HTML
+index 38eda5f..98c26c0 100644
+--- a/TOOLBOX/C/CMATHLIB.HTML
++++ b/TOOLBOX/C/CMATHLIB.HTML
+@@ -102,7 +102,7 @@ public:
+ <p><b><tt><i>d</i> = norm(<i>x</i>)</tt></b></p>
+ <p>Returns the square of the magnitude of <tt><i>x</i></tt>. It is faster than <tt>abs</tt>, but more likely to cause an overflow error. It is intended for comparison of magnitudes.</p>
+ <p><b><tt><i>d</i> = arg(<i>x</i>)</tt></b></p>
+-<p>Returns the angle of <tt><i>x</i></tt>, measured in radians in the range -<i><img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI "></I> TO <I><img src="../../SYMBOLS/ENTITIES/960.PNG" alt=" PI "></i>.</p>
++<p>Returns the angle of <tt><i>x</i></tt>, measured in radians in the range -<i>π</I> TO <I>π</i>.</p>
+ <p><b><tt><i>y</i> = conj(<i>x</i>)</tt></b></p>
+ <p>Returns the complex conjugate of <tt><i>x</i></tt>. That is, if <tt><i>x</i></tt> is <tt>(real, imag)</tt>, then <tt>conj(</tt><tt><i>x</i></tt>
+ <tt>)</tt> is <tt>(real, -imag)</tt>.</p>
+-- 
+2.29.2
+

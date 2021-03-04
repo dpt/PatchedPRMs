@@ -1,0 +1,570 @@
+From 0c7d1fef884e381b2c89fc0a69611989d9b4d085 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Wed, 3 Mar 2021 22:15:24 +0000
+Subject: [PATCH 08/24] =?UTF-8?q?7:=20Replace=20substitute=20PNG=20for=208?=
+ =?UTF-8?q?230=20with=20a=20proper=20=E2=80=A6=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ BASIC/APPENDICES/BASICHISTORY.HTML |  10 +++---
+ BASIC/PART2/CONTROL.HTML           |  32 +++++++++---------
+ BASIC/PART2/ERRORHANDLING.HTML     |   2 +-
+ BASIC/PART2/GRAPHICPATTERNS.HTML   |   6 ++--
+ BASIC/PART2/PROCEDURES.HTML        |   8 ++---
+ BASIC/PART2/SCREENMODES.HTML       |   2 +-
+ BASIC/PART3/KEYWORDS.HTML          |  52 ++++++++++++++---------------
+ SYMBOLS/ENTITIES/8230.PNG          | Bin 107 -> 0 bytes
+ TOOLBOX/ASM/WARNINGS.HTML          |   8 ++---
+ 9 files changed, 60 insertions(+), 60 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/8230.PNG
+
+diff --git a/BASIC/APPENDICES/BASICHISTORY.HTML b/BASIC/APPENDICES/BASICHISTORY.HTML
+index 75e7080..6458ff5 100644
+--- a/BASIC/APPENDICES/BASICHISTORY.HTML
++++ b/BASIC/APPENDICES/BASICHISTORY.HTML
+@@ -26,7 +26,7 @@
+ <dt>
+ <h5><a name="idx-34"></a>BASIC IV</h5>
+ <dd>
+-<p>Also known as CMOS BASIC, this version was a major development from BASIC III. It was designed for use on the BBC Master series and 65C12 Second Processors. Both these used a slightly more powerful version of the 6502 processor than the one used in the original BBC. This allowed several major enhancements to be squeezed into the ROM, such as LIST IF, EXT# as a statement, EDIT, TIME$, ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> PROC, | in VDU statements and faster floating point. Some bugs were also corrected.</p>
++<p>Also known as CMOS BASIC, this version was a major development from BASIC III. It was designed for use on the BBC Master series and 65C12 Second Processors. Both these used a slightly more powerful version of the 6502 processor than the one used in the original BBC. This allowed several major enhancements to be squeezed into the ROM, such as LIST IF, EXT# as a statement, EDIT, TIME$, ON … PROC, | in VDU statements and faster floating point. Some bugs were also corrected.</p>
+ <dt>
+ <h5><a name="idx-35"></a>BASIC V, version 1.04</h5>
+ <dd>
+@@ -62,7 +62,7 @@
+ <dt>
+ <h5><a name="idx-39"></a>Bug fixes</h5>
+ <dd>
+-<p>ELSE in an ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> GOTO/GOSUB no longer leaves a byte on the 6502 stack. This prevented ELSE from being used in ON statements in BASIC I.</p>
++<p>ELSE in an ON … GOTO/GOSUB no longer leaves a byte on the 6502 stack. This prevented ELSE from being used in ON statements in BASIC I.</p>
+ <p>INSTR no longer leaves the main string on the software stack when it is shorter than the substring. This caused ENDPROC and =<i>expression</i> to crash when INSTR was used inside a PROC or FN under the above-mentioned condition.</p>
+ <p>The argument of EVAL is now tokenised correctly so that EVAL"TIME" (or any other pseudo-variable) works. Previously the statement versions of pseudo-variables were used, resulting in a <tt>No such variable</tt> error when BASIC tried to evaluate the expression.</p>
+ <p>The ABS function can now cope with non-negative integers without returning a string type. Previously, ABS1 appeared to yield a string so a statement like <tt>PRINT -ABS1</tt> would give a type-mismatch error.</p>
+@@ -84,7 +84,7 @@
+ <dd>
+ <dl>
+ <dd>
+-<p>The ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> GOTO/GOSUB STATEMENT HAS BEEN EXTENDED TO INCLUDE PROCS. THE SYNTAX IS ON <I>EXPRESSION</I> PROC<I>A</I>_ PROC<I>B</I>_ PROC<I>C</I><img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> [ELSE <i>statement</i>]. The <i>n</i>th PROC in the list is called, where <i>n</i> is the value of <i>expression</i>.</p>
++<p>The ON … GOTO/GOSUB STATEMENT HAS BEEN EXTENDED TO INCLUDE PROCS. THE SYNTAX IS ON <I>EXPRESSION</I> PROC<I>A</I>_ PROC<I>B</I>_ PROC<I>C</I>… [ELSE <i>statement</i>]. The <i>n</i>th PROC in the list is called, where <i>n</i> is the value of <i>expression</i>.</p>
+ <p>The EDIT command converts the program to text and then calls the editor with a *EDIT command. The program can be edited then re-tokenised by returning to BASIC. A <tt>No room</tt> error will be given if there is not enough room to store both the tokenised and textual version of the program during conversion to text.</p>
+ <p>The TIME$ pseudo-variable can be used to display and alter the time held in the CMOS battery-backed clock.</p>
+ <p>The delimiter | may be used in VDU statements to send nine 0 bytes after the last expression. This can be used to ensure that, for example, VDU 23 commands which require many trailing zeros are correctly terminated.</p>
+@@ -104,7 +104,7 @@
+ <dl>
+ <dd>
+ <p>This uses version 1.04 of the BASIC interpreter. Because the major part of the BASIC V guide is concerned with the documentation of BASIC V, this section only mentions the new keywords and features in very terse terms. You are directed to the Keywords chapters for detailed descriptions of all BASIC keywords. The index also gives you the page reference for the main discussion of topics mentioned below.</p>
+-<p>The new constructs WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE_ IF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ELSE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDIF_ CASE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OF<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> WHEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OTHERWISE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDCASE have been introduced. This makes readable, GOTO-less programming much easier to attain than previously.</p>
++<p>The new constructs WHILE … ENDWHILE_ IF … THEN … ELSE … ENDIF_ CASE … OF… WHEN … OTHERWISE … ENDCASE have been introduced. This makes readable, GOTO-less programming much easier to attain than previously.</p>
+ <p>Procedure and function calls have been enhanced in the following ways: value and result parameters (RETURN parameters), array parameters and local arrays, procedure libraries (LIBRARY, INSTALL and OVERLAY), LOCAL DATA and LOCAL ERROR handlers, a relative RESTORE statement which does not require the use of line numbers.</p>
+ <p>Many array operations have been introduced. These include: local arrays and array reference parameters, whole arrays operations such as assignment, four-function arithmetic, matrix and vector multiplication, SUM of array elements, the DIM function to find information on array parameters, array element initialisation, MOD (square root of the sum of the squares of a numeric array).</p>
+ <p>Several new operators have been introduced: &lt;&lt; (left shift), &gt;&gt; (arithmetic right shift), &gt;&gt;&gt; (logical right shift), | (floating point indirection), += (increment assignment, including all the elements of an array), -= (decrement assignment). The character % introduces binary constants as &amp; introduces hexadecimal ones.</p>
+@@ -157,4 +157,4 @@ DIM foo(, foo(, foo%</pre></p>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/BASIC/PART2/CONTROL.HTML b/BASIC/PART2/CONTROL.HTML
+index 5cf3172..610d981 100644
+--- a/BASIC/PART2/CONTROL.HTML
++++ b/BASIC/PART2/CONTROL.HTML
+@@ -125,7 +125,7 @@
+ <dd>
+ <dl>
+ <dd>
+-<p> <a name="marker-988612"></a>A <a name="marker-988613"></a>block structured IF<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> [ELSE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">] ENDIF statement is available. It executes a series of statements, which may be split over several lines, conditionally on the result of the IF expression.</p>
++<p> <a name="marker-988612"></a>A <a name="marker-988613"></a>block structured IF… THEN… [ELSE …] ENDIF statement is available. It executes a series of statements, which may be split over several lines, conditionally on the result of the IF expression.</p>
+ <pre> 10 n% = RND(10)
+  20 m% = RND(10)
+  30 PRINT "What is ";n% " * "m%;
+@@ -137,13 +137,13 @@
+  90   PRINT n%;" * ";m% " = ";n%*m%
+ 100 ENDIF</pre>
+ <p>The <tt>ENDIF</tt> on line 90 terminates the statement. It indicates that execution of the following statements is not dependent on the outcome of the conditional expression on line 50, so these statements are executed as normal. Without the <tt>ENDIF</tt> the computer has no way of knowing whether or not the statements on line 100 belongs to the ELSE part.</p>
+-<p>There are certain rules which must be obeyed when using IF<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> [ELSE<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">] ENDIF constructions:</p>
++<p>There are certain rules which must be obeyed when using IF… THEN… [ELSE…] ENDIF constructions:</p>
+ <ul>
+ <li>The first line must take the form:
+ <pre>IF <I>condition</I> THEN</tt></pre>with <a name="marker-988614"></a>THEN being the last item on the line.
+ <li>The <a name="marker-988615"></a>ELSE part need not be present, but if it is, the ELSE must be the first thing on a line (excluding spaces).
+ <li>The <a name="marker-988616"></a>ENDIF statement must be the first thing on a line (excluding spaces).
+-<li>IF<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> [ELSE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">] ENDIF statements may be nested: one may occur inside another. For example:
++<li>IF… THEN … [ELSE …] ENDIF statements may be nested: one may occur inside another. For example:
+ <pre> 10 DIM A%(10)
+  20 count% = 0
+  30 PRINT "Give me an integer between 0 and 9 ";
+@@ -193,7 +193,7 @@
+ 20   PRINT i
+ 30 NEXT i</pre>
+ <p>The looping variable <tt>i</tt> doesn't reach exactly 100.</p>
+-<p>FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT loops may be nested. For example,</p>
++<p>FOR … NEXT loops may be nested. For example,</p>
+ <pre>10 FOR N = 3.0 TO -1.0 STEP -2.0
+ 20   FOR M = 2.5 TO 2.9 STEP 0.2
+ 30     PRINT N,M
+@@ -250,7 +250,7 @@ Not in a FOR loop at line 50</pre>
+ 30 NEXT</pre>
+ <p>produces:</p>
+ <pre>         6</pre>
+-<p>FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT loops are very versatile, since the initial and terminating values and the step size can be assigned any arithmetic expression containing variables or functions. For example:</p>
++<p>FOR … NEXT loops are very versatile, since the initial and terminating values and the step size can be assigned any arithmetic expression containing variables or functions. For example:</p>
+ <pre>10 REM Draw a sine curve
+ 20 MODE 0 : MOVE 0,512
+ 30 PRINT "Please give me a step size (eg 0.1) "
+@@ -265,7 +265,7 @@ Not in a FOR loop at line 50</pre>
+ <dd>
+ <dl>
+ <dd>
+-<p>The <a name="marker-988622"></a>REPEAT <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> <A NAME="MARKER-988623"></a>UNTIL loop repeats a block of code until a given condition is fulfilled. For example:</p>
++<p>The <a name="marker-988622"></a>REPEAT … <A NAME="MARKER-988623"></a>UNTIL loop repeats a block of code until a given condition is fulfilled. For example:</p>
+ <pre>10 REM Input a number in a given range
+ 20 REPEAT
+ 30   PRINT "Please give me a number between 0 and 9 "
+@@ -273,7 +273,7 @@ Not in a FOR loop at line 50</pre>
+ 50 UNTIL N &gt;= 0 AND N &lt;= 9
+ 60 PRINT "Thank You"</pre>
+ <p>If the result of the conditional expression following the UNTIL is TRUE, then the loop is ended and the statement following the UNTIL is executed. If, however, the result of the expression is FALSE, the block of code after the REPEAT is executed again and the conditional expression is re-evaluated.</p>
+-<p>REPEAT <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> UNTIL LOOPS MAY BE NESTED IN THE SAME WAY AS FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT loops. They are also similar to FOR loops in that the body of the loop is always executed once, since no test is performed until the end of the loop is reached.</p>
++<p>REPEAT … UNTIL LOOPS MAY BE NESTED IN THE SAME WAY AS FOR … NEXT loops. They are also similar to FOR loops in that the body of the loop is always executed once, since no test is performed until the end of the loop is reached.</p>
+ <pre> 10 REM Repeat questions until answered right first time
+  20 REPEAT
+  30   tries% = 0
+@@ -294,13 +294,13 @@ Not in a FOR loop at line 50</pre>
+ <dd>
+ <dl>
+ <dd>
+-<p>The <a name="marker-988624"></a>WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> <A NAME="MARKER-988625"></a>ENDWHILE loop repeats a block of code while a given condition holds true. For example:</p>
++<p>The <a name="marker-988624"></a>WHILE … <A NAME="MARKER-988625"></a>ENDWHILE loop repeats a block of code while a given condition holds true. For example:</p>
+ <pre>10 X = 0
+ 20 WHILE X &lt; 100
+ 30   PRINT X
+ 40   X += RND(5)
+ 50 ENDWHILE</pre>
+-<p>The WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE LOOP HAS A CONDITIONAL EXPRESSION AT THE START OF IT. IF THIS EXPRESSION RETURNS TRUE_ THE BLOCK OF STATEMENTS FOLLOWING THE WHILE_ DOWN TO THE MATCHING ENDWHILE STATEMENT_ IS EXECUTED. THIS IS REPEATED UNTIL THE EXPRESSION RETURNS FALSE_ IN WHICH CASE EXECUTION JUMPS TO THE STATEMENT FOLLOWING THE MATCHING ENDWHILE. WE SAY 'MATCHING' ENDWHILE BECAUSE WHILE LOOPS MAY BE NESTED. THIS MEANS THAT WHEN BASIC IS LOOKING FOR AN ENDWHILE TO TERMINATE A LOOP_ IT MIGHT SKIP NESTED WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE loops.</p>
++<p>The WHILE … ENDWHILE LOOP HAS A CONDITIONAL EXPRESSION AT THE START OF IT. IF THIS EXPRESSION RETURNS TRUE_ THE BLOCK OF STATEMENTS FOLLOWING THE WHILE_ DOWN TO THE MATCHING ENDWHILE STATEMENT_ IS EXECUTED. THIS IS REPEATED UNTIL THE EXPRESSION RETURNS FALSE_ IN WHICH CASE EXECUTION JUMPS TO THE STATEMENT FOLLOWING THE MATCHING ENDWHILE. WE SAY 'MATCHING' ENDWHILE BECAUSE WHILE LOOPS MAY BE NESTED. THIS MEANS THAT WHEN BASIC IS LOOKING FOR AN ENDWHILE TO TERMINATE A LOOP_ IT MIGHT SKIP NESTED WHILE … ENDWHILE loops.</p>
+ <p>Here is an example of nested WHILE loops:</p>
+ <pre>10 A%=256
+ 20 WHILE A%&lt;&gt;0
+@@ -311,7 +311,7 @@ Not in a FOR loop at line 50</pre>
+ 70   ENDWHILE
+ 80   A%=A% DIV 2
+ 90 ENDWHILE</pre>
+-<p>WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE IS SIMILAR TO REPEAT <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> UNTIL EXCEPT THAT THE CONDITIONAL EXPRESSION IS EVALUATED AT THE BEGINNING OF THE LOOP (SO THE BODY OF THE LOOP MAY NEVER BE EXECUTED IF THE CONDITION IS INITIALLY FALSE) AND THE LOOP REPEATS IF THE RESULT IS TRUE. THE FOLLOWING PROGRAM DEMONSTRATES THE FACT THAT REPEAT <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> UNTIL LOOPS ARE ALWAYS EXECUTED AT LEAST ONCE_ WHEREAS THE WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE loops need not be executed at all.</p>
++<p>WHILE … ENDWHILE IS SIMILAR TO REPEAT … UNTIL EXCEPT THAT THE CONDITIONAL EXPRESSION IS EVALUATED AT THE BEGINNING OF THE LOOP (SO THE BODY OF THE LOOP MAY NEVER BE EXECUTED IF THE CONDITION IS INITIALLY FALSE) AND THE LOOP REPEATS IF THE RESULT IS TRUE. THE FOLLOWING PROGRAM DEMONSTRATES THE FACT THAT REPEAT … UNTIL LOOPS ARE ALWAYS EXECUTED AT LEAST ONCE_ WHEREAS THE WHILE … ENDWHILE loops need not be executed at all.</p>
+ <pre>10 REPEAT
+ 20   PRINT "Repeat"
+ 30 UNTIL TRUE
+@@ -330,7 +330,7 @@ All done</pre>
+ <dd>
+ <dl>
+ <dd>
+-<p>The IF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ELSE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDIF CONSTRUCT IS USEFUL IF YOU WISH TO MAKE A CHOICE BETWEEN TWO ALTERNATIVES. THE <A NAME="MARKER-988626"></a>CASE statement can be used when there are many alternatives to be acted upon in different ways.</p>
++<p>The IF … THEN … ELSE … ENDIF CONSTRUCT IS USEFUL IF YOU WISH TO MAKE A CHOICE BETWEEN TWO ALTERNATIVES. THE <A NAME="MARKER-988626"></a>CASE statement can be used when there are many alternatives to be acted upon in different ways.</p>
+ <p>The following program is a keyboard-controlled sketch pad. The statements after the <a name="marker-988627"></a>WHENs alter the values of X% and Y%, and then DRAW a line.</p>
+ <pre> 10 REM Draw a line depending on the L,R,U,D keys
+  20 MODE 0
+@@ -395,7 +395,7 @@ All done</pre>
+ 110 PRINT "Hello"
+ 120 END</pre>
+ <p>Using a variable, however, as the destination for a <tt>GOTO</tt> is not recommended because while RENUMBER changes the line numbers, it does not alter GOTO destinations that are given as anything other than a simple number. If you must use an expression, it is best to put in inside brackets, since BASIC may get confused if the expression starts with a number.</p>
+-<p>If you wish to make your programs easy to read, especially for other people, use as few GOTOs as possible. They make a program very difficult to follow. It is far better to use one of the loop constructs like REPEAT <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> UNTIL which have been described above.</p>
++<p>If you wish to make your programs easy to read, especially for other people, use as few GOTOs as possible. They make a program very difficult to follow. It is far better to use one of the loop constructs like REPEAT … UNTIL which have been described above.</p>
+ </dl>
+ <dt>
+ <h4><a name="GOSUB...RETURN"></a>GOSUB... RETURN</h4>
+@@ -422,7 +422,7 @@ This is printed after the second GOSUB returns</pre>
+ <dd>
+ <dl>
+ <dd>
+-<p>The <a name="marker-988633"></a>ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> GOTO statement is used to choose one of a number of different lines depending on the value of a given expression. For example:
++<p>The <a name="marker-988633"></a>ON … GOTO statement is used to choose one of a number of different lines depending on the value of a given expression. For example:
+ <pre> 10 PRINT "Input a number between 1 and 4"
+  20 INPUT N%
+  30 ON N% GOTO 60, 100, 80, 120
+@@ -441,7 +441,7 @@ This is printed after the second GOSUB returns</pre>
+ <pre>  30 ON N% GOTO 60,100,80,120 ELSE PRINT "Number out of range"
+   40 GOTO 999</pre>
+ <p>Now, when the program is run, if N% is not between 1 and 4 the message <tt>Number out of range</tt> is displayed and the program ends normally.</p>
+-<p><a name="marker-988635"></a>ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> GOSUB acts in exactly the same way:</p>
++<p><a name="marker-988635"></a>ON … GOSUB acts in exactly the same way:</p>
+ <pre> 10 PRINT "Input a number between 1 and 4"
+  20 INPUT N%
+  30 ON N% GOSUB 60, 100, 80, 120
+@@ -454,8 +454,8 @@ This is printed after the second GOSUB returns</pre>
+ 110 RETURN
+ 120 PRINT "Your number is 4"
+ 130 RETURN</pre>
+-<p>There is also an ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> PROC STATEMENT WHICH IS DESCRIBED IN THE <A HREF="PROCEDURES.HTML#30788">Procedures and Functions</a> chapter. Note, however, that when writing new programs, it is better to use the more versatile CASE structures rather than the ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> GOTO/GOSUB/PROC constructs. Again, this old-fashioned construct is provided mainly for backwards compatibility with less powerful versions of BASIC.</p>
++<p>There is also an ON … PROC STATEMENT WHICH IS DESCRIBED IN THE <A HREF="PROCEDURES.HTML#30788">Procedures and Functions</a> chapter. Note, however, that when writing new programs, it is better to use the more versatile CASE structures rather than the ON … GOTO/GOSUB/PROC constructs. Again, this old-fashioned construct is provided mainly for backwards compatibility with less powerful versions of BASIC.</p>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/BASIC/PART2/ERRORHANDLING.HTML b/BASIC/PART2/ERRORHANDLING.HTML
+index ca829ad..1e16cbd 100644
+--- a/BASIC/PART2/ERRORHANDLING.HTML
++++ b/BASIC/PART2/ERRORHANDLING.HTML
+@@ -94,7 +94,7 @@ ENDIF</pre>
+ <dd>
+ <dl>
+ <dd>
+-<p>When an <a name="marker-857024"></a>error occurs, the ON ERROR command can be used to deal with it. BASIC, however, forgets all about what it was doing at the time the error happened. For example, if it was in the middle of a FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT loop or executing a procedure, it is not possible to jump back to the place the error occurred and carry on as though nothing had happened.</p>
++<p>When an <a name="marker-857024"></a>error occurs, the ON ERROR command can be used to deal with it. BASIC, however, forgets all about what it was doing at the time the error happened. For example, if it was in the middle of a FOR … NEXT loop or executing a procedure, it is not possible to jump back to the place the error occurred and carry on as though nothing had happened.</p>
+ <dt>
+ <h5><a name="idx-135"></a>Trapping an error; procedures &amp; functions</h5>
+ <dd>
+diff --git a/BASIC/PART2/GRAPHICPATTERNS.HTML b/BASIC/PART2/GRAPHICPATTERNS.HTML
+index 484c2f3..e59bc92 100644
+--- a/BASIC/PART2/GRAPHICPATTERNS.HTML
++++ b/BASIC/PART2/GRAPHICPATTERNS.HTML
+@@ -520,7 +520,7 @@
+ <dd>
+ <dl>
+ <dd>
+-<p>Using <a name="marker-336458"></a>RECTANGLE<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> TO AND <A NAME="MARKER-336459"></A>RECTANGLE FILL<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> TO_ YOU CAN PICK UP A RECTANGULAR AREA OF THE SCREEN AND EITHER MAKE A <A NAME="MARKER-336460"></A>COPY OF IT ELSEWHERE ON THE SCREEN OR <A NAME="MARKER-336461"></a>move it to another position, replacing it with a block of the background colour.</p>
++<p>Using <a name="marker-336458"></a>RECTANGLE… TO AND <A NAME="MARKER-336459"></A>RECTANGLE FILL… TO_ YOU CAN PICK UP A RECTANGULAR AREA OF THE SCREEN AND EITHER MAKE A <A NAME="MARKER-336460"></A>COPY OF IT ELSEWHERE ON THE SCREEN OR <A NAME="MARKER-336461"></a>move it to another position, replacing it with a block of the background colour.</p>
+ <p>For example:</p>
+ <p><tt>RECTANGLE FILL 400,600,60,80 TO 700,580</tt></p>
+ <p>This marks out the source rectangle as having one corner at co-ordinates (400,600), a width of 60 and a height of 80. It then moves this rectangular area so that the bottom left of it is at the co-ordinates (700,580). The old area is replaced by background.</p>
+@@ -552,7 +552,7 @@
+ <td>&amp;BF
+ <td align="left" valign="top">Absolute rectangle copy
+ </table>
+-<p>The rectangle move operations erase the source rectangle, whereas the copy operations leave it intact. So, the RECTANGLE FILL <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> TO example above could also be expressed as:</p>
++<p>The rectangle move operations erase the source rectangle, whereas the copy operations leave it intact. So, the RECTANGLE FILL … TO example above could also be expressed as:</p>
+ <p><tt>MOVE 400,600<br>
+ MOVE BY 60,80<br>
+ PLOT &amp;BD,700,580 </tt></p>
+@@ -560,4 +560,4 @@ PLOT &amp;BD,700,580 </tt></p>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/BASIC/PART2/PROCEDURES.HTML b/BASIC/PART2/PROCEDURES.HTML
+index 7fb140a..103e8b2 100644
+--- a/BASIC/PART2/PROCEDURES.HTML
++++ b/BASIC/PART2/PROCEDURES.HTML
+@@ -160,7 +160,7 @@
+ <dd>
+ <dl>
+ <dd>
+-<p><a name="marker-662178"></a>ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> PROC IS SIMILAR TO ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> GOTO WHICH IS DESCRIBED IN THE <A HREF="CONTROL.HTML#97509">Control</a> chapter. It evaluates the expression given after the ON keyword. If the value N% is given, it then calls the procedure designated by N% on the list. For example:</p>
++<p><a name="marker-662178"></a>ON … PROC IS SIMILAR TO ON … GOTO WHICH IS DESCRIBED IN THE <A HREF="CONTROL.HTML#97509">Control</a> chapter. It evaluates the expression given after the ON keyword. If the value N% is given, it then calls the procedure designated by N% on the list. For example:</p>
+ <pre> 10 REPEAT
+  20   INPUT "Enter a number ",num
+  30   PRINT "Type 1 to double it"
+@@ -202,10 +202,10 @@ Thequickbrown fox
+ Thequickbrownfox</pre>
+ <p>Recursive procedures often provide a very clear solution to a problem. There are two reasons, however, which suggest that they may not be the best way to solve a problem:</p>
+ <ul>
+-<li>Some operations are more naturally expressed as a loop, that is, using FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT_ REPEAT <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> UNTIL_ OR WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE.
++<li>Some operations are more naturally expressed as a loop, that is, using FOR … NEXT_ REPEAT … UNTIL_ OR WHILE … ENDWHILE.
+ <li>Recursive procedures often use more of the computer's memory than the corresponding loop.
+ </ul>
+-<p>As an example, the following two programs both print Good morning! backwards. The first one uses a WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE loop. The second uses a recursive technique to achieve the same result.</p>
++<p>As an example, the following two programs both print Good morning! backwards. The first one uses a WHILE … ENDWHILE loop. The second uses a recursive technique to achieve the same result.</p>
+ <p>First example:</p>
+ <pre> 10 PROCreverseprint("Good morning !")
+ 100 DEF PROCreverseprint(A$)
+@@ -369,4 +369,4 @@ Call PROChyperHelp for details</pre>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/BASIC/PART2/SCREENMODES.HTML b/BASIC/PART2/SCREENMODES.HTML
+index 0153748..8bfbcc6 100644
+--- a/BASIC/PART2/SCREENMODES.HTML
++++ b/BASIC/PART2/SCREENMODES.HTML
+@@ -167,7 +167,7 @@
+ 260:
+ 270 UNTIL FALSE : REM Repeat forever</pre>
+ <p>This program asks you for three values, one for each of the amounts of red, green and blue you require. It then plots a rectangle in that colour. After it has displayed it for five seconds it clears the screen and starts again. To stop the program at any stage press Esc.</p>
+-<p>Note: the current display hardware only supports 16 levels for each colour component numbered 0, 16, 32<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> up to 240. Intermediate numbers will give the next lowest level.</p>
++<p>Note: the current display hardware only supports 16 levels for each colour component numbered 0, 16, 32… up to 240. Intermediate numbers will give the next lowest level.</p>
+ </dl>
+ <dt>
+ <h4><a name="30602"></a><a name="256-colourModes"></a>256-colour modes</h4>
+diff --git a/BASIC/PART3/KEYWORDS.HTML b/BASIC/PART3/KEYWORDS.HTML
+index c29b36f..b892888 100644
+--- a/BASIC/PART3/KEYWORDS.HTML
++++ b/BASIC/PART3/KEYWORDS.HTML
+@@ -927,7 +927,7 @@ LDR     R0, [R8, R0]    ;De-reference it</pre>
+ <td align="left" valign="top">LINE
+ </table>
+ </p>
+-<p>Returns with R0<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">R3 as the value (or F0 if using BASIC VI), R9 the type of the value as follows:</p>
++<p>Returns with R0…R3 as the value (or F0 if using BASIC VI), R9 the type of the value as follows:</p>
+ <p>
+ <table>
+ <tr>
+@@ -1233,7 +1233,7 @@ Other register set up for a subsequent call to CREATE.</p>
+ </table>
+ </p>
+ <p>Note that MATCH does not need ARGP or LINE.</p>
+-<p>The MODE value is 0 for left-mode (before an = sign, or at the start of a statement) and 1 for right-mode (in an expression). The difference is in the way that BASIC tokenises the pseudo-variables. Each of these has two tokens, one for when it is used as a statement (e.g. TIME=<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">) and one when it is used as a function (PRINT TIME). As you will generally use MATCH to tokenise an expression string, you will use MODE = 1.</p>
++<p>The MODE value is 0 for left-mode (before an = sign, or at the start of a statement) and 1 for right-mode (in an expression). The difference is in the way that BASIC tokenises the pseudo-variables. Each of these has two tokens, one for when it is used as a statement (e.g. TIME=…) and one when it is used as a function (PRINT TIME). As you will generally use MATCH to tokenise an expression string, you will use MODE = 1.</p>
+ <p>The CONSTA value is 0 if you do not want BASIC to convert integers which could be line numbers (in the range 0 to 65279) into internal format, and 1 if you do. Internal format consists of the token &amp;8D followed by three bytes which contain the encoded line number. A property of these bytes is that they lie in the range 64 to 127, and therefore do not contain control codes or tokens.</p>
+ <p>Encoded constants are used for line numbers after GOTO, GOSUB, RESTORE, THEN and ELSE keywords. Because they are of fixed length, the program can be renumbered without having to move program lines about. Because they don't contain special characters, certain BASIC search operations (e.g. for the ELSE in a single-line IF) are speeded up.</p>
+ <p>Both MODE and CONSTA will be updated during the use of the routine. For example, GOTO will set CONSTA to &amp;8D to read the line number, PRINT will change MODE to 1 to read an expression. The table below summarises the setting of MODE and CONSTA:</p>
+@@ -1495,7 +1495,7 @@ CALL sampleWaveform,start%,end%,values%()</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Statement marking the start of a CASE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> WHEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OTHERWISE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDCASE construct. It must be the first statement on the line.</p>
++<p>Statement marking the start of a CASE … OF … WHEN … OTHERWISE … ENDCASE construct. It must be the first statement on the line.</p>
+ <dt>
+ <h5><a name="idx-279"></a>Syntax</h5>
+ <dd>
+@@ -1688,7 +1688,7 @@ CLS</tt></p>
+ <dt>
+ <h5><a name="idx-305"></a>Arguments (3)</h5>
+ <dd>
+-<p>The first expression is an integer in the range 0 to 15 giving the logical colour number. The next three expressions are integers in the range 0 to 255 giving the amount of red, green and blue which are to be assigned to that logical colour. Only the top four bits of each are relevant with the current video display hardware. Thus distinct levels are 0, 16, 32, <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."></p>
++<p>The first expression is an integer in the range 0 to 15 giving the logical colour number. The next three expressions are integers in the range 0 to 255 giving the amount of red, green and blue which are to be assigned to that logical colour. Only the top four bits of each are relevant with the current video display hardware. Thus distinct levels are 0, 16, 32, …</p>
+ <p>Note: The keyword is listed as COLOUR in programs, even if it was typed in using the alternative spelling.</p>
+ <p>In all modes the default state, before any changes to the palette, dictates that colour 0 is black and colour 63 is white.</p>
+ <p>Only colours 0 and 1 are unique in two-colour modes. After that the cycle repeats. Similarly, only colours 0, 1, 2 and 3 are distinct in the four-colour modes.</p>
+@@ -2034,12 +2034,12 @@ ELLIPSE FILL x%,y%,major%,minor%,ang</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Part of the ON GOTO/GOSUB/PROC <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ELSE OR IF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ELSE OR IF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> <A NAME="MARKER-14526"></A>ELSE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDIF constructs.</p>
++<p>Part of the ON GOTO/GOSUB/PROC … ELSE OR IF … THEN … ELSE OR IF … THEN … <A NAME="MARKER-14526"></A>ELSE … ENDIF constructs.</p>
+ <dt>
+ <h5><a name="idx-350"></a>Syntax</h5>
+ <dd>
+ <p>See IF and ON entries, as appropriate.</p>
+-<p>Note: ELSE may occur anywhere in the program, but is only meaningful after an IF (multi- or single-line) or ON <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> GOSUB/GOTO/PROC statement. When used as part of a multi-line IF statement, it must be the first non-space object on the line.</p>
++<p>Note: ELSE may occur anywhere in the program, but is only meaningful after an IF (multi- or single-line) or ON … GOSUB/GOTO/PROC statement. When used as part of a multi-line IF statement, it must be the first non-space object on the line.</p>
+ <dt>
+ <h5><a name="idx-351"></a>Examples</h5>
+ <dd>
+@@ -2105,7 +2105,7 @@ END = &amp;10000 : REM only need 32K to RUN</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Statement marking the end of a CASE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> WHEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OTHERWISE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDCASE construct.</p>
++<p>Statement marking the end of a CASE … OF … WHEN … OTHERWISE … ENDCASE construct.</p>
+ <dt>
+ <h5><a name="idx-358"></a>Syntax</h5>
+ <dd>
+@@ -2117,7 +2117,7 @@ END = &amp;10000 : REM only need 32K to RUN</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Terminates an IF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ELSE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDIF construct.</p>
++<p>Terminates an IF … THEN … ELSE … ENDIF construct.</p>
+ <dt>
+ <h5><a name="idx-359"></a>Syntax</h5>
+ <dd>
+@@ -2149,12 +2149,12 @@ END = &amp;10000 : REM only need 32K to RUN</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Statement to terminate a WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE loop.</p>
++<p>Statement to terminate a WHILE … ENDWHILE loop.</p>
+ <dt>
+ <h5><a name="idx-363"></a>Syntax</h5>
+ <dd>
+ <p><tt><a name="marker-14532"></a>ENDWHILE</tt></p>
+-<p>Note: When an ENDWHILE is executed, control loops back to the corresponding WHILE statement. The statements forming the WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE loop are executed until the condition following the matching WHILE evaluates to FALSE, whereupon control jumps to the statement following the ENDWHILE.</p>
++<p>Note: When an ENDWHILE is executed, control loops back to the corresponding WHILE statement. The statements forming the WHILE … ENDWHILE loop are executed until the condition following the matching WHILE evaluates to FALSE, whereupon control jumps to the statement following the ENDWHILE.</p>
+ <dt>
+ <h5><a name="idx-364"></a>Example</h5>
+ <dd>
+@@ -2448,7 +2448,7 @@ REPEAT PRINT FNhex4(GET): UNTIL FALSE</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Part of the FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT statement.</p>
++<p>Part of the FOR … NEXT statement.</p>
+ <dt>
+ <h5><a name="idx-405"></a>Syntax</h5>
+ <dd>
+@@ -2646,7 +2646,7 @@ IF response$ = "Y" or response$ = "y" CHAIN "program"</tt></p>
+ <dt>
+ <h5><a name="idx-427"></a>Argument (2)</h5>
+ <dd>
+-<p><tt><i>expression</i></tt> should evaluate to an integer. <tt><i>expression1<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."></i></tt> should evaluate to integer line numbers between 0 and 65279. If the first integer is <i>n</i> then the <i>n</i>th line after the GOTO is jumped to. If the integer is less than 1 or greater than the number of line numbers given, the statement following the ELSE, if it is present, is executed.</p>
++<p><tt><i>expression</i></tt> should evaluate to an integer. <tt><i>expression1…</i></tt> should evaluate to integer line numbers between 0 and 65279. If the first integer is <i>n</i> then the <i>n</i>th line after the GOTO is jumped to. If the integer is less than 1 or greater than the number of line numbers given, the statement following the ELSE, if it is present, is executed.</p>
+ <p>Note: The line number after GOTO should be a constant so that RENUMBER and APPEND work properly.</p>
+ <dt>
+ <h5><a name="idx-428"></a>Examples</h5>
+@@ -3648,7 +3648,7 @@ MOVE BY 4*dx%,4*dy%</pre>
+ <dd>
+ <dl>
+ <dd>
+-<p>Part of the FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> TO <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT structure.</p>
++<p>Part of the FOR … TO … NEXT structure.</p>
+ <dt>
+ <h5><a name="idx-550"></a>Syntax</h5>
+ <dd>
+@@ -3656,7 +3656,7 @@ MOVE BY 4*dx%,4*dy%</pre>
+ <dt>
+ <h5><a name="idx-551"></a>Arguments</h5>
+ <dd>
+-<p>The variables are of any numeric type, and if present should correspond to the variable used to open the loop. See the FOR entry for a description of the mechanism of the FOR <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> NEXT loop.</p>
++<p>The variables are of any numeric type, and if present should correspond to the variable used to open the loop. See the FOR entry for a description of the mechanism of the FOR … NEXT loop.</p>
+ <p>Note: The variables after the NEXT should always be specified as this enables BASIC to detect improperly nested loops. If the loop variable given after a NEXT does not correspond to the innermost open loop, BASIC closes the inner loops until a matching looping variable is found. In order for the indentation produced by LISTO 2 to be useful, you should only close one loop per NEXT statement.</p>
+ <dt>
+ <h5><a name="idx-552"></a>Examples</h5>
+@@ -3696,7 +3696,7 @@ REPEAT UNTIL NOT INKEY(-99)</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Part of the CASE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> WHEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OTHERWISE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDCASE statement.</p>
++<p>Part of the CASE … OF … WHEN … OTHERWISE … ENDCASE statement.</p>
+ <dt>
+ <h5><a name="idx-557"></a>Syntax</h5>
+ <dd>
+@@ -3972,7 +3972,7 @@ OSCLI "LOAD "+file$+" "+STR$buff%:REM get file in buffer</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p><a name="marker-14629"></a>Part of the CASE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> WHEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OTHERWISE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDCASE statement.</p>
++<p><a name="marker-14629"></a>Part of the CASE … OF … WHEN … OTHERWISE … ENDCASE statement.</p>
+ <dt>
+ <h5><a name="idx-594"></a>Syntax</h5>
+ <dd>
+@@ -4115,7 +4115,7 @@ POINT TO 640,512</tt></p>
+ <dt>
+ <h5><a name="idx-615"></a>Result</h5>
+ <dd>
+-<p>An integer between 0 and <i>n</i>, where <i>n</i> is the width of the current text viewport minus one. This is the position of the text cursor which is normally given relative to the lefthand edge of the text viewport. If the cursor direction has been altered using <tt>VDU 23,16,<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."></tt> then it is given relative to the negative x edge of the screen which may be top, bottom, left or right.</p>
++<p>An integer between 0 and <i>n</i>, where <i>n</i> is the width of the current text viewport minus one. This is the position of the text cursor which is normally given relative to the lefthand edge of the text viewport. If the cursor direction has been altered using <tt>VDU 23,16,…</tt> then it is given relative to the negative x edge of the screen which may be top, bottom, left or right.</p>
+ <p>Note: Even in VDU 5 mode, POS returns the position of the text cursor. You should therefore keep track of the horizontal position explicitly in programs which must operate in VDU 5 mode (e.g. WIMP-based programs). COUNT still works as expected in VDU 5 mode.</p>
+ <dt>
+ <h5><a name="idx-616"></a>Examples</h5>
+@@ -4395,8 +4395,8 @@ READ a$, fred%, float</tt></p>
+ <dt>
+ <h5><a name="idx-651"></a>Purpose</h5>
+ <dd>
+-<p>RECTANGLE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> TO copies the original rectangular area defined to the new position, hence making a second copy of a rectangular screen area. Pixels in the source that are outside of the current graphics viewport are drawn in the current graphics background colour.</p>
+-<p>RECTANGLE FILL <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> TO moves the original rectangular area defined to the new position, replacing the old area with the current graphics background colour. In both cases the new position is allowed to overlap with the rectangular area.</p>
++<p>RECTANGLE … TO copies the original rectangular area defined to the new position, hence making a second copy of a rectangular screen area. Pixels in the source that are outside of the current graphics viewport are drawn in the current graphics background colour.</p>
++<p>RECTANGLE FILL … TO moves the original rectangular area defined to the new position, replacing the old area with the current graphics background colour. In both cases the new position is allowed to overlap with the rectangular area.</p>
+ <dt>
+ <h5><a name="idx-652"></a>Purpose (3)</h5>
+ <dd>
+@@ -4460,7 +4460,7 @@ RENUMBER 1000,20</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Statement marking start of a REPEAT <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> UNTIL loop.</p>
++<p>Statement marking start of a REPEAT … UNTIL loop.</p>
+ <dt>
+ <h5><a name="idx-661"></a>Syntax</h5>
+ <dd>
+@@ -5205,7 +5205,7 @@ TEXTSAVEO 8, "Version2" : REM strips out line numbers</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Optional part of a single line IF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> <A NAME="MARKER-14677"></A>THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ELSE STATEMENT AND COMPULSORY PART OF MULTI-LINE IF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> THEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ELSE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDIF statement.</p>
++<p>Optional part of a single line IF … <A NAME="MARKER-14677"></A>THEN … ELSE STATEMENT AND COMPULSORY PART OF MULTI-LINE IF … THEN … ELSE … ENDIF statement.</p>
+ <dt>
+ <h5><a name="idx-766"></a>Syntax</h5>
+ <dd>
+@@ -5569,7 +5569,7 @@ VOICES n%*2</pre>
+ <dt>
+ <h5><a name="idx-812"></a>Result</h5>
+ <dd>
+-<p>An integer between 0 and <i>n</i>, where <i>n</i> is the height of the current text viewport minus one. This is the position of the text cursor which is normally given relative to the top edge of the text viewport. If the cursor direction has been altered using VDU 23,16,<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> then it is given relative to the negative y edge of the screen which may be top, bottom, left or right.</p>
++<p>An integer between 0 and <i>n</i>, where <i>n</i> is the height of the current text viewport minus one. This is the position of the text cursor which is normally given relative to the top edge of the text viewport. If the cursor direction has been altered using VDU 23,16,… then it is given relative to the negative y edge of the screen which may be top, bottom, left or right.</p>
+ <p>Note: Even in VDU 5 mode, VPOS returns the position of the text cursor. You should therefore keep track of the vertical position explicitly in programs which must operate in VDU 5 mode (e.g. WIMP-based programs).</p>
+ <dt>
+ <h5><a name="idx-813"></a>Examples</h5>
+@@ -5608,7 +5608,7 @@ UNTIL FALSE</pre></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Part of the CASE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OF <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> WHEN <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> OTHERWISE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDCASE statement.</p>
++<p>Part of the CASE … OF … WHEN … OTHERWISE … ENDCASE statement.</p>
+ <dt>
+ <h5><a name="idx-817"></a>Syntax</h5>
+ <dd>
+@@ -5631,7 +5631,7 @@ WHEN "Y","y","YES","Yes","yes" : PROCgame</tt></p>
+ <dd>
+ <dl>
+ <dd>
+-<p>Statement marking the start of a WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE loop.</p>
++<p>Statement marking the start of a WHILE … ENDWHILE loop.</p>
+ <dt>
+ <h5><a name="idx-820"></a>Syntax</h5>
+ <dd>
+@@ -5640,7 +5640,7 @@ WHEN "Y","y","YES","Yes","yes" : PROCgame</tt></p>
+ <h5><a name="idx-821"></a>Arguments</h5>
+ <dd>
+ <p><tt><i>expression</i></tt> can be any numeric which can be evaluated to give a truth value. If it is zero (FALSE), control passes forward to the statement immediately after the corresponding ENDWHILE. If it is non-zero, control continues until the ENDWHILE statement is reached, then loops back to the WHILE statement, and <tt><i>expression</i></tt> is re-evaluated.</p>
+-<p>Note: The statements making up the body of the WHILE <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="..."> ENDWHILE loop are never executed if the initial value of expression is FALSE.</p>
++<p>Note: The statements making up the body of the WHILE … ENDWHILE loop are never executed if the initial value of expression is FALSE.</p>
+ <dt>
+ <h5><a name="idx-822"></a>Examples</h5>
+ <dd>
+@@ -5679,4 +5679,4 @@ PRINT WIDTH</tt></p>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/SYMBOLS/ENTITIES/8230.PNG b/SYMBOLS/ENTITIES/8230.PNG
+deleted file mode 100644
+index 03483416476cc04e01eba65c4b8a0e1413b29ab9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 107
+zcmeAS@N?(olHy`uVBq!ia0vp^B0$W-0VEh!n>cs@DW;MjzhDMN#wmZ-0eLE(E{-7;
+xw~`ZV_RO6K1cEcuEY2L*FayF&I>5Felbs=gpV!oAbDIFj6i-(_mvv4FO#m{M9fAM=
+
+diff --git a/TOOLBOX/ASM/WARNINGS.HTML b/TOOLBOX/ASM/WARNINGS.HTML
+index 9a4490a..7716632 100644
+--- a/TOOLBOX/ASM/WARNINGS.HTML
++++ b/TOOLBOX/ASM/WARNINGS.HTML
+@@ -452,14 +452,14 @@ where <tt><i>Rlist</i></tt> does <b>not</b> include R15
+ <dd>
+ R<i>d</i> ← (PC+8+expression)<br>
+ PC ← PC+8+expression<br>
+-<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">so execution continues from PC+8+expression</p>
++…so execution continues from PC+8+expression</p>
+ </dl>
+ <p>Actual ARM2 result:<br>
+ <dl>
+ <dd>
+ R<i>d</i> ← R<i>d</i> {no change}<br>
+ PC ← PC+8+expression+4<br>
+-<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">so execution continues from PC+12+expression</p>
++…so execution continues from PC+12+expression</p>
+ </dl>
+ 
+ <h6><a name="idx-242"></a>Case 2: LDR R<i>d</i>,[PC],#<i>expression</i></h6>
+@@ -468,14 +468,14 @@ PC ← PC+8+expression+4<br>
+ <dd>
+ R<i>d</i> ← (PC+8)<br>
+ PC ← PC+8+expression<br>
+-<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">so execution continues from PC+8+expression</p>
++…so execution continues from PC+8+expression</p>
+ </dl>
+ <p>Actual ARM2 result:<br>
+ <dl>
+ <dd>
+ R<i>d</i> ← R<i>d</i> {no change}<br>
+ PC ← PC+8+expression+4<br>
+-<img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">SO EXECUTION CONTINUES FROM PCP12PEXPRESSION<A NAME="MARKER-557475"></a></p>
++…SO EXECUTION CONTINUES FROM PCP12PEXPRESSION<A NAME="MARKER-557475"></a></p>
+ </dl>
+ 
+ </dl>
+-- 
+2.29.2
+

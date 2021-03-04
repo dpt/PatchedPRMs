@@ -1,0 +1,69 @@
+From 3144d0db364bcdad0f033dabb49dd4cc13eaf327 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Thu, 4 Mar 2021 22:59:53 +0000
+Subject: [PATCH 18/24] =?UTF-8?q?16:=20Replace=20substitute=20PNG=20for=20?=
+ =?UTF-8?q?952=20with=20a=20proper=20=CE=B8=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ PRM/DRAW.HTML            |  10 +++++-----
+ SYMBOLS/ENTITIES/952.PNG | Bin 251 -> 0 bytes
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/952.PNG
+
+diff --git a/PRM/DRAW.HTML b/PRM/DRAW.HTML
+index 75a025d..ffa4631 100644
+--- a/PRM/DRAW.HTML
++++ b/PRM/DRAW.HTML
+@@ -115,7 +115,7 @@
+ <p>x' = <i>a</i>x + <i>c</i>y + <i>e</i><br>
+ y' = <i>b</i>x + <i>d</i>y + <i>f</i></p>
+ </dl>
+-<p>The common transformations can all be easily done with this matrix. Translation by a given displacement is done by <i>e</i> for the x axis and <i>f</i> for the y axis. Scaling the x axis uses <i>a</i>, while the y axis uses <i>d</i>. Rotation can be performed by setting <i>a</i> = cos(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">)_ <I>B</I> = SIN(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">)_ <I>C</I> = -SIN(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">) AND <I>D</I> = COS(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">)_ WHERE <img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]"> is the angle of rotation.</p>
++<p>The common transformations can all be easily done with this matrix. Translation by a given displacement is done by <i>e</i> for the x axis and <i>f</i> for the y axis. Scaling the x axis uses <i>a</i>, while the y axis uses <i>d</i>. Rotation can be performed by setting <i>a</i> = cos(θ)_ <I>B</I> = SIN(θ)_ <I>C</I> = -SIN(θ) AND <I>D</I> = COS(θ)_ WHERE θ is the angle of rotation.</p>
+ <p><i>a</i>, <i>b</i>, <i>c</i> and <i>d</i> are given in transform units to allow accurate specification of the fractional part. <i>e</i> and <i>f</i> are specified in internal Draw units, so that the integer part can be large enough to adequately specify displacements on the screen. (Were transform units to be used for these coefficients, then the maximum displacement would only be 256 OS units, which is not very far on the screen.)</p>
+ </dl>
+ 
+@@ -325,19 +325,19 @@ y' = <i>b</i>x + <i>d</i>y + <i>f</i></p>
+ <tr>
+ <td align="left" valign="top">0
+ <td align="left" valign="top"><i>a</i>
+-<td align="left" valign="top">x <a name="marker-895476"></a>scale factor, or cos(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">) TO <A NAME="MARKER-895477"></a>rotate
++<td align="left" valign="top">x <a name="marker-895476"></a>scale factor, or cos(θ) TO <A NAME="MARKER-895477"></a>rotate
+ <tr>
+ <td align="left" valign="top">4
+ <td align="left" valign="top"><i>b</i>
+-<td align="left" valign="top">sin(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">) to rotate
++<td align="left" valign="top">sin(θ) to rotate
+ <tr>
+ <td align="left" valign="top">8
+ <td align="left" valign="top"><i>c</i>
+-<td align="left" valign="top">-sin(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">) to rotate
++<td align="left" valign="top">-sin(θ) to rotate
+ <tr>
+ <td align="left" valign="top">12
+ <td align="left" valign="top"><i>d</i>
+-<td align="left" valign="top">y scale factor, or cos(<img src="../SYMBOLS/ENTITIES/952.PNG" alt="[THETA]">) to rotate
++<td align="left" valign="top">y scale factor, or cos(θ) to rotate
+ <tr>
+ <td align="left" valign="top">16
+ <td align="left" valign="top"><i>e</i>
+diff --git a/SYMBOLS/ENTITIES/952.PNG b/SYMBOLS/ENTITIES/952.PNG
+deleted file mode 100644
+index 611f3caf8cf585f7f8bede7b71a94b11b21defb9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 251
+zcmeAS@N?(olHy`uVBq!ia0vp^JU}eO0VEi_4kcUwQinWU978H@u^v?PW=>>iczC^E
+zKW<OKgF~EL+}wvw9oS@0cranZ4KZG~#Yf{eJdh6%5CZ{TE~6t`j4Td|v+<e8oY|nT
+zr+S|4!n%KF&Yf#y$anWw{~f-(zTy7Qhi>USBKZ=l<UT9T?(zEC*XVOHM0T?DvndQy
+z{?xU)@Hy~luJicLV7f+WjXdMO#)u1*j2`SF3lEAl=$bgqW^qu;Zi|b#&fr}os4ubd
+x+suyc8=<Rj1b%6J{c3MyNY}5b$ZdJ`S7eun#)RH5?Uw=h%G1@)Wt~$(697wTU~d2b
+
+-- 
+2.29.2
+

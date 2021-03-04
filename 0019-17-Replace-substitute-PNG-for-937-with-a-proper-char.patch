@@ -1,0 +1,47 @@
+From b2cc0cc621bc48b593a9e2e31c2cfd9f2cf149fc Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Thu, 4 Mar 2021 23:01:59 +0000
+Subject: [PATCH 19/24] =?UTF-8?q?17:=20Replace=20substitute=20PNG=20for=20?=
+ =?UTF-8?q?937=20with=20a=20proper=20=CE=A9=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ PRM/ADFS.HTML            |   2 +-
+ SYMBOLS/ENTITIES/937.PNG | Bin 305 -> 0 bytes
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 SYMBOLS/ENTITIES/937.PNG
+
+diff --git a/PRM/ADFS.HTML b/PRM/ADFS.HTML
+index 36d0d1f..ebe9783 100644
+--- a/PRM/ADFS.HTML
++++ b/PRM/ADFS.HTML
+@@ -466,7 +466,7 @@ Assuming the drive is always running fast gives an actual workable track length
+ <dt>
+ <h5><a name="idx-175"></a>General</h5>
+ <dd>
+-<p>All interface signals are open-collector, and therefore require a pull-up resistor of nominally 1k<img src="../SYMBOLS/ENTITIES/937.PNG" alt="[OMEGA]"> FOR 3<SUP>1</SUP>/<SUB>2</SUB>" SYSTEMS OR 150<img src="../SYMBOLS/ENTITIES/937.PNG" alt="[OMEGA]"> IN OLDER 5<SUP>1</SUP>/<SUB>4</SUB>" systems. The pull-up should be present in one place only - either on the drive furthest from the controller (for outputs), or on the controller (for inputs).</p>
++<p>All interface signals are open-collector, and therefore require a pull-up resistor of nominally 1kΩ FOR 3<SUP>1</SUP>/<SUB>2</SUB>" SYSTEMS OR 150Ω IN OLDER 5<SUP>1</SUP>/<SUB>4</SUB>" systems. The pull-up should be present in one place only - either on the drive furthest from the controller (for outputs), or on the controller (for inputs).</p>
+ <p>Due to the nature of open collector signals no damage will occur if several outputs drive one signal; thus it is safe, for instance, to connect 'motor on' to 'Sel2' and force motor on true whenever Sel2 is asserted.</p>
+ <p>All signals are active (asserted) low, ie active when at 0 Volts. Inputs are only valid when a drive is selected.</p>
+ 
+diff --git a/SYMBOLS/ENTITIES/937.PNG b/SYMBOLS/ENTITIES/937.PNG
+deleted file mode 100644
+index 1b8e2fc14b4bdde337c0e2bdeb82817f2af091a4..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 305
+zcmV-10nYx3P)<h;3K|Lk000e1NJLTq000sI000sQ00000bEVOX00002bW%=J009A%
+z{jLB20P0CZK~#9!P0p`NLtz+4@pCROa>ETbEG#T6YS9J5!lGfw!h*qQunLO?gJ4)R
+z_(vEF6AVVdYY;@VO_=x^#2;y4!UPQlcZVl^`Gki@0bWmUpF_UVSq4Cz^up$i#{JNa
+zDmrO!psE+4a;IpAmb3P#jl}_+mo!f4iEHHFCD|sMCS0+&Kv{#&`{e11bS|XukmUUD
+z2Xd@anV)h4BJM&_$~2=Xj;pjw>JtjlBBS>wCm|dv1C85RYp8GCv|H$at)o$lqi$c1
+zo5L96*=k@1fEv79F9Fn(*+cK}F`E{T094nx{9D;Ca9BKtmO$3}00000NkvXXu0mjf
+D03Cq@
+
+-- 
+2.29.2
+

@@ -1,0 +1,501 @@
+From df9168ec99b34892c65233e7fefebffe6d4e4084 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Thu, 4 Mar 2021 23:10:43 +0000
+Subject: [PATCH 22/24] =?UTF-8?q?20:=20Replace=20substitute=20PNG=20for=20?=
+ =?UTF-8?q?8804=20with=20a=20proper=20=E2=89=A4=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ PRM/COLOURTRANS.HTML      |   2 +-
+ PRM/CONVERSIONS.HTML      |   2 +-
+ PRM/DESKTOP.HTML          |   2 +-
+ PRM/DRAW.HTML             |   2 +-
+ PRM/FILECORE.HTML         |   6 +++---
+ PRM/FILESWITCH.HTML       |   6 +++---
+ PRM/FLOATINGPOINT.HTML    |  10 +++++-----
+ PRM/MEMMAN.HTML           |   4 ++--
+ PRM/MEMORYMAN.HTML        |   6 +++---
+ PRM/PDRIVERS.HTML         |   4 ++--
+ PRM/PDSUPPORT.HTML        |   2 +-
+ PRM/RAMFS.HTML            |   2 +-
+ PRM/SHAREDCLIBRARY.HTML   |  10 +++++-----
+ PRM/SPRITES.HTML          |   4 ++--
+ PRM/VDU.HTML              |   2 +-
+ PRM/WIMP.HTML             |  10 +++++-----
+ SYMBOLS/ENTITIES/8804.PNG | Bin 220 -> 0 bytes
+ TOOLBOX/ASM/ERRORS.HTML   |   4 ++--
+ TOOLBOX/ASM/FPINSTRS.HTML |  10 +++++-----
+ TOOLBOX/DDE/APPE.HTML     |   4 ++--
+ 20 files changed, 46 insertions(+), 46 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/8804.PNG
+
+diff --git a/PRM/COLOURTRANS.HTML b/PRM/COLOURTRANS.HTML
+index af20116..81e887e 100644
+--- a/PRM/COLOURTRANS.HTML
++++ b/PRM/COLOURTRANS.HTML
+@@ -1730,7 +1730,7 @@ Fast interrupts are enabled</p>
+ <dd>
+ <p>This call converts hue, saturation and value into corresponding RISC OS RGB colours.</p>
+ <p>All parameters are passed as fixed point 32 bit numbers, with 16 bits below the point and 16 bits above the point. Hue ranges from 0 - 360 with no fractional element, whilst the remaining parameters are in the range 0 - 1 and may have fractional elements.</p>
+-<p>An error is generated if both the hue and saturation are 0; for this reason we recommend that when using this call 0 &lt; hue <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 360.</p>
++<p>An error is generated if both the hue and saturation are 0; for this reason we recommend that when using this call 0 &lt; hue ≤ 360.</p>
+ <p>This call is not available in RISC OS 2.</p>
+ 
+ <dt>
+diff --git a/PRM/CONVERSIONS.HTML b/PRM/CONVERSIONS.HTML
+index 3ffe7a7..9aa8c3c 100644
+--- a/PRM/CONVERSIONS.HTML
++++ b/PRM/CONVERSIONS.HTML
+@@ -707,7 +707,7 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-2132"></a>On entry</h5>
+ <dd>
+-<p>R1 = pointer to name (which is terminated by a character <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 32)</p>
++<p>R1 = pointer to name (which is terminated by a character ≤ 32)</p>
+ 
+ <dt>
+ <h5><a name="idx-2133"></a>On exit</h5>
+diff --git a/PRM/DESKTOP.HTML b/PRM/DESKTOP.HTML
+index 373cf09..3abdb03 100644
+--- a/PRM/DESKTOP.HTML
++++ b/PRM/DESKTOP.HTML
+@@ -590,7 +590,7 @@ R1, R2 preserved</p>
+ <dt>
+ <h5><a name="idx-2367"></a>Use</h5>
+ <dd>
+-<p>This call gets the width of a string for the current desktop font. The width returned is that of the first <i>n</i> characters where R2 = <i>n</i>. If there are less than <i>n</i> characters in the string or R2 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 then the full string width is returned.</p>
++<p>This call gets the width of a string for the current desktop font. The width returned is that of the first <i>n</i> characters where R2 = <i>n</i>. If there are less than <i>n</i> characters in the string or R2 ≤ 0 then the full string width is returned.</p>
+ <p>This call might be made before plotting the string in an icon, or before using <A HREF="#59902">Wimp_TextOp 2</a>. For instance, it is used by the Filer when calculating the widths of the columns in a directory display.</p>
+ <p>This call is only available from RISC OS 3.5 onwards.</p>
+ <dd>
+diff --git a/PRM/DRAW.HTML b/PRM/DRAW.HTML
+index ffa4631..e8e0a59 100644
+--- a/PRM/DRAW.HTML
++++ b/PRM/DRAW.HTML
+@@ -440,7 +440,7 @@ flatness = number of user units in x axis / number of pixels in x axis
+ </table>
+ </dl>
+ <p>The <a name="marker-895486"></a>mitre limit is a little more complex than the others, so it is explained here rather than above. At any given corner, the mitre length is the distance from the point at which the inner edges of the stroke meet, to the point where the outer edges of the stroke meet. This distance increases as the angle between the lines decreases. If the ratio of the mitre length to the line width exceeds the mitre limit, stroke treats the corner with a bevel join instead of a mitre join. Also see the notes on scaling, later in this section.</p>
+-<p>Under RISC OS 2, the mitre limit is treated as unsigned. It is now treated as signed, but must be positive (ie <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> &amp;7FFFFFFF).</p>
++<p>Under RISC OS 2, the mitre limit is treated as unsigned. It is now treated as signed, but must be positive (ie ≤ &amp;7FFFFFFF).</p>
+ <p>Note that words at offsets 4, 8, and 12 are only used if the appropriate style is selected by the earlier parts. The structure can therefore be made shorter if triangular caps and mitres are not used.</p>
+ 
+ <dt>
+diff --git a/PRM/FILECORE.HTML b/PRM/FILECORE.HTML
+index 7dee373..12a4029 100644
+--- a/PRM/FILECORE.HTML
++++ b/PRM/FILECORE.HTML
+@@ -185,7 +185,7 @@
+ <td align="left" valign="top">--
+ <td align="left" valign="top">--
+ <td align="left" valign="top">--
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;=">512M
++<td align="left" valign="top">≤512M
+ <td align="left" valign="top">--
+ </table>
+ </ul>
+@@ -589,7 +589,7 @@ Number of disc heads - 1 if sides sequenced<br>
+ <li>The allocation unit cannot be so small as to require more than 15 bits to represent all the fragment ids possible, ie:
+ <dl>
+ <dd>
+-<p>(<i>ids per zone</i> <i>×</i> <i>nzones</i>) <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 2<sup>15</sup></p>
++<p>(<i>ids per zone</i> <i>×</i> <i>nzones</i>) ≤ 2<sup>15</sup></p>
+ </dl>
+ <p>since the fragment id cannot be more than 15 bits long.</p>
+ </ul>
+@@ -2274,7 +2274,7 @@ R8 = pointer to FileCore instance private word</p>
+ </ol>
+ <p>Once the filing system has identified the disc's format, it fills in the <i>log2secsize</i>, <i>secspertrack</i>, <i>heads</i>, <i>density</i>, <i>lowsector</i> and <i>root</i> values in the <a name="marker-884689"></a>disc record (see the chapter entitled <A HREF="#75310">Disc record</a>).</p>
+ <ul>
+-<li>If <i>log2secsize</i> <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 8, then it gives <i>heads</i> the value (actual number of heads-1), and sets bit 6 of <i>lowsector</i>, so sides are treated as sequenced. Otherwise (ie when <i>log2secsize</i> &gt; 8) it gives <i>heads</i> the value (actual number of heads), and clears bit 6 of <i>lowsector</i>, so sides are treated as interleaved.
++<li>If <i>log2secsize</i> ≤ 8, then it gives <i>heads</i> the value (actual number of heads-1), and sets bit 6 of <i>lowsector</i>, so sides are treated as sequenced. Otherwise (ie when <i>log2secsize</i> &gt; 8) it gives <i>heads</i> the value (actual number of heads), and clears bit 6 of <i>lowsector</i>, so sides are treated as interleaved.
+ <li>The filing system clears bit 7 of <i>lowsector</i>; this is used as an initial value, which FileCore subsequently corrects if necessary.
+ </ul>
+ <p>Having filled in the disc record, the filing system then reads in the data asked for.</p>
+diff --git a/PRM/FILESWITCH.HTML b/PRM/FILESWITCH.HTML
+index e950916..7bf922b 100644
+--- a/PRM/FILESWITCH.HTML
++++ b/PRM/FILESWITCH.HTML
+@@ -274,7 +274,7 @@ adfs:%.AAsm</tt></p>
+ <p>When a program is *Run, it is loaded at address &amp;XXXLLLLL and execution commences at address &amp;GGGGGGGG. Note that the execution address must be within the program or an error is given. That is:</p>
+ <dl>
+ <dd>
+-<p>XXXLLLLL <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> GGGGGGGG &lt; XXXLLLLL + Length of file</p>
++<p>XXXLLLLL ≤ GGGGGGGG &lt; XXXLLLLL + Length of file</p>
+ </dl>
+ <p>Also note that if the top twelve bits of the load address are all set (ie 'XXX' is FFF), then the file is assumed to be date-stamped. This is reasonable because su<a name="marker-212284"></a>ch a load address is outside the addressing range of the ARM processor.<a name="marker-212777"></a><a name="marker-212612"></a></p>
+ 
+@@ -1822,7 +1822,7 @@ R5 = size of buffer</p>
+ <td align="left" valign="top" nowrap>R5 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 1 ⇒
+ <td align="left" valign="top">there are (R5 - 1) completely unused bytes in the buffer; so R5 = 1 ⇒ there are 0 unused bytes in the buffer, and therefore the terminator just fitted
+ <tr>
+-<td align="left" valign="top" nowrap>R5 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 ⇒
++<td align="left" valign="top" nowrap>R5 ≤ 0 ⇒
+ <td align="left" valign="top">there are (1 - R5) too many bytes to fit in the buffer, which has consequently not been filled in; so R5 = 0 ⇒ there is 1 byte too many - the terminator - to fit in the buffer
+ </table>
+ </dl>
+@@ -3790,7 +3790,7 @@ R5 = size of buffer</p>
+ <td align="left" valign="top">R5 <img src="../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 1 ⇒
+ <td align="left" valign="top">there are (R5 - 1) completely unused bytes in the buffer; so R5 = 1 ⇒ there are 0 unused bytes in the buffer, and therefore the terminator just fitted
+ <tr>
+-<td align="left" valign="top">R5 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 ⇒
++<td align="left" valign="top">R5 ≤ 0 ⇒
+ <td align="left" valign="top">there are (1 - R5) too many bytes to fit in the buffer, which has consequently not been filled in; so R5 = 0 ⇒ there is 1 byte too many - the terminator - to fit in the buffer
+ </table>
+ </dl>
+diff --git a/PRM/FLOATINGPOINT.HTML b/PRM/FLOATINGPOINT.HTML
+index e3dbca8..da919af 100644
+--- a/PRM/FLOATINGPOINT.HTML
++++ b/PRM/FLOATINGPOINT.HTML
+@@ -137,7 +137,7 @@
+ <a href="FLOATINGPOINT-5.DRAW"><img src="FLOATINGPOINT-5.PNG"  border=0></a><br>
+ <i>Packed decimal format</i></p>
+ <p>The sign nibble contains both the significand's sign (top bit) and the exponent's sign (next bit); the other two bits are zero.</p>
+-<p>d18 is the most significant digit of the significand <i>d</i>, and e3 of the exponent <i>e</i>. The significand has an assumed decimal point between d18 and d17, and is normalised so that for a normal number l <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> D18 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 17 and 3 digits respectively; d0, d1 and e3 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
++<p>d18 is the most significant digit of the significand <i>d</i>, and e3 of the exponent <i>e</i>. The significand has an assumed decimal point between d18 and d17, and is normalised so that for a normal number l ≤ D18 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 17 and 3 digits respectively; d0, d1 and e3 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
+ <p>The result is undefined if any of the packed digits is hexadecimal A - F, save for a representation of ±∞ or a NaN (see below).</p>
+ <ul>
+ <li>If the exponent's sign is 0, the exponent is 0, and the significand is 0, the number represented is ±0.
+@@ -155,7 +155,7 @@
+ <a href="FLOATINGPOINT-6.DRAW"><img src="FLOATINGPOINT-6.PNG"  border=0></a><br>
+ <i>Expanded packed decimal format</i></p>
+ <p>The sign nibble contains both the significand's sign (top bit) and the exponent's sign (next bit); the other two bits are zero.</p>
+-<p>d23 is the most significant digit of the significand <i>d</i>, and e6 of the exponent <i>e</i>. The significand has an assumed decimal point between d23 and d22, and is normalised so that for a normal number l <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> D23 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 21 and 4 digits respectively; d0, d1, d2, e4, e5 and e6 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
++<p>d23 is the most significant digit of the significand <i>d</i>, and e6 of the exponent <i>e</i>. The significand has an assumed decimal point between d23 and d22, and is normalised so that for a normal number l ≤ D23 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 21 and 4 digits respectively; d0, d1, d2, e4, e5 and e6 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
+ <p>The result is undefined if any of the packed digits is hexadecimal A - F, save for a representation of ±∞ or a NaN (see below).</p>
+ <ul>
+ <li>If the exponent's sign is 0, the exponent is 0, and the significand is 0, the number represented is ±0.
+@@ -308,9 +308,9 @@
+ <li>Comparison with exceptions of Unordered operands
+ <li>ACS, ASN when argument's absolute value is &gt; 1 
+ <li>SIN, COS, TAN when argument is ±∞
+-<li>LOG, LGN when argument is <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0
+-<li>POW when first operand is &lt; 0 and second operand is not an integer, or first operand is 0 and second operand is <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0
+-<li>RPW when first operand is not an integer and second operand is &lt; 0, or first operand is <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 and second operand is 0.
++<li>LOG, LGN when argument is ≤ 0
++<li>POW when first operand is &lt; 0 and second operand is not an integer, or first operand is 0 and second operand is ≤ 0
++<li>RPW when first operand is not an integer and second operand is &lt; 0, or first operand is ≤ 0 and second operand is 0.
+ </ul>
+ 
+ <h6><a name="idx-4474"></a>DVZ - division by zero</h6>
+diff --git a/PRM/MEMMAN.HTML b/PRM/MEMMAN.HTML
+index bd05147..80fd787 100644
+--- a/PRM/MEMMAN.HTML
++++ b/PRM/MEMMAN.HTML
+@@ -280,7 +280,7 @@
+ <dd>
+ <p>R0 = base address (&amp;8000)<br>
+ R1 = current size (ie for current task)<br>
+-R2 = maximum size (<img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 28MB-32kB in current implementation)</p>
++R2 = maximum size (≤ 28MB-32kB in current implementation)</p>
+ </dl>
+ 
+ <dt>
+@@ -381,7 +381,7 @@ R5 = page size, in bytes<br>
+ R12 = pointer to workspace</p>
+ 
+ <h6><a name="idx-6138"></a>On exit</h6>
+-<p>R3 = amount area can shrink by, in bytes (must be <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> R3 on entry)<br>
++<p>R3 = amount area can shrink by, in bytes (must be ≤ R3 on entry)<br>
+ All other registers preserved</p>
+ 
+ <h6><a name="idx-6139"></a>Use</h6>
+diff --git a/PRM/MEMORYMAN.HTML b/PRM/MEMORYMAN.HTML
+index 7c7ede0..5c7377b 100644
+--- a/PRM/MEMORYMAN.HTML
++++ b/PRM/MEMORYMAN.HTML
+@@ -2576,7 +2576,7 @@ Fast interrupts are enabled</p>
+ <td align="left" valign="top">number of kilobytes of memory reserved
+ <tr>
+ <td align="left" valign="top"><tt><I>n</tt></I>
+-<td align="left" valign="top">number of pages of memory reserved; n <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 127
++<td align="left" valign="top">number of pages of memory reserved; n ≤ 127
+ </table>
+ 
+ <dt>
+@@ -2624,7 +2624,7 @@ Fast interrupts are enabled</p>
+ <tr>
+ <td align="left" valign="top">
+ <tt><I>n</tt></I>
+-<td align="left" valign="top">number of pages of memory reserved; n <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 127
++<td align="left" valign="top">number of pages of memory reserved; n ≤ 127
+ </table>
+ 
+ <dt>
+@@ -2672,7 +2672,7 @@ Fast interrupts are enabled</p>
+ <tr>
+ <td align="left" valign="top">
+ <tt><I>n</tt></I>
+-<td align="left" valign="top">number of pages of memory reserved; n <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 63
++<td align="left" valign="top">number of pages of memory reserved; n ≤ 63
+ </table>
+ 
+ <dt>
+diff --git a/PRM/PDRIVERS.HTML b/PRM/PDRIVERS.HTML
+index d358dc5..aba433f 100644
+--- a/PRM/PDRIVERS.HTML
++++ b/PRM/PDRIVERS.HTML
+@@ -339,7 +339,7 @@ CLOSE printer:</pre></p>
+ <TR>
+ <td align="left" valign="top" nowrap>OS_Byte 163
+ <td align="left" valign="top">Read/write general graphics information
+-<td align="left" valign="top">Use only to set dot-dash length (ie R1 = 242, R2 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 64)
++<td align="left" valign="top">Use only to set dot-dash length (ie R1 = 242, R2 ≤ 64)
+ <TR>
+ <td align="left" valign="top" nowrap>OS_Byte 218
+ <td align="left" valign="top">Read/write bytes in VDU queue
+@@ -2005,7 +2005,7 @@ R3 = pointer to 20 byte block for open messages file</p>
+ <dd>
+ <p>This service call is issued by a PDriver module that is about to open the common <a name="marker-132065"></a>message file for printer drivers, held in Resources:$.Resources.PDrivers.Messages. It is provided so that the module can find if another PDriver module has already opened the file, and if so get its MessageTrans block:</p>
+ <ul>
+-<li>If the service call is claimed R3 will point to a 20 byte block. The first 16 bytes of this are a MessageTrans block referring to the file, and the remaining word is a usage count. The PDriver module should increment this usage count and use the MessageTrans block to access the file. When the module has finished using the file it should decrement the usage count, and if the count is <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 SHOULD THEN CALL <A HREF="MESSAGETRANS.HTML#58460">MessageTrans_CloseFile</a> followed by <A HREF="MODULES.HTML#70545">OS_Module 7</a> to free the 20 byte block.
++<li>If the service call is claimed R3 will point to a 20 byte block. The first 16 bytes of this are a MessageTrans block referring to the file, and the remaining word is a usage count. The PDriver module should increment this usage count and use the MessageTrans block to access the file. When the module has finished using the file it should decrement the usage count, and if the count is ≤ 0 SHOULD THEN CALL <A HREF="MESSAGETRANS.HTML#58460">MessageTrans_CloseFile</a> followed by <A HREF="MODULES.HTML#70545">OS_Module 7</a> to free the 20 byte block.
+ <li>If the service call is not claimed the PDriver module should instead allocate 20 bytes using <A HREF="MODULES.HTML#64895">OS_Module 6</a>, and then use <A HREF="MESSAGETRANS.HTML#46064">MessageTrans_OpenFile</a> to open Resources:$.Resources.PDrivers.Messages, placing the MessageTrans block in the first 16 bytes of the claimed buffer, and setting the usage count in the last word to 1.
+ </ul>
+ <p>A PDriver module receiving this service call that is using the common messages file should set R3 to point to the MessageTrans block and claim the service call by setting R1 to zero.</p>
+diff --git a/PRM/PDSUPPORT.HTML b/PRM/PDSUPPORT.HTML
+index 5fdb9a2..8438ebd 100644
+--- a/PRM/PDSUPPORT.HTML
++++ b/PRM/PDSUPPORT.HTML
+@@ -529,7 +529,7 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-7682"></a>Use</h5>
+ <dd>
+-<p>This call copies the specified filename into a buffer. The routine terminates on any character <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;=">32 and converts it to a null. An error is generated if an overflow occurs (ie more than R1 characters need to be copied).</p>
++<p>This call copies the specified filename into a buffer. The routine terminates on any character ≤32 and converts it to a null. An error is generated if an overflow occurs (ie more than R1 characters need to be copied).</p>
+ <p>This call is not available under RISC OS 2, nor under RISC OS 3 (version 3.00).</p>
+ 
+ <dt>
+diff --git a/PRM/RAMFS.HTML b/PRM/RAMFS.HTML
+index cfc1c41..6d76d94 100644
+--- a/PRM/RAMFS.HTML
++++ b/PRM/RAMFS.HTML
+@@ -236,7 +236,7 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-8168"></a>Parameters</h5>
+ <dd>
+ <p><tt><i>m</i></tt>K - number of kilobytes of memory reserved<br>
+-<tt><i>n</i></tt> - number of pages of memory reserved; n <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 127</p>
++<tt><i>n</i></tt> - number of pages of memory reserved; n ≤ 127</p>
+ 
+ <dt>
+ <h5><a name="idx-8169"></a>Use</h5>
+diff --git a/PRM/SHAREDCLIBRARY.HTML b/PRM/SHAREDCLIBRARY.HTML
+index b0f37ca..058d5c7 100644
+--- a/PRM/SHAREDCLIBRARY.HTML
++++ b/PRM/SHAREDCLIBRARY.HTML
+@@ -222,7 +222,7 @@ signed divide by 10 (much faster than general division).</p>
+ <p>The PC at the time of the trap together with the call stack are used to find the TrapHandler procedure of an appropriate language. If one is found, it is invoked in user mode. It may return a value (Handled or NotHandled), or may not return at all. If it returns Handled, execution is resumed using the dumped register set (which should have been modified, otherwise resumption is likely just to repeat the trap). If it returns NotHandled, then that handler is marked as failed, and a search for an appropriate handler continues from the current stack frame.</p>
+ <p>If the search for a trap handler fails, then the same procedure is gone through to find a 'uncaught trap' handler.</p>
+ <p>If this too fails, it is an error. It is also an error if a further trap occurs while handling a trap. The procedure <tt>_kernel_exittraphandler</tt> is provided for use in the case the handler takes care of resumption itself (eg via <tt>longjmp</tt>).</p>
+-<p>(A language handler is appropriate for a PC value if LanguageCodeBase <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> PC and PC &lt; LanguageCodeLimit, and it is not marked as failed. Marking as 'failed' is local to a particular kernel trap handler invocation. The search for an appropriate handler examines the current PC, then R14, then the link field of successive stack frames. If the stack is found to be corrupt at any time, the search fails).</p>
++<p>(A language handler is appropriate for a PC value if LanguageCodeBase ≤ PC and PC &lt; LanguageCodeLimit, and it is not marked as failed. Marking as 'failed' is local to a particular kernel trap handler invocation. The search for an appropriate handler examines the current PC, then R14, then the link field of successive stack frames. If the stack is found to be corrupt at any time, the search fails).</p>
+ <dd>
+ 
+ <h6><a name="marker-858316"></a>EventProc, <a name="marker-858317"></a>UnhandledEventProc</h6>
+@@ -397,7 +397,7 @@ Bits 16 - 31 = Root stack size in Kilobytes
+ <dd>
+ <p>Entry vectors specified by the stubs descriptions are patched to contain branches to routines in the library.</p>
+ <p>If R5 &gt; R4 on entry the users statics are copied to the bottom of the workspace specified in R1 and the Client static data offset (at byte offset +24 from the stack base) is initialised.</p>
+-<p>For each library chunk the library statics are copied either into the workspace specified in R1 if R5 &gt; R4 on entry or to the static data area specified in the chunks stub description if R5 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> R4. </p>
++<p>For each library chunk the library statics are copied either into the workspace specified in R1 if R5 &gt; R4 on entry or to the static data area specified in the chunks stub description if R5 ≤ R4. </p>
+ <p>The Library static data offset (at byte offset +20 from the stack base) is initialised. </p>
+ <p>Space for the root stack chunk is claimed from the workspace specified in R1. </p>
+ <p>R0 = value of R2 on entry<br>
+@@ -507,7 +507,7 @@ Bits 16 - 31 = Root stack size in Kilobytes
+ <dd>
+ <p>Entry vectors specified by the stubs descriptions are patched to contain branches to routines in the library.</p>
+ <p>If R5 &gt; R4 on entry the users statics are copied to the bottom of the workspace specified in R1 and the Client static data offset (at byte offset +24 from the stack base) is initialised.</p>
+-<p>For each library chunk the library statics are copied either into the workspace specified in R1 if R5 &gt; R4 on entry or to the static data area specified in the chunks stub description if R5 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> R4. </p>
++<p>For each library chunk the library statics are copied either into the workspace specified in R1 if R5 &gt; R4 on entry or to the static data area specified in the chunks stub description if R5 ≤ R4. </p>
+ <p>The Library static data offset (at byte offset +20 from the stack base) is initialised. </p>
+ <p>Space for the root stack chunk is claimed from the SVC stack.</p>
+ <p>R0 = value of R2 on entry<br>
+@@ -3177,7 +3177,7 @@ R1, R2 scrambled.</p>
+     <h5><a name="72332"></a>Entry no. 13: _rd2chk</h5><br>
+     <h5><a name="41800"></a>Entry no. 14: _rd4chk</h5>
+ <dd>
+-<p>The functions <tt>_rd1chk</tt>, <tt>_rd2chk</tt> and <tt>_rd4chk</tt> check that the value of R0 passed to them is a valid address in the application space (&amp;8000 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> R0 &lt; &amp;1000000). _rd2chk and _rd4chk also check that the value is properly aligned for a half-word / word access respectively.</p>
++<p>The functions <tt>_rd1chk</tt>, <tt>_rd2chk</tt> and <tt>_rd4chk</tt> check that the value of R0 passed to them is a valid address in the application space (&amp;8000 ≤ R0 &lt; &amp;1000000). _rd2chk and _rd4chk also check that the value is properly aligned for a half-word / word access respectively.</p>
+ <p>If the value of R0 is a valid address the function just returns, otherwise it generates an <tt>Illegal read</tt> error.</p>
+ <p>These calls are used by the C compiler when compiling with memory checking enabled.</p>
+ 
+@@ -3186,7 +3186,7 @@ R1, R2 scrambled.</p>
+     <h5><a name="88635"></a>Entry no. 16: _wr2chk</h5><br>
+     <h5><a name="13328"></a>Entry no. 17: _wr4chk</h5>
+ <dd>
+-<p>The functions <tt>_wr1chk</tt>, <tt>_wr2chk</tt> and <tt>_wr4chk</tt> check that the value of R0 passed to them is a valid address in the application space (&amp;8000 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> R0 &lt; &amp;1000000). _rd2chk and _rd4chk also check that the value is properly aligned for a half-word / word access respectively.</p>
++<p>The functions <tt>_wr1chk</tt>, <tt>_wr2chk</tt> and <tt>_wr4chk</tt> check that the value of R0 passed to them is a valid address in the application space (&amp;8000 ≤ R0 &lt; &amp;1000000). _rd2chk and _rd4chk also check that the value is properly aligned for a half-word / word access respectively.</p>
+ <p>If the value of R0 is a valid address the function just returns, otherwise it generates an <tt>Illegal write</tt> error.</p>
+ <p>These calls are used by the C compiler when compiling with memory checking enabled.</p>
+ 
+diff --git a/PRM/SPRITES.HTML b/PRM/SPRITES.HTML
+index 48dd387..cb053a5 100644
+--- a/PRM/SPRITES.HTML
++++ b/PRM/SPRITES.HTML
+@@ -2313,7 +2313,7 @@ R6+8,12 = X1,Y1 on screen (1/256th OS unit)<br>
+ R6+16,20 = X2,Y2 on screen (1/256th OS unit)<br>
+ R6+24,28 = X3,Y3 on screen (1/256th OS unit)<br>
+ </dl>
+-R7 = pointer to translation table (<img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 ⇒ none)</p>
++R7 = pointer to translation table (≤ 0 ⇒ none)</p>
+ 
+ <dt>
+ <h5><a name="idx-9442"></a>On exit</h5>
+@@ -2605,7 +2605,7 @@ R3 = size of required save area in bytes</p>
+ <h5><a name="idx-9469"></a>Parameters</h5>
+ <dd>
+ <p><tt><i>m</i>K</tt> - number of kilobytes of memory reserved<br>
+-<tt><i>n</i></tt> - number of pages of memory reserved; n <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 127</p>
++<tt><i>n</i></tt> - number of pages of memory reserved; n ≤ 127</p>
+ 
+ <dt>
+ <h5><a name="idx-9470"></a>Use</h5>
+diff --git a/PRM/VDU.HTML b/PRM/VDU.HTML
+index e716411..700365e 100644
+--- a/PRM/VDU.HTML
++++ b/PRM/VDU.HTML
+@@ -8214,7 +8214,7 @@ Fast interrupts are enabled</p>
+ <tr>
+ <td align="left" valign="top">
+ <tt><I>n</i></tt>
+-<td align="left" valign="top">number of pages of memory reserved; n <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 127
++<td align="left" valign="top">number of pages of memory reserved; n ≤ 127
+ </table>
+ 
+ <dt>
+diff --git a/PRM/WIMP.HTML b/PRM/WIMP.HTML
+index f25f789..29f7e54 100644
+--- a/PRM/WIMP.HTML
++++ b/PRM/WIMP.HTML
+@@ -5163,7 +5163,7 @@ for drag types 1 - 4 only
+ <h5><a name="idx-11572"></a>Types 8 - 11</h5>
+ <dd>
+ <p>These types give the maximum flexibility for dragging objects around the whole screen. Use drag type 7 and Wimp_UpdateWindow to drag an object within a window. They are, though, somewhat more complex to use than the previously described types.</p>
+-<p>First the application must provide the addresses of three routines which draw, remove and move the user's drag item (it doesn't have to be a box). If no move routine is supplied ([R1+52] <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0), the Wimp will use the remove and draw routines to perform the operation.</p>
++<p>First the application must provide the addresses of three routines which draw, remove and move the user's drag item (it doesn't have to be a box). If no move routine is supplied ([R1+52] ≤ 0), the Wimp will use the remove and draw routines to perform the operation.</p>
+ <p>Note that the user code must not be in application space, but in the RMA. This is because the Wimp doesn't know to page the task in when this code is required.</p>
+ <p>The user code is called under the following conditions:</p>
+ 
+@@ -5947,7 +5947,7 @@ Fast interrupts are enabled</p>
+ <dt>
+ <h5><a name="idx-11658"></a>On entry</h5>
+ <dd>
+-<p>R1 = pointer to user buffer for template, or <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 to find the size of the template<br>
++<p>R1 = pointer to user buffer for template, or ≤ 0 to find the size of the template<br>
+ R2 = pointer to workspace for indirected icons<br>
+ R3 = pointer to byte following workspace<br>
+ R4 = pointer to 256 byte font reference array (-1 for no fonts)<br>
+@@ -5958,8 +5958,8 @@ R6 = position to search from (0 for first call)</p>
+ <h5><a name="idx-11659"></a>On exit</h5>
+ <dd>
+ <p>R0 corrupted<br>
+-R1 preserved, or required size of buffer (if R1 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 on entry)<br>
+-R2 = pointer to remaining workspace, or required size of workspace (if R1 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 on entry)<br>
++R1 preserved, or required size of buffer (if R1 ≤ 0 on entry)<br>
++R2 = pointer to remaining workspace, or required size of workspace (if R1 ≤ 0 on entry)<br>
+ R3, R4 preserved<br>
+ R5 = pointer to actual name<br>
+ R6 = position of next entry (0 if no match found) </p>
+@@ -5985,7 +5985,7 @@ Fast interrupts are enabled</p>
+ <dd>
+ <p>This call loads a template. You must have previously called Wimp_OpenTemplate to open the template.</p>
+ <p>The space required by the buffer passed in R1 is 88 bytes for the window, 32 bytes for each icon and room for the initial values of all indirected data fields, since all of these things are initially copied into the buffer. The indirected data is then copied by the Wimp into the workspace area pointed to by R2. The font reference array is also updated if fonts are used.</p>
+-<p>The required sizes of the buffer and workspace area are hard to work out, and so in RISC OS 3 the option was added whereby you can find these values by setting R1 <img src="../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0. You should use this option where possible.</p>
++<p>The required sizes of the buffer and workspace area are hard to work out, and so in RISC OS 3 the option was added whereby you can find these values by setting R1 ≤ 0. You should use this option where possible.</p>
+ <p>Window templates are created by the <a name="marker-155111"></a>template creation utility (FormEd). They are stored in a file, and each template has a name associated with it. Because the search name may be wildcarded, it is possible to search for all templates of a given form (e.g. dialog*) by calling Wimp_LoadTemplate with R6=0 the first time, then using the value passed back for subsequent calls. R6 will be returned as 0 on the call after the last template is found. As the wildcarded name is overwritten by the actual one found, it must be re-initialised before every call and must be big enough to have the template name written into it.</p>
+ <p>The indirected icon workspace pointer is provided so that when the window definition is read into the buffer addressed by R1, its icon fields can be set correctly. An indirected icon's data is read from the file into the workspace addressed by R2, and the icon data pointer fields in the window definition are set appropriately. R2 is updated, and if it becomes greater than R3, a <tt>Window definition won't fit</tt> error is given.</p>
+ <p>The <a name="marker-155467"></a>font reference count array is used to overcome the problem caused with dynamically allocated <a name="marker-155468"></a>font handles. When a template file is created, font information such as size, font name etc is stored along with the font handle that was returned for the font in FormEd. When a template is subsequently loaded, the Wimp calls Font_FindFont and replaces references to the original font number with the new handle. It then increments the entry for that handle in the reference array. This array should be initialised to zero before the first call to Wimp_LoadTemplate.</p>
+diff --git a/SYMBOLS/ENTITIES/8804.PNG b/SYMBOLS/ENTITIES/8804.PNG
+deleted file mode 100644
+index 21eae72f741d1e7219d4fb7a4d3c0ab8e7f1d111..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 220
+zcmeAS@N?(olHy`uVBq!ia0vp^d_XL~0VEih{|i0?QcNX5e!&ckj8p!u1M;SNx;TbZ
+z+)7S!Y4|L^-1vay?^+2Ky~8_R>q@BXx^HY`U}R+UZ{GTY3yl6-D=RBAD?k2T$H_MN
+ztAH!deQ6enns0}B5_X(Fuu(SA;_!18v1u*03-pv9zm?&e*76y|`phKP)&OSxW@BWV
+z{ud<n8)!oNaSnH*y7%EX&!0Haz_7p0pf0ZY$oGUD{YR2-@H5o!RukKw5DRiHgQu&X
+J%Q~loCIF^LQ^5cL
+
+diff --git a/TOOLBOX/ASM/ERRORS.HTML b/TOOLBOX/ASM/ERRORS.HTML
+index 107180e..51f74f4 100644
+--- a/TOOLBOX/ASM/ERRORS.HTML
++++ b/TOOLBOX/ASM/ERRORS.HTML
+@@ -76,7 +76,7 @@ An opcode has been found in an area which is not a code area.
+ <li><tt>Coprocessor register number out of range</tt>
+ <li><tt>Data transfer offset out of range</tt><br>
+ The immediate value in a data transfer opcode must be in the range:<br>
+--4095 <em><img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="></EM> E <EM><img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="></em> +4095
++-4095 <em>≤</EM> E <EM>≤</em> +4095
+ <li><tt>Decimal overflow</tt><br>
+ The number exceeds 32 bits.
+ <li><tt>Division by zero<br>
+@@ -197,4 +197,4 @@ Not one of the six legal shift mnemonics.<a name="marker-556618"></a></ul>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/TOOLBOX/ASM/FPINSTRS.HTML b/TOOLBOX/ASM/FPINSTRS.HTML
+index a3e3bc5..33d0745 100644
+--- a/TOOLBOX/ASM/FPINSTRS.HTML
++++ b/TOOLBOX/ASM/FPINSTRS.HTML
+@@ -129,7 +129,7 @@
+ <p align="center"><i>Packed decimal format</i>
+ </p>
+ <p>The sign nibble contains both the significand's sign (top bit) and the exponent's sign (next bit); the other two bits are zero.</p>
+-<p>d18 is the most significant digit of the significand <i>d</i>, and e3 of the exponent <i>e</i>. The significand has an assumed decimal point between d18 and d17, and is normalised so that for a normal number l <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> D18 <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 17 and 3 digits respectively; d0, d1 and e3 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
++<p>d18 is the most significant digit of the significand <i>d</i>, and e3 of the exponent <i>e</i>. The significand has an assumed decimal point between d18 and d17, and is normalised so that for a normal number l ≤ D18 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 17 and 3 digits respectively; d0, d1 and e3 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
+ <p>The result is undefined if any of the packed digits is hexadecimal A - F, save for a representation of ±∞ or a NaN (see below).</p>
+ <ul>
+ <li>If the exponent's sign is 0, the exponent is 0, and the significand is 0, the number represented is ±0.
+@@ -151,7 +151,7 @@
+ </p>
+ 
+ <p>The sign nibble contains both the significand's sign (top bit) and the exponent's sign (next bit); the other two bits are zero.</p>
+-<p>d23 is the most significant digit of the significand <i>d</i>, and e6 of the exponent <i>e</i>. The significand has an assumed decimal point between d23 and d22, and is normalised so that for a normal number l <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> D23 <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 21 and 4 digits respectively; d0, d1, d2, e4, e5 and e6 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
++<p>d23 is the most significant digit of the significand <i>d</i>, and e6 of the exponent <i>e</i>. The significand has an assumed decimal point between d23 and d22, and is normalised so that for a normal number l ≤ D23 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 21 and 4 digits respectively; d0, d1, d2, e4, e5 and e6 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
+ <p>The result is undefined if any of the packed digits is hexadecimal A - F, save for a representation of ±∞ or a NaN (see below).</p>
+ <ul>
+ <li>If the exponent's sign is 0, the exponent is 0, and the significand is 0, the number represented is ±0.
+@@ -286,9 +286,9 @@
+ <li>Comparison with exceptions of Unordered operands
+ <li>ACS, ASN when argument's absolute value is &gt; 1 
+ <li>SIN, COS, TAN when argument is ±∞
+-<li>LOG, LGN when argument is <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0
+-<li>POW when first operand is &lt; 0 and second operand is not an integer, or first operand is 0 and second operand is <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0
+-<li>RPW when first operand is not an integer and second operand is &lt; 0, or first operand is <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> 0 and second operand is 0.
++<li>LOG, LGN when argument is ≤ 0
++<li>POW when first operand is &lt; 0 and second operand is not an integer, or first operand is 0 and second operand is ≤ 0
++<li>RPW when first operand is not an integer and second operand is &lt; 0, or first operand is ≤ 0 and second operand is 0.
+ </ul>
+ 
+ <h6><a name="idx-59"></a>DVZ - division by zero</h6>
+diff --git a/TOOLBOX/DDE/APPE.HTML b/TOOLBOX/DDE/APPE.HTML
+index 673bda5..4224b99 100644
+--- a/TOOLBOX/DDE/APPE.HTML
++++ b/TOOLBOX/DDE/APPE.HTML
+@@ -1703,7 +1703,7 @@ End                          ; The list of offsets of locations to
+ <td align="left" valign="top"># source space occupied by this statement
+ </table>
+ <p><b>lineinc</b> describes how to calculate the source position (line, column) of the next statement from the source position of this one:</p>
+-<p>If lineinc is in the range 0 <img src="../../SYMBOLS/ENTITIES/8804.PNG" alt="&LT;="> and &lt; 64, the new position is (line+lineinc,1). <br>
++<p>If lineinc is in the range 0 ≤ and &lt; 64, the new position is (line+lineinc,1). <br>
+ If lineinc <img src="../../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 64, the new position is (line, column+lineinc -64).</p>
+ <p>The number of bytes of code generated for a statement may be zero, provided the line increment is non-zero (such an item may describe a block end or block start, for example).</p>
+ <p>It is not possible to describe a statement which generates no code and no line number increment, as that encoding is used as an escape to the long form lineinfo items described below.</p>
+@@ -1740,4 +1740,4 @@ If lineinc <img src="../../SYMBOLS/ENTITIES/8805.PNG" alt="&GT;="> 64, the new p
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+-- 
+2.29.2
+

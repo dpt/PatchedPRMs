@@ -1,0 +1,220 @@
+From 3d8f78302cd02613beabaf1d5f56bc17a1570731 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Wed, 3 Mar 2021 01:10:06 +0000
+Subject: [PATCH 05/24] =?UTF-8?q?4:=20Replace=20substitute=20PNG=20for=208?=
+ =?UTF-8?q?594=20with=20a=20proper=20=E2=86=92=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ BASIC/APPENDICES/INKEYVALUES.HTML |   2 +-
+ BASIC/PART2/BASICSCREENED.HTML    |  16 ++++++++--------
+ BASIC/PART2/INPUTTING.HTML        |   4 ++--
+ SYMBOLS/ENTITIES/8594.PNG         | Bin 189 -> 0 bytes
+ TOOLBOX/C/CERRORS.HTML            |   4 ++--
+ TOOLBOX/C/CLIB.HTML               |   2 +-
+ TOOLBOX/DDE/DDTOLD.HTML           |   2 +-
+ TOOLBOX/DDE/SRCEDIT.HTML          |   8 ++++----
+ 8 files changed, 19 insertions(+), 19 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/8594.PNG
+
+diff --git a/BASIC/APPENDICES/INKEYVALUES.HTML b/BASIC/APPENDICES/INKEYVALUES.HTML
+index 1179c78..e7bf17b 100644
+--- a/BASIC/APPENDICES/INKEYVALUES.HTML
++++ b/BASIC/APPENDICES/INKEYVALUES.HTML
+@@ -262,7 +262,7 @@
+ <td align="left" valign="top">←
+ <td align="left" valign="top">-26 
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">→
+ <td align="left" valign="top">-122 
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+diff --git a/BASIC/PART2/BASICSCREENED.HTML b/BASIC/PART2/BASICSCREENED.HTML
+index 80314cf..7211357 100644
+--- a/BASIC/PART2/BASICSCREENED.HTML
++++ b/BASIC/PART2/BASICSCREENED.HTML
+@@ -150,8 +150,8 @@
+ <p>If you press Shift <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">_ THE NEXT SCREENFUL OF YOUR PROGRAM IS DISPLAYED. IN THIS WAY_ YOU CAN MOVE QUICKLY AROUND YOUR PROGRAM FROM BEGINNING TO END. SIMILARLY_ IF YOU PRESS SHIFT ↑, you can see the previous screenful. These functions are duplicated by the Page Up and Page Down keys.</p>
+ <p>If you press Ctrl-Shift ↑ OR CTRL-SHIFT <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]"> you can move to the first or last statement on the current screen. In addition, if the cursor starts n characters along a statement, it remains n characters along. It does not go to the beginning of the statement.</p>
+ <h6><a name="idx-73"></a>Moving horizontally</h6>
+-<p>Pressing the Shift <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> AND SHIFT ← enables you to move sideways across the screen at twice the normal speed.</p>
+-<p>Pressing Ctrl ← TAKES YOU TO THE BEGINNING OF THE CURRENT STATEMENT AND CTRL <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> TAKES YOU TO THE END OF THE CURRENT LINE. PRESSING CTRL-SHIFT <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> TAKES YOU TO THE BEGINNING OF THE NEXT STATEMENT. PRESSING CTRL-SHIFT ← takes you to the beginning of the previous statement.</p>
++<p>Pressing the Shift → AND SHIFT ← enables you to move sideways across the screen at twice the normal speed.</p>
++<p>Pressing Ctrl ← TAKES YOU TO THE BEGINNING OF THE CURRENT STATEMENT AND CTRL → TAKES YOU TO THE END OF THE CURRENT LINE. PRESSING CTRL-SHIFT → TAKES YOU TO THE BEGINNING OF THE NEXT STATEMENT. PRESSING CTRL-SHIFT ← takes you to the beginning of the previous statement.</p>
+ <h6><a name="idx-74"></a>Using two windows</h6>
+ <p>You can split the screen into two windows, which lets you look at two portions of your program at the same time (this is called split window mode). To do this, press Ctrl-F4. This saves you scrolling through the program many times. To place the cursor in the other window, press Ctrl-F2 (which acts as a toggle between the two windows).</p>
+ <p>When you want to return to a single window, press Ctrl-F4 again. Note that while you are using the split window mode, the Copy key will not work.</p>
+@@ -308,13 +308,13 @@
+ <td align="left" valign="top">← / SHIFT ←
+ <td align="left" valign="top">Moves cursor left 1 or 2 positions
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> / SHIFT <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">→ / SHIFT →
+ <td align="left" valign="top">Moves cursor right 1 or 2 positions
+ <tr>
+ <td align="left" valign="top">Ctrl ←
+ <td align="left" valign="top">Moves cursor to beginning of field
+ <tr>
+-<td align="left" valign="top">Ctrl <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Ctrl →
+ <td align="left" valign="top">Moves cursor to end of field 
+ </table>
+ </p>
+@@ -339,7 +339,7 @@
+ <td align="left" valign="top">←
+ <td align="left" valign="top">Moves right<br>
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">→
+ <td align="left" valign="top">Moves left
+ <tr>
+ <td align="left" valign="top">↑
+@@ -350,7 +350,7 @@
+ <tr>
+ <td>
+ <tr>
+-<td align="left" valign="top">Shift <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Shift →
+ <td align="left" valign="top">Moves right two characters
+ <tr>
+ <td align="left" valign="top">Shift ←
+@@ -364,7 +364,7 @@
+ <tr>
+ <td>
+ <tr>
+-<td align="left" valign="top">Ctrl <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Ctrl →
+ <td align="left" valign="top">Moves to the end of the statement
+ <tr>
+ <td align="left" valign="top">Ctrl ←
+@@ -378,7 +378,7 @@
+ <tr>
+ <td>
+ <tr>
+-<td align="left" valign="top">Ctrl-Shift <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Ctrl-Shift →
+ <td align="left" valign="top">Moves to beginning of next statement
+ <tr>
+ <td align="left" valign="top">Ctrl-Shift ←
+diff --git a/BASIC/PART2/INPUTTING.HTML b/BASIC/PART2/INPUTTING.HTML
+index c4dade0..2b64b83 100644
+--- a/BASIC/PART2/INPUTTING.HTML
++++ b/BASIC/PART2/INPUTTING.HTML
+@@ -157,7 +157,7 @@ Hello, how are you?</pre>
+ <td align="left" valign="top">←
+ <td align="left" valign="top">136
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">→
+ <td align="left" valign="top">137
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+@@ -309,7 +309,7 @@ Hello, how are you?</pre>
+ <td align="left" valign="top">←
+ <td align="left" valign="top">12
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">→
+ <td align="left" valign="top">13
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+diff --git a/SYMBOLS/ENTITIES/8594.PNG b/SYMBOLS/ENTITIES/8594.PNG
+deleted file mode 100644
+index 3ba79c536a7418fefec25c76f68b67303f078f26..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 189
+zcmeAS@N?(olHy`uVBq!ia0vp^5<twy0VEg%CO0nvQcNX5e!&ckj8p!u1M<o|T^vIy
+zZY8I=Fz;_IGc*E$1>QE#Rvy$lXfZ$0u8i{-&$PQYRO_ri$Q;u;_#>|Qxq<TIj~;A1
+zAD;4_uM_KJ@#&P!=P}tJxpn^0XU1mM@4R2s983F|FFf;kPfyR8o)=;@x3<Q&Ha0Rk
+jAFpjYYti(?riF<?s7(5y*Tc)QAa{AX`njxgN@xNAPbNkS
+
+diff --git a/TOOLBOX/C/CERRORS.HTML b/TOOLBOX/C/CERRORS.HTML
+index fb590cb..45bff4f 100644
+--- a/TOOLBOX/C/CERRORS.HTML
++++ b/TOOLBOX/C/CERRORS.HTML
+@@ -992,7 +992,7 @@ struct t;
+ static struct t t1; /* t not defined */</pre></p>
+ 
+ <p><tt><b>struct/union 'xx' not yet defined - cannot be selected from</b></tt></p>
+-<p>The structure or union type used as the left operand of a <em>.</em> or <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> operator has not yet been defined so the field names are not known. Example:</p>
++<p>The structure or union type used as the left operand of a <em>.</em> or → operator has not yet been defined so the field names are not known. Example:</p>
+ <p><pre>{
+   struct s s1; /* forward reference          */
+   s1.a = 12;   /* don't know field names yet */
+@@ -1106,4 +1106,4 @@ out of store (in cc_alloc)</b></tt></p>
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/TOOLBOX/C/CLIB.HTML b/TOOLBOX/C/CLIB.HTML
+index c650bf0..e015ee5 100644
+--- a/TOOLBOX/C/CLIB.HTML
++++ b/TOOLBOX/C/CLIB.HTML
+@@ -67,7 +67,7 @@
+ <td align="left" valign="top">Returns true if c is a lower-case letter
+ <tr>
+ <td align="left" valign="top" nowrap><tt>int isprint(int c)</tt>
+-<td align="left" valign="top">Returns true if c is a printable character (in the ASCII locale this means 0x20 (space) <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> 0x7E (tilde) inclusive).
++<td align="left" valign="top">Returns true if c is a printable character (in the ASCII locale this means 0x20 (space) → 0x7E (tilde) inclusive).
+ <tr>
+ <td align="left" valign="top" nowrap><tt>int ispunct(int c)</tt>
+ <td align="left" valign="top">Returns true if c is a printable character other than a space or alphanumeric character
+diff --git a/TOOLBOX/DDE/DDTOLD.HTML b/TOOLBOX/DDE/DDTOLD.HTML
+index a7484bd..7716cb5 100644
+--- a/TOOLBOX/DDE/DDTOLD.HTML
++++ b/TOOLBOX/DDE/DDTOLD.HTML
+@@ -176,7 +176,7 @@ while (i--) { ... }</pre></p>
+ <p>The upper window is the <a name="marker-120441"></a>
+ 
+ <b>Context</b> window. The title bar contains the name of the program being debugged. The Context window displays the source text or symbolic disassembly associated with the current Context or PC location.</p>
+-<p>When you start a debugging session, the Context window initially displays a symbolic disassembly, like that shown above. This is a disassembly of the run-time system initialisation code. The arrow symbol (<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">) to the left of the window shows the current PC location. The debugger does not display your source code at this stage because the program has not started executing your code, it still has to execute the initialisation code. Once execution reaches your code (i.e. the first instruction of <b>main</b>) your source code will be displayed.</p>
++<p>When you start a debugging session, the Context window initially displays a symbolic disassembly, like that shown above. This is a disassembly of the run-time system initialisation code. The arrow symbol (→) to the left of the window shows the current PC location. The debugger does not display your source code at this stage because the program has not started executing your code, it still has to execute the initialisation code. Once execution reaches your code (i.e. the first instruction of <b>main</b>) your source code will be displayed.</p>
+ <p>The lower window is the <a name="marker-120442"></a>
+ <b>Status</b> window. The title bar contains the current status of the program being debugged. The Status window displays error and informational messages, in addition to any data displayed by the debugger's display, trace and watchpoint facilities. The Status display scrolls when any new information is displayed. You can use the scroll bar to examine earlier contents of the status display.</p>
+ <p>Some messages that may appear in the <a name="marker-120444"></a>Status window at this stage are:</p>
+diff --git a/TOOLBOX/DDE/SRCEDIT.HTML b/TOOLBOX/DDE/SRCEDIT.HTML
+index 8f2c273..a5432b8 100644
+--- a/TOOLBOX/DDE/SRCEDIT.HTML
++++ b/TOOLBOX/DDE/SRCEDIT.HTML
+@@ -705,10 +705,10 @@ To change these three options and retain the new settings whenever you use SrcEd
+ <dd>
+ <table>
+ <tr>
+-<td align="left" valign="top">←_ <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">_↑_ <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
++<td align="left" valign="top">←_ →_↑_ <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+ <td align="left" valign="top">Move caret one character left, right, up or down.
+ <tr>
+-<td align="left" valign="top">Shift-←_ SHIFT-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Shift-←_ SHIFT-→
+ <td align="left" valign="top">Move caret one word left or right.
+ <tr>
+ <td align="left" valign="top">Shift-↑_ SHIFT-<img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+@@ -720,7 +720,7 @@ To change these three options and retain the new settings whenever you use SrcEd
+ <td align="left" valign="top">Ctrl-<img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+ <td align="left" valign="top">Move caret to end of file.
+ <tr>
+-<td align="left" valign="top">Ctrl-←_ CTRL-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Ctrl-←_ CTRL-→
+ <td align="left" valign="top">Move caret to start or end of line.
+ <tr>
+ <td align="left" valign="top">Ctrl-Shift-↑_ CTRL-SHIFT-<img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+@@ -729,7 +729,7 @@ To change these three options and retain the new settings whenever you use SrcEd
+ <td align="left" valign="top">Ctrl-Shift-←
+ <td align="left" valign="top">Scroll all documents up by one line.
+ <tr>
+-<td align="left" valign="top">Ctrl-Shift-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Ctrl-Shift-→
+ <td align="left" valign="top">Scroll all documents down by one line.
+ <tr>
+ <td align="left" valign="top">Copy
+-- 
+2.29.2
+

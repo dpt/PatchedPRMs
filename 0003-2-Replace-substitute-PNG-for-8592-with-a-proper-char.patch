@@ -1,0 +1,228 @@
+From a8f60f207abbce9bc07d3b86abf3b6a580e31501 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Wed, 3 Mar 2021 01:03:54 +0000
+Subject: [PATCH 03/24] =?UTF-8?q?2:=20Replace=20substitute=20PNG=20for=208?=
+ =?UTF-8?q?592=20with=20a=20proper=20=E2=86=90=20character?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ BASIC/APPENDICES/INKEYVALUES.HTML |   4 ++--
+ BASIC/PART2/BASICSCREENED.HTML    |  16 ++++++++--------
+ BASIC/PART2/INPUTTING.HTML        |   4 ++--
+ SYMBOLS/ENTITIES/8592.PNG         | Bin 194 -> 0 bytes
+ TOOLBOX/ASM/WARNINGS.HTML         |  16 ++++++++--------
+ TOOLBOX/DDE/SRCEDIT.HTML          |  10 +++++-----
+ 6 files changed, 25 insertions(+), 25 deletions(-)
+ delete mode 100644 SYMBOLS/ENTITIES/8592.PNG
+
+diff --git a/BASIC/APPENDICES/INKEYVALUES.HTML b/BASIC/APPENDICES/INKEYVALUES.HTML
+index d0e14a4..b4f468e 100644
+--- a/BASIC/APPENDICES/INKEYVALUES.HTML
++++ b/BASIC/APPENDICES/INKEYVALUES.HTML
+@@ -259,7 +259,7 @@
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">
+ <td align="left" valign="top">-58 
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">←
+ <td align="left" valign="top">-26 
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+@@ -331,4 +331,4 @@
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/BASIC/PART2/BASICSCREENED.HTML b/BASIC/PART2/BASICSCREENED.HTML
+index 622372c..6a09bc5 100644
+--- a/BASIC/PART2/BASICSCREENED.HTML
++++ b/BASIC/PART2/BASICSCREENED.HTML
+@@ -150,8 +150,8 @@
+ <p>If you press Shift <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">_ THE NEXT SCREENFUL OF YOUR PROGRAM IS DISPLAYED. IN THIS WAY_ YOU CAN MOVE QUICKLY AROUND YOUR PROGRAM FROM BEGINNING TO END. SIMILARLY_ IF YOU PRESS SHIFT <img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">, you can see the previous screenful. These functions are duplicated by the Page Up and Page Down keys.</p>
+ <p>If you press Ctrl-Shift <img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]"> OR CTRL-SHIFT <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]"> you can move to the first or last statement on the current screen. In addition, if the cursor starts n characters along a statement, it remains n characters along. It does not go to the beginning of the statement.</p>
+ <h6><a name="idx-73"></a>Moving horizontally</h6>
+-<p>Pressing the Shift <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> AND SHIFT <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> enables you to move sideways across the screen at twice the normal speed.</p>
+-<p>Pressing Ctrl <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> TAKES YOU TO THE BEGINNING OF THE CURRENT STATEMENT AND CTRL <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> TAKES YOU TO THE END OF THE CURRENT LINE. PRESSING CTRL-SHIFT <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> TAKES YOU TO THE BEGINNING OF THE NEXT STATEMENT. PRESSING CTRL-SHIFT <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> takes you to the beginning of the previous statement.</p>
++<p>Pressing the Shift <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> AND SHIFT ← enables you to move sideways across the screen at twice the normal speed.</p>
++<p>Pressing Ctrl ← TAKES YOU TO THE BEGINNING OF THE CURRENT STATEMENT AND CTRL <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> TAKES YOU TO THE END OF THE CURRENT LINE. PRESSING CTRL-SHIFT <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> TAKES YOU TO THE BEGINNING OF THE NEXT STATEMENT. PRESSING CTRL-SHIFT ← takes you to the beginning of the previous statement.</p>
+ <h6><a name="idx-74"></a>Using two windows</h6>
+ <p>You can split the screen into two windows, which lets you look at two portions of your program at the same time (this is called split window mode). To do this, press Ctrl-F4. This saves you scrolling through the program many times. To place the cursor in the other window, press Ctrl-F2 (which acts as a toggle between the two windows).</p>
+ <p>When you want to return to a single window, press Ctrl-F4 again. Note that while you are using the split window mode, the Copy key will not work.</p>
+@@ -305,13 +305,13 @@
+ <td align="left" valign="top">Ctrl-F11
+ <td align="left" valign="top">Deletes all text in this field
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> / SHIFT <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">← / SHIFT ←
+ <td align="left" valign="top">Moves cursor left 1 or 2 positions
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> / SHIFT <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+ <td align="left" valign="top">Moves cursor right 1 or 2 positions
+ <tr>
+-<td align="left" valign="top">Ctrl <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">Ctrl ←
+ <td align="left" valign="top">Moves cursor to beginning of field
+ <tr>
+ <td align="left" valign="top">Ctrl <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+@@ -336,7 +336,7 @@
+ <p>
+ <table>
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">←
+ <td align="left" valign="top">Moves right<br>
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+@@ -353,7 +353,7 @@
+ <td align="left" valign="top">Shift <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+ <td align="left" valign="top">Moves right two characters
+ <tr>
+-<td align="left" valign="top">Shift <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">Shift ←
+ <td align="left" valign="top">Moves left two characters
+ <tr>
+ <td align="left" valign="top">Shift <img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">
+@@ -367,7 +367,7 @@
+ <td align="left" valign="top">Ctrl <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+ <td align="left" valign="top">Moves to the end of the statement
+ <tr>
+-<td align="left" valign="top">Ctrl <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">Ctrl ←
+ <td align="left" valign="top">Moves to the beginning of the statement
+ <tr>
+ <td align="left" valign="top">Ctrl <img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">
+@@ -381,7 +381,7 @@
+ <td align="left" valign="top">Ctrl-Shift <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+ <td align="left" valign="top">Moves to beginning of next statement
+ <tr>
+-<td align="left" valign="top">Ctrl-Shift <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">Ctrl-Shift ←
+ <td align="left" valign="top">Moves to beginning of previous statement
+ <tr>
+ <td align="left" valign="top">Ctrl-Shift <img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">
+diff --git a/BASIC/PART2/INPUTTING.HTML b/BASIC/PART2/INPUTTING.HTML
+index 34f650d..36932f4 100644
+--- a/BASIC/PART2/INPUTTING.HTML
++++ b/BASIC/PART2/INPUTTING.HTML
+@@ -154,7 +154,7 @@ Hello, how are you?</pre>
+ <td align="left" valign="top">Copy
+ <td align="left" valign="top">135
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">←
+ <td align="left" valign="top">136
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+@@ -306,7 +306,7 @@ Hello, how are you?</pre>
+ <td align="left" valign="top">Copy
+ <td align="left" valign="top">11
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">←
+ <td align="left" valign="top">12
+ <tr>
+ <td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+diff --git a/SYMBOLS/ENTITIES/8592.PNG b/SYMBOLS/ENTITIES/8592.PNG
+deleted file mode 100644
+index 3d60613dbcd1dd59d81cf6d9ebef887d1c295379..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 194
+zcmeAS@N?(olHy`uVBq!ia0vp^5<twy0VEg%CO0nvQcNX5e!&ckj8p!u1M;dpT^vIy
+zZY3wAfIv+B3_)H410x`q_x$BCt&cH>o|>C=p0_euFS*g9X4^x{^Bt~_HuIiNbJKaS
+z{jne)CmWBzp+ncoTU6Uvot@@4PTV+Ou~~4oY)=m_&*hEY2Fo_gIi~mVw(CRNZwi&`
+mgPM*Su(7eVWith3oMU2$Ymn#(b2VQGa-65DpUXO@geCwR(L>At
+
+diff --git a/TOOLBOX/ASM/WARNINGS.HTML b/TOOLBOX/ASM/WARNINGS.HTML
+index a0a480a..9a4490a 100644
+--- a/TOOLBOX/ASM/WARNINGS.HTML
++++ b/TOOLBOX/ASM/WARNINGS.HTML
+@@ -450,15 +450,15 @@ where <tt><i>Rlist</i></tt> does <b>not</b> include R15
+ <p>Expected result:<br>
+ <dl>
+ <dd>
+-R<i>d</i> <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> (PC+8+expression)<br>
+-PC <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression<br>
++R<i>d</i> ← (PC+8+expression)<br>
++PC ← PC+8+expression<br>
+ <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">so execution continues from PC+8+expression</p>
+ </dl>
+ <p>Actual ARM2 result:<br>
+ <dl>
+ <dd>
+-R<i>d</i> <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> R<i>d</i> {no change}<br>
+-PC <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression+4<br>
++R<i>d</i> ← R<i>d</i> {no change}<br>
++PC ← PC+8+expression+4<br>
+ <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">so execution continues from PC+12+expression</p>
+ </dl>
+ 
+@@ -466,15 +466,15 @@ PC <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression+4<br>
+ <p>Expected result:<br>
+ <dl>
+ <dd>
+-R<i>d</i> <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> (PC+8)<br>
+-PC <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression<br>
++R<i>d</i> ← (PC+8)<br>
++PC ← PC+8+expression<br>
+ <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">so execution continues from PC+8+expression</p>
+ </dl>
+ <p>Actual ARM2 result:<br>
+ <dl>
+ <dd>
+-R<i>d</i> <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> R<i>d</i> {no change}<br>
+-PC <img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression+4<br>
++R<i>d</i> ← R<i>d</i> {no change}<br>
++PC ← PC+8+expression+4<br>
+ <img src="../../SYMBOLS/ENTITIES/8230.PNG" alt="...">SO EXECUTION CONTINUES FROM PCP12PEXPRESSION<A NAME="MARKER-557475"></a></p>
+ </dl>
+ 
+diff --git a/TOOLBOX/DDE/SRCEDIT.HTML b/TOOLBOX/DDE/SRCEDIT.HTML
+index 97229f4..aebe942 100644
+--- a/TOOLBOX/DDE/SRCEDIT.HTML
++++ b/TOOLBOX/DDE/SRCEDIT.HTML
+@@ -705,10 +705,10 @@ To change these three options and retain the new settings whenever you use SrcEd
+ <dd>
+ <table>
+ <tr>
+-<td align="left" valign="top"><img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">_ <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">_<img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">_ <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
++<td align="left" valign="top">←_ <img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">_<img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">_ <img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+ <td align="left" valign="top">Move caret one character left, right, up or down.
+ <tr>
+-<td align="left" valign="top">Shift-<img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">_ SHIFT-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Shift-←_ SHIFT-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+ <td align="left" valign="top">Move caret one word left or right.
+ <tr>
+ <td align="left" valign="top">Shift-<img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">_ SHIFT-<img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+@@ -720,13 +720,13 @@ To change these three options and retain the new settings whenever you use SrcEd
+ <td align="left" valign="top">Ctrl-<img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+ <td align="left" valign="top">Move caret to end of file.
+ <tr>
+-<td align="left" valign="top">Ctrl-<img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">_ CTRL-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">Ctrl-←_ CTRL-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+ <td align="left" valign="top">Move caret to start or end of line.
+ <tr>
+ <td align="left" valign="top">Ctrl-Shift-<img src="../../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">_ CTRL-SHIFT-<img src="../../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
+ <td align="left" valign="top">Scroll file without moving caret.
+ <tr>
+-<td align="left" valign="top">Ctrl-Shift-<img src="../../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">Ctrl-Shift-←
+ <td align="left" valign="top">Scroll all documents up by one line.
+ <tr>
+ <td align="left" valign="top">Ctrl-Shift-<img src="../../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
+@@ -883,4 +883,4 @@ To change these three options and retain the new settings whenever you use SrcEd
+ </dl>
+ </dl>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+-- 
+2.29.2
+
