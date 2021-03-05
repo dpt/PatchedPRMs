@@ -16,13 +16,13 @@ It wasn't easy. The HTML that emerged from our entirely legal _student edition_ 
 
 Additionally, many of the diagrams were missing, having remained as references to files still living on Acorn/Pace's network. I re-drew them all from scratch in Draw, obtaining any required screenshots by reconfiguring my machine to look like RISC OS 2, or 3, as required. I am amazing.
 
-In order to keep the manual pages readable across the typical RISC OS browsers of the day: Fresco, Browse and - god forbid - Webster X fucking L, we had to resort to removing the ornate characters like double arrows and math symbols and replace them with small PNG files. Here in the future, now that we live on the moon and wear silver jumpsuits, these can now be removed.
+In order to keep the manual pages readable across the typical RISC OS browsers of the day: Fresco, Browse and - god forbid - Webster X fucking L, we had to resort to removing the ornate characters like double arrows and math symbols and replace them with small PNG files. Here in the future, now that we live on the moon and wear silver jumpsuits, these can now be removed, and we can fix various numerous issues too.
 
-Problems
---------
-* Most of the HTML entities can now be replaced with UTF-8 codepoints, e.g. `&times;` can become `×` [DONE]
-* All of the tiny PNG files are no longer required and look awkward, they should be expunged [DONE]
-* Some greedy regexps used in the original conversion have resulted in PORTIONS OF SHOUTY TEXT which need fixing [TODO]
+Problems, Solutions
+-------------------
+* [X] Most of the HTML entities can now be replaced with UTF-8 codepoints, e.g. `&times;` can become `×`
+* [X] All of the tiny PNG files are no longer required and look awkward, they should be expunged
+* [ ] Some greedy regexps used in the original conversion have resulted in PORTIONS OF SHOUTY TEXT which need fixing
 
 Patches
 -------
