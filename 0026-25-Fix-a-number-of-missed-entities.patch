@@ -1,0 +1,169 @@
+From 0f20834a23a2813c4110d5ef02684f1b83e37c77 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Fri, 5 Mar 2021 20:50:25 +0000
+Subject: [PATCH] 25: Fix a number of missed entities
+
+---
+ PRM/ASMAPPNOTE.HTML     | 16 ++++++++--------
+ PRM/CHARINPUT.HTML      |  8 ++++----
+ PRM/FILESWITCH.HTML     |  2 +-
+ PRM/HARDVECS.HTML       |  4 ++--
+ PRM/MEMORYMAN.HTML      |  6 +++---
+ PRM/PDRIVERS.HTML       |  2 +-
+ PRM/SHAREDCLIBRARY.HTML |  2 +-
+ 7 files changed, 20 insertions(+), 20 deletions(-)
+
+diff --git a/PRM/ASMAPPNOTE.HTML b/PRM/ASMAPPNOTE.HTML
+index 0d5a831..4f434fa 100644
+--- a/PRM/ASMAPPNOTE.HTML
++++ b/PRM/ASMAPPNOTE.HTML
+@@ -401,13 +401,13 @@ or <pre>        <I>opcode{cond}{</i>S<I>}</i> Rd,Rn,Rm,<I>shiftname</i> Rs</pre>
+ <table>
+ <tr>
+ <td align="left" valign="top">Expected result:
+-<td align="left" valign="top">Rd <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> (PC+8+expression)<br>
+-PC <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression<br>
++<td align="left" valign="top">Rd ← (PC+8+expression)<br>
++PC ← PC+8+expression<br>
+ ...so execution continues from PC+8+expression
+ <tr>
+ <td align="left" valign="top">Actual ARM2 result:
+-<td align="left" valign="top">Rd <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> Rd {no change}<br>
+-PC <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression+4<br>
++<td align="left" valign="top">Rd ← Rd {no change}<br>
++PC ← PC+8+expression+4<br>
+ ...so execution continues from PC+12+expression
+ <tr>
+ </table>
+@@ -416,13 +416,13 @@ PC <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression+4<br>
+ <table>
+ <tr>
+ <td align="left" valign="top">Expected result:
+-<td align="left" valign="top">Rd <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> (PC+8)<br>
+-PC <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression<br>
++<td align="left" valign="top">Rd ← (PC+8)<br>
++PC ← PC+8+expression<br>
+ ...so execution continues from PC+8+expression
+ <tr>
+ <td align="left" valign="top">Actual ARM2 result:
+-<td align="left" valign="top">Rd <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> Rd {no change}<br>
+-PC <img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-"> PC+8+expression+4<br>
++<td align="left" valign="top">Rd ← Rd {no change}<br>
++PC ← PC+8+expression+4<br>
+ ...so execution continues from PC+12+expression<a name="marker-125425"></a>
+ </table>
+ </dl>
+diff --git a/PRM/CHARINPUT.HTML b/PRM/CHARINPUT.HTML
+index 87dee96..cfd62af 100644
+--- a/PRM/CHARINPUT.HTML
++++ b/PRM/CHARINPUT.HTML
+@@ -1960,25 +1960,25 @@ Fast interrupts are enabled</p>
+ <td align="left" valign="top">&amp;AB
+ <td align="left" valign="top">&amp;BB<a name="marker-207876"></a>
+ <tr>
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8592.PNG" alt="&LT;-">
++<td align="left" valign="top">←
+ <td align="left" valign="top">&amp;8C
+ <td align="left" valign="top">&amp;9C
+ <td align="left" valign="top">&amp;AC
+ <td align="left" valign="top">&amp;BC
+ <tr>
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;">
++<td align="left" valign="top">→
+ <td align="left" valign="top">&amp;8D
+ <td align="left" valign="top">&amp;9D
+ <td align="left" valign="top">&amp;AD
+ <td align="left" valign="top">&amp;BD
+ <tr>
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]">
++<td align="left" valign="top">↓
+ <td align="left" valign="top">&amp;8E
+ <td align="left" valign="top">&amp;9E
+ <td align="left" valign="top">&amp;AE
+ <td align="left" valign="top">&amp;BE
+ <tr>
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]">
++<td align="left" valign="top">↑
+ <td align="left" valign="top">&amp;8F
+ <td align="left" valign="top">&amp;9F
+ <td align="left" valign="top">&amp;AF
+diff --git a/PRM/FILESWITCH.HTML b/PRM/FILESWITCH.HTML
+index c12ec85..fb760e5 100644
+--- a/PRM/FILESWITCH.HTML
++++ b/PRM/FILESWITCH.HTML
+@@ -4390,7 +4390,7 @@ some more text</pre></p>
+ <h5><a name="idx-4172"></a>Use</h5>
+ <dd>
+ <p>*Build opens a new file (or reopens an existing one with zero extent) and directs subsequent input to it. Each line of input is passed to <a name="marker-213137"></a>OS_GSTrans before it is added to the file. Pressing <a name="marker-213138"></a>Escape finishes the input.</p>
+-<p>Note that for compatibility with earlier systems the *Build command creates files with lines terminating in the <a name="marker-213139"></a>carriage return character (ASCII &amp;0D). The Edit application provides a simple way of changing this into a <a name="marker-213140"></a>linefeed character, using the CR<img src="../SYMBOLS/ENTITIES/8596.PNG" alt="&LT;-&GT;">LF function from the Edit submenu.</p>
++<p>Note that for compatibility with earlier systems the *Build command creates files with lines terminating in the <a name="marker-213139"></a>carriage return character (ASCII &amp;0D). The Edit application provides a simple way of changing this into a <a name="marker-213140"></a>linefeed character, using the CR↔︎LF function from the Edit submenu.</p>
+ 
+ <dt>
+ <h5><a name="idx-4173"></a>Example</h5>
+diff --git a/PRM/HARDVECS.HTML b/PRM/HARDVECS.HTML
+index d789a95..a64c36b 100644
+--- a/PRM/HARDVECS.HTML
++++ b/PRM/HARDVECS.HTML
+@@ -203,14 +203,14 @@ In both cases above you now have a pointer to a variable which holds the address
+ <td align="left" valign="top">Address exception
+ <tr>
+ <td align="left" valign="top">Data abort
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8593.PNG" alt="[UP]"> High priority
++<td align="left" valign="top">↑ High priority
+ <tr>
+ <td align="left" valign="top">FIQ
+ <tr>
+ <td align="left" valign="top">IRQ
+ <tr>
+ <td align="left" valign="top">Prefetch abort
+-<td align="left" valign="top"><img src="../SYMBOLS/ENTITIES/8595.PNG" alt="[DOWN]"> Low priority
++<td align="left" valign="top">↓ Low priority
+ <tr>
+ <td align="left" valign="top">Undefined instruction
+ <tr>
+diff --git a/PRM/MEMORYMAN.HTML b/PRM/MEMORYMAN.HTML
+index b717e97..c63ad48 100644
+--- a/PRM/MEMORYMAN.HTML
++++ b/PRM/MEMORYMAN.HTML
+@@ -201,9 +201,9 @@
+ <p>All block sizes allocated are in bytes and are rounded up to a multiple of four bytes. All blocks returned to the user are word-aligned<a name="marker-828854"></a>. All blocks have an overhead of eight bytes (two words). One word is used to hold the block's length and status, the other contains a <a name="marker-828855"></a>guard constant which is used to detect heap corruptions. The guard word may not be present in future releases of the ANSI C library. When the stack needs to be extended, blocks are <a name="marker-828856"></a>allocated from the <tt>malloc</tt> heap.</p>
+ <p>When an allocation request is received<a name="marker-828857"></a> by the storage manager, it is categorised into one of three sizes of blocks</p>
+ <ul>
+-<li>small - 0 <img src="../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> 64 bytes
+-<li>medium - 65 <img src="../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> 512 bytes
+-<li>large - 513 <img src="../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> 16777216 bytes.
++<li>small - 0 → 64 bytes
++<li>medium - 65 → 512 bytes
++<li>large - 513 → 16777216 bytes.
+ </ul>
+ <p>The <a name="marker-828858"></a>storage manager keeps track of the free sections of the heap in two ways. The medium and large sized blocks are chained together into a linked list (<a name="marker-828947"></a>overflow list) and small blocks of the same size are chained together into linked lists (<a name="marker-828860"></a>bins). The overflow list is ordered by ascending block address, while the bins have the most recently freed block at the start of the list.</p>
+ <p>When a small block is requested, the bin which contains the blocks of the required size is checked, and, if the bin is not empty, the first block in the list is returned to the user. If there was not a block of the exact size available, the bin containing blocks of the next size up is checked, and so on until a block is found. If a block is not found in the bins, the last block (highest address) on the overflow list is taken. If <a name="marker-828861"></a>the block is large enough to be split into two blocks, and the remainder is a usable size (&gt; 12 including the overhead) then the block is split, the top section returned to the user and the remainder, depending on its size, is either put in the relevant bin at the front of the list or left in the overflow list.</p>
+diff --git a/PRM/PDRIVERS.HTML b/PRM/PDRIVERS.HTML
+index e5ea7d6..9247ed5 100644
+--- a/PRM/PDRIVERS.HTML
++++ b/PRM/PDRIVERS.HTML
+@@ -2914,7 +2914,7 @@ Fast interrupts are enabled</p>
+ <td align="left" valign="top">high y coordinate of rectangle to print, in OS units (exclusive)
+ </table>
+ </dl>
+-<p>The information passed in R2 and R3 is not particularly important, though it helps to make output produced by the PostScript printer driver conform better to Adobe's structuring conventions. If non-zero values are supplied, they should be correct. Note that R2 is <b>not</b> the sequence number of the page in the print job, but in the document. For example, if a document consists of 11 pages, numbered '' (the title page), 'i'-'iii' and '1'-'7', and the application is requested to print the entire preface part, it should use R2 = 2, 3, 4 and R3 <img src="../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> 'i', 'ii', 'iii' for the three pages.</p>
++<p>The information passed in R2 and R3 is not particularly important, though it helps to make output produced by the PostScript printer driver conform better to Adobe's structuring conventions. If non-zero values are supplied, they should be correct. Note that R2 is <b>not</b> the sequence number of the page in the print job, but in the document. For example, if a document consists of 11 pages, numbered '' (the title page), 'i'-'iii' and '1'-'7', and the application is requested to print the entire preface part, it should use R2 = 2, 3, 4 and R3 → 'i', 'ii', 'iii' for the three pages.</p>
+ 
+ <dt>
+ <h5><a name="idx-7456"></a>Related SWIs</h5>
+diff --git a/PRM/SHAREDCLIBRARY.HTML b/PRM/SHAREDCLIBRARY.HTML
+index ec6f600..49ab0d8 100644
+--- a/PRM/SHAREDCLIBRARY.HTML
++++ b/PRM/SHAREDCLIBRARY.HTML
+@@ -3345,7 +3345,7 @@ R1 = pointer to block containing R0 + <i>n</i> words, each word of which points
+ <dt>
+ <h5><a name="83687"></a>Entry no. 161: int isprint(int <i>c</i>)</h5>
+ <dd>
+-<p>Returns true if <tt><i>c</i></tt> is a printable character (in the ASCII locale this means &amp;20 (space) <img src="../SYMBOLS/ENTITIES/8594.PNG" alt="-&GT;"> &amp;7E (tilde) inclusive).</p>
++<p>Returns true if <tt><i>c</i></tt> is a printable character (in the ASCII locale this means &amp;20 (space) → &amp;7E (tilde) inclusive).</p>
+ 
+ <dt>
+ <h5>Entry no. <a name="ispunct"></a>162: int ispunct(int <i>c</i>)</h5>
+-- 
+2.31.1
+
