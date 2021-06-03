@@ -1,0 +1,70 @@
+From a5eeb2775fa3746f9d0eed22164d346446ead4fa Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Sat, 6 Mar 2021 17:53:21 +0000
+Subject: [PATCH 5/5] Various fixes
+
+- Duplicated paragraph tags
+- Missing italics
+- Typo(s)
+---
+ PRM/16BITJOYSTICK.HTML | 2 +-
+ PRM/ASMAPPNOTE.HTML    | 2 +-
+ PRM/DESKTOP.HTML       | 2 +-
+ PRM/VDU.HTML           | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/PRM/16BITJOYSTICK.HTML b/PRM/16BITJOYSTICK.HTML
+index a8e3363..d8adb43 100644
+--- a/PRM/16BITJOYSTICK.HTML
++++ b/PRM/16BITJOYSTICK.HTML
+@@ -94,7 +94,7 @@
+ <li>ADVAL (0) returns an integer giving the state of switch 0 on joysticks 0 (in bit 0) and 1 (in bit 1).
+ <li>ADVAL (1) returns an integer giving the raw position of channel 1; this is uncalibrated, in the range 0 - 65535.<br>Similarly, ADVAL (20, (3) and (4) return respectively the raw position of channel 2, 3 and 4.
+ </ul>
+-<p><p>All other ADVAL parameters continue to work in the same way as always; they are documented in the <i>BBC BASIC Reference Manual</i>.</p>
++<p>All other ADVAL parameters continue to work in the same way as always; they are documented in the <i>BBC BASIC Reference Manual</i>.</p>
+ </dl>
+ 
+ <dt>
+diff --git a/PRM/ASMAPPNOTE.HTML b/PRM/ASMAPPNOTE.HTML
+index 4f434fa..01e4cb7 100644
+--- a/PRM/ASMAPPNOTE.HTML
++++ b/PRM/ASMAPPNOTE.HTML
+@@ -37,7 +37,7 @@
+ <li><B>Dangerous instructions</b>
+ <p>Such instructions can cause a program to fail unexpectedly, for example:</p>
+ <p><pre>        LDM R15,<a name="marker-125465"></a><I>Rlist</I></pre></p>
+-<p>uses PC+PSR as the base and so cn cause an unexpected address exception.</p>
++<p>uses PC+PSR as the base and so can cause an unexpected address exception.</p>
+ <li><B>Useless instructions</b>
+ <p>It is better to reserve the instruction space occupied by existing 'useless' instructions for instruction expansion in future processors. For example:</p>
+ <p><pre>        MUL R15,Rm,Rs</pre></p>
+diff --git a/PRM/DESKTOP.HTML b/PRM/DESKTOP.HTML
+index 0f86835..ef951a8 100644
+--- a/PRM/DESKTOP.HTML
++++ b/PRM/DESKTOP.HTML
+@@ -237,7 +237,7 @@
+ Set <I>App</I>$Messages &lt;Obey$Dir&gt;.NewMessages
+ RMEnsure WindowManager 3.21 Set <I>App</I>$Messages &lt;Obey$Dir&gt;.OldMessages</pre>
+ </dl>
+-<p>and then in your code, instead of opening &lt;Obey$Dir&gt;.Messages as is customary, you should open <a name="marker-648008"></a>App$Messages.</p>
++<p>and then in your code, instead of opening &lt;Obey$Dir&gt;.Messages as is customary, you should open <a name="marker-648008"></a><i>App</i>$Messages.</p>
+ <p>The second problem is more involved. Let's say you wish to display a report that has 'Discard', 'Cancel' and 'Save' buttons:</p>
+ <ul>
+ <li>Under earlier versions of RISC OS this would need custom code.
+diff --git a/PRM/VDU.HTML b/PRM/VDU.HTML
+index dabf322..5c5aca6 100644
+--- a/PRM/VDU.HTML
++++ b/PRM/VDU.HTML
+@@ -423,7 +423,7 @@
+ <td align="left" valign="top">Blue bit 3 (high)</table>
+ </ul></p>
+ <p>where the palette index (0 - 15) controls which VIDC palette entry is used, but with some bits of the palette entry then being overridden by the top 4 bits of the memory byte. With the default palette setting, this becomes:</p>
+-<p><p><ul>
++<p><ul>
+ <table>
+ <tr>
+ <th align="left" valign="top">Bit
+-- 
+2.31.1
+

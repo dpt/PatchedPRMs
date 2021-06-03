@@ -1,0 +1,1386 @@
+From 1ef049d7bf2d85eef579d90583a35f1cb1f9dfa0 Mon Sep 17 00:00:00 2001
+From: David Thomas <dave@davespace.co.uk>
+Date: Sat, 6 Mar 2021 22:56:03 +0000
+Subject: [PATCH 4/5] Capitalisation fixes
+
+---
+ PRM/16BITJOYSTICK.HTML | 10 ++---
+ PRM/ADFS.HTML          |  4 +-
+ PRM/ADFSNEW.HTML       |  2 +-
+ PRM/ARM3.HTML          |  2 +-
+ PRM/CMOS.HTML          | 90 +++++++++++++++++++++---------------------
+ PRM/COLPICK.HTML       |  2 +-
+ PRM/COMPRESSJPEG.HTML  |  2 +-
+ PRM/DESKTOP.HTML       | 10 ++---
+ PRM/DEVICEFS.HTML      |  8 ++--
+ PRM/DRAW.HTML          |  2 +-
+ PRM/ECONET.HTML        |  4 +-
+ PRM/FILEFORMATS.HTML   | 18 ++++-----
+ PRM/FLOATINGPOINT.HTML |  4 +-
+ PRM/FONTMANAGER.HTML   |  6 +--
+ PRM/HARDVEC.HTML       |  2 +-
+ PRM/INTERNET.HTML      |  4 +-
+ PRM/JOYSTICK.HTML      |  4 +-
+ PRM/JPEG.HTML          | 20 +++++-----
+ PRM/KBDMOUSE.HTML      |  4 +-
+ PRM/MEMORYMAN.HTML     | 66 +++++++++++++++----------------
+ PRM/PORTABLE.HTML      |  2 +-
+ PRM/PRINTSERVERS.HTML  |  4 +-
+ PRM/PROCSTD.HTML       |  4 +-
+ PRM/SERPARPT.HTML      | 18 ++++-----
+ PRM/SOUND.HTML         |  6 +--
+ PRM/SOUNDDMA.HTML      |  4 +-
+ PRM/SQUASH.HTML        | 14 +++----
+ PRM/VDU.HTML           | 10 ++---
+ PRM/VIDEO.HTML         | 26 ++++++------
+ PRM/WRITEDEV.HTML      |  2 +-
+ PRM/WRITEFS.HTML       |  4 +-
+ 31 files changed, 180 insertions(+), 178 deletions(-)
+
+diff --git a/PRM/16BITJOYSTICK.HTML b/PRM/16BITJOYSTICK.HTML
+index 55d6a31..a8e3363 100644
+--- a/PRM/16BITJOYSTICK.HTML
++++ b/PRM/16BITJOYSTICK.HTML
+@@ -408,7 +408,7 @@ Fast interrupts are enabled</p>
+ <table>
+ <tr>
+ <td align="left" valign="top" nowrap>bits 0 - 7
+-<td align="left" valign="top">joystick number (0 ⇒ FIRST JOYSTICK_ 1 ⇒ second, etc)
++<td align="left" valign="top">joystick number (0 ⇒ first joystick, 1 ⇒ second, etc)
+ <tr>
+ <td align="left" valign="top" nowrap>bits 8 - 15
+ <td align="left" valign="top">reason code
+@@ -483,7 +483,7 @@ Fast interrupts are enabled</p>
+ <table>
+ <tr>
+ <td align="left" valign="top" nowrap>bits 0 - 7
+-<td align="left" valign="top">joystick number (0 ⇒ FIRST JOYSTICK_ 1 ⇒ second, etc)
++<td align="left" valign="top">joystick number (0 ⇒ first joystick, 1 ⇒ second, etc)
+ <tr>
+ <td align="left" valign="top" nowrap>bits 8 - 15
+ <td align="left" valign="top">0 (reason code)
+@@ -503,10 +503,10 @@ Fast interrupts are enabled</p>
+ <table>
+ <tr>
+ <td align="left" valign="top" nowrap>bits 0 - 7
+-<td align="left" valign="top">signed Y value in the range -127 (down) to 127 (up); for a single switch joystick, -64 ⇒ DOWN_ 0 ⇒ REST_ AND 64 ⇒ up
++<td align="left" valign="top">signed Y value in the range -127 (down) to 127 (up); for a single switch joystick, -64 ⇒ down, 0 ⇒ rest, AND 64 ⇒ up
+ <tr>
+ <td align="left" valign="top" nowrap>bits 8 - 15
+-<td align="left" valign="top">signed X value in the range -127 (left) to 127 (right); for a single switch joystick, -64 ⇒ LEFT_ 0 ⇒ REST_ AND 64 ⇒ right
++<td align="left" valign="top">signed X value in the range -127 (left) to 127 (right); for a single switch joystick, -64 ⇒ left, 0 ⇒ rest, AND 64 ⇒ right
+ <tr>
+ <td align="left" valign="top" nowrap>bits 16 - 23
+ <td align="left" valign="top">switches (eg fire buttons) starting in bit 16; unimplemented switches return 0
+@@ -536,7 +536,7 @@ Fast interrupts are enabled</p>
+ <table>
+ <tr>
+ <td align="left" valign="top" nowrap>bits 0 - 7
+-<td align="left" valign="top">joystick number (0 ⇒ FIRST JOYSTICK_ 1 ⇒ second, etc)
++<td align="left" valign="top">joystick number (0 ⇒ first joystick, 1 ⇒ second, etc)
+ <tr>
+ <td align="left" valign="top" nowrap>bits 8 - 15
+ <td align="left" valign="top">1 (reason code)
+diff --git a/PRM/ADFS.HTML b/PRM/ADFS.HTML
+index adc6a9f..1f93390 100644
+--- a/PRM/ADFS.HTML
++++ b/PRM/ADFS.HTML
+@@ -468,7 +468,7 @@ Assuming the drive is always running fast gives an actual workable track length
+ <dt>
+ <h5><a name="idx-175"></a>General</h5>
+ <dd>
+-<p>All interface signals are open-collector, and therefore require a pull-up resistor of nominally 1kΩ FOR 3<SUP>1</SUP>/<SUB>2</SUB>" SYSTEMS OR 150Ω IN OLDER 5<SUP>1</SUP>/<SUB>4</SUB>" systems. The pull-up should be present in one place only - either on the drive furthest from the controller (for outputs), or on the controller (for inputs).</p>
++<p>All interface signals are open-collector, and therefore require a pull-up resistor of nominally 1kΩ for 3½" systems or 150Ω in older 5¼" systems. The pull-up should be present in one place only - either on the drive furthest from the controller (for outputs), or on the controller (for inputs).</p>
+ <p>Due to the nature of open collector signals no damage will occur if several outputs drive one signal; thus it is safe, for instance, to connect 'motor on' to 'Sel2' and force motor on true whenever Sel2 is asserted.</p>
+ <p>All signals are active (asserted) low, ie active when at 0 Volts. Inputs are only valid when a drive is selected.</p>
+ 
+@@ -1421,7 +1421,7 @@ Fast interrupts are enabled</p>
+ <p>R0 =
+ <dl>
+ <dd>
+-bit 0 set ⇒ RESET CONTROLLER_ CLEAR ⇒ process command<br>
++bit 0 set ⇒ reset controller, clear ⇒ process command<br>
+ bits 24 - 25 = transfer direction:
+ <dl>
+ <dd>
+diff --git a/PRM/ADFSNEW.HTML b/PRM/ADFSNEW.HTML
+index 9a4fded..f3b3ac2 100644
+--- a/PRM/ADFSNEW.HTML
++++ b/PRM/ADFSNEW.HTML
+@@ -106,7 +106,7 @@ Fast interrupts are enabled</p>
+ <h5><a name="idx-358"></a>On entry</h5>
+ <dd>
+ <p>R0 = flags:<br>
+-        bit 0 clear ⇒ UNLOCK IDE BUS_ SET ⇒ lock IDE bus<br>
++        bit 0 clear ⇒ unlock IDE bus, set ⇒ lock IDE bus<br>
+         all other bits reserved (must be zero)</p>
+ 
+ <dt>
+diff --git a/PRM/ARM3.HTML b/PRM/ARM3.HTML
+index f350417..3bfa754 100644
+--- a/PRM/ARM3.HTML
++++ b/PRM/ARM3.HTML
+@@ -62,7 +62,7 @@ R1 = AND mask</p>
+ <dt>
+ <h5><a name="idx-381"></a>On exit</h5>
+ <dd>
+-<p>R0 = old state (0 ⇒ CACHEING WAS DISABLED_ 1 ⇒ cacheing was enabled)</p>
++<p>R0 = old state (0 ⇒ cacheing was disabled, 1 ⇒ cacheing was enabled)</p>
+ 
+ <dt>
+ <h5><a name="idx-382"></a>Interrupts</h5>
+diff --git a/PRM/CMOS.HTML b/PRM/CMOS.HTML
+index f942f48..f716c67 100644
+--- a/PRM/CMOS.HTML
++++ b/PRM/CMOS.HTML
+@@ -82,10 +82,10 @@
+ <td align="left" valign="top">ADFS drive
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 3 - 5
+-<td align="left" valign="top">1 ⇒ SHCAPS_ 2 ⇒ NOCAPS_ 4 ⇒ Caps
++<td align="left" valign="top">1 ⇒ ShCaps, 2 ⇒ NoCaps, 4 ⇒ Caps
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 6
+-<td align="left" valign="top">0 ⇒ DIR_ 1 ⇒ NoDir
++<td align="left" valign="top">0 ⇒ Dir, 1 ⇒ NoDir
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 7
+ <td align="left" valign="top">reserved for Acorn use
+@@ -107,10 +107,10 @@
+ <td align="left" valign="top">reserved for Acorn use
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 1
+-<td align="left" valign="top">0 ⇒ IGNORE_ 1 ⇒ NoIgnore
++<td align="left" valign="top">0 ⇒ Ignore, 1 ⇒ NoIgnore
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 2 - 4
+-<td align="left" valign="top">serial baud rate (0 ⇒ 75_..._7 ⇒ 19200)
++<td align="left" valign="top">serial baud rate (0=75,...,7=19200)
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 5 - 7
+ <td align="left" valign="top">printer type
+@@ -123,16 +123,16 @@
+ <td align="left" valign="top">reserved for Acorn use
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 1
+-<td align="left" valign="top">0 ⇒ QUIET_ 1 ⇒ Loud
++<td align="left" valign="top">0 ⇒ Quiet, 1 ⇒ Loud
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 2
+ <td align="left" valign="top">reserved for Acorn use
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 3
+-<td align="left" valign="top">0 ⇒ SCROLL_ 1 ⇒ NoScroll
++<td align="left" valign="top">0 ⇒ Scroll, 1 ⇒ NoScroll
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 4
+-<td align="left" valign="top">0 ⇒ NOBOOT_ 1 ⇒ Boot
++<td align="left" valign="top">0 ⇒ NoBoot, 1 ⇒ Boot
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 5 - 7
+ <td align="left" valign="top">serial data format (0...7)
+@@ -142,13 +142,13 @@
+ <tr>
+ <td align="left" valign="top" rowspan="4">
+ <td align="left" valign="top" nowrap>Bit 0
+-<td align="left" valign="top">FS list sorting mode: 0 ⇒ BY NAME_ 1 ⇒ by number
++<td align="left" valign="top">FS list sorting mode: 0 ⇒ by name, 1 ⇒ by number
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 1
+-<td align="left" valign="top">library type: 0 ⇒ DEFAULT LIBRARY RETURNED BY FILE SERVER_ 1 ⇒ $.ArthurLib
++<td align="left" valign="top">library type: 0 ⇒ default library returned by file server, 1 ⇒ $.ArthurLib
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 2 - 3
+-<td align="left" valign="top">FS list display mode: 0 ⇒ LARGE ICONS_ 1 ⇒ SMALL ICONS_ 2 ⇒ full info, 3 reserved
++<td align="left" valign="top">FS list display mode: 0 ⇒ large icons, 1 ⇒ small icons, 2 ⇒ full info, 3 reserved
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 4 - 7
+ <td align="left" valign="top">reserved for Acorn use
+@@ -182,25 +182,25 @@
+ <tr>
+ <td align="left" valign="top" rowspan="7">
+ <td align="left" valign="top" nowrap>Bit 0
+-<td align="left" valign="top">truncate names: 0 ⇒ GIVE ERROR_ 1 ⇒ truncate no error
++<td align="left" valign="top">truncate names: 0 ⇒ give error, 1 ⇒ truncate no error
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 1
+-<td align="left" valign="top">DragASprite and DragAnObject: 0 ⇒ DON'T USE_ 1 ⇒ use
++<td align="left" valign="top">DragASprite and DragAnObject: 0 ⇒ don't use, 1 ⇒ use
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 2
+-<td align="left" valign="top">interactive file copy: 0 ⇒ USE_ 1 ⇒ don't use
++<td align="left" valign="top">interactive file copy: 0 ⇒ use, 1 ⇒ don't use
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 3
+-<td align="left" valign="top">Wimp's use of dither patterns on desktop: 0 ⇒ DON'T USE_ 1 ⇒ use
++<td align="left" valign="top">Wimp's use of dither patterns on desktop: 0 ⇒ don't use, 1 ⇒ use
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 4 †‡
+-<td align="left" valign="top">type of click on toggle size icon that doesn't obscure icon bar: 0 ⇒ CLICK_ 1 ⇒ Shift-click
++<td align="left" valign="top">type of click on toggle size icon that doesn't obscure icon bar: 0 ⇒ click, 1 ⇒ Shift-click
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 5
+ <td align="left" valign="top">reserved for Acorn use
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 6 - 7
+-<td align="left" valign="top">state of last shutdown: 0 ⇒ DON'T CARE_ 1 ⇒ FAILED_ 2 ⇒ DUE TO POWER LOSS_ 3 ⇒ undefined
++<td align="left" valign="top">state of last shutdown: 0 ⇒ don't care, 1 ⇒ failed, 2 ⇒ due to power loss, 3 ⇒ undefined
+ <tr>
+ <td align="left" valign="top" rowspan="6" nowrap>29 ‡
+ <td align="left" valign="top" colspan="3">Mouse type:
+@@ -216,11 +216,11 @@
+ <tr>
+ <td align="left" valign="top">4 - 255 reserved for Acorn use
+ <tr>
+-<td align="left" valign="top" nowrap><B>30 - 45</B>
+-<td align="left" valign="top" colspan="3"><B>Reserved for the user</B>
++<td align="left" valign="top" nowrap><b>30 - 45</b>
++<td align="left" valign="top" colspan="3"><b>Reserved for the user</b>
+ <tr>
+-<td align="left" valign="top" nowrap><B>46 - 59</B>
+-<td align="left" valign="top" colspan="3"><B>Reserved for applications</B>
++<td align="left" valign="top" nowrap><b>46 - 59</b>
++<td align="left" valign="top" colspan="3"><b>Reserved for applications</b>
+ <tr>
+ <td align="left" valign="top" nowrap>60 - 79 ‡
+ <td align="left" valign="top" colspan="3">Reserved for expansion card use
+@@ -323,13 +323,13 @@
+ <tr>
+ <td align="left" valign="top" rowspan="3">
+ <td align="left" valign="top" nowrap>Bits 0, 7
+-<td align="left" valign="top">0 ⇒ VERTICAL SYNC_ 1 ⇒ COMPOSITE SYNC_ 3 ⇒ auto sync)
++<td align="left" valign="top">0 ⇒ vertical sync, 1 ⇒ composite sync, 3 ⇒ auto sync)
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 1 †
+-<td align="left" valign="top">0 ⇒ ENABLE LOADMODEFILE IN !BOOT_ 1 ⇒ disable LoadModeFile in !Boot
++<td align="left" valign="top">0 ⇒ enable LoadModeFile in !Boot, 1 ⇒ disable LoadModeFile in !Boot
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 2 - 6
+-<td align="left" valign="top">monitor type: 0 ⇒ 0_ 1 ⇒ 1_ ..._ 31 ⇒ auto
++<td align="left" valign="top">monitor type: 0 ⇒ 0, 1 ⇒ 1, ..., 31 ⇒ auto
+ <tr>
+ <td align="left" valign="top">134
+ <td align="left" valign="top" colspan="3">FontSize in units of 4K
+@@ -374,7 +374,7 @@
+ <td align="left" valign="top">number of CD-ROM drives
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 5 - 7
+-<td align="left" valign="top">buffer size: 0 ⇒ 0K_ 1 ⇒ 8K_ 2 ⇒ 16K_ 3 ⇒ 32K_ 4 ⇒ 64K_ 5 ⇒ 128K_ 6 ⇒ 256K_ 7 ⇒ 512K
++<td align="left" valign="top">buffer size: 0 ⇒ 0K, 1 ⇒ 8K, 2 ⇒ 16K, 3 ⇒ 32K, 4 ⇒ 64K, 5 ⇒ 128K, 6 ⇒ 256K, 7 ⇒ 512K
+ <tr>
+ <td align="left" valign="top">139
+ <td align="left" valign="top" colspan="3">TimeZone in 15min offsets from UTC, stored as signed 2's complement number (RISC OS 3 version 3.10 onwards)
+@@ -384,7 +384,7 @@
+ <tr>
+ <td align="left" valign="top" rowspan="7">
+ <td align="left" valign="top" nowrap>Bit 0
+-<td align="left" valign="top">3D: 0 ⇒ 2D LOOK_ 1 ⇒ 3D look
++<td align="left" valign="top">3D: 0 ⇒ 2D look, 1 ⇒ 3D look
+ <tr>
+ <td align="left" valign="top" rowspan="4" nowrap>Bits 1 - 4 ‡
+ <td align="left" valign="top">desktop font setting:
+@@ -399,7 +399,7 @@
+ <td align="left" valign="top">reserved for Acorn use
+ <tr>
+ <td align="left" valign="top" nowrap><a name="pgfId-432992"></a>Bit 7 ‡
+-<td align="left" valign="top">window background tiling: 0 ⇒ USE TILE_1_ 1 ⇒ not tiled (i.e. grey 1)
++<td align="left" valign="top">window background tiling: 0 ⇒ use tile_1, 1 ⇒ not tiled (i.e. grey 1)
+ <tr>
+ <td align="left" valign="top" nowrap>141 - 142 †‡
+ <td align="left" valign="top" colspan="3">*Unplug for ROM modules: 16 bits for up to 16 modules
+@@ -464,16 +464,16 @@
+ <td align="left" valign="top">ROMFS Opt 4 state
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 2
+-<td align="left" valign="top">cache icon enable state: 0 ⇒ NO CACHE ICON STATE_ 1 ⇒ caches icon
++<td align="left" valign="top">cache icon enable state: 0 ⇒ no cache icon state, 1 ⇒ caches icon
+ <tr>
+ <td align="left" valign="top" nowrap>Bits 3 - 5
+-<td align="left" valign="top">screen blanker time: 0 ⇒ OFF_ 1 ⇒ 30S_ 2 ⇒ 1MIN_ 3 ⇒ 2MINS_ 4 ⇒ 5MINS_ 5 ⇒ 10MINS_ 6 ⇒ 15MINS_ 7 ⇒ 30mins
++<td align="left" valign="top">screen blanker time: 0 ⇒ off, 1 ⇒ 30s, 2 ⇒ 1min, 3 ⇒ 2mins, 4 ⇒ 5mins, 5 ⇒ 10mins, 6 ⇒ 15mins, 7 ⇒ 30mins
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 6
+-<td align="left" valign="top">screen blanker/Wrch interaction: 0 ⇒ IGNORE WRCH_ 1 ⇒ Wrch unblanks screen
++<td align="left" valign="top">screen blanker/Wrch interaction: 0 ⇒ ignore Wrch, 1 ⇒ Wrch unblanks screen
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 7
+-<td align="left" valign="top">hardware test disable: 0 ⇒ FULL TESTS_ 1 ⇒ disable long tests at power-up
++<td align="left" valign="top">hardware test disable: 0 ⇒ full tests, 1 ⇒ disable long tests at power-up
+ <tr>
+ <td align="left" valign="top" nowrap>189 - 192
+ <td align="left" valign="top" colspan="3">Winchester size
+@@ -514,28 +514,28 @@
+ <tr>
+ <td align="left" valign="top" rowspan="8">
+ <td align="left" valign="top" nowrap>Bit 0
+-<td align="left" valign="top">AUN BootNet: 0 ⇒ DISABLED_ 1 ⇒ enabled
++<td align="left" valign="top">AUN BootNet: 0 ⇒ disabled, 1 ⇒ enabled
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 1
+-<td align="left" valign="top">AUN dynamic station numbering: 0 ⇒ DISABLED_ 1 ⇒ enabled
++<td align="left" valign="top">AUN dynamic station numbering: 0 ⇒ disabled, 1 ⇒ enabled
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 2
+-<td align="left" valign="top">type of last reset: 0 ⇒ ORDINARY_ 1 ⇒ CMOS reset
++<td align="left" valign="top">type of last reset: 0 ⇒ ordinary, 1 ⇒ CMOS reset
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 3
+-<td align="left" valign="top">power saving: 0 ⇒ DISABLED_ 1 ⇒ enabled
++<td align="left" valign="top">power saving: 0 ⇒ disabled, 1 ⇒ enabled
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 4
+-<td align="left" valign="top">mode and wimp mode: 0 ⇒ USE BYTE 196_ 1 ⇒ auto
++<td align="left" valign="top">mode and wimp mode: 0 ⇒ use byte 196, 1 ⇒ auto
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 5
+-<td align="left" valign="top">cache enable for ARM: 0 ⇒ ENABLED_ 1 ⇒ disabled
++<td align="left" valign="top">cache enable for arm: 0 ⇒ enabled, 1 ⇒ disabled
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 6
+-<td align="left" valign="top">broadcast loader enable: 0 ⇒ ENABLED_ 1 ⇒ disabled
++<td align="left" valign="top">broadcast loader enable: 0 ⇒ enabled, 1 ⇒ disabled
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 7
+-<td align="left" valign="top">colour hourglass enable: 0 ⇒ DISABLED_ 1 ⇒ enabled
++<td align="left" valign="top">colour hourglass enable: 0 ⇒ disabled, 1 ⇒ enabled
+ <tr>
+ <td align="left" valign="top">196
+ <td align="left" valign="top" colspan="3">Mode and Wimp mode
+@@ -548,10 +548,10 @@
+ <tr>
+ <td align="left" valign="top" rowspan="6">
+ <td align="left" valign="top" nowrap><a name="pgfId-433052"></a>Bits 0, 1
+-<td align="left" valign="top">Filer display mode: 0 ⇒ LARGE ICONS_ 1 ⇒ SMALL ICONS_ 2 ⇒ full info, 3 reserved
++<td align="left" valign="top">Filer display mode: 0 ⇒ large icons, 1 ⇒ small icons, 2 ⇒ full info, 3 reserved
+ <tr>
+ <td align="left" valign="top" nowrap><a name="pgfId-433054"></a>Bits 2, 3
+-<td align="left" valign="top">Filer sorting mode: 0 ⇒ SORT BY NAME_ 1 ⇒ SORT BY TYPE_ 2 ⇒ SORT BY SIZE_ 3 ⇒ sort by date
++<td align="left" valign="top">Filer sorting mode: 0 ⇒ sort by name, 1 ⇒ sort by type, 2 ⇒ sort by size, 3 ⇒ sort by date
+ <tr>
+ <td align="left" valign="top" nowrap><a name="pgfId-433057"></a>Bit 4
+ <td align="left" valign="top">force option (1 ⇒ force)
+@@ -624,19 +624,19 @@
+ <td align="left" valign="top">6 &amp; 7 reserved
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 3
+-<td align="left" valign="top">deletion: 0 ⇒ DO NOT CONFIRM_ 1 ⇒ confirm
++<td align="left" valign="top">deletion: 0 ⇒ do not confirm, 1 ⇒ confirm
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 4
+-<td align="left" valign="top">auto save: 0 ⇒ NO AUTO SAVE_ 1 ⇒ auto save
++<td align="left" valign="top">auto save: 0 ⇒ no auto save, 1 ⇒ auto save
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 5
+-<td align="left" valign="top">5 day weeks: 0 ⇒ DISABLED_ 1 ⇒ enabled
++<td align="left" valign="top">5 day weeks: 0 ⇒ disabled, 1 ⇒ enabled
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 6
+-<td align="left" valign="top">alarm noise: 0 ⇒ NOT SILENT_ 1 ⇒ silent
++<td align="left" valign="top">alarm noise: 0 ⇒ not silent, 1 ⇒ silent
+ <tr>
+ <td align="left" valign="top" nowrap>Bit 7
+-<td align="left" valign="top">Daylight Saving Time: 0 ⇒ NORMAL TIME_ 1 ⇒ Daylight Saving Time (DST)
++<td align="left" valign="top">Daylight Saving Time: 0 ⇒ normal time, 1 ⇒ Daylight Saving Time (DST)
+ <tr>
+ <td align="left" valign="top">221
+ <td align="left" valign="top" colspan="3">WimpDragDelay time
+diff --git a/PRM/COLPICK.HTML b/PRM/COLPICK.HTML
+index 87c4c7b..dfb6ea1 100644
+--- a/PRM/COLPICK.HTML
++++ b/PRM/COLPICK.HTML
+@@ -150,7 +150,7 @@
+ <th align="left" valign="top">Data
+ <tr>
+ <td align="left" valign="top">8
+-<td align="left" valign="top">colour model number: 0 ⇒ RGB_ 1 ⇒ CMYK_ 2 ⇒ HSV
++<td align="left" valign="top">colour model number: 0 ⇒ RGB, 1 ⇒ CMYK, 2 ⇒ HSV
+ <tr>
+ <td align="left" valign="top">12
+ <td align="left" valign="top">colour model dependent data (see below)
+diff --git a/PRM/COMPRESSJPEG.HTML b/PRM/COMPRESSJPEG.HTML
+index 9d6ae5c..0294c6a 100644
+--- a/PRM/COMPRESSJPEG.HTML
++++ b/PRM/COMPRESSJPEG.HTML
+@@ -73,7 +73,7 @@ R2 = pointer to block of parameters:
+ <td align="left" valign="top">quality value (0 - 100): lower quality results in a smaller image
+ <tr>
+ <td align="left" valign="top" nowrap>+ 2
+-<td align="left" valign="top">number of 8 bit components in source:<br>3 ⇒ 24 BIT COLOUR_ 1 ⇒ 8 bit greyscale
++<td align="left" valign="top">number of 8 bit components in source:<br>3 ⇒ 24 bit colour, 1 ⇒ 8 bit greyscale
+ <tr>
+ <td align="left" valign="top" nowrap>+ 6
+ <td align="left" valign="top">horizontal DPI of image, or 0 if unknown
+diff --git a/PRM/DESKTOP.HTML b/PRM/DESKTOP.HTML
+index b1e1105..0f86835 100644
+--- a/PRM/DESKTOP.HTML
++++ b/PRM/DESKTOP.HTML
+@@ -160,7 +160,7 @@
+ <p>and at least one of the following must also be true:</p>
+ <ul>
+ <li>The string after the last space must start with no more than one of the patterns in the <i>Modifiers</i> list, held in the Wimp's Messages file. In the UK this list is:
+-<p> ⇑ ^ ^⇑ ⇑^</p>
++<p>⇑ ^ ^⇑ ⇑^</p>
+ <li>The entry must end with a pattern from the <i>KeyNames</i> list, also held in the Wimp's Messages file. This list consists of:
+ <p>Esc ESC F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 Print PRINT Break BREAK Pause PAUSE Tab TAB Return RETURN Insert INSERT Home HOME PageUp PAGE UP Delete DELETE Copy COPY End END PageDown PAGE DOWN Enter ENTER Up UP Down DOWN Left LEFT Right RIGHT Select SELECT Menu MENU Adjust ADJUST</p>
+ </ul>
+@@ -306,10 +306,10 @@ RISC OS 3 <A HREF="../../PRMS/INDEX.HTML" TITLE="Programmer's Reference Manual">
+ <td align="left" valign="top">Set ⇒ use new types of error report, as given by bits 9 - 11 and R3 - R5
+ <tr>
+ <td align="left" valign="top" nowrap>9 - 11
+-<td align="left" valign="top">0 ⇒ OLD ERROR SPRITE (NON CLASSIFIED)_ 1 ⇒ information report,
++<td align="left" valign="top">0 ⇒ old error sprite (non classified), 1 ⇒ information report,
+ <tr>
+ <td align="left" valign="top">
+-<td align="left" valign="top">2 ⇒ ERROR REPORT_ 3 ⇒ PROGRAM REPORT_ 4 ⇒ question
++<td align="left" valign="top">2 ⇒ error report, 3 ⇒ program report, 4 ⇒ question
+ </table>
+ </dl>
+ <p>The values passed in R3 - R5 (ignored unless bit 8 of R1 is set) are:</p>
+@@ -422,7 +422,7 @@ R2-R7 = values of R0-R5 (respectively) actually passed to Wimp_ReportError - see
+ <dd>
+ <p>R0 = 0<br>
+ R1 = &amp;400C1 (reason code)<br>
+-R2 = button number (1 ⇒ OK_ 2 ⇒ CANCEL_ 3 ⇒ rightmost additional button...)<br>
++R2 = button number (1 ⇒ OK, 2 ⇒ Cancel, 3 ⇒ rightmost additional button...)<br>
+ R3 = pointer to button list as it appeared on the error report</p>
+ 
+ <dt>
+@@ -635,7 +635,7 @@ R1 - R5 preserved</p>
+ <dt>
+ <h5><a name="idx-2371"></a>On entry</h5>
+ <dd>
+-<p>R0 = state (0 ⇒ DISABLE_ 1 ⇒ enable)<br>
++<p>R0 = state (0 ⇒ disable, 1 ⇒ enable)<br>
+ R1 = code word, or 0 if none</p>
+ 
+ <dt>
+diff --git a/PRM/DEVICEFS.HTML b/PRM/DEVICEFS.HTML
+index ba0a0bf..54234d2 100644
+--- a/PRM/DEVICEFS.HTML
++++ b/PRM/DEVICEFS.HTML
+@@ -162,8 +162,8 @@ R2 = file handle of an open stream on that device</p>
+ <p>R0 = global flags for devices:<br>
+ <dl>
+ <dd>
+-bit 0 clear ⇒ CHARACTER DEVICE_ SET ⇒ block device<br>
+-bit 1 clear ⇒ DEVICE IS NOT FULL DUPLEX_ SET ⇒ device is full duplex<br>
++bit 0 clear ⇒ character device, set ⇒ block device<br>
++bit 1 clear ⇒ device is not full duplex, set ⇒ device is full duplex<br>
+ all other bits reserved (must be zero)
+ </dl>
+ R1 = pointer to list of devices to be installed<br>
+@@ -171,8 +171,8 @@ R2 = pointer to device driver entry point<br>
+ R3 = private word<br>
+ R4 = workspace pointer<br>
+ R5 = pointer to validation string for special fields (0 ⇒ none)<br>
+-R6 = maximum number of RX devices (0 ⇒ NONE_ -1 ⇒ unlimited)<br>
+-R7 = maximum number of TX devices (0 ⇒ NONE_ -1 ⇒ unlimited)</p>
++R6 = maximum number of RX devices (0 ⇒ none, -1 ⇒ unlimited)<br>
++R7 = maximum number of TX devices (0 ⇒ none, -1 ⇒ unlimited)</p>
+ 
+ <dt>
+ <h5><a name="idx-2425"></a>On exit</h5>
+diff --git a/PRM/DRAW.HTML b/PRM/DRAW.HTML
+index d3ca610..949f407 100644
+--- a/PRM/DRAW.HTML
++++ b/PRM/DRAW.HTML
+@@ -117,7 +117,7 @@
+ <p>x' = <i>a</i>x + <i>c</i>y + <i>e</i><br>
+ y' = <i>b</i>x + <i>d</i>y + <i>f</i></p>
+ </dl>
+-<p>The common transformations can all be easily done with this matrix. Translation by a given displacement is done by <i>e</i> for the x axis and <i>f</i> for the y axis. Scaling the x axis uses <i>a</i>, while the y axis uses <i>d</i>. Rotation can be performed by setting <i>a</i> = cos(θ)_ <I>B</I> = SIN(θ)_ <I>C</I> = -SIN(θ) AND <I>D</I> = COS(θ)_ WHERE θ is the angle of rotation.</p>
++<p>The common transformations can all be easily done with this matrix. Translation by a given displacement is done by <i>e</i> for the x axis and <i>f</i> for the y axis. Scaling the x axis uses <i>a</i>, while the y axis uses <i>d</i>. Rotation can be performed by setting <i>a</i> = cos(θ), <i>b</i> = sin(θ), <i>c</i> = -sin(θ) and <i>d</i> = cos(θ), where θ is the angle of rotation.</p>
+ <p><i>a</i>, <i>b</i>, <i>c</i> and <i>d</i> are given in transform units to allow accurate specification of the fractional part. <i>e</i> and <i>f</i> are specified in internal Draw units, so that the integer part can be large enough to adequately specify displacements on the screen. (Were transform units to be used for these coefficients, then the maximum displacement would only be 256 OS units, which is not very far on the screen.)</p>
+ </dl>
+ 
+diff --git a/PRM/ECONET.HTML b/PRM/ECONET.HTML
+index 1b9ccc0..29293f7 100644
+--- a/PRM/ECONET.HTML
++++ b/PRM/ECONET.HTML
+@@ -2497,7 +2497,7 @@ R2 = 2</p>
+ <h5><a name="idx-2969"></a>On exit</h5>
+ <dd>
+ <p>R0, R1 preserved<br>
+-R2 = transport type (0 ⇒ NOT KNOWN_ 1 ⇒ <A NAME="MARKER-239961"></A>INTERNET_ 2 ⇒ ECONET_ 3 ⇒ <A NAME="MARKER-239962"></a>Nexus)</p>
++R2 = transport type (0 ⇒ not known, 1 ⇒ <A NAME="MARKER-239961"></A>Internet, 2 ⇒ Econet, 3 ⇒ <A NAME="MARKER-239962"></a>Nexus)</p>
+ 
+ <dt>
+ <h5><a name="idx-2970"></a>Interrupts</h5>
+@@ -2950,7 +2950,7 @@ R1 = net number</p>
+ <h5><a name="idx-3041"></a>On exit</h5>
+ <dd>
+ <p>R0, R1 preserved<br>
+-R2 = transport state (0 ⇒ FULLY FUNCTIONAL_ 1 ⇒ no clock signal)</p>
++R2 = transport state (0 ⇒ fully functional, 1 ⇒ no clock signal)</p>
+ 
+ <dt>
+ <h5><a name="idx-3042"></a>Interrupts</h5>
+diff --git a/PRM/FILEFORMATS.HTML b/PRM/FILEFORMATS.HTML
+index 86dd36e..ea88f26 100644
+--- a/PRM/FILEFORMATS.HTML
++++ b/PRM/FILEFORMATS.HTML
+@@ -782,19 +782,19 @@ No further data, ie just an object header.</ul>
+ <td align="left" valign="top" colspan="2">grid division
+ <tr>
+ <td align="left" valign="top">4
+-<td align="left" valign="top" colspan="2">grid type (zero ⇒ RECTANGULAR_ NON-ZERO ⇒ isometric)
++<td align="left" valign="top" colspan="2">grid type (zero ⇒ rectangular, non-zero ⇒ isometric)
+ <tr>
+ <td align="left" valign="top">4
+-<td align="left" valign="top" colspan="2">grid auto-adjustment (zero ⇒ OFF_ NON-ZERO ⇒ on)
++<td align="left" valign="top" colspan="2">grid auto-adjustment (zero ⇒ off, non-zero ⇒ on)
+ <tr>
+ <td align="left" valign="top">4
+-<td align="left" valign="top" colspan="2">grid shown (zero ⇒ NO_ NON-ZERO ⇒ yes)
++<td align="left" valign="top" colspan="2">grid shown (zero ⇒ no, non-zero ⇒ yes)
+ <tr>
+ <td align="left" valign="top">4
+-<td align="left" valign="top" colspan="2">grid locking (zero ⇒ OFF_ NON-ZERO ⇒ on)
++<td align="left" valign="top" colspan="2">grid locking (zero ⇒ off, non-zero ⇒ on)
+ <tr>
+ <td align="left" valign="top">4
+-<td align="left" valign="top" colspan="2">grid units (zero ⇒ INCHES_ NON-ZERO ⇒ centimetres)
++<td align="left" valign="top" colspan="2">grid units (zero ⇒ inches, non-zero ⇒ centimetres)
+ <tr>
+ <td align="left" valign="top">4
+ <td align="left" valign="top" colspan="2">zoom multiplier (1 - 8)
+@@ -803,10 +803,10 @@ No further data, ie just an object header.</ul>
+ <td align="left" valign="top" colspan="2">zoom divider (1 - 8)
+ <tr>
+ <td align="left" valign="top">4
+-<td align="left" valign="top" colspan="2">zoom locking (zero ⇒ NONE_ NON-ZERO ⇒ locked to powers of two)
++<td align="left" valign="top" colspan="2">zoom locking (zero ⇒ none, non-zero ⇒ locked to powers of two)
+ <tr>
+ <td align="left" valign="top">4
+-<td align="left" valign="top" colspan="2">toolbox presence (zero ⇒ NO_ NON-ZERO ⇒ yes)
++<td align="left" valign="top" colspan="2">toolbox presence (zero ⇒ no, non-zero ⇒ yes)
+ <tr>
+ <td align="left" valign="top">4
+ <td align="left" valign="top" colspan="2">initial entry mode: one of
+@@ -1445,7 +1445,7 @@ A zero value means the character is not defined.
+ <td align="left" valign="top" colspan="2">bits 2-5 reserved (must be zero)
+ <tr>
+ <td align="left" valign="top" colspan="2">
+-<td align="left" valign="top" colspan="2">bit 6 set ⇒ FLAG WORD PRECEDES INDEX IN CHUNK (MUST BE SET IF <I>VERSION NUMBER</I> ≥ 7, else clear).
++<td align="left" valign="top" colspan="2">bit 6 set ⇒ flag word precedes index in chunk (must be set if <i>version number</i> ≥ 7, else clear).
+ <tr>
+ <td align="left" valign="top" colspan="2">
+ <td align="left" valign="top" colspan="2">bit 7 reserved (must be zero)
+@@ -1650,7 +1650,7 @@ If offset(<i>n</i>+1)=offset(<i>n</i>), then chunk <i>n</i> is null.
+ <td align="left" valign="top">bit 15 set ⇒ 'linear' scaffold line
+ <tr>
+ <td align="left" valign="top">1
+-<td align="left" valign="top">width (254 ⇒ L-TANGENT_ 255 ⇒ R-tangent)
++<td align="left" valign="top">width (254 ⇒ L-tangent, 255 ⇒ R-tangent)
+ </table>
+ </dl>
+ 
+diff --git a/PRM/FLOATINGPOINT.HTML b/PRM/FLOATINGPOINT.HTML
+index ab5625b..5ddfedd 100644
+--- a/PRM/FLOATINGPOINT.HTML
++++ b/PRM/FLOATINGPOINT.HTML
+@@ -139,7 +139,7 @@
+ <a href="FLOATINGPOINT-5.DRAW"><img src="FLOATINGPOINT-5.PNG"  border=0></a><br>
+ <i>Packed decimal format</i></p>
+ <p>The sign nibble contains both the significand's sign (top bit) and the exponent's sign (next bit); the other two bits are zero.</p>
+-<p>d18 is the most significant digit of the significand <i>d</i>, and e3 of the exponent <i>e</i>. The significand has an assumed decimal point between d18 and d17, and is normalised so that for a normal number l ≤ D18 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 17 and 3 digits respectively; d0, d1 and e3 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
++<p>d18 is the most significant digit of the significand <i>d</i>, and e3 of the exponent <i>e</i>. The significand has an assumed decimal point between d18 and d17, and is normalised so that for a normal number l ≤ d18 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 17 and 3 digits respectively; d0, d1 and e3 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
+ <p>The result is undefined if any of the packed digits is hexadecimal A - F, save for a representation of ±∞ or a NaN (see below).</p>
+ <ul>
+ <li>If the exponent's sign is 0, the exponent is 0, and the significand is 0, the number represented is ±0.
+@@ -157,7 +157,7 @@
+ <a href="FLOATINGPOINT-6.DRAW"><img src="FLOATINGPOINT-6.PNG"  border=0></a><br>
+ <i>Expanded packed decimal format</i></p>
+ <p>The sign nibble contains both the significand's sign (top bit) and the exponent's sign (next bit); the other two bits are zero.</p>
+-<p>d23 is the most significant digit of the significand <i>d</i>, and e6 of the exponent <i>e</i>. The significand has an assumed decimal point between d23 and d22, and is normalised so that for a normal number l ≤ D23 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 21 and 4 digits respectively; d0, d1, d2, e4, e5 and e6 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
++<p>d23 is the most significant digit of the significand <i>d</i>, and e6 of the exponent <i>e</i>. The significand has an assumed decimal point between d23 and d22, and is normalised so that for a normal number l ≤ d23 ≤ 9. The guaranteed ranges for <i>d</i> and <i>e</i> are 21 and 4 digits respectively; d0, d1, d2, e4, e5 and e6 may always be zero in a particular system. (By comparison, an S format number has 9 digits of significand and a maximum exponent of 53; a D format number has 17 digits in the significand and a maximum exponent of 340.)</p>
+ <p>The result is undefined if any of the packed digits is hexadecimal A - F, save for a representation of ±∞ or a NaN (see below).</p>
+ <ul>
+ <li>If the exponent's sign is 0, the exponent is 0, and the significand is 0, the number represented is ±0.
+diff --git a/PRM/FONTMANAGER.HTML b/PRM/FONTMANAGER.HTML
+index aebaa63..16327dc 100644
+--- a/PRM/FONTMANAGER.HTML
++++ b/PRM/FONTMANAGER.HTML
+@@ -566,8 +566,8 @@ Fast interrupts are enabled</p>
+ <p>R1 = pointer to font identifier (terminated by a Ctrl char) <br>
+ R2 = x point size × 16 (ie in 1/16ths point) <br>
+ R3 = y point size × 16 (ie in 1/16ths point) <br>
+-R4 = x resolution in dots per inch (0 ⇒ USE DEFAULT_ -1 ⇒ use current) <br>
+-R5 = y resolution in dots per inch (0 ⇒ USE DEFAULT_ -1 ⇒ use current) </p>
++R4 = x resolution in dots per inch (0 ⇒ use default, -1 ⇒ use current) <br>
++R5 = y resolution in dots per inch (0 ⇒ use default, -1 ⇒ use current) </p>
+ 
+ <dt>
+ <h5><a name="idx-4554"></a>On exit</h5>
+@@ -1614,7 +1614,7 @@ bits 23 - 31 reserved (must be zero)
+ R3 = size of buffer pointed to by R1 (if R1 ≠ 0)<br>
+ R4 = pointer to buffer for font name, or for indirected menu data (0 to return required size of buffer)<br>
+ R5 = size of buffer pointed to by R4 (if R4 ≠ 0)<br>
+-R6 = pointer to identifier of font to tick (0 ⇒ NO TICK_ 1 ⇒ tick 'System font')</p>
++R6 = pointer to identifier of font to tick (0 ⇒ no tick, 1 ⇒ tick 'System font')</p>
+ 
+ <dt>
+ <h5><a name="idx-4692"></a>On exit</h5>
+diff --git a/PRM/HARDVEC.HTML b/PRM/HARDVEC.HTML
+index cb7524d..16267d4 100644
+--- a/PRM/HARDVEC.HTML
++++ b/PRM/HARDVEC.HTML
+@@ -339,7 +339,7 @@
+ <td align="left" valign="top" colspan="2">(all other values reserved for future use)
+ <tr>
+ <td align="left" valign="top">8
+-<td align="left" valign="top" colspan="2">0 ⇒ RELEASE_ 1 ⇒ claim
++<td align="left" valign="top" colspan="2">0 ⇒ release, 1 ⇒ claim
+ <tr>
+ <td align="left" valign="top" nowrap>9 - 31
+ <td align="left" valign="top" colspan="2">reserved, must be 0
+diff --git a/PRM/INTERNET.HTML b/PRM/INTERNET.HTML
+index 5afbe50..e329f55 100644
+--- a/PRM/INTERNET.HTML
++++ b/PRM/INTERNET.HTML
+@@ -5833,7 +5833,7 @@ R1 preserved to pass on call</p>
+ <dd>
+ <p>R0 = pointer to driver information block for starting/terminating driver<br>
+ R1 = &amp;9D (reason code)<br>
+-R2 = status (0 ⇒ STARTING_ 1 ⇒ terminating)<br>
++R2 = status (0 ⇒ starting, 1 ⇒ terminating)<br>
+ R3 = DCI version supported × 100 (eg 403 for version 4.03)</p>
+ 
+ <dt>
+@@ -5868,7 +5868,7 @@ R3 = DCI version supported × 100 (eg 403 for version 4.03)</p>
+ <dd>
+ <p>R0 = protocol module's private word pointer<br>
+ R1 = &amp;9F (reason code)<br>
+-R2 = status (0 ⇒ STARTING_ 1 ⇒ terminating)<br>
++R2 = status (0 ⇒ starting, 1 ⇒ terminating)<br>
+ R3 = DCI version supported × 100 (eg 403 for version 4.03)<br>
+ R4 = pointer to protocol module's title string</p>
+ 
+diff --git a/PRM/JOYSTICK.HTML b/PRM/JOYSTICK.HTML
+index c82efd0..243ed29 100644
+--- a/PRM/JOYSTICK.HTML
++++ b/PRM/JOYSTICK.HTML
+@@ -65,10 +65,10 @@ Fast interrupts are enabled</p>
+ <th align="left" valign="top">Value
+ <tr>
+ <td align="left" valign="top">0
+-<td align="left" valign="top">Signed Y value in the range -127 to 127. For a single switch joystick, -64 ⇒ DOWN_ 0 ⇒ REST_ AND 64 ⇒ Up.
++<td align="left" valign="top">Signed Y value in the range -127 to 127. For a single switch joystick, -64 ⇒ Down, 0 ⇒ Rest, and 64 ⇒ Up.
+ <tr>
+ <td align="left" valign="top">1
+-<td align="left" valign="top">Signed Y value in the range -127 to 127. For a single switch joystick, -64 ⇒ LEFT_ 0 ⇒ REST_ AND 64 ⇒ Right.
++<td align="left" valign="top">Signed Y value in the range -127 to 127. For a single switch joystick, -64 ⇒ Left, 0 ⇒ Rest, and 64 ⇒ Right.
+ <tr>
+ <td align="left" valign="top">2
+ <td align="left" valign="top">Switches (eg fire buttons) starting in bit 0; unimplemented switches return 0.
+diff --git a/PRM/JPEG.HTML b/PRM/JPEG.HTML
+index 67ed33a..388bf81 100644
+--- a/PRM/JPEG.HTML
++++ b/PRM/JPEG.HTML
+@@ -122,7 +122,7 @@
+ <p>R0 = flags for desired operation:
+ <dl>
+ <dd>
+-bit 0 set ⇒ RETURN DIMENSIONS_ CLEAR ⇒ don't return dimensions<br>
++bit 0 set ⇒ return dimensions, clear ⇒ don't return dimensions<br>
+ all other bits reserved (must be zero)
+ </dl>
+ R1 = pointer to buffer holding JPEG image<br>
+@@ -134,9 +134,9 @@ R2 = length of JPEG image, in bytes</p>
+ <p>R0 = returned information flags:
+ <dl>
+ <dd>
+-bit 0 set ⇒ GREYSCALE IMAGE_ CLEAR ⇒ colour image<br>
+-bit 1 set ⇒ TRANSFORMED PLOTS NOT SUPPORTED_ CLEAR ⇒ supported<br>
+-bit 2 set ⇒ PIXEL DENSITY IS A SIMPLE RATIO_ CLEAR ⇒ pixel density is in dpi
++bit 0 set ⇒ greyscale image, clear ⇒ colour image<br>
++bit 1 set ⇒ transformed plots not supported, clear ⇒ supported<br>
++bit 2 set ⇒ pixel density is a simple ratio, clear ⇒ pixel density is in dpi
+ </dl>
+ R1 preserved<br>
+ R2 = width, in pixels (if R0 bit 0 set on entry)<br>
+@@ -191,7 +191,7 @@ FIQs are enabled</p>
+ <p>R0 = flags for desired operation:
+ <dl>
+ <dd>
+-bit 0 set ⇒ RETURN DIMENSIONS_ CLEAR ⇒ don't return dimensions<br>
++bit 0 set ⇒ return dimensions, clear ⇒ don't return dimensions<br>
+ all other bits reserved (must be zero)
+ </dl>
+ R1 = pointer to pathname of JPEG file, control character terminated</p>
+@@ -202,9 +202,9 @@ R1 = pointer to pathname of JPEG file, control character terminated</p>
+ <p>R0 = returned information flags:
+ <dl>
+ <dd>
+-bit 0 set ⇒ GREYSCALE IMAGE_ CLEAR ⇒ colour image<br>
+-bit 1 set ⇒ TRANSFORMED PLOTS NOT SUPPORTED_ CLEAR ⇒ supported<br>
+-bit 2 set ⇒ PIXEL DENSITY IS A SIMPLE RATIO_ CLEAR ⇒ pixel density is in dpi
++bit 0 set ⇒ greyscale image, clear ⇒ colour image<br>
++bit 1 set ⇒ transformed plots not supported, clear ⇒ supported<br>
++bit 2 set ⇒ pixel density is a simple ratio, clear ⇒ pixel density is in dpi
+ </dl>
+ R1 preserved<br>
+ R2 = width, in pixels<br>
+@@ -491,8 +491,8 @@ FIQs are enabled</p>
+ <p>R0 = flags:</p>
+ <dl>
+ <dd>
+-bit 0 set ⇒ PASS ON PLOTTING CALLS_ CLEAR ⇒ don't pass on plotting calls<br>
+-bit 1 set ⇒ USE TRANSLATION TABLES_ CLEAR ⇒ don't use translation tables<br>
++bit 0 set ⇒ pass on plotting calls, clear ⇒ don't pass on plotting calls<br>
++bit 1 set ⇒ use translation tables, clear ⇒ don't use translation tables<br>
+ all other bits reserved (must be zero)
+ </dl>
+ 
+diff --git a/PRM/KBDMOUSE.HTML b/PRM/KBDMOUSE.HTML
+index f62406a..75a18cd 100644
+--- a/PRM/KBDMOUSE.HTML
++++ b/PRM/KBDMOUSE.HTML
+@@ -422,7 +422,7 @@
+ <h6><a name="marker-320632"></a>Keyboard present</h6>
+ <dd>
+ <p>R0 = 0 (reason code)<br>
+-R1 = keyboard ID: 1 ⇒ ARCHIMEDES KEYBOARD_ 2 ⇒ PC-AT keyboard</p>
++R1 = keyboard ID: 1 ⇒ Archimedes keyboard, 2 ⇒ PC-AT keyboard</p>
+ 
+ <h6><a name="marker-320635"></a>Key released</h6>
+ <p>R0 = 1 (reason code)<br>
+@@ -581,7 +581,7 @@ R3 = signed 32-bit y movement since last call</p>
+ <dt>
+ <h5><a name="idx-6020"></a>On entry</h5>
+ <dd>
+-<p>R0 = reason code: 0 ⇒ GET POINTER TYPE_ 1 ⇒ set pointer type<br>
++<p>R0 = reason code: 0 ⇒ get pointer type, 1 ⇒ set pointer type<br>
+ R1 = pointer device type (if R1 = 1 on entry) - see <A HREF="#49060">Pointer device types</a></p>
+ 
+ <dt>
+diff --git a/PRM/MEMORYMAN.HTML b/PRM/MEMORYMAN.HTML
+index c63ad48..2db9e0e 100644
+--- a/PRM/MEMORYMAN.HTML
++++ b/PRM/MEMORYMAN.HTML
+@@ -576,7 +576,7 @@ Bits 0 - 2
+ <tr>
+ <td valign=top>
+ Bits 3 - 5
+-<td align="left" valign="top">001 ⇒ SHCAPS_ 010 ⇒ NOCAPS_ 100 ⇒ Caps
++<td align="left" valign="top">001 ⇒ ShCaps, 010 ⇒ NoCaps, 100 ⇒ Caps
+ <tr>
+ <td valign=top>
+ Bits 6 - 7
+@@ -606,7 +606,7 @@ Bit 0
+ <tr>
+ <td valign=top>
+ Bit 1
+-<td align="left" valign="top">0 ⇒ IGNORE_ 1 ⇒ NoIgnore
++<td align="left" valign="top">0 ⇒ Ignore, 1 ⇒ NoIgnore
+ <tr>
+ <td valign=top>
+ Bits 2 - 4
+@@ -628,7 +628,7 @@ Bit 0
+ <tr>
+ <td valign=top>
+ Bit 1
+-<td align="left" valign="top">0 ⇒ QUIET_ 1 ⇒ Loud
++<td align="left" valign="top">0 ⇒ Quiet, 1 ⇒ Loud
+ <tr>
+ <td valign=top>
+ Bit 2
+@@ -636,11 +636,11 @@ Bit 2
+ <tr>
+ <td valign=top>
+ Bit 3
+-<td align="left" valign="top">0 ⇒ SCROLL_ 1 ⇒ NoScroll
++<td align="left" valign="top">0 ⇒ Scroll, 1 ⇒ NoScroll
+ <tr>
+ <td valign=top>
+ Bit 4
+-<td align="left" valign="top">0 ⇒ NOBOOT_ 1 ⇒ Boot
++<td align="left" valign="top">0 ⇒ NoBoot, 1 ⇒ Boot
+ <tr>
+ <td valign=top>
+ Bits 5 - 7
+@@ -654,15 +654,15 @@ Bits 5 - 7
+ <tr>
+ <td valign=top>
+ Bit 0
+-<td align="left" valign="top">FS list sorting mode:<br>0 ⇒ BY NAME_ 1 ⇒ by number
++<td align="left" valign="top">FS list sorting mode:<br>0 ⇒ by name, 1 ⇒ by number
+ <tr>
+ <td valign=top>
+ Bit 1
+-<td align="left" valign="top">library type:<br>0 ⇒ DEFAULT LIBRARY RETURNED BY FILE SERVER_ 1 ⇒ $.ArthurLib
++<td align="left" valign="top">library type:<br>0 ⇒ default library returned by file server, 1 ⇒ $.ArthurLib
+ <tr>
+ <td valign=top>
+ Bits 2 - 3
+-<td align="left" valign="top">FS list display mode:<br>0 ⇒ LARGE ICONS_ 1 ⇒ SMALL ICONS_ 2 ⇒ full info, 3 reserved
++<td align="left" valign="top">FS list display mode:<br>0 ⇒ large icons, 1 ⇒ small icons, 2 ⇒ full info, 3 reserved
+ <tr>
+ <td valign=top>
+ Bits 4 - 7
+@@ -708,23 +708,23 @@ Bits 4 - 7
+ <tr>
+ <td valign=top>
+ Bit 0
+-<td align="left" valign="top">truncate names:<br>0 ⇒ GIVE ERROR_ 1 ⇒ truncate
++<td align="left" valign="top">truncate names:<br>0 ⇒ give error, 1 ⇒ truncate
+ <tr>
+ <td valign=top>
+ Bit 1
+-<td align="left" valign="top">DragASprite:<br>0 ⇒ DON'T USE_ 1 ⇒ use
++<td align="left" valign="top">DragASprite:<br>0 ⇒ don't use, 1 ⇒ use
+ <tr>
+ <td valign=top>
+ Bit 2
+-<td align="left" valign="top">interactive file copy:<br>0 ⇒ USE_ 1 ⇒ don't use
++<td align="left" valign="top">interactive file copy:<br>0 ⇒ use, 1 ⇒ don't use
+ <tr>
+ <td valign=top>
+ Bit 3
+-<td align="left" valign="top">Wimp's use of dither patterns on desktop:<br>0 ⇒ DON'T USE_ 1 ⇒ use
++<td align="left" valign="top">Wimp's use of dither patterns on desktop:<br>0 ⇒ don't use, 1 ⇒ use
+ <tr>
+ <td valign=top>
+ Bit 4
+-<td align="left" valign="top">Shift toggle size behaviour:<br>0 ⇒ STANDARD RISC OS 3 BEHAVIOUR_ 1 ⇒ never obscure icon bar
++<td align="left" valign="top">Shift toggle size behaviour:<br>0 ⇒ standard RISC OS 3 behaviour, 1 ⇒ never obscure icon bar
+ <tr>
+ <td valign=top>
+ Bit 5
+@@ -732,7 +732,7 @@ Bit 5
+ <tr>
+ <td valign=top>
+ Bits 6 - 7
+-<td align="left" valign="top">state of last shutdown:<br>0 ⇒ DON'T CARE_ 1 ⇒ FAILED_ 2 ⇒ DUE TO POWER LOSS_ 3 ⇒ undefined
++<td align="left" valign="top">state of last shutdown:<br>0 ⇒ don't care, 1 ⇒ failed, 2 ⇒ due to power loss, 3 ⇒ undefined
+ </table>
+ <tr>
+ <td valign=top>
+@@ -770,7 +770,7 @@ Bits 6 - 7
+ <tr>
+ <td valign=top>
+ Bits 0,1
+-<td align="left" valign="top">control character print control:<br>0 &nbsp;⇒ PRINT IN GSTRANS FORMAT_ 1 ⇒ PRINT AS A DOT_ 2 ⇒ PRINT DECIMAL INSIDE ANGLE BRACKETS_ 3 ⇒ print hex inside angle brackets
++<td align="left" valign="top">control character print control:<br>0 &nbsp;⇒ print in GSTrans format, 1 ⇒ print as a dot, 2 ⇒ print decimal inside angle brackets, 3 ⇒ print hex inside angle brackets
+ <tr>
+ <td valign=top>
+ Bit 2
+@@ -800,7 +800,7 @@ Bits 6,7
+ <tr>
+ <td valign=top>
+ Bits 0, 7
+-<td align="left" valign="top">0 ⇒ VERTICAL SYNC_ 1 ⇒ COMPOSITE SYNC_ 3 ⇒ auto sync)
++<td align="left" valign="top">0 ⇒ vertical sync, 1 ⇒ composite sync, 3 ⇒ auto sync)
+ <tr>
+ <td valign=top>
+ Bit 1
+@@ -809,7 +809,7 @@ Bit 1
+ <td valign=top>
+ Bits 2 - 6
+ <td align="left" valign="top">monitor type:
+-<tr>0 ⇒ 0_ 1 ⇒ 1_ ..._ 31 ⇒ auto
++<tr>0 ⇒ 0, 1 ⇒ 1, ..., 31 ⇒ auto
+ </table>
+ <tr>
+ <td valign=top>
+@@ -835,7 +835,7 @@ Bits 2 - 6
+ <tr>
+ <td valign=top>
+ Bit 0
+-<td align="left" valign="top">3D: 0 ⇒ STANDARD RISC OS 2 LOOK_ 1 ⇒ 3D
++<td align="left" valign="top">3D: 0 ⇒ standard RISC OS 2 look, 1 ⇒ 3D
+ <tr>
+ <td valign=top>
+ Bits 1 - 7
+@@ -939,15 +939,15 @@ Bit 2 †
+ <tr>
+ <td valign=top>
+ Bits 3 - 5 †
+-<td align="left" valign="top">screen blanker time:<br>0 ⇒ OFF_ 1 ⇒ 30S_ 2 ⇒ 1MIN_ 3 ⇒ 2MINS_ 4 ⇒ 5MINS_ 5 ⇒ 10MINS_ 6 ⇒ 15MINS_ 7 ⇒ 30mins
++<td align="left" valign="top">screen blanker time:<br>0 ⇒ off, 1 ⇒ 30s, 2 ⇒ 1min, 3 ⇒ 2mins, 4 ⇒ 5mins, 5 ⇒ 10mins, 6 ⇒ 15mins, 7 ⇒ 30mins
+ <tr>
+ <td valign=top>
+ Bit 6 †
+-<td align="left" valign="top">screen blanker/Wrch interaction:<br>0 ⇒ IGNORE WRCH_ 1 ⇒ Wrch unblanks screen
++<td align="left" valign="top">screen blanker/Wrch interaction:<br>0 ⇒ ignore Wrch, 1 ⇒ Wrch unblanks screen
+ <tr>
+ <td valign=top>
+ Bit 7 †
+-<td align="left" valign="top">hardware test disable:<br>0 ⇒ FULL TESTS_ 1 ⇒ disable long tests at power-up
++<td align="left" valign="top">hardware test disable:<br>0 ⇒ full tests, 1 ⇒ disable long tests at power-up
+ </table>
+ <tr>
+ <td valign=top>
+@@ -997,7 +997,7 @@ Bit 6
+ <tr>
+ <td valign=top>
+ Bit 0
+-<td align="left" valign="top">AUN BootNet:<br>0 ⇒ DISABLED_ 1 ⇒ enabled
++<td align="left" valign="top">AUN BootNet:<br>0 ⇒ disabled, 1 ⇒ enabled
+ <tr>
+ <td valign=top>
+ Bit 1
+@@ -1005,15 +1005,15 @@ Bit 1
+ <tr>
+ <td valign=top>
+ Bit 2
+-<td align="left" valign="top">type of last reset:<br>0 ⇒ ORDINARY_ 1 ⇒ CMOS reset (RISC OS 3 version 3.10 onwards)
++<td align="left" valign="top">type of last reset:<br>0 ⇒ ordinary, 1 ⇒ CMOS reset (RISC OS 3 version 3.10 onwards)
+ <tr>
+ <td valign=top>
+ Bit 3
+-<td align="left" valign="top">power saving:<br>0 ⇒ DISABLED_ 1 ⇒ enabled
++<td align="left" valign="top">power saving:<br>0 ⇒ disabled, 1 ⇒ enabled
+ <tr>
+ <td valign=top>
+ Bit 4
+-<td align="left" valign="top">mode and wimp mode:<br>0 ⇒ USE BYTE 196_ 1 ⇒ auto
++<td align="left" valign="top">mode and wimp mode:<br>0 ⇒ use byte 196, 1 ⇒ auto
+ <tr>
+ <td valign=top>
+ Bit 5
+@@ -1043,11 +1043,11 @@ Bit 7
+ <tr>
+ <td valign=top>
+ Bits 0, 1
+-<td align="left" valign="top">Filer display mode:<br>0 ⇒ &NBSP;LARGE ICONS_ 1 ⇒ SMALL ICONS_ 2 ⇒ full info, 3 reserved
++<td align="left" valign="top">Filer display mode:<br>0 ⇒ large icons, 1 ⇒ small icons, 2 ⇒ full info, 3 reserved
+ <tr>
+ <td valign=top>
+ Bits 2, 3
+-<td align="left" valign="top">Filer sorting mode:<br>0 ⇒ SORT BY NAME_ 1 ⇒ SORT BY TYPE_ 2 ⇒ SORT BY SIZE_ 3 ⇒ sort by date
++<td align="left" valign="top">Filer sorting mode:<br>0 ⇒ sort by name, 1 ⇒ sort by type, 2 ⇒ sort by size, 3 ⇒ sort by date
+ <tr>
+ <td valign=top>
+ Bit 4 †
+@@ -1140,7 +1140,7 @@ Bits 0 - 3
+ <tr>
+ <td valign=top>
+ Bit 0
+-<td align="left" valign="top">0 ⇒ VERTICAL SYNC_ 1 ⇒ composite sync
++<td align="left" valign="top">0 ⇒ vertical sync, 1 ⇒ composite sync
+ <tr>
+ <td valign=top>
+ Bit 1
+@@ -1162,23 +1162,23 @@ Bits 4 - 7
+ <tr>
+ <td valign=top>
+ Bit 0
+-<td align="left" valign="top">print line feeds:<br>0 ⇒ DO_ 1 ⇒ don't
++<td align="left" valign="top">print line feeds:<br>0 ⇒ do, 1 ⇒ don't
+ <tr>
+ <td valign=top>
+ Bits 1 - 2
+-<td align="left" valign="top">strip control:<br>0 ⇒ MONOCHROME_ 1 ⇒ GREY SCALE_ 2 ⇒ colour, 3 reserved
++<td align="left" valign="top">strip control:<br>0 ⇒ monochrome, 1 ⇒ grey scale, 2 ⇒ colour, 3 reserved
+ <tr>
+ <td valign=top>
+ Bit 3
+-<td align="left" valign="top">feed:<br>0  ⇒ AUTO FEED_ 1 ⇒ manual feed
++<td align="left" valign="top">feed:<br>0 ⇒ auto feed, 1 ⇒ manual feed
+ <tr>
+ <td valign=top>
+ Bit 4
+-<td align="left" valign="top">print quality:<br>0 ⇒ DRAFT_ 1 ⇒ NLQ
++<td align="left" valign="top">print quality:<br>0 ⇒ draft, 1 ⇒ NLQ
+ <tr>
+ <td valign=top>
+ Bits 5 - 6
+-<td align="left" valign="top">halftone type:<br>0 ⇒ SMALL_ 1 ⇒ LARGE_ 2 ⇒ dithered, 3 reserved
++<td align="left" valign="top">halftone type:<br>0 ⇒ small, 1 ⇒ large, 2 ⇒ dithered, 3 reserved
+ <tr>
+ <td valign=top>
+ Bit 7
+diff --git a/PRM/PORTABLE.HTML b/PRM/PORTABLE.HTML
+index 5c6994f..35897d4 100644
+--- a/PRM/PORTABLE.HTML
++++ b/PRM/PORTABLE.HTML
+@@ -166,7 +166,7 @@ R1 = AND mask</p>
+ <h5><a name="idx-7771"></a>On exit</h5>
+ <dd>
+ <p>R0 = old speed<br>
+-R1 = new speed (0 ⇒ FAST_ 1 ⇒ slow)</p>
++R1 = new speed (0 ⇒ fast, 1 ⇒ slow)</p>
+ 
+ <dt>
+ <h5><a name="idx-7772"></a>Interrupts</h5>
+diff --git a/PRM/PRINTSERVERS.HTML b/PRM/PRINTSERVERS.HTML
+index e7e66bd..7c591ad 100644
+--- a/PRM/PRINTSERVERS.HTML
++++ b/PRM/PRINTSERVERS.HTML
+@@ -31,7 +31,7 @@
+ <td align="left" valign="top">printer name, padded with spaces
+ <tr>
+ <td align="left" valign="top">7
+-<td align="left" valign="top">reason code (1 ⇒ STATUS REQUEST_ 6 ⇒ name request)
++<td align="left" valign="top">reason code (1 ⇒ status request, 6 ⇒ name request)
+ <tr>
+ <td align="left" valign="top">8
+ <td align="left" valign="top">reserved (must be zero)
+@@ -56,7 +56,7 @@
+ <th align="left" valign="top">Meaning
+ <tr>
+ <td align="left" valign="top">1
+-<td align="left" valign="top">status: 0 ⇒ READY_ 1 ⇒ BUSY_ 2 ⇒ JAMMED_ 6 ⇒ Offline;<br>all other values reserved
++<td align="left" valign="top">status: 0 ⇒ Ready, 1 ⇒ Busy, 2 ⇒ Jammed, 6 ⇒ Offline;<br>all other values reserved
+ <tr>
+ <td align="left" valign="top">2
+ <td align="left" valign="top">station number for Busy status, or 0
+diff --git a/PRM/PROCSTD.HTML b/PRM/PROCSTD.HTML
+index 2974a2b..cf6f1db 100644
+--- a/PRM/PROCSTD.HTML
++++ b/PRM/PROCSTD.HTML
+@@ -131,8 +131,10 @@ f7 FN 7   ; floating point preserved register<a name="marker-443376"></a></pre>
+ <h5><a name="idx-7882"></a>Register usage and argument passing to external procedures</h5>
+ <dd>
+ 
++  We consider the passing of N (>= 0) actual argument words to a procedure which expects to receive either exactly N argument words or a variable number V (>= 1) of argument words (it is assumed that there is at least one argument word which indicates in a language-implementation-dependent manner how many actual argument words there are: for example, by using a format string argument, a count argument, or an argument-list terminator).
++
+ <h6><a name="idx-7883"></a>Control Arrival</h6>
+-<p>W<a name="marker-443378"></a>e consider the passing of N (≥ 0) ACTUAL ARGUMENT WORDS TO A PROCEDURE WHICH EXPECTS TO RECEIVE EITHER EXACTLY N ARGUMENT WORDS OR A VARIABLE NUMBER V (≥ 1) of argument words (it is assumed that there is at least one argument word which indicates in a language-implementation-dependent manner how many actual argument words there are: for example, by using a format string argument, a count argument, or an argument-list terminator).</p>
++<p>W<a name="marker-443378"></a>e consider the passing of N (≥ 0) actual argument words to a procedure which expects to receive either exactly N argument words or a variable number V (≥ 1) of argument words (it is assumed that there is at least one argument word which indicates in a language-implementation-dependent manner how many actual argument words there are: for example, by using a format string argument, a count argument, or an argument-list terminator).</p>
+ <p>At the instant when control arrives at the target procedure, the following shall be true (for any M, if a statement is made about argM, and M &gt; N, the statement can be ignored):</p>
+ <dl>
+ <dd>
+diff --git a/PRM/SERPARPT.HTML b/PRM/SERPARPT.HTML
+index 5e2a786..fadbef4 100644
+--- a/PRM/SERPARPT.HTML
++++ b/PRM/SERPARPT.HTML
+@@ -157,7 +157,7 @@ R12 = R2 value from Buffer_InternalInfo call</p>
+ <p>R2 = pointer to first byte not inserted<br>
+ R3 = number of bytes not inserted<br>
+ All other registers preserved</p>
+-<p>C = 1 ⇒ UNABLE TO TRANSFER ALL DATA (IE. R3≠0)</p>
++<p>C = 1 ⇒ unable to transfer all data (ie. R3≠0)</p>
+ 
+ <h6><a name="idx-8500"></a>Use</h6>
+ <p>This reason code inserts a block of data into the specified buffer. The pointer and length are adjusted to reflect how much data was actually inserted. If the data has already been written directly into the buffer (ie. R2 = pointer to buffer insertion point), then no data is copied and the buffer indices are simply updated.</p>
+@@ -194,7 +194,7 @@ R12 = R2 value from Buffer_InternalInfo call</p>
+ <p>R2 = pointer to first free byte in destination area<br>
+ R3 = number of bytes not removed<br>
+ All other registers preserved</p>
+-<p>C = 1 ⇒ UNABLE TO REMOVE ALL DATA (IE. R3≠0)</p>
++<p>C = 1 ⇒ unable to remove all data (ie. R3≠0)</p>
+ 
+ <h6><a name="idx-8506"></a>Use</h6>
+ <p>This reason code removes a block from the specified buffer. The pointer and length are adjusted to reflect how much data was actually removed. </p>
+@@ -231,7 +231,7 @@ R12 = R2 value from Buffer_InternalInfo call</p>
+ <p>R2 = pointer to first free byte in destination area<br>
+ R3 = number of bytes not transferred<br>
+ All other registers preserved</p>
+-<p>C = 1 ⇒ UNABLE TO TRANSFER ALL DATA (IE. R3≠0)</p>
++<p>C = 1 ⇒ unable to transfer all data (ie. R3≠0)</p>
+ 
+ <h6><a name="idx-8512"></a>Use</h6>
+ <p>This reason code reads a block of data from the specified buffer, without actually removing it. The pointer and length are adjusted to reflect the data transferred.<a name="marker-26330"></a></p>
+@@ -335,28 +335,28 @@ All other registers preserved</p>
+ <td align="left" valign="top" rowspan="2">=
+ <td align="left" valign="top">special functions chip type:
+ <tr>
+-<td align="left" valign="top">0 ⇒ NONE_ 1 ⇒ <A NAME="MARKER-26434"></a>IOEB ASIC
++<td align="left" valign="top">0 ⇒ none, 1 ⇒ <A NAME="MARKER-26434"></a>IOEB ASIC
+ <tr>
+ <td align="left" valign="top" rowspan="2">bits
+ <td align="left" valign="top" rowspan="2" nowrap>8 - 15
+ <td align="left" valign="top" rowspan="2">=
+ <td align="left" valign="top">I/O control chip type:
+ <tr>
+-<td align="left" valign="top">0 ⇒ IOC_ 1 ⇒ <A NAME="MARKER-26436"></a>IOMD
++<td align="left" valign="top">0 ⇒ IOC, 1 ⇒ <A NAME="MARKER-26436"></a>IOMD
+ <tr>
+ <td align="left" valign="top" rowspan="2">bits
+ <td align="left" valign="top" rowspan="2" nowrap>16 - 23
+ <td align="left" valign="top" rowspan="2">=
+ <td align="left" valign="top">memory control chip:
+ <tr>
+-<td align="left" valign="top">0 ⇒ <A NAME="MARKER-26437"></A>MEMC1/MEMC1A_ 1 ⇒ IOMD
++<td align="left" valign="top">0 ⇒ <A NAME="MARKER-26437"></A>MEMC1/MEMC1a, 1 ⇒ IOMD
+ <tr>
+ <td align="left" valign="top" rowspan="2">bits
+ <td align="left" valign="top" rowspan="2" nowrap>24 - 31
+ <td align="left" valign="top" rowspan="2">=
+ <td align="left" valign="top">video control chip type:
+ <tr>
+-<td align="left" valign="top">0 ⇒ <A NAME="MARKER-26438"></A>VIDC1A_ 1 ⇒ VIDC20
++<td align="left" valign="top">0 ⇒ <A NAME="MARKER-26438"></A>VIDC1a, 1 ⇒ VIDC20
+ </table>
+ </dl>
+ <p>R1 = hardware configuration word 1:</p>
+@@ -369,7 +369,7 @@ All other registers preserved</p>
+ <td align="left" valign="top" rowspan="2">=
+ <td align="left" valign="top">I/O chip type:
+ <tr>
+-<td align="left" valign="top">0 ⇒ ABSENT_ 1 ⇒ <A NAME="MARKER-26435"></A>82C710/711 OR <A NAME="MARKER-26439"></A>SMC '<A NAME="MARKER-26463"></a>665 or similar
++<td align="left" valign="top">0 ⇒ absent, 1 ⇒ <A NAME="MARKER-26435"></A>82C710/711 or <A NAME="MARKER-26439"></A>SMC '<A NAME="MARKER-26463"></a>665 or similar
+ <tr>
+ <td align="left" valign="top">bits
+ <td align="left" valign="top" colspan="2" nowrap>8 - 31
+@@ -386,7 +386,7 @@ All other registers preserved</p>
+ <td align="left" valign="top" rowspan="2">=
+ <td align="left" valign="top"><a name="marker-26440"></a>LCD controller type:
+ <tr>
+-<td align="left" valign="top">0 ⇒ ABSENT_ 1 ⇒ present (type 1)
++<td align="left" valign="top">0 ⇒ absent, 1 ⇒ present (type 1)
+ <tr>
+ <td align="left" valign="top">bits
+ <td align="left" valign="top" nowrap>8 - 31
+diff --git a/PRM/SOUND.HTML b/PRM/SOUND.HTML
+index c5b32df..cefc75f 100644
+--- a/PRM/SOUND.HTML
++++ b/PRM/SOUND.HTML
+@@ -116,18 +116,18 @@
+ <dt>
+ <h5><a name="idx-8809"></a>Sample rate: maximum</h5>
+ <dd>
+-<p>A high <a name="marker-650642"></a>sample rate will give the best sound quality. If too high a rate is sought then DMA request conflicts will occur, especially when high bandwidths are also required from VIDC (the Video Controller) by high resolution screen modes. To avoid such contention the <a name="marker-650644"></a>output period must not be less than 4µS. OUTPUTTING A BYTE TO ONE OF EIGHT CHANNELS EVERY 4µS RESULTS IN A <A NAME="MARKER-650645"></A>SAMPLE PERIOD OF 32µs, which gives a maximum sample rate of 31.25kHz.</p>
++<p>A high <a name="marker-650642"></a>sample rate will give the best sound quality. If too high a rate is sought then DMA request conflicts will occur, especially when high bandwidths are also required from VIDC (the Video Controller) by high resolution screen modes. To avoid such contention the <a name="marker-650644"></a>output period must not be less than 4µS. Outputting a byte to one of eight channels every 4µS results in a <A NAME="MARKER-650645"></A>sample period of 32µs, which gives a maximum sample rate of 31.25kHz.</p>
+ 
+ <dt>
+ <h5><a name="idx-8810"></a>Sample rate: default</h5>
+ <dd>
+-<p>The <a name="marker-650648"></a>clock for the Sound system is derived from the system clock for the video controller, which is then divided by a multiple of 24. Current ARM based computers use a <a name="marker-650647"></a>VIDC system clock of 24MHz, 25.175MHz or 36MHz, depending on the screen mode and monitor type selected. The default output period is 6µS_ WHICH IS COMPATIBLE WITH VIDC SYSTEM CLOCKS RUNNING AT MULTIPLES OF 4MHZ FROM 12MHZ UPWARDS (IE 12MHZ_ 16MHZ_ 20MHZ...). THIS 6µs output period is obtained as follows from the 24MHz and 36MHz VIDC system clocks:</p>
++<p>The <a name="marker-650648"></a>clock for the Sound system is derived from the system clock for the video controller, which is then divided by a multiple of 24. Current ARM based computers use a <a name="marker-650647"></a>VIDC system clock of 24MHz, 25.175MHz or 36MHz, depending on the screen mode and monitor type selected. The default output period is 6µS, which is compatible with VIDC system clocks running at multiples of 4MHz from 12MHz upwards (ie 12MHz, 16MHz, 20MHz...). This 6µs output period is obtained as follows from the 24MHz and 36MHz VIDC system clocks:</p>
+ <ul>
+ <li>24MHz clock divided by 144 (6 × 24)
+ <li>36MHz clock divided by 216 (9 × 24)
+ </ul>
+ <p>Unfortunately with a VIDC system clock of 25.175MHz (used for VGA screen modes) the same output period cannot be produced. The divider used is the same as for a 24MHz VIDC system clock (ie 144, or 6 × 24), which results in a slightly shorter output period, and so <a name="marker-650646"></a>sounds are approximately a semitone higher.</p>
+-<p>Outputting a byte to one of eight channels every 6µS RESULTS IN A SAMPLE PERIOD OF 48µs, which gives a default sample rate of 20.833kHz.</p>
++<p>Outputting a byte to one of eight channels every 6µS results in a sample period of 48µs, which gives a default sample rate of 20.833kHz.</p>
+ 
+ <dt>
+ <h5><a name="idx-8811"></a>Buffer length</h5>
+diff --git a/PRM/SOUNDDMA.HTML b/PRM/SOUNDDMA.HTML
+index b329150..8f2c396 100644
+--- a/PRM/SOUNDDMA.HTML
++++ b/PRM/SOUNDDMA.HTML
+@@ -313,13 +313,13 @@ R1 = the configuration stored in SoundSystem bits at offset 132 of <A HREF="CMOS
+ <h5><a name="idx-9152"></a>On entry</h5>
+ <dd>
+ <p>R0 = 1 (reason code)<br>
+-R1 = new state of automatic linear 2× oversampling: 0 ⇒ DISABLED_ 1 ⇒ enabled</p>
++R1 = new state of automatic linear 2× oversampling: 0 ⇒ disabled, 1 ⇒ enabled</p>
+ 
+ <dt>
+ <h5><a name="idx-9153"></a>On exit</h5>
+ <dd>
+ <p>R0 preserved<br>
+-R1 = previous state of automatic linear 2× oversampling: 0 ⇒ DISABLED_ 1 ⇒ enabled</p>
++R1 = previous state of automatic linear 2× oversampling: 0 ⇒ disabled, 1 ⇒ enabled</p>
+ 
+ <dt>
+ <h5><a name="idx-9154"></a>Use</h5>
+diff --git a/PRM/SQUASH.HTML b/PRM/SQUASH.HTML
+index 496dabe..eec5185 100644
+--- a/PRM/SQUASH.HTML
++++ b/PRM/SQUASH.HTML
+@@ -58,16 +58,16 @@
+ <table>
+ <TR>
+ <td align="left" valign="top" nowrap>bit 0:
+-<td align="left" valign="top">0 ⇒ START NEW OPERATION_ 1 ⇒ continue existing operation (using existing workspace contents)
++<td align="left" valign="top">0 ⇒ start new operation, 1 ⇒ continue existing operation (using existing workspace contents)
+ <TR>
+ <td align="left" valign="top" nowrap>bit 1:
+-<td align="left" valign="top">0 ⇒ END OF THE INPUT_ 1 ⇒ more input after this
++<td align="left" valign="top">0 ⇒ end of the input, 1 ⇒ more input after this
+ <TR>
+ <td align="left" valign="top" nowrap>bit 2:
+ <td align="left" valign="top">reserved (must be zero)
+ <TR>
+ <td align="left" valign="top" nowrap>bit 3:
+-<td align="left" valign="top">0 ⇒ NO EFFECT_ 1 ⇒ return the work space size required and the maximum output size in bytes (all other bits must be 0)
++<td align="left" valign="top">0 ⇒ no effect, 1 ⇒ return the work space size required and the maximum output size in bytes (all other bits must be 0)
+ <TR>
+ <td align="left" valign="top" colspan="2">bits 4 - 31 reserved (must be zero)
+ </table>
+@@ -154,16 +154,16 @@ Fast interrupts are enabled</p>
+ <table>
+ <tr>
+ <td align="left" valign="top" nowrap>bit 0:
+-<td align="left" valign="top">0 ⇒ START NEW OPERATION_ 1 ⇒ continue existing operation (using existing workspace contents)
++<td align="left" valign="top">0 ⇒ start new operation, 1 ⇒ continue existing operation (using existing workspace contents)
+ <tr>
+ <td align="left" valign="top" nowrap>bit 1:
+-<td align="left" valign="top">0 ⇒ END OF THE INPUT_ 1 ⇒ more input after this
++<td align="left" valign="top">0 ⇒ end of the input, 1 ⇒ more input after this
+ <tr>
+ <td align="left" valign="top" nowrap>bit 2:
+-<td align="left" valign="top">0 ⇒ NORMAL_ 1 ⇒ you may assume that the output will all fit in this buffer (allows a faster algorithm to be used, if bits 0 and 1 are both 0)
++<td align="left" valign="top">0 ⇒ normal, 1 ⇒ you may assume that the output will all fit in this buffer (allows a faster algorithm to be used, if bits 0 and 1 are both 0)
+ <tr>
+ <td align="left" valign="top" nowrap>bit 3:
+-<td align="left" valign="top">0 ⇒ NO EFFECT_ 1 ⇒ return the work space size required and the maximum output size in bytes (all other bits must be 0)
++<td align="left" valign="top">0 ⇒ no effect, 1 ⇒ return the work space size required and the maximum output size in bytes (all other bits must be 0)
+ <tr>
+ <td align="left" valign="top" colspan="2">bits 4 - 31 reserved (must be zero)
+ </table>
+diff --git a/PRM/VDU.HTML b/PRM/VDU.HTML
+index c6b55df..dabf322 100644
+--- a/PRM/VDU.HTML
++++ b/PRM/VDU.HTML
+@@ -3837,10 +3837,10 @@ n+8
+ <th align="left" valign="top">Meaning
+ <tr>
+ <td align="left" valign="top">0
+-<td align="left" valign="top">0 ⇒ HSYNC PVE (AS ON A STANDARD ARCHIMEDES)_ 1 ⇒ HSync -ve
++<td align="left" valign="top">0 ⇒ HSync +ve (as on a standard Archimedes), 1 ⇒ HSync -ve
+ <tr>
+ <td align="left" valign="top">1
+-<td align="left" valign="top">0 ⇒ VSYNC PVE (AS ON A STANDARD ARCHIMEDES)_ 1 ⇒ VSync -ve
++<td align="left" valign="top">0 ⇒ VSync +ve (as on a standard Archimedes), 1 ⇒ VSync -ve
+ <tr>
+ <td align="left" valign="top">2 - 23
+ <td align="left" valign="top">reserved; must be zero
+@@ -3940,7 +3940,7 @@ R2 = monitor lead ID (see below)</p>
+ <p>R1 = 0 (claim service)<br>
+ R3 = default screen mode number to use on this type of monitor<br>
+ R4 = monitor type number to use (as used in *Configure MonitorType)<br>
+-R5 = sync type to use on this type of monitor (0 ⇒ SEPARATE SYNCS_ 1 ⇒ composite sync)</p>
++R5 = sync type to use on this type of monitor (0 ⇒ separate syncs, 1 ⇒ composite sync)</p>
+ <p>All other registers must be preserved.</p>
+ <p> If the monitor lead ID is not recognised, the module should preserve all registers.</p>
+ 
+@@ -7835,10 +7835,10 @@ Fast interrupts are enabled</p>
+ <td align="left" valign="top">graphics plotting action (see below)
+ <tr>
+ <td align="left" valign="top">bit 4
+-<td align="left" valign="top">set ⇒ ALTER BACKGROUND_ CLEAR ⇒ alter foreground
++<td align="left" valign="top">set ⇒ alter background, clear ⇒ alter foreground
+ <tr>
+ <td align="left" valign="top">bit 5
+-<td align="left" valign="top">set ⇒ R1 = PATTERN DATA_ CLEAR ⇒ R1 = colour number
++<td align="left" valign="top">set ⇒ R1 = pattern data, clear ⇒ R1 = colour number
+ <tr>
+ <td align="left" valign="top">bits 6 - 31
+ <td align="left" valign="top">reserved (must be zero)</table>
+diff --git a/PRM/VIDEO.HTML b/PRM/VIDEO.HTML
+index 71bfbea..0e31842 100644
+--- a/PRM/VIDEO.HTML
++++ b/PRM/VIDEO.HTML
+@@ -125,7 +125,7 @@
+ <td align="left" valign="top" colspan="2">pixel depth:
+ <tr>
+ <td align="left" valign="top">
+-<td align="left" valign="top">0 ⇒ 1BPP_ 1 ⇒ 2BPP_ 2 ⇒ 4BPP_ 3 ⇒ 8BPP_ 4 ⇒ 16BPP_ 5 ⇒ 32bpp
++<td align="left" valign="top">0 ⇒ 1bpp, 1 ⇒ 2bpp, 2 ⇒ 4bpp, 3 ⇒ 8bpp, 4 ⇒ 16bpp, 5 ⇒ 32bpp
+ <tr>
+ <td align="left" valign="top">16
+ <td align="left" valign="top" colspan="2">frame rate (in Hz); -1 ⇒ use highest rate available
+@@ -822,23 +822,23 @@ endmode</pre></p>
+ <tr>
+ <td align="left" valign="top">NColour
+ <td align="left" valign="top"><p>3</p>
+-<td align="left" valign="top"><p>T=1 ⇒ 1_ T=2 ⇒ 3_ T=3 ⇒ 15_ T=4 ⇒ 63 OR 255_ T=5 ⇒ 65535_ T=6 ⇒ &amp;FFFFFFFF</p>
++<td align="left" valign="top"><p>T=1 ⇒ 1, T=2 ⇒ 3, T=3 ⇒ 15, T=4 ⇒ 63 or 255, T=5 ⇒ 65535, T=6 ⇒ &amp;FFFFFFFF</p>
+ <tr>
+ <td align="left" valign="top"><p>XEigFactor</p>
+ <td align="left" valign="top"><p>4</p>
+-<td align="left" valign="top"><p>hdpi=22/23 ⇒ 3_ HDPI=45 ⇒ 2_ HDPI=90 ⇒ 1_ HDPI=180 ⇒ 0</p>
++<td align="left" valign="top"><p>hdpi=22/23 ⇒ 3, hdpi=45 ⇒ 2, hdpi=90 ⇒ 1, hdpi=180 ⇒ 0</p>
+ <tr>
+ <td align="left" valign="top"><p>YEigFactor</p>
+ <td align="left" valign="top"><p>5</p>
+-<td align="left" valign="top"><p>vdpi=22/23 ⇒ 3_ VDPI=45 ⇒ 2_ VDPI=90 ⇒ 1_ VDPI=180 ⇒ 0</p>
++<td align="left" valign="top"><p>vdpi=22/23 ⇒ 3, vdpi=45 ⇒ 2, vdpi=90 ⇒ 1, vdpi=180 ⇒ 0</p>
+ <tr>
+ <td align="left" valign="top"><p>Log2BPP</p>
+ <td align="left" valign="top"><p>9</p>
+-<td align="left" valign="top"><p>T=1 ⇒ 0_ T=2 ⇒ 1_ T=3 ⇒ 2_ T=4 ⇒ 3_ T=5 ⇒ 4_ T=6 ⇒ 5</p>
++<td align="left" valign="top"><p>T=1 ⇒ 0, T=2 ⇒ 1, T=3 ⇒ 2, T=4 ⇒ 3, T=5 ⇒ 4, T=6 ⇒ 5</p>
+ <tr>
+ <td align="left" valign="top"><p>Log2BPC</p>
+ <td align="left" valign="top"><p>10</p>
+-<td align="left" valign="top"><p>T=1 ⇒ 0_ T=2 ⇒ 1_ T=3 ⇒ 2_ T=4 ⇒ 3_ T=5 ⇒ 4_ T=6 ⇒ 5<A NAME="MARKER-329034"></a></p>
++<td align="left" valign="top"><p>T=1 ⇒ 0, T=2 ⇒ 1, T=3 ⇒ 2, T=4 ⇒ 3, T=5 ⇒ 4, T=6 ⇒ 5<A NAME="MARKER-329034"></a></p>
+ </table>
+ </dl>
+ 
+@@ -861,10 +861,10 @@ endmode</pre></p>
+ <table>
+ <tr>
+ <td align="left" valign="top" nowrap>bit 6
+-<td align="left" valign="top">set ⇒ R1 = TEXT COLOUR_ CLEAR ⇒ R1 = graphics colour
++<td align="left" valign="top">set ⇒ R1 = text colour, clear ⇒ R1 = graphics colour
+ <tr>
+ <td align="left" valign="top" nowrap>bit 7
+-<td align="left" valign="top">set ⇒ READ COLOUR_ CLEAR ⇒ set colour
++<td align="left" valign="top">set ⇒ read colour, clear ⇒ set colour
+ </table>
+ </dl>
+ <p>When setting the colour all the flags are used. As before, you can specify graphics colours using a pattern block or a colour number; text colours must be specified as colour numbers.</p>
+@@ -1243,7 +1243,7 @@ R4 = pointer to workspace list if mode specifier was a mode number, or 0 if mode
+ <tr>
+ <td align="left" valign="top">4
+ <td align="left" valign="top">pixel depth:
+-<td align="left" valign="top">0 ⇒ 1BPP_ 1⇒ 2BPP_ 2⇒ 4BPP 3 ⇒ 8BPP_ 4 ⇒ 16BPP_ 5⇒ 32bpp
++<td align="left" valign="top">0 ⇒ 1bpp, 1⇒ 2bpp, 2⇒ 4bpp 3 ⇒ 8bpp, 4 ⇒ 16bpp, 5⇒ 32bpp
+ <tr>
+ <td align="left" valign="top">8
+ <td align="left" valign="top" rowspan="6">horizontal:
+@@ -1312,11 +1312,11 @@ bits 2 to 31 reserved (must be zero)
+ <tr>
+ <td align="left" valign="top">1
+ <td align="left" valign="top">LCD mode
+-<td align="left" valign="top">0 ⇒ DISABLE_ 1 ⇒ enable
++<td align="left" valign="top">0 ⇒ disable, 1 ⇒ enable
+ <tr>
+ <td align="left" valign="top">2
+ <td align="left" valign="top">LCD dual-panel mode
+-<td align="left" valign="top">0 ⇒ DISABLE_ 1 ⇒ enable
++<td align="left" valign="top">0 ⇒ disable, 1 ⇒ enable
+ <tr>
+ <td align="left" valign="top">3
+ <td align="left" valign="top">LCD offset register 0
+@@ -1328,11 +1328,11 @@ bits 2 to 31 reserved (must be zero)
+ <tr>
+ <td align="left" valign="top">5
+ <td align="left" valign="top">Hi-res mode
+-<td align="left" valign="top">0 ⇒ DISABLE_ 1 ⇒ enable
++<td align="left" valign="top">0 ⇒ disable, 1 ⇒ enable
+ <tr>
+ <td align="left" valign="top">6
+ <td align="left" valign="top">DAC control
+-<td align="left" valign="top">0 ⇒ DISABLE_ 1 ⇒ enable (default)
++<td align="left" valign="top">0 ⇒ disable, 1 ⇒ enable (default)
+ <tr>
+ <td align="left" valign="top">7
+ <td align="left" valign="top">RGB pedestal enables
+diff --git a/PRM/WRITEDEV.HTML b/PRM/WRITEDEV.HTML
+index e19a02f..319ad66 100644
+--- a/PRM/WRITEDEV.HTML
++++ b/PRM/WRITEDEV.HTML
+@@ -109,7 +109,7 @@ R2 = DeviceFS stream handle<br>
+ R3 = flags for opening the stream:<br>
+ <dl>
+ <dd>
+-bit 0 clear ⇒ STREAM OPENED FOR RX_ SET ⇒ stream opened for TX<br>
++bit 0 clear ⇒ stream opened for RX, set ⇒ stream opened for TX<br>
+ all others bits reserved, and should be ignored
+ </dl>
+ R6 = pointer to special field control block</p>
+diff --git a/PRM/WRITEFS.HTML b/PRM/WRITEFS.HTML
+index 8c629da..5ed63ee 100644
+--- a/PRM/WRITEFS.HTML
++++ b/PRM/WRITEFS.HTML
+@@ -1861,7 +1861,7 @@ R4 = offset of next item to read in directory (-1 if end)</p>
+ <p>You should return an error if the object being catalogued is not found or is a file. The following are, however, all valid return values:</p>
+ <ul>
+ <li>R3 = 0, R4 ≠ -1 (the buffer overflowed)
+-<li>R3 ≠ 0_ R4 ≠ -1 (there are more names to read)
++<li>R3 ≠ 0, R4 ≠ -1 (there are more names to read)
+ <li>R3 = 0, R4 = -1 (the previous read filled the buffer with the last name, but didn't detect the end; now there no more names to read).
+ </ul>
+ </dl>
+@@ -2548,7 +2548,7 @@ R6 = pointer to special field if present, otherwise 0 (FSEntry_Func 33); or imag
+ <h5><a name="idx-12477"></a>On entry</h5>
+ <dd>
+ <p>R1 = pointer to null-terminated directory name<br>
+-R2 = changed directory (0 ⇒ CSD_ 1 ⇒ PSD_ 2 ⇒ URD_ 3 ⇒ Lib)<br>
++R2 = changed directory (0 ⇒ CSD, 1 ⇒ PSD, 2 ⇒ URD, 3 ⇒ Lib)<br>
+ R6 = pointer to special field if present, otherwise 0</p>
+ 
+ <dt>
+-- 
+2.31.1
+

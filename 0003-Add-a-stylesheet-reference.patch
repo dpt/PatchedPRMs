@@ -1,7 +1,7 @@
-From 6bc5dd2b073d99efc32bd292d2689f1dbc8b2cad Mon Sep 17 00:00:00 2001
+From 7017387619fbae37c58ea3ff8db3fb2667059aa9 Mon Sep 17 00:00:00 2001
 From: David Thomas <dave@davespace.co.uk>
-Date: Fri, 5 Mar 2021 00:02:47 +0000
-Subject: [PATCH] 23: Mark content as UTF-8
+Date: Fri, 5 Mar 2021 00:32:39 +0000
+Subject: [PATCH 3/5] Add a stylesheet reference
 
 ---
  APPENDICES/CONVNOTES.HTML              | 1 +
@@ -9,7 +9,7 @@ Subject: [PATCH] 23: Mark content as UTF-8
  BASIC/APPENDICES/ARMASSEMBLER.HTML     | 1 +
  BASIC/APPENDICES/BASICHISTORY.HTML     | 1 +
  BASIC/APPENDICES/COLOURS.HTML          | 1 +
- BASIC/APPENDICES/ERRORMESSAGES.HTML    | 3 ++-
+ BASIC/APPENDICES/ERRORMESSAGES.HTML    | 1 +
  BASIC/APPENDICES/FXCOMMANDS.HTML       | 1 +
  BASIC/APPENDICES/INKEYVALUES.HTML      | 1 +
  BASIC/APPENDICES/MINABBREVIATIONS.HTML | 1 +
@@ -17,9 +17,9 @@ Subject: [PATCH] 23: Mark content as UTF-8
  BASIC/APPENDICES/PLOTCODES.HTML        | 1 +
  BASIC/APPENDICES/VDUCOMMANDS.HTML      | 1 +
  BASIC/INDEX.HTML                       | 1 +
- BASIC/PART1/BBCBASIC.HTML              | 3 ++-
+ BASIC/PART1/BBCBASIC.HTML              | 1 +
  BASIC/PART1/BBCREFMANUAL.HTML          | 1 +
- BASIC/PART2/ACCESSMEMLOCS.HTML         | 3 ++-
+ BASIC/PART2/ACCESSMEMLOCS.HTML         | 1 +
  BASIC/PART2/ARRAYS.HTML                | 1 +
  BASIC/PART2/BASES.HTML                 | 1 +
  BASIC/PART2/BASICSCREENED.HTML         | 1 +
@@ -36,13 +36,13 @@ Subject: [PATCH] 23: Mark content as UTF-8
  BASIC/PART2/SCREENMODES.HTML           | 1 +
  BASIC/PART2/SIMPLE.HTML                | 1 +
  BASIC/PART2/SIMPLEGRAPHICS.HTML        | 1 +
- BASIC/PART2/SOUND.HTML                 | 3 ++-
+ BASIC/PART2/SOUND.HTML                 | 1 +
  BASIC/PART2/SPRITES.HTML               | 1 +
  BASIC/PART2/STRINGVARS.HTML            | 1 +
- BASIC/PART2/TELETEXT.HTML              | 3 ++-
- BASIC/PART2/VARIABLES.HTML             | 3 ++-
+ BASIC/PART2/TELETEXT.HTML              | 1 +
+ BASIC/PART2/VARIABLES.HTML             | 1 +
  BASIC/PART2/VDUCONTROL.HTML            | 1 +
- BASIC/PART2/VIEWPORTS.HTML             | 3 ++-
+ BASIC/PART2/VIEWPORTS.HTML             | 1 +
  BASIC/PART3/KEYWORDS.HTML              | 1 +
  INDEX.HTML                             | 1 +
  OVERVIEWS/OVERVIEW-ASM.HTML            | 1 +
@@ -52,41 +52,41 @@ Subject: [PATCH] 23: Mark content as UTF-8
  OVERVIEWS/OVERVIEW-PRM.HTML            | 1 +
  OVERVIEWS/OVERVIEW-TOOLBOX.HTML        | 1 +
  PRM-INDEX/ALPHASERVICES.HTML           | 1 +
- PRM-INDEX/ALPHASWILIST.HTML            | 3 ++-
+ PRM-INDEX/ALPHASWILIST.HTML            | 1 +
  PRM-INDEX/NUMSERVICES.HTML             | 1 +
- PRM-INDEX/NUMSWILIST.HTML              | 3 ++-
+ PRM-INDEX/NUMSWILIST.HTML              | 1 +
  PRM-INDEX/OSBYTES.HTML                 | 1 +
  PRM-INDEX/OSWORDS.HTML                 | 1 +
  PRM-INDEX/STARCOMMS.HTML               | 1 +
  PRM/16BITJOYSTICK.HTML                 | 1 +
  PRM/5THCOLROMS.HTML                    | 1 +
  PRM/ABOUT.HTML                         | 1 +
- PRM/ACCESS.HTML                        | 3 ++-
+ PRM/ACCESS.HTML                        | 1 +
  PRM/ADFS.HTML                          | 1 +
  PRM/ADFSNEW.HTML                       | 1 +
  PRM/ARM3.HTML                          | 1 +
- PRM/ARM710WARN.HTML                    | 3 ++-
- PRM/ARMHW.HTML                         | 3 ++-
+ PRM/ARM710WARN.HTML                    | 1 +
+ PRM/ARMHW.HTML                         | 1 +
  PRM/ASM.HTML                           | 1 +
  PRM/ASMAPPNOTE.HTML                    | 1 +
  PRM/AUN.HTML                           | 1 +
- PRM/BASIC.HTML                         | 3 ++-
- PRM/BBCECONET.HTML                     | 3 ++-
+ PRM/BASIC.HTML                         | 1 +
+ PRM/BBCECONET.HTML                     | 1 +
  PRM/BOOTAPP.HTML                       | 1 +
  PRM/BROADCASTLOAD.HTML                 | 1 +
  PRM/BUFFERMAN.HTML                     | 1 +
  PRM/BUFFERS.HTML                       | 1 +
- PRM/CDFS.HTML                          | 3 ++-
+ PRM/CDFS.HTML                          | 1 +
  PRM/CHARINPUT.HTML                     | 1 +
  PRM/CHAROUTPUT.HTML                    | 1 +
  PRM/CHARSETS.HTML                      | 1 +
- PRM/CLI.HTML                           | 3 ++-
- PRM/CLIINTRO.HTML                      | 3 ++-
+ PRM/CLI.HTML                           | 1 +
+ PRM/CLIINTRO.HTML                      | 1 +
  PRM/CMOS.HTML                          | 1 +
  PRM/COLOURTRANS.HTML                   | 1 +
  PRM/COLPICK.HTML                       | 1 +
- PRM/COMMANDSCRIPTS.HTML                | 3 ++-
- PRM/COMMS.HTML                         | 3 ++-
+ PRM/COMMANDSCRIPTS.HTML                | 1 +
+ PRM/COMMS.HTML                         | 1 +
  PRM/COMPRESSJPEG.HTML                  | 1 +
  PRM/CONVERSIONS.HTML                   | 1 +
  PRM/DEBUGGER.HTML                      | 1 +
@@ -195,34 +195,34 @@ Subject: [PATCH] 23: Mark content as UTF-8
  PRM/VDU.HTML                           | 1 +
  PRM/VDUCODES.HTML                      | 1 +
  PRM/VIDEO.HTML                         | 1 +
- PRM/WAVESYNTH.HTML                     | 3 ++-
+ PRM/WAVESYNTH.HTML                     | 1 +
  PRM/WIMP.HTML                          | 1 +
  PRM/WRITEDEV.HTML                      | 1 +
  PRM/WRITEFC.HTML                       | 1 +
- PRM/WRITEFCNEW.HTML                    | 3 ++-
+ PRM/WRITEFCNEW.HTML                    | 1 +
  PRM/WRITEFS.HTML                       | 1 +
  PRM/WRITEFSNEW.HTML                    | 1 +
- TOOLBOX/ASM/AASM.HTML                  | 3 ++-
+ TOOLBOX/ASM/AASM.HTML                  | 1 +
  TOOLBOX/ASM/ASMEG.HTML                 | 1 +
  TOOLBOX/ASM/ASMLANG.HTML               | 1 +
- TOOLBOX/ASM/ASMPC.HTML                 | 3 ++-
- TOOLBOX/ASM/CONDASM.HTML               | 3 ++-
+ TOOLBOX/ASM/ASMPC.HTML                 | 1 +
+ TOOLBOX/ASM/CONDASM.HTML               | 1 +
  TOOLBOX/ASM/CPU.HTML                   | 1 +
  TOOLBOX/ASM/DIRECTIV.HTML              | 1 +
  TOOLBOX/ASM/ERRORS.HTML                | 1 +
- TOOLBOX/ASM/EXHANDLE.HTML              | 3 ++-
- TOOLBOX/ASM/EXPROP.HTML                | 3 ++-
+ TOOLBOX/ASM/EXHANDLE.HTML              | 1 +
+ TOOLBOX/ASM/EXPROP.HTML                | 1 +
  TOOLBOX/ASM/FPINSTRS.HTML              | 1 +
  TOOLBOX/ASM/INDEX.HTML                 | 1 +
  TOOLBOX/ASM/INSTRSET.HTML              | 1 +
  TOOLBOX/ASM/INTRO.HTML                 | 1 +
  TOOLBOX/ASM/MACROS.HTML                | 1 +
- TOOLBOX/ASM/NEWFEATS.HTML              | 3 ++-
+ TOOLBOX/ASM/NEWFEATS.HTML              | 1 +
  TOOLBOX/ASM/OBJASM.HTML                | 1 +
- TOOLBOX/ASM/SYMBOLIC.HTML              | 3 ++-
+ TOOLBOX/ASM/SYMBOLIC.HTML              | 1 +
  TOOLBOX/ASM/WARNINGS.HTML              | 1 +
  TOOLBOX/ASM/WRITERM.HTML               | 1 +
- TOOLBOX/ASMIX.HTML                     | 3 ++-
+ TOOLBOX/ASMIX.HTML                     | 1 +
  TOOLBOX/C/ANSILIB.HTML                 | 1 +
  TOOLBOX/C/CCANDCPP.HTML                | 1 +
  TOOLBOX/C/CERRORS.HTML                 | 1 +
@@ -231,3713 +231,3553 @@ Subject: [PATCH] 23: Mark content as UTF-8
  TOOLBOX/C/CMATHLIB.HTML                | 1 +
  TOOLBOX/C/CMHG.HTML                    | 1 +
  TOOLBOX/C/CPASM.HTML                   | 1 +
- TOOLBOX/C/CPPERROR.HTML                | 3 ++-
- TOOLBOX/C/CPPIMPL.HTML                 | 3 ++-
+ TOOLBOX/C/CPPERROR.HTML                | 1 +
+ TOOLBOX/C/CPPIMPL.HTML                 | 1 +
  TOOLBOX/C/EVENTLIB.HTML                | 1 +
  TOOLBOX/C/INDEX.HTML                   | 1 +
  TOOLBOX/C/INTRO.HTML                   | 1 +
- TOOLBOX/C/NEWFEATS.HTML                | 3 ++-
- TOOLBOX/C/OVERLAYS.HTML                | 3 ++-
- TOOLBOX/C/PORTABLE.HTML                | 3 ++-
- TOOLBOX/C/RENDLIB.HTML                 | 3 ++-
+ TOOLBOX/C/NEWFEATS.HTML                | 1 +
+ TOOLBOX/C/OVERLAYS.HTML                | 1 +
+ TOOLBOX/C/PORTABLE.HTML                | 1 +
+ TOOLBOX/C/RENDLIB.HTML                 | 1 +
  TOOLBOX/C/STRMLIB.HTML                 | 1 +
- TOOLBOX/C/TBOXLIB.HTML                 | 3 ++-
+ TOOLBOX/C/TBOXLIB.HTML                 | 1 +
  TOOLBOX/C/TOANSI.HTML                  | 1 +
  TOOLBOX/C/TOPCC.HTML                   | 1 +
- TOOLBOX/C/WIMPLIB.HTML                 | 3 ++-
- TOOLBOX/C/WRITERM.HTML                 | 3 ++-
- TOOLBOX/CCPPIX.HTML                    | 3 ++-
- TOOLBOX/DDE/AMU.HTML                   | 3 ++-
- TOOLBOX/DDE/APPA.HTML                  | 3 ++-
+ TOOLBOX/C/WIMPLIB.HTML                 | 1 +
+ TOOLBOX/C/WRITERM.HTML                 | 1 +
+ TOOLBOX/CCPPIX.HTML                    | 1 +
+ TOOLBOX/DDE/AMU.HTML                   | 1 +
+ TOOLBOX/DDE/APPA.HTML                  | 1 +
  TOOLBOX/DDE/APPB.HTML                  | 1 +
- TOOLBOX/DDE/APPC.HTML                  | 3 ++-
- TOOLBOX/DDE/APPD.HTML                  | 3 ++-
+ TOOLBOX/DDE/APPC.HTML                  | 1 +
+ TOOLBOX/DDE/APPD.HTML                  | 1 +
  TOOLBOX/DDE/APPE.HTML                  | 1 +
  TOOLBOX/DDE/APPF.HTML                  | 1 +
- TOOLBOX/DDE/DDTOLD.HTML                | 1 +
+ TOOLBOX/DDE/DDTOLD.HTML                | 3 ++-
  TOOLBOX/DDE/DECAOF.HTML                | 1 +
- TOOLBOX/DDE/DIFF.HTML                  | 3 ++-
+ TOOLBOX/DDE/DIFF.HTML                  | 1 +
  TOOLBOX/DDE/EXTEND.HTML                | 1 +
- TOOLBOX/DDE/FIND.HTML                  | 3 ++-
- TOOLBOX/DDE/GENERAL.HTML               | 3 ++-
+ TOOLBOX/DDE/FIND.HTML                  | 1 +
+ TOOLBOX/DDE/GENERAL.HTML               | 1 +
  TOOLBOX/DDE/INDEX.HTML                 | 1 +
- TOOLBOX/DDE/INSTALL.HTML               | 3 ++-
- TOOLBOX/DDE/INTRO.HTML                 | 3 ++-
- TOOLBOX/DDE/LIBFILE.HTML               | 3 ++-
- TOOLBOX/DDE/LINK.HTML                  | 3 ++-
- TOOLBOX/DDE/MAKE.HTML                  | 3 ++-
- TOOLBOX/DDE/OBJSIZE.HTML               | 3 ++-
- TOOLBOX/DDE/SQUEEZE.HTML               | 3 ++-
+ TOOLBOX/DDE/INSTALL.HTML               | 1 +
+ TOOLBOX/DDE/INTRO.HTML                 | 1 +
+ TOOLBOX/DDE/LIBFILE.HTML               | 1 +
+ TOOLBOX/DDE/LINK.HTML                  | 1 +
+ TOOLBOX/DDE/MAKE.HTML                  | 1 +
+ TOOLBOX/DDE/OBJSIZE.HTML               | 1 +
+ TOOLBOX/DDE/SQUEEZE.HTML               | 1 +
  TOOLBOX/DDE/SRCEDIT.HTML               | 1 +
- TOOLBOX/DDE/WORKING.HTML               | 3 ++-
- TOOLBOX/DDEIX.HTML                     | 3 ++-
+ TOOLBOX/DDE/WORKING.HTML               | 1 +
+ TOOLBOX/DDEIX.HTML                     | 1 +
  TOOLBOX/TOOLBOX/COLMENU.HTML           | 1 +
  TOOLBOX/TOOLBOX/COLOURDBOX.HTML        | 1 +
  TOOLBOX/TOOLBOX/DCS.HTML               | 1 +
  TOOLBOX/TOOLBOX/FILEINFO.HTML          | 1 +
- TOOLBOX/TOOLBOX/FONTDBOX.HTML          | 3 ++-
+ TOOLBOX/TOOLBOX/FONTDBOX.HTML          | 1 +
  TOOLBOX/TOOLBOX/FONTMENU.HTML          | 1 +
- TOOLBOX/TOOLBOX/ICONBAR.HTML           | 3 ++-
+ TOOLBOX/TOOLBOX/ICONBAR.HTML           | 1 +
  TOOLBOX/TOOLBOX/INDEX.HTML             | 1 +
- TOOLBOX/TOOLBOX/MENUS.HTML             | 3 ++-
- TOOLBOX/TOOLBOX/PRINT.HTML             | 3 ++-
+ TOOLBOX/TOOLBOX/MENUS.HTML             | 1 +
+ TOOLBOX/TOOLBOX/PRINT.HTML             | 1 +
  TOOLBOX/TOOLBOX/PROGINFO.HTML          | 1 +
  TOOLBOX/TOOLBOX/QUIT.HTML              | 1 +
  TOOLBOX/TOOLBOX/RENDER.HTML            | 1 +
  TOOLBOX/TOOLBOX/RESEDITOR.HTML         | 1 +
- TOOLBOX/TOOLBOX/RESOURCEFILEFMTS.HTML  | 3 ++-
+ TOOLBOX/TOOLBOX/RESOURCEFILEFMTS.HTML  | 1 +
  TOOLBOX/TOOLBOX/RESTEST.HTML           | 1 +
  TOOLBOX/TOOLBOX/SAVEAS.HTML            | 1 +
- TOOLBOX/TOOLBOX/SCALE.HTML             | 3 ++-
- TOOLBOX/TOOLBOX/SUPPORT310.HTML        | 3 ++-
- TOOLBOX/TOOLBOX/TOOLBOXEXAMPLES.HTML   | 3 ++-
+ TOOLBOX/TOOLBOX/SCALE.HTML             | 1 +
+ TOOLBOX/TOOLBOX/SUPPORT310.HTML        | 1 +
+ TOOLBOX/TOOLBOX/TOOLBOXEXAMPLES.HTML   | 1 +
  TOOLBOX/TOOLBOX/TOOLINTRO.HTML         | 1 +
  TOOLBOX/TOOLBOX/WINDOWS.HTML           | 1 +
  TOOLBOX/TOOLBOXIX.HTML                 | 1 +
- 290 files changed, 353 insertions(+), 63 deletions(-)
+ 290 files changed, 291 insertions(+), 1 deletion(-)
 
 diff --git a/APPENDICES/CONVNOTES.HTML b/APPENDICES/CONVNOTES.HTML
-index 5556b0f..08ca380 100644
+index 08ca380..59659db 100644
 --- a/APPENDICES/CONVNOTES.HTML
 +++ b/APPENDICES/CONVNOTES.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Notes on the HTML Conversion</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/APPENDICES/COPYRIGHT.HTML b/APPENDICES/COPYRIGHT.HTML
-index 3d65259..014bf3d 100644
+index 014bf3d..0381c0f 100644
 --- a/APPENDICES/COPYRIGHT.HTML
 +++ b/APPENDICES/COPYRIGHT.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Copyright</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/BASIC/APPENDICES/ARMASSEMBLER.HTML b/BASIC/APPENDICES/ARMASSEMBLER.HTML
-index e8a5d6f..73aa6b3 100644
+index 73aa6b3..34e70e1 100644
 --- a/BASIC/APPENDICES/ARMASSEMBLER.HTML
 +++ b/BASIC/APPENDICES/ARMASSEMBLER.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 37: Appendix J - ARM assembler</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="idx-0"></a>Appendix J - ARM assembler</h1><hr>
 diff --git a/BASIC/APPENDICES/BASICHISTORY.HTML b/BASIC/APPENDICES/BASICHISTORY.HTML
-index 6458ff5..dc807fe 100644
+index dc807fe..790ceb6 100644
 --- a/BASIC/APPENDICES/BASICHISTORY.HTML
 +++ b/BASIC/APPENDICES/BASICHISTORY.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 36: Appendix I - BBC BASIC's history</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/APPENDICES/COLOURS.HTML b/BASIC/APPENDICES/COLOURS.HTML
-index c543275..51a8e84 100644
+index 51a8e84..3d56f8d 100644
 --- a/BASIC/APPENDICES/COLOURS.HTML
 +++ b/BASIC/APPENDICES/COLOURS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 32: Appendix E - Colour modes</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="93901"></a>Appendix E - Colour modes</h1><hr>
 diff --git a/BASIC/APPENDICES/ERRORMESSAGES.HTML b/BASIC/APPENDICES/ERRORMESSAGES.HTML
-index 8bf52fb..992691c 100644
+index 992691c..694a93b 100644
 --- a/BASIC/APPENDICES/ERRORMESSAGES.HTML
 +++ b/BASIC/APPENDICES/ERRORMESSAGES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 30: Appendix C - Error messages</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -127,4 +128,4 @@
- </tt></dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <dl>
 diff --git a/BASIC/APPENDICES/FXCOMMANDS.HTML b/BASIC/APPENDICES/FXCOMMANDS.HTML
-index 1c88e02..3f1e125 100644
+index 3f1e125..f4602ee 100644
 --- a/BASIC/APPENDICES/FXCOMMANDS.HTML
 +++ b/BASIC/APPENDICES/FXCOMMANDS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 35: Appendix H - *FX commands</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="idx-40"></a>Appendix H - *FX commands</h1><hr>
 diff --git a/BASIC/APPENDICES/INKEYVALUES.HTML b/BASIC/APPENDICES/INKEYVALUES.HTML
-index 48a8b65..38f2857 100644
+index 38f2857..9afda92 100644
 --- a/BASIC/APPENDICES/INKEYVALUES.HTML
 +++ b/BASIC/APPENDICES/INKEYVALUES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 31: Appendix D - Inkey values</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/APPENDICES/MINABBREVIATIONS.HTML b/BASIC/APPENDICES/MINABBREVIATIONS.HTML
-index 9229427..f918963 100644
+index f918963..a64c6fa 100644
 --- a/BASIC/APPENDICES/MINABBREVIATIONS.HTML
 +++ b/BASIC/APPENDICES/MINABBREVIATIONS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 29: Appendix B - Minimum abbreviations</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/APPENDICES/NUMERICREP.HTML b/BASIC/APPENDICES/NUMERICREP.HTML
-index 1f7cae1..160dba8 100644
+index 160dba8..3545c88 100644
 --- a/BASIC/APPENDICES/NUMERICREP.HTML
 +++ b/BASIC/APPENDICES/NUMERICREP.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 28: Appendix A - Numeric implementation</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="90598"></a>Appendix A - Numeric implementation</h1><hr>
 diff --git a/BASIC/APPENDICES/PLOTCODES.HTML b/BASIC/APPENDICES/PLOTCODES.HTML
-index 2df11f1..6694222 100644
+index 6694222..8c2246f 100644
 --- a/BASIC/APPENDICES/PLOTCODES.HTML
 +++ b/BASIC/APPENDICES/PLOTCODES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 33: Appendix F - Plot codes</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="23268"></a>Appendix F - Plot codes</h1><hr>
 diff --git a/BASIC/APPENDICES/VDUCOMMANDS.HTML b/BASIC/APPENDICES/VDUCOMMANDS.HTML
-index 0a07cd9..619e2ed 100644
+index 619e2ed..3ab92be 100644
 --- a/BASIC/APPENDICES/VDUCOMMANDS.HTML
 +++ b/BASIC/APPENDICES/VDUCOMMANDS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 4: Chapter 34: Appendix G - VDU commands</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="90334"></a>Appendix G - VDU commands</h1><hr>
 diff --git a/BASIC/INDEX.HTML b/BASIC/INDEX.HTML
-index c1b7b17..e3a9d8f 100644
+index e3a9d8f..bfac0b0 100644
 --- a/BASIC/INDEX.HTML
 +++ b/BASIC/INDEX.HTML
-@@ -1,6 +1,7 @@
- <!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
- <html>
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Reference Manual: Index</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/BASIC/PART1/BBCBASIC.HTML b/BASIC/PART1/BBCBASIC.HTML
-index 9827e7c..0b265c5 100644
+index 0b265c5..82c8d17 100644
 --- a/BASIC/PART1/BBCBASIC.HTML
 +++ b/BASIC/PART1/BBCBASIC.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 1: Chapter 2: About BBC BASIC</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -101,4 +102,4 @@ SYS "Wimp_SetColour",0</tt></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr><h1></a><a name="57047"></a>About BBC BASIC</h1><hr>
 diff --git a/BASIC/PART1/BBCREFMANUAL.HTML b/BASIC/PART1/BBCREFMANUAL.HTML
-index 56e9550..ca25877 100644
+index ca25877..6c3ed82 100644
 --- a/BASIC/PART1/BBCREFMANUAL.HTML
 +++ b/BASIC/PART1/BBCREFMANUAL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 1: Chapter 1: About the BBC BASIC Reference Manual</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/ACCESSMEMLOCS.HTML b/BASIC/PART2/ACCESSMEMLOCS.HTML
-index db43cba..7cf517f 100644
+index 7cf517f..9ce5e36 100644
 --- a/BASIC/PART2/ACCESSMEMLOCS.HTML
 +++ b/BASIC/PART2/ACCESSMEMLOCS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 23: Accessing memory locations</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -134,4 +135,4 @@ PRINT $pointer%</pre>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr><h1><a name="72338"></a>Accessing memory locations</h1><hr>
 diff --git a/BASIC/PART2/ARRAYS.HTML b/BASIC/PART2/ARRAYS.HTML
-index 49acb7a..c1130de 100644
+index c1130de..d6ff070 100644
 --- a/BASIC/PART2/ARRAYS.HTML
 +++ b/BASIC/PART2/ARRAYS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 9: Arrays</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="49828"></a>Arrays</h1><hr>
 diff --git a/BASIC/PART2/BASES.HTML b/BASIC/PART2/BASES.HTML
-index e6149b8..f77f5db 100644
+index f77f5db..90ba5b0 100644
 --- a/BASIC/PART2/BASES.HTML
 +++ b/BASIC/PART2/BASES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 7: Bases</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="17886"></a>Bases</h1><hr>
 diff --git a/BASIC/PART2/BASICSCREENED.HTML b/BASIC/PART2/BASICSCREENED.HTML
-index cf4b885..88c24fb 100644
+index 88c24fb..6265917 100644
 --- a/BASIC/PART2/BASICSCREENED.HTML
 +++ b/BASIC/PART2/BASICSCREENED.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 26: Editing BASIC files</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/COMMAND.HTML b/BASIC/PART2/COMMAND.HTML
-index 50579d5..6f1558c 100644
+index 6f1558c..2f043c5 100644
 --- a/BASIC/PART2/COMMAND.HTML
 +++ b/BASIC/PART2/COMMAND.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 3: Command mode</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="idx-113"></a>Command mode</h1><hr>
 diff --git a/BASIC/PART2/COMPLEXGRAPHICS.HTML b/BASIC/PART2/COMPLEXGRAPHICS.HTML
-index c00d572..d879cfd 100644
+index d879cfd..2e0a454 100644
 --- a/BASIC/PART2/COMPLEXGRAPHICS.HTML
 +++ b/BASIC/PART2/COMPLEXGRAPHICS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 17: Complex graphics</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/CONTROL.HTML b/BASIC/PART2/CONTROL.HTML
-index 610d981..0c64514 100644
+index 0c64514..de6b740 100644
 --- a/BASIC/PART2/CONTROL.HTML
 +++ b/BASIC/PART2/CONTROL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 12: Control statements</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/DATAFILES.HTML b/BASIC/PART2/DATAFILES.HTML
-index 8133da4..b057b22 100644
+index b057b22..d0a5f67 100644
 --- a/BASIC/PART2/DATAFILES.HTML
 +++ b/BASIC/PART2/DATAFILES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 14: Data and command files</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/ERRORHANDLING.HTML b/BASIC/PART2/ERRORHANDLING.HTML
-index 1e16cbd..6684334 100644
+index 6684334..f9b6021 100644
 --- a/BASIC/PART2/ERRORHANDLING.HTML
 +++ b/BASIC/PART2/ERRORHANDLING.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 24: Error handling and debugging</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="11886"></a>Error handling and debugging</h1><hr>
 diff --git a/BASIC/PART2/GRAPHICPATTERNS.HTML b/BASIC/PART2/GRAPHICPATTERNS.HTML
-index e59bc92..b3d0848 100644
+index b3d0848..9dbbf8a 100644
 --- a/BASIC/PART2/GRAPHICPATTERNS.HTML
 +++ b/BASIC/PART2/GRAPHICPATTERNS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 18: Graphic patterns</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="87660"></a>Graphic patterns</h1><hr>
 diff --git a/BASIC/PART2/INPUTTING.HTML b/BASIC/PART2/INPUTTING.HTML
-index 81bd771..772e845 100644
+index 772e845..a614801 100644
 --- a/BASIC/PART2/INPUTTING.HTML
 +++ b/BASIC/PART2/INPUTTING.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 11: Inputting data</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/NUMERICVARS.HTML b/BASIC/PART2/NUMERICVARS.HTML
-index 51fc687..7295a08 100644
+index 7295a08..216e341 100644
 --- a/BASIC/PART2/NUMERICVARS.HTML
 +++ b/BASIC/PART2/NUMERICVARS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 6: Numeric variables</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="idx-159"></a>Numeric variables</h1><hr>
 diff --git a/BASIC/PART2/OUTPUTTING.HTML b/BASIC/PART2/OUTPUTTING.HTML
-index d59185d..70a7e13 100644
+index 70a7e13..b16ca47 100644
 --- a/BASIC/PART2/OUTPUTTING.HTML
 +++ b/BASIC/PART2/OUTPUTTING.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 10: Outputting text</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="56899"></a>Outputting text</h1><hr>
 diff --git a/BASIC/PART2/PROCEDURES.HTML b/BASIC/PART2/PROCEDURES.HTML
-index 103e8b2..bbc6e6f 100644
+index bbc6e6f..8d954f5 100644
 --- a/BASIC/PART2/PROCEDURES.HTML
 +++ b/BASIC/PART2/PROCEDURES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 13: Procedures and functions</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/SCREENMODES.HTML b/BASIC/PART2/SCREENMODES.HTML
-index 8bfbcc6..3586567 100644
+index 3586567..7e5386f 100644
 --- a/BASIC/PART2/SCREENMODES.HTML
 +++ b/BASIC/PART2/SCREENMODES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 15: Screen modes</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/SIMPLE.HTML b/BASIC/PART2/SIMPLE.HTML
-index e009a18..dad8b3b 100644
+index dad8b3b..adb2ef8 100644
 --- a/BASIC/PART2/SIMPLE.HTML
 +++ b/BASIC/PART2/SIMPLE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 4: Simple programming</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="idx-186"></a>Simple programming</h1><hr>
 diff --git a/BASIC/PART2/SIMPLEGRAPHICS.HTML b/BASIC/PART2/SIMPLEGRAPHICS.HTML
-index dadb492..0e4bd4a 100644
+index 0e4bd4a..27b4109 100644
 --- a/BASIC/PART2/SIMPLEGRAPHICS.HTML
 +++ b/BASIC/PART2/SIMPLEGRAPHICS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 16: Simple graphics</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/SOUND.HTML b/BASIC/PART2/SOUND.HTML
-index 72715e6..9a0dc85 100644
+index 9a0dc85..1b465a0 100644
 --- a/BASIC/PART2/SOUND.HTML
 +++ b/BASIC/PART2/SOUND.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 22: Sound</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -441,4 +442,4 @@ SOUND 2,-10,232,20,-1</pre>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <dl>
 diff --git a/BASIC/PART2/SPRITES.HTML b/BASIC/PART2/SPRITES.HTML
-index 3a55d7a..9b502ed 100644
+index 9b502ed..c516525 100644
 --- a/BASIC/PART2/SPRITES.HTML
 +++ b/BASIC/PART2/SPRITES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 20: Sprites</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="59983"></a>Sprites</h1><hr>
 diff --git a/BASIC/PART2/STRINGVARS.HTML b/BASIC/PART2/STRINGVARS.HTML
-index 8902160..0b2a41c 100644
+index 0b2a41c..04ed737 100644
 --- a/BASIC/PART2/STRINGVARS.HTML
 +++ b/BASIC/PART2/STRINGVARS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 8: String variables</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr><h1><a name="idx-203"></a>String variables</h1><hr>
 diff --git a/BASIC/PART2/TELETEXT.HTML b/BASIC/PART2/TELETEXT.HTML
-index f44b239..c922e0d 100644
+index c922e0d..a1e5dfe 100644
 --- a/BASIC/PART2/TELETEXT.HTML
 +++ b/BASIC/PART2/TELETEXT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 21: Teletext mode</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -181,4 +182,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr><h1><a name="idx-208"></a>Teletext mode</h1><hr>
 diff --git a/BASIC/PART2/VARIABLES.HTML b/BASIC/PART2/VARIABLES.HTML
-index 289f9d0..1932176 100644
+index 1932176..2649629 100644
 --- a/BASIC/PART2/VARIABLES.HTML
 +++ b/BASIC/PART2/VARIABLES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 5: Variables and expressions</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -72,4 +73,4 @@ XPOS1</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr><h1><a name="idx-211"></a>Variables and expressions</h1><hr>
 diff --git a/BASIC/PART2/VDUCONTROL.HTML b/BASIC/PART2/VDUCONTROL.HTML
-index 7ed3a5e..bc64ad9 100644
+index bc64ad9..96cb3bf 100644
 --- a/BASIC/PART2/VDUCONTROL.HTML
 +++ b/BASIC/PART2/VDUCONTROL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 25: VDU control</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/BASIC/PART2/VIEWPORTS.HTML b/BASIC/PART2/VIEWPORTS.HTML
-index ff90981..b046712 100644
+index b046712..431d4dd 100644
 --- a/BASIC/PART2/VIEWPORTS.HTML
 +++ b/BASIC/PART2/VIEWPORTS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 2: Chapter 19: Viewports</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -78,4 +79,4 @@ and (<tt><I>right</tt></I>,<tt><I>top</tt></I>) are the coordinates of the lower
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr><h1><a name="97011"></a>Viewports</h1><hr>
 diff --git a/BASIC/PART3/KEYWORDS.HTML b/BASIC/PART3/KEYWORDS.HTML
-index caeee05..83cbc40 100644
+index 83cbc40..c531fa3 100644
 --- a/BASIC/PART3/KEYWORDS.HTML
 +++ b/BASIC/PART3/KEYWORDS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BBC BASIC Manual: Part 3: Chapter 27: Keywords</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <dl>
 diff --git a/INDEX.HTML b/INDEX.HTML
-index 8491951..13f6343 100644
+index 13f6343..e9de61e 100644
 --- a/INDEX.HTML
 +++ b/INDEX.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS Programmer's Reference Manuals</title>
++<link rel="stylesheet" type="text/css" href="style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/OVERVIEWS/OVERVIEW-ASM.HTML b/OVERVIEWS/OVERVIEW-ASM.HTML
-index 8804675..5504a88 100644
+index 5504a88..bd441da 100644
 --- a/OVERVIEWS/OVERVIEW-ASM.HTML
 +++ b/OVERVIEWS/OVERVIEW-ASM.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Overview of chapters</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/OVERVIEWS/OVERVIEW-BASIC.HTML b/OVERVIEWS/OVERVIEW-BASIC.HTML
-index d6f8af3..d16a803 100644
+index d16a803..1072bb4 100644
 --- a/OVERVIEWS/OVERVIEW-BASIC.HTML
 +++ b/OVERVIEWS/OVERVIEW-BASIC.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>BASIC: Overview of chapters</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/OVERVIEWS/OVERVIEW-C.HTML b/OVERVIEWS/OVERVIEW-C.HTML
-index 6221850..0ded16c 100644
+index 0ded16c..c7984af 100644
 --- a/OVERVIEWS/OVERVIEW-C.HTML
 +++ b/OVERVIEWS/OVERVIEW-C.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Acorn C/C++: Overview of chapters</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/OVERVIEWS/OVERVIEW-DDE.HTML b/OVERVIEWS/OVERVIEW-DDE.HTML
-index ed71b8f..7152ca5 100644
+index 7152ca5..1c547d6 100644
 --- a/OVERVIEWS/OVERVIEW-DDE.HTML
 +++ b/OVERVIEWS/OVERVIEW-DDE.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Overview of chapters</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/OVERVIEWS/OVERVIEW-PRM.HTML b/OVERVIEWS/OVERVIEW-PRM.HTML
-index 8c41bcd..abc8d7e 100644
+index abc8d7e..05eda11 100644
 --- a/OVERVIEWS/OVERVIEW-PRM.HTML
 +++ b/OVERVIEWS/OVERVIEW-PRM.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Overview of chapters</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/OVERVIEWS/OVERVIEW-TOOLBOX.HTML b/OVERVIEWS/OVERVIEW-TOOLBOX.HTML
-index 0c8e749..25bc4a2 100644
+index 25bc4a2..f916f3b 100644
 --- a/OVERVIEWS/OVERVIEW-TOOLBOX.HTML
 +++ b/OVERVIEWS/OVERVIEW-TOOLBOX.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Overview of chapters</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/PRM-INDEX/ALPHASERVICES.HTML b/PRM-INDEX/ALPHASERVICES.HTML
-index 66f1788..2d78fb4 100644
+index 2d78fb4..96c31dc 100644
 --- a/PRM-INDEX/ALPHASERVICES.HTML
 +++ b/PRM-INDEX/ALPHASERVICES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Alphabetic index of Service Calls</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM-INDEX/ALPHASWILIST.HTML b/PRM-INDEX/ALPHASWILIST.HTML
-index 311f10a..50cc933 100644
+index 50cc933..fe367aa 100644
 --- a/PRM-INDEX/ALPHASWILIST.HTML
 +++ b/PRM-INDEX/ALPHASWILIST.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Alphabetic index of SWIs</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
-@@ -3103,4 +3104,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM-INDEX/NUMSERVICES.HTML b/PRM-INDEX/NUMSERVICES.HTML
-index 937737e..ad73f18 100644
+index ad73f18..b4862c9 100644
 --- a/PRM-INDEX/NUMSERVICES.HTML
 +++ b/PRM-INDEX/NUMSERVICES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Numeric index of Service Calls</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM-INDEX/NUMSWILIST.HTML b/PRM-INDEX/NUMSWILIST.HTML
-index eec9481..5701cff 100644
+index 5701cff..2f988d1 100644
 --- a/PRM-INDEX/NUMSWILIST.HTML
 +++ b/PRM-INDEX/NUMSWILIST.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Numeric index of SWIs</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
-@@ -3113,4 +3114,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM-INDEX/OSBYTES.HTML b/PRM-INDEX/OSBYTES.HTML
-index 87b0a71..35ed0e6 100644
+index 35ed0e6..51029b3 100644
 --- a/PRM-INDEX/OSBYTES.HTML
 +++ b/PRM-INDEX/OSBYTES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Index of OS_Bytes</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM-INDEX/OSWORDS.HTML b/PRM-INDEX/OSWORDS.HTML
-index 0efcda4..bd98d29 100644
+index bd98d29..2f5f627 100644
 --- a/PRM-INDEX/OSWORDS.HTML
 +++ b/PRM-INDEX/OSWORDS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Index of OS_Words</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM-INDEX/STARCOMMS.HTML b/PRM-INDEX/STARCOMMS.HTML
-index d6f1de5..4a04255 100644
+index 4a04255..f17a333 100644
 --- a/PRM-INDEX/STARCOMMS.HTML
 +++ b/PRM-INDEX/STARCOMMS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Index of * Commands</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/16BITJOYSTICK.HTML b/PRM/16BITJOYSTICK.HTML
-index 90cdd3f..7fe626f 100644
+index 7fe626f..55d6a31 100644
 --- a/PRM/16BITJOYSTICK.HTML
 +++ b/PRM/16BITJOYSTICK.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 135: Joystick module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/5THCOLROMS.HTML b/PRM/5THCOLROMS.HTML
-index ae2696b..1647cd4 100644
+index 1647cd4..1e1548d 100644
 --- a/PRM/5THCOLROMS.HTML
 +++ b/PRM/5THCOLROMS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 19: Extension ROMs</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ABOUT.HTML b/PRM/ABOUT.HTML
-index 8607087..cc815d7 100644
+index cc815d7..094c27c 100644
 --- a/PRM/ABOUT.HTML
 +++ b/PRM/ABOUT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: About this manual</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ACCESS.HTML b/PRM/ACCESS.HTML
-index d8cab10..4503b6c 100644
+index 4503b6c..5598940 100644
 --- a/PRM/ACCESS.HTML
 +++ b/PRM/ACCESS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 124: Acorn Access</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -407,4 +408,4 @@ Share ADFS::Maths.$ Maths -protected</tt></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/ADFS.HTML b/PRM/ADFS.HTML
-index 1c9f005..3237dff 100644
+index 3237dff..adc6a9f 100644
 --- a/PRM/ADFS.HTML
 +++ b/PRM/ADFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 29: ADFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ADFSNEW.HTML b/PRM/ADFSNEW.HTML
-index 8d84a7b..05a1818 100644
+index 05a1818..9a4fded 100644
 --- a/PRM/ADFSNEW.HTML
 +++ b/PRM/ADFSNEW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 111: ADFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ARM3.HTML b/PRM/ARM3.HTML
-index dc6d81b..542c7db 100644
+index 542c7db..f350417 100644
 --- a/PRM/ARM3.HTML
 +++ b/PRM/ARM3.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 79: ARM3 Support</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ARM710WARN.HTML b/PRM/ARM710WARN.HTML
-index d3a183f..d2e23f4 100644
+index d2e23f4..abc01f9 100644
 --- a/PRM/ARM710WARN.HTML
 +++ b/PRM/ARM710WARN.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 138: Appendix A: Warnings on the use of ARM assembler</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -23,4 +24,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/ARMHW.HTML b/PRM/ARMHW.HTML
-index 05fb82c..689347a 100644
+index 689347a..d881d1b 100644
 --- a/PRM/ARMHW.HTML
 +++ b/PRM/ARMHW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 99: ARM hardware</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -183,4 +184,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/ASM.HTML b/PRM/ASM.HTML
-index 5c3ba0e..64d2018 100644
+index 64d2018..2931ae2 100644
 --- a/PRM/ASM.HTML
 +++ b/PRM/ASM.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 86: Appendix A: ARM assembler</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/ASMAPPNOTE.HTML b/PRM/ASMAPPNOTE.HTML
-index 2361983..9dfca23 100644
+index 1ddc913..4f434fa 100644
 --- a/PRM/ASMAPPNOTE.HTML
 +++ b/PRM/ASMAPPNOTE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 87: Appendix B: Warnings on the use of ARM assembler</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/AUN.HTML b/PRM/AUN.HTML
-index 755e7c8..35238b5 100644
+index 35238b5..a2abc1e 100644
 --- a/PRM/AUN.HTML
 +++ b/PRM/AUN.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 122: AUN</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/BASIC.HTML b/PRM/BASIC.HTML
-index 0612f4b..2f6f8dc 100644
+index 2f6f8dc..afec0d5 100644
 --- a/PRM/BASIC.HTML
 +++ b/PRM/BASIC.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 84: BASIC and BASICTrans</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -186,4 +187,4 @@ Starting with 643324 bytes free</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/BBCECONET.HTML b/PRM/BBCECONET.HTML
-index 1c92202..112b4c1 100644
+index 112b4c1..a72f8b8 100644
 --- a/PRM/BBCECONET.HTML
 +++ b/PRM/BBCECONET.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 50: BBC Econet</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -130,4 +131,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/BOOTAPP.HTML b/PRM/BOOTAPP.HTML
-index f6be823..cbc3c9f 100644
+index cbc3c9f..3901820 100644
 --- a/PRM/BOOTAPP.HTML
 +++ b/PRM/BOOTAPP.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 128: RISC OS boot applications</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/BROADCASTLOAD.HTML b/PRM/BROADCASTLOAD.HTML
-index e09e620..f380492 100644
+index f380492..a628e81 100644
 --- a/PRM/BROADCASTLOAD.HTML
 +++ b/PRM/BROADCASTLOAD.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 49: The Broadcast Loader</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/BUFFERMAN.HTML b/PRM/BUFFERMAN.HTML
-index 7e257ff..6bc1582 100644
+index 6bc1582..0d5b88f 100644
 --- a/PRM/BUFFERMAN.HTML
 +++ b/PRM/BUFFERMAN.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 74: The Buffer Manager</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/BUFFERS.HTML b/PRM/BUFFERS.HTML
-index 1a42f40..c21ce0a 100644
+index c21ce0a..58ed0f3 100644
 --- a/PRM/BUFFERS.HTML
 +++ b/PRM/BUFFERS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 12: Buffers</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/CDFS.HTML b/PRM/CDFS.HTML
-index 40e9b56..dac0505 100644
+index dac0505..22a75dd 100644
 --- a/PRM/CDFS.HTML
 +++ b/PRM/CDFS.HTML
-@@ -1,5 +1,6 @@
- <<html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 113: CDs and CD-ROMs</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -685,4 +686,4 @@ SONY, LMS, TOSHIBA, HITACHI, CHINON</pre>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/CHARINPUT.HTML b/PRM/CHARINPUT.HTML
-index cd48171..94eab6f 100644
+index 1300e4a..cfd62af 100644
 --- a/PRM/CHARINPUT.HTML
 +++ b/PRM/CHARINPUT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 23: Character Input</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/CHAROUTPUT.HTML b/PRM/CHAROUTPUT.HTML
-index 9dd783a..59e6025 100644
+index 59e6025..aef393b 100644
 --- a/PRM/CHAROUTPUT.HTML
 +++ b/PRM/CHAROUTPUT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 20: Character Output</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/CHARSETS.HTML b/PRM/CHARSETS.HTML
-index d5cac09..f2f01f6 100644
+index f2f01f6..5138114 100644
 --- a/PRM/CHARSETS.HTML
 +++ b/PRM/CHARSETS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 97: Table D: Character sets</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/CLI.HTML b/PRM/CLI.HTML
-index b94d87d..53bd0bc 100644
+index 53bd0bc..d5ed62d 100644
 --- a/PRM/CLI.HTML
 +++ b/PRM/CLI.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 24: The CLI</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -326,4 +327,4 @@ Fast interrupts are enabled</p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/CLIINTRO.HTML b/PRM/CLIINTRO.HTML
-index 16223d6..7b89986 100644
+index 7b89986..5074562 100644
 --- a/PRM/CLIINTRO.HTML
 +++ b/PRM/CLIINTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 4: * Commands and the CLI</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -298,4 +299,4 @@ _kernel_swi(OS_CLI, &amp;regs, &amp;regs);</pre></p></dl>
- <p>You can use system variables of the form <a name="marker-715069"></a>Alias$<i>command</i> to create new commands from existing ones, or to rename existing commands. For more details, see the chapter entitled <A HREF="CLI.HTML#45560">Aliases</a>, the command <A HREF="PROGENV.HTML#83598">*Set</a>, and the chapter <A HREF="SYSTEMVARS.HTML#69104">Changing and adding commands</a>.<a name="marker-715017"></a></p></dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/CMOS.HTML b/PRM/CMOS.HTML
-index 1306690..e726ef0 100644
+index e726ef0..f942f48 100644
 --- a/PRM/CMOS.HTML
 +++ b/PRM/CMOS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 104: CMOS RAM allocation</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/COLOURTRANS.HTML b/PRM/COLOURTRANS.HTML
-index a56d844..d84eb33 100644
+index d84eb33..2d8e166 100644
 --- a/PRM/COLOURTRANS.HTML
 +++ b/PRM/COLOURTRANS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 60: ColourTrans</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/COLPICK.HTML b/PRM/COLPICK.HTML
-index 0598695..f2a4a98 100644
+index f2a4a98..87c4c7b 100644
 --- a/PRM/COLPICK.HTML
 +++ b/PRM/COLPICK.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 129: The colour picker</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/COMMANDSCRIPTS.HTML b/PRM/COMMANDSCRIPTS.HTML
-index 534404c..f7d1a8c 100644
+index f7d1a8c..7aa7abd 100644
 --- a/PRM/COMMANDSCRIPTS.HTML
 +++ b/PRM/COMMANDSCRIPTS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 85: Command scripts</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -244,4 +245,4 @@ echo |&lt;7&gt;</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/COMMS.HTML b/PRM/COMMS.HTML
-index 75ac22e..a2a9d0f 100644
+index a2a9d0f..085debe 100644
 --- a/PRM/COMMS.HTML
 +++ b/PRM/COMMS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 13: Communications within RISC OS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -723,4 +724,4 @@ R1 is preserved</p>
- <p><A HREF="MEMORYMAN.HTML#89840">OS_ChangeDynamicArea</a><a name="marker-852047"></a></p>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/COMPRESSJPEG.HTML b/PRM/COMPRESSJPEG.HTML
-index 776efd6..8db58bb 100644
+index 8db58bb..9d6ae5c 100644
 --- a/PRM/COMPRESSJPEG.HTML
 +++ b/PRM/COMPRESSJPEG.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 133: CompressJPEG</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/CONVERSIONS.HTML b/PRM/CONVERSIONS.HTML
-index 8ea5154..ce008b2 100644
+index ce008b2..d80edf3 100644
 --- a/PRM/CONVERSIONS.HTML
 +++ b/PRM/CONVERSIONS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 18: Conversions</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DEBUGGER.HTML b/PRM/DEBUGGER.HTML
-index a4c16ed..7880771 100644
+index 7880771..aa926fa 100644
 --- a/PRM/DEBUGGER.HTML
 +++ b/PRM/DEBUGGER.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 82: Debugger</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DEPRECATED.HTML b/PRM/DEPRECATED.HTML
-index c079d68..e0886f4 100644
+index e0886f4..584e7c3 100644
 --- a/PRM/DEPRECATED.HTML
 +++ b/PRM/DEPRECATED.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 141: Appendix D: Deprecated calls</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DESKTOP.HTML b/PRM/DESKTOP.HTML
-index 3abdb03..1cd5dbe 100644
+index 1cd5dbe..b1e1105 100644
 --- a/PRM/DESKTOP.HTML
 +++ b/PRM/DESKTOP.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 125: The desktop</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DESKTOPFS.HTML b/PRM/DESKTOPFS.HTML
-index a858502..cfecd6c 100644
+index cfecd6c..ddbd46a 100644
 --- a/PRM/DESKTOPFS.HTML
 +++ b/PRM/DESKTOPFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 36: DeskFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DEVICEFS.HTML b/PRM/DEVICEFS.HTML
-index 50226f4..6a119c7 100644
+index 6a119c7..ba0a0bf 100644
 --- a/PRM/DEVICEFS.HTML
 +++ b/PRM/DEVICEFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 37: DeviceFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DMA.HTML b/PRM/DMA.HTML
-index 114eaef..72811e3 100644
+index 72811e3..518e465 100644
 --- a/PRM/DMA.HTML
 +++ b/PRM/DMA.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 105: DMA</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DOSFS.HTML b/PRM/DOSFS.HTML
-index d2cf720..c67b3e4 100644
+index c67b3e4..320047d 100644
 --- a/PRM/DOSFS.HTML
 +++ b/PRM/DOSFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 31: DOSFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DOSFSNEW.HTML b/PRM/DOSFSNEW.HTML
-index 482aa69..acc770b 100644
+index acc770b..9332db7 100644
 --- a/PRM/DOSFSNEW.HTML
 +++ b/PRM/DOSFSNEW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 112: DOSFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DRAGANOBJECT.HTML b/PRM/DRAGANOBJECT.HTML
-index 147c42b..65e0289 100644
+index 65e0289..b2cac9e 100644
 --- a/PRM/DRAGANOBJECT.HTML
 +++ b/PRM/DRAGANOBJECT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 126: Drag An Object</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DRAGASPRITE.HTML b/PRM/DRAGASPRITE.HTML
-index 10a6f46..2f37ee6 100644
+index 2f37ee6..8c2387d 100644
 --- a/PRM/DRAGASPRITE.HTML
 +++ b/PRM/DRAGASPRITE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 55: Drag A Sprite</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DRAW.HTML b/PRM/DRAW.HTML
-index e8e0a59..bd3db53 100644
+index bd3db53..d3ca610 100644
 --- a/PRM/DRAW.HTML
 +++ b/PRM/DRAW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 63: Draw module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/DRAWFILE.HTML b/PRM/DRAWFILE.HTML
-index 93c8790..004d3c4 100644
+index 004d3c4..4020920 100644
 --- a/PRM/DRAWFILE.HTML
 +++ b/PRM/DRAWFILE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 127: Draw file renderer</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ECONET.HTML b/PRM/ECONET.HTML
-index 0e0a235..b671dc5 100644
+index b671dc5..1b9ccc0 100644
 --- a/PRM/ECONET.HTML
 +++ b/PRM/ECONET.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 47: Econet</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ERRATA.HTML b/PRM/ERRATA.HTML
-index 66f5099..fb05f01 100644
+index fb05f01..cb72ab7 100644
 --- a/PRM/ERRATA.HTML
 +++ b/PRM/ERRATA.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 140: Appendix C: Errata and omissions for RISC OS 3 PRM</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/ERRORS.HTML b/PRM/ERRORS.HTML
-index 190526c..805943f 100644
+index 805943f..50c5126 100644
 --- a/PRM/ERRORS.HTML
 +++ b/PRM/ERRORS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 5: Generating and handling errors</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/EVENTS.HTML b/PRM/EVENTS.HTML
-index 5a946a2..a85cc8d 100644
+index a85cc8d..6703c1b 100644
 --- a/PRM/EVENTS.HTML
 +++ b/PRM/EVENTS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 11: Events</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/EXCARDS.HTML b/PRM/EXCARDS.HTML
-index 0c3fa17..d0f2c5f 100644
+index d0f2c5f..3818d0f 100644
 --- a/PRM/EXCARDS.HTML
 +++ b/PRM/EXCARDS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 77: Expansion Cards and Extension ROMs</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILECORE.HTML b/PRM/FILECORE.HTML
-index de29e93..bc23f37 100644
+index bc23f37..7fac9c6 100644
 --- a/PRM/FILECORE.HTML
 +++ b/PRM/FILECORE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 28: FileCore</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILECORENEW.HTML b/PRM/FILECORENEW.HTML
-index f312ae4..904d652 100644
+index 904d652..2d012e3 100644
 --- a/PRM/FILECORENEW.HTML
 +++ b/PRM/FILECORENEW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 110: FileCore</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILEFORMAT.HTML b/PRM/FILEFORMAT.HTML
-index 5c7c11d..ac17ddf 100644
+index ac17ddf..59feaba 100644
 --- a/PRM/FILEFORMAT.HTML
 +++ b/PRM/FILEFORMAT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 139: Appendix B: File formats</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILEFORMATS.HTML b/PRM/FILEFORMATS.HTML
-index cca207a..cd86168 100644
+index cd86168..86dd36e 100644
 --- a/PRM/FILEFORMATS.HTML
 +++ b/PRM/FILEFORMATS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 90: Appendix E: File formats</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/FILERACTION.HTML b/PRM/FILERACTION.HTML
-index 0cc1699..3746458 100644
+index 3746458..ce48a13 100644
 --- a/PRM/FILERACTION.HTML
 +++ b/PRM/FILERACTION.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 42: Filer_Action and FilerSWIs</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILERS.HTML b/PRM/FILERS.HTML
-index 0b721d7..021094f 100644
+index 021094f..8de3c60 100644
 --- a/PRM/FILERS.HTML
 +++ b/PRM/FILERS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 41: The Filer</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILESERVERS.HTML b/PRM/FILESERVERS.HTML
-index ba85c45..b35870e 100644
+index b35870e..ac7fd81 100644
 --- a/PRM/FILESERVERS.HTML
 +++ b/PRM/FILESERVERS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 48: File server protocol interface</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILESWITCH.HTML b/PRM/FILESWITCH.HTML
-index d2058eb..20420cc 100644
+index 6d54ddf..fb760e5 100644
 --- a/PRM/FILESWITCH.HTML
 +++ b/PRM/FILESWITCH.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 27: FileSwitch</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILESWITCHNEW.HTML b/PRM/FILESWITCHNEW.HTML
-index 6f26154..1a4b15c 100644
+index 1a4b15c..ea51559 100644
 --- a/PRM/FILESWITCHNEW.HTML
 +++ b/PRM/FILESWITCHNEW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 109: FileSwitch</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FILETYPES.HTML b/PRM/FILETYPES.HTML
-index 1de5cd0..a5f0b8b 100644
+index a5f0b8b..5416469 100644
 --- a/PRM/FILETYPES.HTML
 +++ b/PRM/FILETYPES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 96: Table C: File types</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/FILTERMAN.HTML b/PRM/FILTERMAN.HTML
-index 1065ec2..587a34f 100644
+index 587a34f..d3936b8 100644
 --- a/PRM/FILTERMAN.HTML
 +++ b/PRM/FILTERMAN.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 56: The Filter Manager</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FLOATINGPOINT.HTML b/PRM/FLOATINGPOINT.HTML
-index da919af..9f599d8 100644
+index 9f599d8..ab5625b 100644
 --- a/PRM/FLOATINGPOINT.HTML
 +++ b/PRM/FLOATINGPOINT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 78: Floating point emulator</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FONTMANAGER.HTML b/PRM/FONTMANAGER.HTML
-index d01bb5c..39d006f 100644
+index 39d006f..aebaa63 100644
 --- a/PRM/FONTMANAGER.HTML
 +++ b/PRM/FONTMANAGER.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 61: The Font Manager</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FREENEW.HTML b/PRM/FREENEW.HTML
-index 67cf8eb..492708d 100644
+index 492708d..98d2cb3 100644
 --- a/PRM/FREENEW.HTML
 +++ b/PRM/FREENEW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 118: Free</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FREESPACE.HTML b/PRM/FREESPACE.HTML
-index e8f884d..d14929b 100644
+index d14929b..ed9851b 100644
 --- a/PRM/FREESPACE.HTML
 +++ b/PRM/FREESPACE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 43: Free</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FSINTRO.HTML b/PRM/FSINTRO.HTML
-index 80c03e2..17165d8 100644
+index 17165d8..2914863 100644
 --- a/PRM/FSINTRO.HTML
 +++ b/PRM/FSINTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 26: Introduction to filing systems</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/FSLOCK.HTML b/PRM/FSLOCK.HTML
-index 834dd8a..027a932 100644
+index 027a932..2f68c4b 100644
 --- a/PRM/FSLOCK.HTML
 +++ b/PRM/FSLOCK.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 117: Filing system locking and resets</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/HARDVEC.HTML b/PRM/HARDVEC.HTML
-index a39f707..1390c07 100644
+index 1390c07..cb7524d 100644
 --- a/PRM/HARDVEC.HTML
 +++ b/PRM/HARDVEC.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 100: Hardware vectors</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/HARDVECS.HTML b/PRM/HARDVECS.HTML
-index 207a979..9d4d6a9 100644
+index 8ea430e..a64c36b 100644
 --- a/PRM/HARDVECS.HTML
 +++ b/PRM/HARDVECS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 9: Hardware vectors</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/HARDWARE.HTML b/PRM/HARDWARE.HTML
-index fd7c964..c4934ef 100644
+index c4934ef..568b0b8 100644
 --- a/PRM/HARDWARE.HTML
 +++ b/PRM/HARDWARE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 2: ARM Hardware</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/HOURGLASS.HTML b/PRM/HOURGLASS.HTML
-index 583c043..7bd66f1 100644
+index 7bd66f1..875d346 100644
 --- a/PRM/HOURGLASS.HTML
 +++ b/PRM/HOURGLASS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 51: Hourglass</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/INDEX.HTML b/PRM/INDEX.HTML
-index be98a3e..c894acc 100644
+index c894acc..e5cf807 100644
 --- a/PRM/INDEX.HTML
 +++ b/PRM/INDEX.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS 3 Programmer's Reference Manual: Index</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/PRM/INTERNATIONAL.HTML b/PRM/INTERNATIONAL.HTML
-index 24c0055..78a91b2 100644
+index 78a91b2..c2ea46b 100644
 --- a/PRM/INTERNATIONAL.HTML
 +++ b/PRM/INTERNATIONAL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 70: International module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/INTERNET.HTML b/PRM/INTERNET.HTML
-index c41e73f..4a771b2 100644
+index 4a771b2..5afbe50 100644
 --- a/PRM/INTERNET.HTML
 +++ b/PRM/INTERNET.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 123: The Internet module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/INTERRUPT.HTML b/PRM/INTERRUPT.HTML
-index 6b502e7..d220693 100644
+index d220693..19b6c7c 100644
 --- a/PRM/INTERRUPT.HTML
 +++ b/PRM/INTERRUPT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 101: Interrupts</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/INTERRUPTS.HTML b/PRM/INTERRUPTS.HTML
-index b167204..4aad713 100644
+index 4aad713..d419984 100644
 --- a/PRM/INTERRUPTS.HTML
 +++ b/PRM/INTERRUPTS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 10: Interrupts and handling them</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/INTNAT.HTML b/PRM/INTNAT.HTML
-index 01c542c..a5355e5 100644
+index a5355e5..527fb15 100644
 --- a/PRM/INTNAT.HTML
 +++ b/PRM/INTNAT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 131: Internationalisation</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/INTRO.HTML b/PRM/INTRO.HTML
-index 5ee8472..2f0f209 100644
+index 2f0f209..0d3c1be 100644
 --- a/PRM/INTRO.HTML
 +++ b/PRM/INTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 1: An introduction to RISC OS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/JOYSTICK.HTML b/PRM/JOYSTICK.HTML
-index b3906e5..6b65595 100644
+index 6b65595..c82efd0 100644
 --- a/PRM/JOYSTICK.HTML
 +++ b/PRM/JOYSTICK.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 81: Joystick module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/JPEG.HTML b/PRM/JPEG.HTML
-index 2b9ec54..1908996 100644
+index 1908996..67ed33a 100644
 --- a/PRM/JPEG.HTML
 +++ b/PRM/JPEG.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 107: JPEG images</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/KBDMOUSE.HTML b/PRM/KBDMOUSE.HTML
-index 0a27ae6..4939a35 100644
+index 4939a35..f62406a 100644
 --- a/PRM/KBDMOUSE.HTML
 +++ b/PRM/KBDMOUSE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 116: Keyboard and mouse</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MAKEPSFONT.HTML b/PRM/MAKEPSFONT.HTML
-index 0ac9c8c..a629c16 100644
+index a629c16..870063a 100644
 --- a/PRM/MAKEPSFONT.HTML
 +++ b/PRM/MAKEPSFONT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 68: MakePSFont</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MEDECO.HTML b/PRM/MEDECO.HTML
-index 2849d81..226fabb 100644
+index 226fabb..20387fa 100644
 --- a/PRM/MEDECO.HTML
 +++ b/PRM/MEDECO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 121: Econet</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MEDEXCRD.HTML b/PRM/MEDEXCRD.HTML
-index 25127a8..2bf5085 100644
+index 2bf5085..98d67f5 100644
 --- a/PRM/MEDEXCRD.HTML
 +++ b/PRM/MEDEXCRD.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 134: Expansion card support</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MEDINTRO.HTML b/PRM/MEDINTRO.HTML
-index fe3c0bc..5a8f0ac 100644
+index 5a8f0ac..c3e19af 100644
 --- a/PRM/MEDINTRO.HTML
 +++ b/PRM/MEDINTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 98: Introduction to RISC OS 3.5 and RISC OS 3.6</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MEMMAN.HTML b/PRM/MEMMAN.HTML
-index 80fd787..f012325 100644
+index f012325..ce7c02d 100644
 --- a/PRM/MEMMAN.HTML
 +++ b/PRM/MEMMAN.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 103: Memory management</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MEMORYMAN.HTML b/PRM/MEMORYMAN.HTML
-index 5c7377b..95a6729 100644
+index 754ffca..c63ad48 100644
 --- a/PRM/MEMORYMAN.HTML
 +++ b/PRM/MEMORYMAN.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 16: Memory Management</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MESSAGETRANS.HTML b/PRM/MESSAGETRANS.HTML
-index fd80437..12111f4 100644
+index 12111f4..5c8a1d4 100644
 --- a/PRM/MESSAGETRANS.HTML
 +++ b/PRM/MESSAGETRANS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 69: MessageTrans</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MISC.HTML b/PRM/MISC.HTML
-index 278d56b..19d6a0b 100644
+index 19d6a0b..f9c532c 100644
 --- a/PRM/MISC.HTML
 +++ b/PRM/MISC.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 108: Miscellaneous kernel items</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MODES.HTML b/PRM/MODES.HTML
-index 8cef7a0..21cd509 100644
+index 21cd509..a47cb95 100644
 --- a/PRM/MODES.HTML
 +++ b/PRM/MODES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 95: Table B: Modes</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/MODULE.HTML b/PRM/MODULE.HTML
-index c5e74e2..804709d 100644
+index 804709d..8bd356d 100644
 --- a/PRM/MODULE.HTML
 +++ b/PRM/MODULE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 102: Modules</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/MODULES.HTML b/PRM/MODULES.HTML
-index 2c5da7e..41145b4 100644
+index 41145b4..d61414d 100644
 --- a/PRM/MODULES.HTML
 +++ b/PRM/MODULES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 14: Modules</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/NETFS.HTML b/PRM/NETFS.HTML
-index ca41aef..cca2606 100644
+index cca2606..fa553da 100644
 --- a/PRM/NETFS.HTML
 +++ b/PRM/NETFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 32: NetFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/NETPRINT.HTML b/PRM/NETPRINT.HTML
-index 817da5d..8f7710a 100644
+index 8f7710a..b0f4282 100644
 --- a/PRM/NETPRINT.HTML
 +++ b/PRM/NETPRINT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 114: NetPrint</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/NETPRINT5A.HTML b/PRM/NETPRINT5A.HTML
-index 5070783..6798028 100644
+index 6798028..21ee526 100644
 --- a/PRM/NETPRINT5A.HTML
 +++ b/PRM/NETPRINT5A.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 33: NetPrint</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/NETSTATUS.HTML b/PRM/NETSTATUS.HTML
-index 9757951..0825a68 100644
+index 0825a68..6569ace 100644
 --- a/PRM/NETSTATUS.HTML
 +++ b/PRM/NETSTATUS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 52: NetStatus</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/OBJECTFORMAT.HTML b/PRM/OBJECTFORMAT.HTML
-index da61818..705cc92 100644
+index 705cc92..a71dc3a 100644
 --- a/PRM/OBJECTFORMAT.HTML
 +++ b/PRM/OBJECTFORMAT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 89: Appendix D: Code file formats</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/OSBYTE.HTML b/PRM/OSBYTE.HTML
-index e6bd166..074cce7 100644
+index 074cce7..59fd3d8 100644
 --- a/PRM/OSBYTE.HTML
 +++ b/PRM/OSBYTE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 6: OS_Byte</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/OSWORD.HTML b/PRM/OSWORD.HTML
-index 517f435..3672163 100644
+index 3672163..f14802a 100644
 --- a/PRM/OSWORD.HTML
 +++ b/PRM/OSWORD.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 7: OS_Word</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PARALLEL.HTML b/PRM/PARALLEL.HTML
-index 4604b0c..72ffef6 100644
+index 72ffef6..d3f82f1 100644
 --- a/PRM/PARALLEL.HTML
 +++ b/PRM/PARALLEL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 39: Parallel device</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PDRIVERS.HTML b/PRM/PDRIVERS.HTML
-index 1952a05..d3398c9 100644
+index 4c38ea9..9247ed5 100644
 --- a/PRM/PDRIVERS.HTML
 +++ b/PRM/PDRIVERS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 64: Printer Drivers</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PDSUPPORT.HTML b/PRM/PDSUPPORT.HTML
-index 8438ebd..cfbf246 100644
+index cfbf246..471b142 100644
 --- a/PRM/PDSUPPORT.HTML
 +++ b/PRM/PDSUPPORT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 66: PDumperSupport</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PDUMPERS.HTML b/PRM/PDUMPERS.HTML
-index ac4883d..d859dc2 100644
+index d859dc2..1a85d96 100644
 --- a/PRM/PDUMPERS.HTML
 +++ b/PRM/PDUMPERS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 65: Printers Dumper</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PINBOARD.HTML b/PRM/PINBOARD.HTML
-index d261e36..dbc3f65 100644
+index dbc3f65..293a89a 100644
 --- a/PRM/PINBOARD.HTML
 +++ b/PRM/PINBOARD.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 54: Pinboard</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PIPEFS.HTML b/PRM/PIPEFS.HTML
-index b66d1b0..4412b8f 100644
+index 4412b8f..6c544bd 100644
 --- a/PRM/PIPEFS.HTML
 +++ b/PRM/PIPEFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 32: PipeFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PORTABLE.HTML b/PRM/PORTABLE.HTML
-index 829597a..ad8b679 100644
+index ad8b679..5c6994f 100644
 --- a/PRM/PORTABLE.HTML
 +++ b/PRM/PORTABLE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 80: The Portable module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PRINTERDEFS.HTML b/PRM/PRINTERDEFS.HTML
-index 473defc..086a887 100644
+index 086a887..3bfaba6 100644
 --- a/PRM/PRINTERDEFS.HTML
 +++ b/PRM/PRINTERDEFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 67: Printer definition files</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PRINTING.HTML b/PRM/PRINTING.HTML
-index bd91a0b..d968eb5 100644
+index d968eb5..4b99ca8 100644
 --- a/PRM/PRINTING.HTML
 +++ b/PRM/PRINTING.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 130: Printing</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PRINTSERVERS.HTML b/PRM/PRINTSERVERS.HTML
-index 74afde0..141bfac 100644
+index 141bfac..e7e66bd 100644
 --- a/PRM/PRINTSERVERS.HTML
 +++ b/PRM/PRINTSERVERS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 48½: Printer server protocol interface</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PROCSTD.HTML b/PRM/PROCSTD.HTML
-index c6d00e6..8f53eac 100644
+index 8f53eac..2974a2b 100644
 --- a/PRM/PROCSTD.HTML
 +++ b/PRM/PROCSTD.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 88: Appendix C: ARM procedure call standard</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/PROGENV.HTML b/PRM/PROGENV.HTML
-index df412a7..7cdcd30 100644
+index 7cdcd30..402f722 100644
 --- a/PRM/PROGENV.HTML
 +++ b/PRM/PROGENV.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 15: Program Environment</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/PWRSAVE.HTML b/PRM/PWRSAVE.HTML
-index 2187087..73c9546 100644
+index 73c9546..ae14c7e 100644
 --- a/PRM/PWRSAVE.HTML
 +++ b/PRM/PWRSAVE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 136: Monitor power saving</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/RAMFS.HTML b/PRM/RAMFS.HTML
-index 6d76d94..62efe12 100644
+index 62efe12..9582a96 100644
 --- a/PRM/RAMFS.HTML
 +++ b/PRM/RAMFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 30: RamFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/REGISTERING.HTML b/PRM/REGISTERING.HTML
-index 51839f8..9cee20c 100644
+index 9cee20c..66923db 100644
 --- a/PRM/REGISTERING.HTML
 +++ b/PRM/REGISTERING.HTML
-@@ -1,4 +1,5 @@
+@@ -1,6 +1,7 @@
  <html><head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 93: Appendix H: Registering names</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/RESOURCEFS.HTML b/PRM/RESOURCEFS.HTML
-index 0f7c73a..3280808 100644
+index 3280808..6bf2a85 100644
 --- a/PRM/RESOURCEFS.HTML
 +++ b/PRM/RESOURCEFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 35: ResourceFS</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/RESTKERNEL.HTML b/PRM/RESTKERNEL.HTML
-index 6a9e250..2c3a2a3 100644
+index 2c3a2a3..3ecb17a 100644
 --- a/PRM/RESTKERNEL.HTML
 +++ b/PRM/RESTKERNEL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 25: The rest of the kernel</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SCREENBLANKER.HTML b/PRM/SCREENBLANKER.HTML
-index eb3db21..565a9ce 100644
+index 565a9ce..d0dec97 100644
 --- a/PRM/SCREENBLANKER.HTML
 +++ b/PRM/SCREENBLANKER.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 76: ScreenBlank</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SERIAL.HTML b/PRM/SERIAL.HTML
-index 35a531f..c299436 100644
+index c299436..4a6c682 100644
 --- a/PRM/SERIAL.HTML
 +++ b/PRM/SERIAL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 38: Serial device</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SERPARPT.HTML b/PRM/SERPARPT.HTML
-index 1bfc5ef..e056380 100644
+index e056380..5e2a786 100644
 --- a/PRM/SERPARPT.HTML
 +++ b/PRM/SERPARPT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 115: Parallel and serial device drivers</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SHAREDCLIBRARY.HTML b/PRM/SHAREDCLIBRARY.HTML
-index 465096d..8a4ec84 100644
+index f5224fa..49ab0d8 100644
 --- a/PRM/SHAREDCLIBRARY.HTML
 +++ b/PRM/SHAREDCLIBRARY.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 83: The shared C library</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SHELLCLI.HTML b/PRM/SHELLCLI.HTML
-index 78d0df6..cafcf19 100644
+index cafcf19..262ff29 100644
 --- a/PRM/SHELLCLI.HTML
 +++ b/PRM/SHELLCLI.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 59: ShellCLI</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SOFTVECS.HTML b/PRM/SOFTVECS.HTML
-index 3d0a999..76e9fdf 100644
+index 76e9fdf..231156d 100644
 --- a/PRM/SOFTVECS.HTML
 +++ b/PRM/SOFTVECS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 8: Software vectors</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SOUND.HTML b/PRM/SOUND.HTML
-index af9b511..7e96cb8 100644
+index 7e96cb8..c5b32df 100644
 --- a/PRM/SOUND.HTML
 +++ b/PRM/SOUND.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 72: The Sound system</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SOUNDDMA.HTML b/PRM/SOUNDDMA.HTML
-index 8a30cb2..afb8e06 100644
+index afb8e06..b329150 100644
 --- a/PRM/SOUNDDMA.HTML
 +++ b/PRM/SOUNDDMA.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 132: Sound</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SPRITES.HTML b/PRM/SPRITES.HTML
-index cb053a5..d8c2044 100644
+index d8c2044..090efc1 100644
 --- a/PRM/SPRITES.HTML
 +++ b/PRM/SPRITES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 22: Sprites</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SQUASH.HTML b/PRM/SQUASH.HTML
-index c3c949f..4502fd3 100644
+index 4502fd3..496dabe 100644
 --- a/PRM/SQUASH.HTML
 +++ b/PRM/SQUASH.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 75: Squash</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SUPERSAMPLE.HTML b/PRM/SUPERSAMPLE.HTML
-index 45a8faf..a32f792 100644
+index a32f792..66d48b2 100644
 --- a/PRM/SUPERSAMPLE.HTML
 +++ b/PRM/SUPERSAMPLE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 62: SuperSample module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SWIS.HTML b/PRM/SWIS.HTML
-index 254194d..7e05261 100644
+index 7e05261..6ccad3f 100644
 --- a/PRM/SWIS.HTML
 +++ b/PRM/SWIS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 3: An introduction to SWIs</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SYSTEMDEVS.HTML b/PRM/SYSTEMDEVS.HTML
-index 31853ba..c2a988f 100644
+index c2a988f..5313ed7 100644
 --- a/PRM/SYSTEMDEVS.HTML
 +++ b/PRM/SYSTEMDEVS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 40: System devices</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/SYSTEMVARS.HTML b/PRM/SYSTEMVARS.HTML
-index e6c2d50..eb94ba5 100644
+index eb94ba5..32a9360 100644
 --- a/PRM/SYSTEMVARS.HTML
 +++ b/PRM/SYSTEMVARS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 91: Appendix F: System variables</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/TASKMANAGER.HTML b/PRM/TASKMANAGER.HTML
-index fe91caf..6ba473b 100644
+index 6ba473b..6b559bb 100644
 --- a/PRM/TASKMANAGER.HTML
 +++ b/PRM/TASKMANAGER.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 57: The TaskManager module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/TASKWINDOW.HTML b/PRM/TASKWINDOW.HTML
-index 179d890..c888ac6 100644
+index c888ac6..5742391 100644
 --- a/PRM/TASKWINDOW.HTML
 +++ b/PRM/TASKWINDOW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 58: TaskWindow</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/TERRITORY.HTML b/PRM/TERRITORY.HTML
-index 4f19bd1..e4da417 100644
+index e4da417..3761e29 100644
 --- a/PRM/TERRITORY.HTML
 +++ b/PRM/TERRITORY.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 71: The Territory Manager</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/TIMEDATE.HTML b/PRM/TIMEDATE.HTML
-index e458481..e1f3704 100644
+index e1f3704..2821521 100644
 --- a/PRM/TIMEDATE.HTML
 +++ b/PRM/TIMEDATE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 17: Time and Date</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/TIP.HTML b/PRM/TIP.HTML
-index a5bca67..9330e69 100644
+index 9330e69..21f790a 100644
 --- a/PRM/TIP.HTML
 +++ b/PRM/TIP.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 92: Appendix G: The Acorn Terminal Interface Protocol</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/TOOLBOX.HTML b/PRM/TOOLBOX.HTML
-index f9a1cbc..94b8420 100644
+index 94b8420..32a1c86 100644
 --- a/PRM/TOOLBOX.HTML
 +++ b/PRM/TOOLBOX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 137: The Toolbox modules</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/VDU.HTML b/PRM/VDU.HTML
-index 792546f..3d179bb 100644
+index 3d179bb..c6b55df 100644
 --- a/PRM/VDU.HTML
 +++ b/PRM/VDU.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 1: Chapter 21: VDU Drivers</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/VDUCODES.HTML b/PRM/VDUCODES.HTML
-index 55796b5..26f8a74 100644
+index 26f8a74..45cb785 100644
 --- a/PRM/VDUCODES.HTML
 +++ b/PRM/VDUCODES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 94: Table A: VDU codes</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkred">
+ <hr>
 diff --git a/PRM/VIDEO.HTML b/PRM/VIDEO.HTML
-index 0c33fef..68f4770 100644
+index 68f4770..71bfbea 100644
 --- a/PRM/VIDEO.HTML
 +++ b/PRM/VIDEO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 106: Video</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/WAVESYNTH.HTML b/PRM/WAVESYNTH.HTML
-index f941bbc..24d87cc 100644
+index 24d87cc..4f7981a 100644
 --- a/PRM/WAVESYNTH.HTML
 +++ b/PRM/WAVESYNTH.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 4: Chapter 73: WaveSynth</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -124,4 +125,4 @@ OSCLI "Stamp "+obj$</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/WIMP.HTML b/PRM/WIMP.HTML
-index 9fd2fe4..a3297e6 100644
+index a3297e6..9de6992 100644
 --- a/PRM/WIMP.HTML
 +++ b/PRM/WIMP.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 3: Chapter 53: The Window Manager</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/WRITEDEV.HTML b/PRM/WRITEDEV.HTML
-index 24b6fd4..11e3606 100644
+index 11e3606..e19a02f 100644
 --- a/PRM/WRITEDEV.HTML
 +++ b/PRM/WRITEDEV.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 46: Writing a device driver</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/WRITEFC.HTML b/PRM/WRITEFC.HTML
-index 630e36a..75577b0 100644
+index 75577b0..6e116b1 100644
 --- a/PRM/WRITEFC.HTML
 +++ b/PRM/WRITEFC.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 45: Writing a FileCore module</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/WRITEFCNEW.HTML b/PRM/WRITEFCNEW.HTML
-index 09224e1..c892038 100644
+index c892038..feaa77d 100644
 --- a/PRM/WRITEFCNEW.HTML
 +++ b/PRM/WRITEFCNEW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 120: Writing a FileCore mnodule</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -131,4 +132,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/PRM/WRITEFS.HTML b/PRM/WRITEFS.HTML
-index b2f5636..eb90748 100644
+index eb90748..8c629da 100644
 --- a/PRM/WRITEFS.HTML
 +++ b/PRM/WRITEFS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 2: Chapter 44: Writing a filing system</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/PRM/WRITEFSNEW.HTML b/PRM/WRITEFSNEW.HTML
-index fe96d8f..582a407 100644
+index 582a407..9c18a37 100644
 --- a/PRM/WRITEFSNEW.HTML
 +++ b/PRM/WRITEFSNEW.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>RISC OS PRMs: Volume 5a: Chapter 119: Writing a filing system</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/AASM.HTML b/TOOLBOX/ASM/AASM.HTML
-index 68f4bb7..276a404 100644
+index 276a404..1663f20 100644
 --- a/TOOLBOX/ASM/AASM.HTML
 +++ b/TOOLBOX/ASM/AASM.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Appendix E: Support for AAsm source</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -30,4 +31,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/ASM/ASMEG.HTML b/TOOLBOX/ASM/ASMEG.HTML
-index 756e7e5..bab91d8 100644
+index bab91d8..4a81c8f 100644
 --- a/TOOLBOX/ASM/ASMEG.HTML
 +++ b/TOOLBOX/ASM/ASMEG.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Appendix C: Example assembler fragments</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/ASMLANG.HTML b/TOOLBOX/ASM/ASMLANG.HTML
-index 22647c7..70bdb2f 100644
+index 70bdb2f..e925e9d 100644
 --- a/TOOLBOX/ASM/ASMLANG.HTML
 +++ b/TOOLBOX/ASM/ASMLANG.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 4: ARM assembly language</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/ASMPC.HTML b/TOOLBOX/ASM/ASMPC.HTML
-index 88cf7dd..01039ba 100644
+index 01039ba..c79cebc 100644
 --- a/TOOLBOX/ASM/ASMPC.HTML
 +++ b/TOOLBOX/ASM/ASMPC.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 14: Interworking assembler with C</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -72,4 +73,4 @@ var1 = -20</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/ASM/CONDASM.HTML b/TOOLBOX/ASM/CONDASM.HTML
-index 5ed829f..fbccb73 100644
+index fbccb73..d5aaf5e 100644
 --- a/TOOLBOX/ASM/CONDASM.HTML
 +++ b/TOOLBOX/ASM/CONDASM.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 10: Conditional assembly</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -131,4 +132,4 @@ counter SETA    counter-1
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/ASM/CPU.HTML b/TOOLBOX/ASM/CPU.HTML
-index a6502b7..1fe8c46 100644
+index 1fe8c46..cb452b5 100644
 --- a/TOOLBOX/ASM/CPU.HTML
 +++ b/TOOLBOX/ASM/CPU.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 3: The ARM CPU</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/DIRECTIV.HTML b/TOOLBOX/ASM/DIRECTIV.HTML
-index aa2d3c4..82a3d01 100644
+index 82a3d01..5f53dc4 100644
 --- a/TOOLBOX/ASM/DIRECTIV.HTML
 +++ b/TOOLBOX/ASM/DIRECTIV.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 7: Directives</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/ERRORS.HTML b/TOOLBOX/ASM/ERRORS.HTML
-index 51f74f4..c8eef77 100644
+index c8eef77..e918bfd 100644
 --- a/TOOLBOX/ASM/ERRORS.HTML
 +++ b/TOOLBOX/ASM/ERRORS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Appendix B: Error messages</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/EXHANDLE.HTML b/TOOLBOX/ASM/EXHANDLE.HTML
-index 0e1b5e2..3356234 100644
+index 3356234..9f6bb9b 100644
 --- a/TOOLBOX/ASM/EXHANDLE.HTML
 +++ b/TOOLBOX/ASM/EXHANDLE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 12: Exception handling</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -115,4 +116,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/ASM/EXPROP.HTML b/TOOLBOX/ASM/EXPROP.HTML
-index 3dea9fe..df99e8e 100644
+index df99e8e..ef55940 100644
 --- a/TOOLBOX/ASM/EXPROP.HTML
 +++ b/TOOLBOX/ASM/EXPROP.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 9: Expressions and operators</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -249,4 +250,4 @@ INDEX</tt><a name="marker-804687"></a><a name="marker-804688"></a>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/ASM/FPINSTRS.HTML b/TOOLBOX/ASM/FPINSTRS.HTML
-index 33d0745..d94379d 100644
+index d94379d..6e9df40 100644
 --- a/TOOLBOX/ASM/FPINSTRS.HTML
 +++ b/TOOLBOX/ASM/FPINSTRS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 6: Floating point instructions</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/INDEX.HTML b/TOOLBOX/ASM/INDEX.HTML
-index ab8858a..e5bf0da 100644
+index e5bf0da..50181b1 100644
 --- a/TOOLBOX/ASM/INDEX.HTML
 +++ b/TOOLBOX/ASM/INDEX.HTML
-@@ -1,6 +1,7 @@
- <html>
- 
+@@ -3,6 +3,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Contents</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
 diff --git a/TOOLBOX/ASM/INSTRSET.HTML b/TOOLBOX/ASM/INSTRSET.HTML
-index 0786fe3..35f2718 100644
+index 35f2718..940c3b0 100644
 --- a/TOOLBOX/ASM/INSTRSET.HTML
 +++ b/TOOLBOX/ASM/INSTRSET.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 5: CPU instruction set</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/INTRO.HTML b/TOOLBOX/ASM/INTRO.HTML
-index 8d6ca18..2051366 100644
+index 2051366..452c06c 100644
 --- a/TOOLBOX/ASM/INTRO.HTML
 +++ b/TOOLBOX/ASM/INTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 1: Introduction</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/MACROS.HTML b/TOOLBOX/ASM/MACROS.HTML
-index 7fdf7e7..e3c73c8 100644
+index e3c73c8..e48f3c2 100644
 --- a/TOOLBOX/ASM/MACROS.HTML
 +++ b/TOOLBOX/ASM/MACROS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 11: Macros</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/NEWFEATS.HTML b/TOOLBOX/ASM/NEWFEATS.HTML
-index 62d69ed..57d3d9f 100644
+index 57d3d9f..352f47b 100644
 --- a/TOOLBOX/ASM/NEWFEATS.HTML
 +++ b/TOOLBOX/ASM/NEWFEATS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Appendix A: Changes to the assembler</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -22,4 +23,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/ASM/OBJASM.HTML b/TOOLBOX/ASM/OBJASM.HTML
-index 2a1fce1..56520d3 100644
+index 56520d3..44ce655 100644
 --- a/TOOLBOX/ASM/OBJASM.HTML
 +++ b/TOOLBOX/ASM/OBJASM.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 2: ObjAsm</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/SYMBOLIC.HTML b/TOOLBOX/ASM/SYMBOLIC.HTML
-index 17580d2..7c231cc 100644
+index 7c231cc..1fe04d0 100644
 --- a/TOOLBOX/ASM/SYMBOLIC.HTML
 +++ b/TOOLBOX/ASM/SYMBOLIC.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 8: Symbolic capabilities</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -122,4 +123,4 @@ label</i> CN <i>numeric-expression</i></tt></p>
- <td align="left" valign="top"><tt>{ENDIAN}</tt><a name="marker-804743"></a><td align="left" valign="top">Has the value "<tt>big</tt>" if the assembler is in big-endian mode, and the value "<tt>little</tt>" if it is in little-endian mode.<a name="marker-804703"></a><a name="marker-804732"></a></dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/ASM/WARNINGS.HTML b/TOOLBOX/ASM/WARNINGS.HTML
-index 7716632..f5cf3f0 100644
+index f5cf3f0..716513e 100644
 --- a/TOOLBOX/ASM/WARNINGS.HTML
 +++ b/TOOLBOX/ASM/WARNINGS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Appendix D: Warnings on the use of ARM assembler</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASM/WRITERM.HTML b/TOOLBOX/ASM/WRITERM.HTML
-index 6063a19..d65fa9d 100644
+index d65fa9d..d46ccc2 100644
 --- a/TOOLBOX/ASM/WRITERM.HTML
 +++ b/TOOLBOX/ASM/WRITERM.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Chapter 13: Writing relocatable modules</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/ASMIX.HTML b/TOOLBOX/ASMIX.HTML
-index f0aab96..9143eb8 100644
+index 9143eb8..91309b2 100644
 --- a/TOOLBOX/ASMIX.HTML
 +++ b/TOOLBOX/ASMIX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Assembler: Index</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -616,4 +617,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/C/ANSILIB.HTML b/TOOLBOX/C/ANSILIB.HTML
-index 0781ce4..9dedd7d 100644
+index 9dedd7d..db902e3 100644
 --- a/TOOLBOX/C/ANSILIB.HTML
 +++ b/TOOLBOX/C/ANSILIB.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Acorn C/C++: Chapter 8: The ANSI library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/C/CCANDCPP.HTML b/TOOLBOX/C/CCANDCPP.HTML
-index 948f9a5..00595a5 100644
+index 00595a5..84f28d3 100644
 --- a/TOOLBOX/C/CCANDCPP.HTML
 +++ b/TOOLBOX/C/CCANDCPP.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Acorn C/C++: Chapter 2: CC and C++</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/C/CERRORS.HTML b/TOOLBOX/C/CERRORS.HTML
-index 45bff4f..775ad4e 100644
+index 775ad4e..f3be220 100644
 --- a/TOOLBOX/C/CERRORS.HTML
 +++ b/TOOLBOX/C/CERRORS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Acorn C/C++: Appendix B: C errors and warnings</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/CIMPL.HTML b/TOOLBOX/C/CIMPL.HTML
-index 0ed2438..9ee2d1c 100644
---- a/TOOLBOX/C/CIMPL.HTML
-+++ b/TOOLBOX/C/CIMPL.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 6: C implementation details</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/CLIB.HTML b/TOOLBOX/C/CLIB.HTML
-index e015ee5..89bffbe 100644
---- a/TOOLBOX/C/CLIB.HTML
-+++ b/TOOLBOX/C/CLIB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 7: The C library</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/CMATHLIB.HTML b/TOOLBOX/C/CMATHLIB.HTML
-index 98c26c0..05cd75c 100644
---- a/TOOLBOX/C/CMATHLIB.HTML
-+++ b/TOOLBOX/C/CMATHLIB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 15: The Complex Math library</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/CMHG.HTML b/TOOLBOX/C/CMHG.HTML
-index 02ab2a7..e4a8292 100644
---- a/TOOLBOX/C/CMHG.HTML
-+++ b/TOOLBOX/C/CMHG.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 3: CMHG</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/CPASM.HTML b/TOOLBOX/C/CPASM.HTML
-index ba2975c..67cafe2 100644
---- a/TOOLBOX/C/CPASM.HTML
-+++ b/TOOLBOX/C/CPASM.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 17: Assembly language interface</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/CPPERROR.HTML b/TOOLBOX/C/CPPERROR.HTML
-index 8307749..95a3ae1 100644
---- a/TOOLBOX/C/CPPERROR.HTML
-+++ b/TOOLBOX/C/CPPERROR.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Appendix C: C++ errors and warnings</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -528,4 +529,4 @@ char *ws = L"abcd";</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/CPPIMPL.HTML b/TOOLBOX/C/CPPIMPL.HTML
-index d1cc96d..d803dbe 100644
---- a/TOOLBOX/C/CPPIMPL.HTML
-+++ b/TOOLBOX/C/CPPIMPL.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 13: C++ implementation details</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -378,4 +379,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/EVENTLIB.HTML b/TOOLBOX/C/EVENTLIB.HTML
-index fecb235..5a15a3a 100644
---- a/TOOLBOX/C/EVENTLIB.HTML
-+++ b/TOOLBOX/C/EVENTLIB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 9: The Event library</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/INDEX.HTML b/TOOLBOX/C/INDEX.HTML
-index 2412fbb..092e23a 100644
---- a/TOOLBOX/C/INDEX.HTML
-+++ b/TOOLBOX/C/INDEX.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Contents</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/INTRO.HTML b/TOOLBOX/C/INTRO.HTML
-index 70607b2..915ca39 100644
---- a/TOOLBOX/C/INTRO.HTML
-+++ b/TOOLBOX/C/INTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 1: Introduction</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/NEWFEATS.HTML b/TOOLBOX/C/NEWFEATS.HTML
-index 53e990c..c6d5fd9 100644
---- a/TOOLBOX/C/NEWFEATS.HTML
-+++ b/TOOLBOX/C/NEWFEATS.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Appendix A: Changes to the C compiler</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -30,4 +31,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/OVERLAYS.HTML b/TOOLBOX/C/OVERLAYS.HTML
-index ebcc5f5..99bf424 100644
---- a/TOOLBOX/C/OVERLAYS.HTML
-+++ b/TOOLBOX/C/OVERLAYS.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 19: Overlays</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -43,4 +44,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/PORTABLE.HTML b/TOOLBOX/C/PORTABLE.HTML
-index 164233d..7fe73e3 100644
---- a/TOOLBOX/C/PORTABLE.HTML
-+++ b/TOOLBOX/C/PORTABLE.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 16: Portability</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -340,4 +341,4 @@ signal(SIGINT, f);
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/RENDLIB.HTML b/TOOLBOX/C/RENDLIB.HTML
-index ee7af4d..cba5ccc 100644
---- a/TOOLBOX/C/RENDLIB.HTML
-+++ b/TOOLBOX/C/RENDLIB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 12: The Render library</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -16,4 +17,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/STRMLIB.HTML b/TOOLBOX/C/STRMLIB.HTML
-index 1ec9bc2..b2a156b 100644
---- a/TOOLBOX/C/STRMLIB.HTML
-+++ b/TOOLBOX/C/STRMLIB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 14: The Streams library</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/TBOXLIB.HTML b/TOOLBOX/C/TBOXLIB.HTML
-index 4fc0c10..7d9592e 100644
---- a/TOOLBOX/C/TBOXLIB.HTML
-+++ b/TOOLBOX/C/TBOXLIB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 11: The Toolbox library</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -16,4 +17,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/TOANSI.HTML b/TOOLBOX/C/TOANSI.HTML
-index d2250be..0744ba7 100644
---- a/TOOLBOX/C/TOANSI.HTML
-+++ b/TOOLBOX/C/TOANSI.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 4: ToANSI</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/TOPCC.HTML b/TOOLBOX/C/TOPCC.HTML
-index ca681ee..2517405 100644
---- a/TOOLBOX/C/TOPCC.HTML
-+++ b/TOOLBOX/C/TOPCC.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 5: ToPCC</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/C/WIMPLIB.HTML b/TOOLBOX/C/WIMPLIB.HTML
-index 7c2ac93..618e71c 100644
---- a/TOOLBOX/C/WIMPLIB.HTML
-+++ b/TOOLBOX/C/WIMPLIB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 10: The Wimp library</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -679,4 +680,4 @@ SpriteParams;</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/C/WRITERM.HTML b/TOOLBOX/C/WRITERM.HTML
-index c49668d..abd13e6 100644
---- a/TOOLBOX/C/WRITERM.HTML
-+++ b/TOOLBOX/C/WRITERM.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Chapter 18: How to write relocatable modules in C</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -562,4 +563,4 @@ extern int event_handler(_kernel_swi_regs *r,void *pw)
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/CCPPIX.HTML b/TOOLBOX/CCPPIX.HTML
-index c0b347d..74f84d7 100644
---- a/TOOLBOX/CCPPIX.HTML
-+++ b/TOOLBOX/CCPPIX.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Acorn C/C++: Index</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -636,4 +637,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/DDE/AMU.HTML b/TOOLBOX/DDE/AMU.HTML
-index a56e6aa..326cb79 100644
---- a/TOOLBOX/DDE/AMU.HTML
-+++ b/TOOLBOX/DDE/AMU.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Chapter 8: AMU</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -113,4 +114,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/DDE/APPA.HTML b/TOOLBOX/DDE/APPA.HTML
-index ff0d649..b3d2277 100644
---- a/TOOLBOX/DDE/APPA.HTML
-+++ b/TOOLBOX/DDE/APPA.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Appendix A: Makefile syntax</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -368,4 +369,4 @@ o.t1::  c.t1 h.t2
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/DDE/APPB.HTML b/TOOLBOX/DDE/APPB.HTML
-index 4ab9c2b..93e0591 100644
---- a/TOOLBOX/DDE/APPB.HTML
-+++ b/TOOLBOX/DDE/APPB.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Appendix B: FrontEnd protocols</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/DDE/APPC.HTML b/TOOLBOX/DDE/APPC.HTML
-index 5279a30..b5fde98 100644
---- a/TOOLBOX/DDE/APPC.HTML
-+++ b/TOOLBOX/DDE/APPC.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Appendix C: DDEUtils</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -330,4 +331,4 @@ InfoDetails ::=           &lt;DDEUtils_InfoforFile&gt;
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/DDE/APPD.HTML b/TOOLBOX/DDE/APPD.HTML
-index da07404..64a7d92 100644
---- a/TOOLBOX/DDE/APPD.HTML
-+++ b/TOOLBOX/DDE/APPD.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Appendix D: SrcEdit file formats</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -47,4 +48,4 @@ etc</pre></p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
-diff --git a/TOOLBOX/DDE/APPE.HTML b/TOOLBOX/DDE/APPE.HTML
-index c848707..9b351b2 100644
---- a/TOOLBOX/DDE/APPE.HTML
-+++ b/TOOLBOX/DDE/APPE.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Appendix E: Code file formats</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/DDE/APPF.HTML b/TOOLBOX/DDE/APPF.HTML
-index a36ecd3..c108397 100644
---- a/TOOLBOX/DDE/APPF.HTML
-+++ b/TOOLBOX/DDE/APPF.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Appendix F: ARM procedure call standard</title>
- </head>
- <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-diff --git a/TOOLBOX/DDE/DDTOLD.HTML b/TOOLBOX/DDE/DDTOLD.HTML
-index 7716cb5..bb75d26 100644
---- a/TOOLBOX/DDE/DDTOLD.HTML
-+++ b/TOOLBOX/DDE/DDTOLD.HTML
-@@ -1,5 +1,6 @@
- <html>
- <head>
-+<meta charset="utf-8">
- <title>Desktop Tools: Chapter 4: Desktop debugging tool</title></head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
  
+diff --git a/TOOLBOX/C/CIMPL.HTML b/TOOLBOX/C/CIMPL.HTML
+index 9ee2d1c..aaad001 100644
+--- a/TOOLBOX/C/CIMPL.HTML
++++ b/TOOLBOX/C/CIMPL.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 6: C implementation details</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/CLIB.HTML b/TOOLBOX/C/CLIB.HTML
+index 89bffbe..d7c63b6 100644
+--- a/TOOLBOX/C/CLIB.HTML
++++ b/TOOLBOX/C/CLIB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 7: The C library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/CMATHLIB.HTML b/TOOLBOX/C/CMATHLIB.HTML
+index 05cd75c..3c4d391 100644
+--- a/TOOLBOX/C/CMATHLIB.HTML
++++ b/TOOLBOX/C/CMATHLIB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 15: The Complex Math library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/CMHG.HTML b/TOOLBOX/C/CMHG.HTML
+index e4a8292..841ddb4 100644
+--- a/TOOLBOX/C/CMHG.HTML
++++ b/TOOLBOX/C/CMHG.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 3: CMHG</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/CPASM.HTML b/TOOLBOX/C/CPASM.HTML
+index 67cafe2..d1309d4 100644
+--- a/TOOLBOX/C/CPASM.HTML
++++ b/TOOLBOX/C/CPASM.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 17: Assembly language interface</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/CPPERROR.HTML b/TOOLBOX/C/CPPERROR.HTML
+index 95a3ae1..98d8efa 100644
+--- a/TOOLBOX/C/CPPERROR.HTML
++++ b/TOOLBOX/C/CPPERROR.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Appendix C: C++ errors and warnings</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/CPPIMPL.HTML b/TOOLBOX/C/CPPIMPL.HTML
+index d803dbe..fb93f6e 100644
+--- a/TOOLBOX/C/CPPIMPL.HTML
++++ b/TOOLBOX/C/CPPIMPL.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 13: C++ implementation details</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/EVENTLIB.HTML b/TOOLBOX/C/EVENTLIB.HTML
+index 5a15a3a..679657c 100644
+--- a/TOOLBOX/C/EVENTLIB.HTML
++++ b/TOOLBOX/C/EVENTLIB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 9: The Event library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/INDEX.HTML b/TOOLBOX/C/INDEX.HTML
+index 092e23a..d89fa97 100644
+--- a/TOOLBOX/C/INDEX.HTML
++++ b/TOOLBOX/C/INDEX.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Contents</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/INTRO.HTML b/TOOLBOX/C/INTRO.HTML
+index 915ca39..9607309 100644
+--- a/TOOLBOX/C/INTRO.HTML
++++ b/TOOLBOX/C/INTRO.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 1: Introduction</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
+diff --git a/TOOLBOX/C/NEWFEATS.HTML b/TOOLBOX/C/NEWFEATS.HTML
+index c6d5fd9..94f27c5 100644
+--- a/TOOLBOX/C/NEWFEATS.HTML
++++ b/TOOLBOX/C/NEWFEATS.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Appendix A: Changes to the C compiler</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/OVERLAYS.HTML b/TOOLBOX/C/OVERLAYS.HTML
+index 99bf424..3137b4d 100644
+--- a/TOOLBOX/C/OVERLAYS.HTML
++++ b/TOOLBOX/C/OVERLAYS.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 19: Overlays</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/PORTABLE.HTML b/TOOLBOX/C/PORTABLE.HTML
+index 7fe73e3..4ac6b77 100644
+--- a/TOOLBOX/C/PORTABLE.HTML
++++ b/TOOLBOX/C/PORTABLE.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 16: Portability</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/RENDLIB.HTML b/TOOLBOX/C/RENDLIB.HTML
+index cba5ccc..bfbf4e1 100644
+--- a/TOOLBOX/C/RENDLIB.HTML
++++ b/TOOLBOX/C/RENDLIB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 12: The Render library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
+diff --git a/TOOLBOX/C/STRMLIB.HTML b/TOOLBOX/C/STRMLIB.HTML
+index b2a156b..e3751cf 100644
+--- a/TOOLBOX/C/STRMLIB.HTML
++++ b/TOOLBOX/C/STRMLIB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 14: The Streams library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/TBOXLIB.HTML b/TOOLBOX/C/TBOXLIB.HTML
+index 7d9592e..d378094 100644
+--- a/TOOLBOX/C/TBOXLIB.HTML
++++ b/TOOLBOX/C/TBOXLIB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 11: The Toolbox library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
+diff --git a/TOOLBOX/C/TOANSI.HTML b/TOOLBOX/C/TOANSI.HTML
+index 0744ba7..ee7310b 100644
+--- a/TOOLBOX/C/TOANSI.HTML
++++ b/TOOLBOX/C/TOANSI.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 4: ToANSI</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/TOPCC.HTML b/TOOLBOX/C/TOPCC.HTML
+index 2517405..e60f21d 100644
+--- a/TOOLBOX/C/TOPCC.HTML
++++ b/TOOLBOX/C/TOPCC.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 5: ToPCC</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/WIMPLIB.HTML b/TOOLBOX/C/WIMPLIB.HTML
+index 618e71c..be7a60b 100644
+--- a/TOOLBOX/C/WIMPLIB.HTML
++++ b/TOOLBOX/C/WIMPLIB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 10: The Wimp library</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/C/WRITERM.HTML b/TOOLBOX/C/WRITERM.HTML
+index abd13e6..3df8dc8 100644
+--- a/TOOLBOX/C/WRITERM.HTML
++++ b/TOOLBOX/C/WRITERM.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Chapter 18: How to write relocatable modules in C</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/CCPPIX.HTML b/TOOLBOX/CCPPIX.HTML
+index 74f84d7..1396589 100644
+--- a/TOOLBOX/CCPPIX.HTML
++++ b/TOOLBOX/CCPPIX.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Acorn C/C++: Index</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/AMU.HTML b/TOOLBOX/DDE/AMU.HTML
+index 326cb79..c644652 100644
+--- a/TOOLBOX/DDE/AMU.HTML
++++ b/TOOLBOX/DDE/AMU.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Desktop Tools: Chapter 8: AMU</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/APPA.HTML b/TOOLBOX/DDE/APPA.HTML
+index b3d2277..941e04d 100644
+--- a/TOOLBOX/DDE/APPA.HTML
++++ b/TOOLBOX/DDE/APPA.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Desktop Tools: Appendix A: Makefile syntax</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/APPB.HTML b/TOOLBOX/DDE/APPB.HTML
+index 93e0591..9c84643 100644
+--- a/TOOLBOX/DDE/APPB.HTML
++++ b/TOOLBOX/DDE/APPB.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Desktop Tools: Appendix B: FrontEnd protocols</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/APPC.HTML b/TOOLBOX/DDE/APPC.HTML
+index b5fde98..e894699 100644
+--- a/TOOLBOX/DDE/APPC.HTML
++++ b/TOOLBOX/DDE/APPC.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Desktop Tools: Appendix C: DDEUtils</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/APPD.HTML b/TOOLBOX/DDE/APPD.HTML
+index 64a7d92..f43760a 100644
+--- a/TOOLBOX/DDE/APPD.HTML
++++ b/TOOLBOX/DDE/APPD.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Desktop Tools: Appendix D: SrcEdit file formats</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/APPE.HTML b/TOOLBOX/DDE/APPE.HTML
+index 9b351b2..7a00af4 100644
+--- a/TOOLBOX/DDE/APPE.HTML
++++ b/TOOLBOX/DDE/APPE.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Desktop Tools: Appendix E: Code file formats</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/APPF.HTML b/TOOLBOX/DDE/APPF.HTML
+index c108397..96a3288 100644
+--- a/TOOLBOX/DDE/APPF.HTML
++++ b/TOOLBOX/DDE/APPF.HTML
+@@ -2,6 +2,7 @@
+ <head>
+ <meta charset="utf-8">
+ <title>Desktop Tools: Appendix F: ARM procedure call standard</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
+ </head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+diff --git a/TOOLBOX/DDE/DDTOLD.HTML b/TOOLBOX/DDE/DDTOLD.HTML
+index bb75d26..fe4d38c 100644
+--- a/TOOLBOX/DDE/DDTOLD.HTML
++++ b/TOOLBOX/DDE/DDTOLD.HTML
+@@ -1,7 +1,8 @@
+ <html>
+ <head>
+ <meta charset="utf-8">
+-<title>Desktop Tools: Chapter 4: Desktop debugging tool</title></head>
++<title>Desktop Tools: Chapter 4: Desktop debugging tool</title>
++<link rel="stylesheet" type="text/css" href="../../style.css"></head>
+ <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
+ <hr>
 diff --git a/TOOLBOX/DDE/DECAOF.HTML b/TOOLBOX/DDE/DECAOF.HTML
-index 0ab0509..0e64c8c 100644
+index 0e64c8c..43e28da 100644
 --- a/TOOLBOX/DDE/DECAOF.HTML
 +++ b/TOOLBOX/DDE/DECAOF.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 9: DecAOF</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
 diff --git a/TOOLBOX/DDE/DIFF.HTML b/TOOLBOX/DDE/DIFF.HTML
-index c8acd21..0a886dd 100644
+index 0a886dd..8a7a851 100644
 --- a/TOOLBOX/DDE/DIFF.HTML
 +++ b/TOOLBOX/DDE/DIFF.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 10: Diff</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -151,4 +152,4 @@ filename2</tt>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/EXTEND.HTML b/TOOLBOX/DDE/EXTEND.HTML
-index 4e6ca87..841c82b 100644
+index 841c82b..6d329c9 100644
 --- a/TOOLBOX/DDE/EXTEND.HTML
 +++ b/TOOLBOX/DDE/EXTEND.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 16: Adding your own desktop tools</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
 diff --git a/TOOLBOX/DDE/FIND.HTML b/TOOLBOX/DDE/FIND.HTML
-index ce156a4..36a76c8 100644
+index 36a76c8..0152a2f 100644
 --- a/TOOLBOX/DDE/FIND.HTML
 +++ b/TOOLBOX/DDE/FIND.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 11: Find</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -322,4 +323,4 @@ inserts a right bracket immediately before the caret.</p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/GENERAL.HTML b/TOOLBOX/DDE/GENERAL.HTML
-index 1319cd7..296c13b 100644
+index 296c13b..ee79c26 100644
 --- a/TOOLBOX/DDE/GENERAL.HTML
 +++ b/TOOLBOX/DDE/GENERAL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 7: General features</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -151,4 +152,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/INDEX.HTML b/TOOLBOX/DDE/INDEX.HTML
-index b1ec2d6..df03829 100644
+index df03829..ca45e73 100644
 --- a/TOOLBOX/DDE/INDEX.HTML
 +++ b/TOOLBOX/DDE/INDEX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Contents</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
 diff --git a/TOOLBOX/DDE/INSTALL.HTML b/TOOLBOX/DDE/INSTALL.HTML
-index 1daca66..f7f5145 100644
+index f7f5145..c050a5e 100644
 --- a/TOOLBOX/DDE/INSTALL.HTML
 +++ b/TOOLBOX/DDE/INSTALL.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 2: Installing Acorn C/C++</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -142,4 +143,4 @@ if not present, or updated if it is already there:</p>
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/INTRO.HTML b/TOOLBOX/DDE/INTRO.HTML
-index 824a8aa..df2fed2 100644
+index df2fed2..41f7ba8 100644
 --- a/TOOLBOX/DDE/INTRO.HTML
 +++ b/TOOLBOX/DDE/INTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 1: Introduction</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -133,4 +134,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/LIBFILE.HTML b/TOOLBOX/DDE/LIBFILE.HTML
-index 9340115..684ed7a 100644
+index 684ed7a..13c2604 100644
 --- a/TOOLBOX/DDE/LIBFILE.HTML
 +++ b/TOOLBOX/DDE/LIBFILE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 12: LibFile</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -182,4 +183,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/LINK.HTML b/TOOLBOX/DDE/LINK.HTML
-index 056b9f0..f5bbe35 100644
+index f5bbe35..11acd7c 100644
 --- a/TOOLBOX/DDE/LINK.HTML
 +++ b/TOOLBOX/DDE/LINK.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 13: Link</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -398,4 +399,4 @@ init
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/MAKE.HTML b/TOOLBOX/DDE/MAKE.HTML
-index 152f0de..9606a9d 100644
+index 9606a9d..6a748b9 100644
 --- a/TOOLBOX/DDE/MAKE.HTML
 +++ b/TOOLBOX/DDE/MAKE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 5: Make</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -381,4 +382,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/OBJSIZE.HTML b/TOOLBOX/DDE/OBJSIZE.HTML
-index 0d4284d..684e053 100644
+index 684e053..3bf449c 100644
 --- a/TOOLBOX/DDE/OBJSIZE.HTML
 +++ b/TOOLBOX/DDE/OBJSIZE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 14: ObjSize</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -89,4 +90,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/DDE/SQUEEZE.HTML b/TOOLBOX/DDE/SQUEEZE.HTML
-index 75c6ec5..858edd8 100644
+index 858edd8..9fa4ffd 100644
 --- a/TOOLBOX/DDE/SQUEEZE.HTML
 +++ b/TOOLBOX/DDE/SQUEEZE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 15: Squeeze</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -97,4 +98,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDE/SRCEDIT.HTML b/TOOLBOX/DDE/SRCEDIT.HTML
-index a9308bf..e6239c1 100644
+index e6239c1..7d1ed0a 100644
 --- a/TOOLBOX/DDE/SRCEDIT.HTML
 +++ b/TOOLBOX/DDE/SRCEDIT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 6: SrcEdit</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ 
 diff --git a/TOOLBOX/DDE/WORKING.HTML b/TOOLBOX/DDE/WORKING.HTML
-index bb02ee0..40f5aae 100644
+index 40f5aae..cde334f 100644
 --- a/TOOLBOX/DDE/WORKING.HTML
 +++ b/TOOLBOX/DDE/WORKING.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Chapter 3: Working with desktop tools</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -117,4 +118,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ 
 diff --git a/TOOLBOX/DDEIX.HTML b/TOOLBOX/DDEIX.HTML
-index b80bb4c..5591caa 100644
+index 5591caa..88241b9 100644
 --- a/TOOLBOX/DDEIX.HTML
 +++ b/TOOLBOX/DDEIX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Desktop Tools: Index</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -1112,4 +1113,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/COLMENU.HTML b/TOOLBOX/TOOLBOX/COLMENU.HTML
-index ef385e9..174e656 100644
+index 174e656..859061d 100644
 --- a/TOOLBOX/TOOLBOX/COLMENU.HTML
 +++ b/TOOLBOX/TOOLBOX/COLMENU.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 4: Colour Menu class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/COLOURDBOX.HTML b/TOOLBOX/TOOLBOX/COLOURDBOX.HTML
-index 08ad22f..c2a1e2c 100644
+index c2a1e2c..56bde7b 100644
 --- a/TOOLBOX/TOOLBOX/COLOURDBOX.HTML
 +++ b/TOOLBOX/TOOLBOX/COLOURDBOX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 3: Colour Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/DCS.HTML b/TOOLBOX/TOOLBOX/DCS.HTML
-index 3cc6035..ff743b7 100644
+index ff743b7..e435cb7 100644
 --- a/TOOLBOX/TOOLBOX/DCS.HTML
 +++ b/TOOLBOX/TOOLBOX/DCS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 5: Discard/Cancel/Save Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/FILEINFO.HTML b/TOOLBOX/TOOLBOX/FILEINFO.HTML
-index 63308fa..cb35d22 100644
+index cb35d22..1a4575d 100644
 --- a/TOOLBOX/TOOLBOX/FILEINFO.HTML
 +++ b/TOOLBOX/TOOLBOX/FILEINFO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 6: File Info Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/FONTDBOX.HTML b/TOOLBOX/TOOLBOX/FONTDBOX.HTML
-index 11adae0..5887bbd 100644
+index 5887bbd..c621a91 100644
 --- a/TOOLBOX/TOOLBOX/FONTDBOX.HTML
 +++ b/TOOLBOX/TOOLBOX/FONTDBOX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 7: Font Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -892,4 +893,4 @@ R4 holds number of bytes written to buffer
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/FONTMENU.HTML b/TOOLBOX/TOOLBOX/FONTMENU.HTML
-index c1acec0..803d219 100644
+index 803d219..daae7d3 100644
 --- a/TOOLBOX/TOOLBOX/FONTMENU.HTML
 +++ b/TOOLBOX/TOOLBOX/FONTMENU.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 8: Font Menu class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/ICONBAR.HTML b/TOOLBOX/TOOLBOX/ICONBAR.HTML
-index 1c6acf5..9144bda 100644
+index 9144bda..72544f3 100644
 --- a/TOOLBOX/TOOLBOX/ICONBAR.HTML
 +++ b/TOOLBOX/TOOLBOX/ICONBAR.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 9: Iconbar icon class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -1021,4 +1022,4 @@ If a help message is attached to this Iconbar icon, then a reply is sent on the
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/INDEX.HTML b/TOOLBOX/TOOLBOX/INDEX.HTML
-index 3a4c7cb..3238cf1 100644
+index 3238cf1..07bdec8 100644
 --- a/TOOLBOX/TOOLBOX/INDEX.HTML
 +++ b/TOOLBOX/TOOLBOX/INDEX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Contents</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/MENUS.HTML b/TOOLBOX/TOOLBOX/MENUS.HTML
-index 03f6b6f..899d271 100644
+index 899d271..f6ff98a 100644
 --- a/TOOLBOX/TOOLBOX/MENUS.HTML
 +++ b/TOOLBOX/TOOLBOX/MENUS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 10: Menu class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -1854,4 +1855,4 @@ The Menu which was being shown is marked as hidden (as if Toolbox_HideObject had
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/PRINT.HTML b/TOOLBOX/TOOLBOX/PRINT.HTML
-index dbe4957..562d146 100644
+index 562d146..82c1569 100644
 --- a/TOOLBOX/TOOLBOX/PRINT.HTML
 +++ b/TOOLBOX/TOOLBOX/PRINT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 11: Print Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -1178,4 +1179,4 @@ return help message to sender
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/PROGINFO.HTML b/TOOLBOX/TOOLBOX/PROGINFO.HTML
-index e2cc562..b20c541 100644
+index b20c541..1f66fac 100644
 --- a/TOOLBOX/TOOLBOX/PROGINFO.HTML
 +++ b/TOOLBOX/TOOLBOX/PROGINFO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 12: Prog Info Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/QUIT.HTML b/TOOLBOX/TOOLBOX/QUIT.HTML
-index 0789891..8e02831 100644
+index 8e02831..4fb5d05 100644
 --- a/TOOLBOX/TOOLBOX/QUIT.HTML
 +++ b/TOOLBOX/TOOLBOX/QUIT.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 13: Quit Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/RENDER.HTML b/TOOLBOX/TOOLBOX/RENDER.HTML
-index 21f17f9..80dd2fc 100644
+index 80dd2fc..52cf183 100644
 --- a/TOOLBOX/TOOLBOX/RENDER.HTML
 +++ b/TOOLBOX/TOOLBOX/RENDER.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 19: DrawFile</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/RESEDITOR.HTML b/TOOLBOX/TOOLBOX/RESEDITOR.HTML
-index f6470fa..824fd36 100644
+index 824fd36..cbd907d 100644
 --- a/TOOLBOX/TOOLBOX/RESEDITOR.HTML
 +++ b/TOOLBOX/TOOLBOX/RESEDITOR.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 17: ResEd</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/RESOURCEFILEFMTS.HTML b/TOOLBOX/TOOLBOX/RESOURCEFILEFMTS.HTML
-index 869e8a6..a98afdd 100644
+index a98afdd..126ccef 100644
 --- a/TOOLBOX/TOOLBOX/RESOURCEFILEFMTS.HTML
 +++ b/TOOLBOX/TOOLBOX/RESOURCEFILEFMTS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Appendix A: Resource File Formats</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -189,4 +190,4 @@ typedef int MsgReference;
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/RESTEST.HTML b/TOOLBOX/TOOLBOX/RESTEST.HTML
-index f2fdfbc..00825cf 100644
+index 00825cf..3aa57cf 100644
 --- a/TOOLBOX/TOOLBOX/RESTEST.HTML
 +++ b/TOOLBOX/TOOLBOX/RESTEST.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 18: ResTest</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/SAVEAS.HTML b/TOOLBOX/TOOLBOX/SAVEAS.HTML
-index 3ce937d..ffa5699 100644
+index ffa5699..c256524 100644
 --- a/TOOLBOX/TOOLBOX/SAVEAS.HTML
 +++ b/TOOLBOX/TOOLBOX/SAVEAS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 14: SaveAs Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/SCALE.HTML b/TOOLBOX/TOOLBOX/SCALE.HTML
-index 3d2e2a7..25a490a 100644
+index 25a490a..4b428c1 100644
 --- a/TOOLBOX/TOOLBOX/SCALE.HTML
 +++ b/TOOLBOX/TOOLBOX/SCALE.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 15: Scale Dialogue box class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -774,4 +775,4 @@ deliver a Scale_DialogueCompleted Toolbox event.
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/SUPPORT310.HTML b/TOOLBOX/TOOLBOX/SUPPORT310.HTML
-index 496792a..b85256d 100644
+index b85256d..75d6264 100644
 --- a/TOOLBOX/TOOLBOX/SUPPORT310.HTML
 +++ b/TOOLBOX/TOOLBOX/SUPPORT310.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Appendix B: Support for RISC OS 3.10</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -23,4 +24,4 @@
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/TOOLBOXEXAMPLES.HTML b/TOOLBOX/TOOLBOX/TOOLBOXEXAMPLES.HTML
-index ef1ee51..7b6cc2f 100644
+index 7b6cc2f..4cb9352 100644
 --- a/TOOLBOX/TOOLBOX/TOOLBOXEXAMPLES.HTML
 +++ b/TOOLBOX/TOOLBOX/TOOLBOXEXAMPLES.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 2: Building an application</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
-@@ -518,4 +519,4 @@ name
- </dl>
- </dl>
- </body>
--</html>
-\ No newline at end of file
-+</html>
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/TOOLINTRO.HTML b/TOOLBOX/TOOLBOX/TOOLINTRO.HTML
-index 2027795..56a47a8 100644
+index 56a47a8..6040bd2 100644
 --- a/TOOLBOX/TOOLBOX/TOOLINTRO.HTML
 +++ b/TOOLBOX/TOOLBOX/TOOLINTRO.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 1: Introduction to the Toolbox</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOX/WINDOWS.HTML b/TOOLBOX/TOOLBOX/WINDOWS.HTML
-index aa737c8..5404e96 100644
+index 5404e96..d92747f 100644
 --- a/TOOLBOX/TOOLBOX/WINDOWS.HTML
 +++ b/TOOLBOX/TOOLBOX/WINDOWS.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Chapter 16: Window class</title>
++<link rel="stylesheet" type="text/css" href="../../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 diff --git a/TOOLBOX/TOOLBOXIX.HTML b/TOOLBOX/TOOLBOXIX.HTML
-index fcdace5..ca7be81 100644
+index ca7be81..fda7587 100644
 --- a/TOOLBOX/TOOLBOXIX.HTML
 +++ b/TOOLBOX/TOOLBOXIX.HTML
-@@ -1,5 +1,6 @@
- <html>
+@@ -2,6 +2,7 @@
  <head>
-+<meta charset="utf-8">
+ <meta charset="utf-8">
  <title>Toolbox: Index</title>
++<link rel="stylesheet" type="text/css" href="../style.css">
  </head>
  <body bgcolor="white" text="black" link="blue" alink="red" vlink="darkblue">
+ <hr>
 -- 
 2.31.1
 
